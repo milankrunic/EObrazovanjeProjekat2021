@@ -1,0 +1,9 @@
+package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
+
+public interface EnrollmentRepository extends JpaRepository<Enrollment, Long>{
+
+}
