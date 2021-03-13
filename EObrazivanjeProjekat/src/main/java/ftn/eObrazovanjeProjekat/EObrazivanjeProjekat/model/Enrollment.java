@@ -21,5 +21,8 @@ public class Enrollment {
 	@ManyToOne
 	@JoinColumn(name = "course_instance", referencedColumnName = "idCourseInstance", nullable = false)
 	private CourseInstance courseInstance;
-
+	
+	// fali povezivanje sa studentom
+	
+	
 }
