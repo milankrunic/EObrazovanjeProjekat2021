@@ -8,7 +8,6 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 
 
 public interface StudentRepository extends JpaRepository<Student, Long>{
-	Student findOneCardNumber(String cardNumber);
 	List<Student> findAllByLastName(String lastName);
 
 }

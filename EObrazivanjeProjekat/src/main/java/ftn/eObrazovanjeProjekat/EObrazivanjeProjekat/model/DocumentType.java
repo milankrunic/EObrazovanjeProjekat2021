@@ -2,11 +2,19 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Document type")
+@Table(name="document_type")
 public class DocumentType {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idDokumentType", nullable = false, unique = true)
+	private Long idDokumentType;
 	
 	@Column(name = "name", unique = false, nullable = false)
 	private String name;
@@ -18,10 +26,19 @@ public class DocumentType {
 		super();
 	}
 	
-	public DocumentType(String name,String code) {
+	public DocumentType(Long idDokumentType, String name,String code) {
 		super();
+		this.idDokumentType = idDokumentType;
 		this.name = name;
 		this.code = code;
+	}
+
+	public Long getIdDokumentType() {
+		return idDokumentType;
+	}
+
+	public void setIdDokumentType(Long idDokumentType) {
+		this.idDokumentType = idDokumentType;
 	}
 
 	public String getName() {

@@ -35,10 +35,6 @@ public class CourseInstance {
 	@JoinColumn(name = "courseSpecification", referencedColumnName = "id", nullable = false)
 	private CourseSpecification courseSpecification;
 	
-	@ManyToOne
-	@JoinColumn(name = "passed_exams", referencedColumnName = "idPassedExams", nullable = false)
-	private PassedExams passedExams;
-	
 	@OneToMany(cascade = {ALL}, fetch=LAZY, mappedBy="courseInstance")
 	private List<Teaching> teaching = new ArrayList<Teaching>();
 	
@@ -50,13 +46,12 @@ public class CourseInstance {
 	}
 
 	public CourseInstance(Long idCourseInstance, String startDate, String endDate, CourseSpecification courseSpecification,
-			PassedExams passedExams, List<Teaching> teaching, List<Enrollment> enrollment) {
+			List<Teaching> teaching, List<Enrollment> enrollment) {
 		super();
 		this.idCourseInstance = idCourseInstance;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.courseSpecification = courseSpecification;
-		this.passedExams = passedExams;
 		this.teaching = teaching;
 		this.enrollment = enrollment;
 	}
@@ -91,14 +86,6 @@ public class CourseInstance {
 
 	public void setCourseSpecification(CourseSpecification courseSpecification) {
 		this.courseSpecification = courseSpecification;
-	}
-
-	public PassedExams getPassedExams() {
-		return passedExams;
-	}
-
-	public void setPassedExams(PassedExams passedExams) {
-		this.passedExams = passedExams;
 	}
 
 	public List<Teaching> getTeaching() {

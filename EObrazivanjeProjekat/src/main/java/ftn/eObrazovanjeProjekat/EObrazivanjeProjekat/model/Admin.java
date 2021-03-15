@@ -2,16 +2,21 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Admin")
 public class Admin {
 	
-	//@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@Column(name = "idAdmin", nullable = false, unique = true)
-	//private Long idAdmin;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idAdmin", nullable = false, unique = true)
+	private Long idAdmin;
 	
 	@Column(name = "first_name", nullable = false)
 	private String firstName;
@@ -22,25 +27,30 @@ public class Admin {
 	@Column(name = "email", nullable = false)
 	private String email;
 	
+	@ManyToOne
+	@JoinColumn(name = "user", referencedColumnName = "idUser", nullable = false)
+	private User user;
+	
 	public Admin() {
 		super();
 	}
 
-	public Admin(String firstName, String lastName, String email) {
+	public Admin(Long idAdmin, String firstName, String lastName, String email, User user) {
 		super();
-		//this.idAdmin = idAdmin;
+		this.idAdmin = idAdmin;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.user = user;
 	}
 
-//	public Long getIdAdmin() {
-//		return idAdmin;
-//	}
-//
-//	public void setIdAdmin(Long idAdmin) {
-//		this.idAdmin = idAdmin;
-//	}
+	public Long getIdAdmin() {
+		return idAdmin;
+	}
+
+	public void setIdAdmin(Long idAdmin) {
+		this.idAdmin = idAdmin;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -65,6 +75,12 @@ public class Admin {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 }

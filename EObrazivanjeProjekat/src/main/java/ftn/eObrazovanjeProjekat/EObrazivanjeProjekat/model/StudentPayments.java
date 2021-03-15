@@ -7,10 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Student payments")
+@Table(name = "student_payments")
 public class StudentPayments {
 	
 	
@@ -28,16 +30,21 @@ public class StudentPayments {
 	@Column(name = "name", unique = false, nullable = false)
 	private String name;
 	
+	@ManyToOne
+	@JoinColumn(name = "account", referencedColumnName = "idAccount", nullable = false)
+	private Account account;
+	
 	public StudentPayments() {
 		super();
 	}
-	
-	public StudentPayments(Long idStudentPayments,Integer amount,Date date,String name) {
+
+	public StudentPayments(Long idStudentPayments, Integer amount, Date date, String name, Account account) {
 		super();
 		this.idStudentPayments = idStudentPayments;
 		this.amount = amount;
 		this.date = date;
 		this.name = name;
+		this.account = account;
 	}
 
 	public Long getIdStudentPayments() {
@@ -71,6 +78,12 @@ public class StudentPayments {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
 }

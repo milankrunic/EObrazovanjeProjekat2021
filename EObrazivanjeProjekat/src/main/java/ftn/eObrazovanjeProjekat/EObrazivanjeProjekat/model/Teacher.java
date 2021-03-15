@@ -11,6 +11,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -35,19 +37,23 @@ public class Teacher {
 	@OneToMany(cascade = {ALL}, fetch=LAZY, mappedBy="teacher")
 	private List<Teaching> teaching = new ArrayList<Teaching>();
 	
-	// fali povezivanje sa User klasom
+	@ManyToOne
+	@JoinColumn(name = "user", referencedColumnName = "idUser", nullable = false)
+	private User user;
 	
 	public Teacher() {
 		super();
 	}
 
-	public Teacher(Long idTeacher, String firstName, String lastName, String email, List<Teaching> teaching) {
+	public Teacher(Long idTeacher, String firstName, String lastName, String email, List<Teaching> teaching,
+			User user) {
 		super();
 		this.idTeacher = idTeacher;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.teaching = teaching;
+		this.user = user;
 	}
 
 	public Long getIdTeacher() {
@@ -88,5 +94,13 @@ public class Teacher {
 
 	public void setTeaching(List<Teaching> teaching) {
 		this.teaching = teaching;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 }
