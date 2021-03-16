@@ -14,8 +14,7 @@ Student:
 	PAYMENT
 	
 	As a Student, I want to see my amount of money on my account, so that I can pay for the exam.
-	As a Student, I want to see my payments, so that I know how many money do I have.
-	As a Student, I want to put money into the my account, so that I can pay for the exam.  
+	As a Student, I want to see my payments, so that I know how many money do I have.  
 	
 	DOCUMENT
 	
@@ -27,7 +26,12 @@ Teacher:
 	
 	As a Teacher, I want to see list of my courses, so that I know what courses I teach.
 	As a Teacher, I want to see list of my courses instance, so that I know when I teach.
+	As a Teacher, I want to see list of exams, so that I know when I have.
 	
 Admin:
 
-	As an Admin, I want to see list of users, so that I want to change their passwords.
+	As a Admin, I want to put money into the student account, so that they can pay for the exam.
+	As an Admin, I want to see my profile, so that I can create and update my profile.
+	As a Admin, I want create update delete student, so that I work on them.
+	As a Admin, I want create update delete teacher, so that I work on them.
+	As a Admin, I want create update delete exam, so that I work on them.
