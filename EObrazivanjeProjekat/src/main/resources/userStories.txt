@@ -23,10 +23,10 @@ Student:
 
 Teacher:
 
-	THEACHING
+	TEACHING
 	
-	As a Theacher, I want to see list of my courses, so that I know what courses I teach.
-	As a Theacher, I want to see list of my courses instance, so that I know when I teach.
+	As a Teacher, I want to see list of my courses, so that I know what courses I teach.
+	As a Teacher, I want to see list of my courses instance, so that I know when I teach.
 	
 Admin:
 
