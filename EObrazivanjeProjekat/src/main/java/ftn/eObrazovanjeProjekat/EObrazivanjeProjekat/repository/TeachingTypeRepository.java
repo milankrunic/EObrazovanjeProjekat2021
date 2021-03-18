@@ -6,4 +6,6 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.TeachingType;
 
 public interface TeachingTypeRepository extends JpaRepository<TeachingType, Long>{
 
+	TeachingType findByIdTeachingType(Long id);
+	
 }
