@@ -11,5 +11,7 @@ public interface TeachingServiceInterface {
 	public Teaching findById(Long teachingId);
 	public Teaching save(Teaching teaching);
 	public void remove(Long id);
+	public Teaching findByTeacher(Long id);
+	public List<Teaching> findAllTeachingByTeacher(Long id);
 
 }

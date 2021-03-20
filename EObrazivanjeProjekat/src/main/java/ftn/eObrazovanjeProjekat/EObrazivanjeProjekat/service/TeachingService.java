@@ -41,4 +41,15 @@ public class TeachingService implements TeachingServiceInterface{
 		
 	}
 
+	@Override
+	public Teaching findByTeacher(Long id) {
+		return teachingRepository.findOneTeachingByTeacher_idTeacher(id);
+	}
+
+	@Override
+	public List<Teaching> findAllTeachingByTeacher(Long id) {
+		return teachingRepository.findAllTeachingByTeacher_idTeacher(id);
+	}
+
+
 }

@@ -12,6 +12,10 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.TeacherSer
 @Service
 public class TeacherService implements TeacherServiceInterface{
 
+//	As a Teacher, I want to see list of my teaching, so that I know what I teach.
+//	As a Teacher, I want to see list of my courses instance, so that I know when I teach.
+//	As a Teacher, I want to see list of exams, so that I know when I have.
+	
 	@Autowired
 	TeacherRepository teacherRepository;
 
