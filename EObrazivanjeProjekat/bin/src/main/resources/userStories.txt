@@ -1,0 +1,37 @@
+As a [persona], I [want to], [so that].
+
+Student:
+
+	ENROLLMENT
+	
+	As a Student, I want to see the list of my enrollments, so that i know which of the enrollments i must to listening. 
+	
+	EXAM
+	
+	As a Student, I want to see the list of my exams, so that i know how many more of then left.
+	As a Student, I want to see the list of my passed exams, so that I can see my grades and points.
+	
+	PAYMENT
+	
+	As a Student, I want to see my amount of money on my account, so that I can pay for the exam.
+	As a Student, I want to see my payments, so that I know how many money do I have.  
+	
+	DOCUMENT
+	
+	As a Student, I want to see the list of my documents, so that I know which of the documents a have.
+
+Teacher:
+
+	TEACHING
+	
+	As a Teacher, I want to see list of my courses, so that I know what courses I teach.
+	As a Teacher, I want to see list of my courses instance, so that I know when I teach.
+	As a Teacher, I want to see list of exams, so that I know when I have.
+	
+Admin:
+
+	As a Admin, I want to put money into the student account, so that they can pay for the exam.
+	As an Admin, I want to see my profile, so that I can create and update my profile.
+	As a Admin, I want create update delete student, so that I work on them.
+	As a Admin, I want create update delete teacher, so that I work on them.
+	As a Admin, I want create update delete exam, so that I work on them.

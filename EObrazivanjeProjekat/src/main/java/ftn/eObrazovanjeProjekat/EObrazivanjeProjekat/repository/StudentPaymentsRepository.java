@@ -6,4 +6,5 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.StudentPayments;
 
 public interface StudentPaymentsRepository extends JpaRepository<StudentPayments, Long> {
 
+	
 }
