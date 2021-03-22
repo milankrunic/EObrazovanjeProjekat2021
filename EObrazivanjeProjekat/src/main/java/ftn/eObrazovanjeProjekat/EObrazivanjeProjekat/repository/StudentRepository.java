@@ -8,6 +8,9 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 
 
 public interface StudentRepository extends JpaRepository<Student, Long>{
+	
+	List<Student> findByUser_id(Integer id);
+	
 	List<Student> findAllStudent(Long idStudent);
 	Student findByIdStudent(Long idStudent);
 	Student saveStudent(Student student);
