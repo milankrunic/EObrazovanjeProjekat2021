@@ -1,12 +1,15 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface;
 
+import java.util.List;
+
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.StudentPayments;
 
 public interface StudentPaymentsServiceInterface {
 	
-	public StudentPayments findByStudentId(Long id);
+
 	public StudentPayments findOne(Long id);
 	public StudentPayments save(StudentPayments studentPayments);
-	public void remove(Long id);
+	List<StudentPayments> findByStudentId(Long id);
+	void remove(StudentPayments studentPayments);
 
 }
