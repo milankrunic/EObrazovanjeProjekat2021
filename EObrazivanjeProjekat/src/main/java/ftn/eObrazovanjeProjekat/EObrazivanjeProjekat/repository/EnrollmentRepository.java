@@ -8,6 +8,6 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
 
 public interface EnrollmentRepository extends JpaRepository<Enrollment, Long>{
 
-	List<Enrollment> findByStudent_id(Long id);
+	List<Enrollment> findByIdEnrollment(Long id);
 
 }

@@ -8,6 +8,6 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPartStatus;
 
 public interface ExamPartStatusRepository extends JpaRepository<ExamPartStatus, Long>{
 
-	List<ExamPartStatus> findByExamPart_id(Long id);
+	List<ExamPartStatus> findByIdExamPartStatus(Long id);
 
 }

@@ -23,10 +23,10 @@ public class StudentService implements StudentServiceInterface {
 	@Autowired
 	ExamPartRepository examPartRepository;
 	
-	@Override
-	public List<Student> findAllByUser(Long id) {
-		return studentRepository.findByUser_id(id);
-	}
+//	@Override
+//	public List<Student> findAllByUser(Long id) {
+//		return studentRepository.findByUser_id(id);
+//	}
 
 	@Override
 	public Student findOne(Long id) {

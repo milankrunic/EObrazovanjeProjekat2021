@@ -23,7 +23,7 @@ public class DocumentService implements DocumentServiceInterface {
 
 	@Override
 	public Document findOne(Long id) {
-		return documentRepository.findByIdDocument(id);
+		return documentRepository.findByIdDokument(id);
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class DocumentService implements DocumentServiceInterface {
 
 	@Override
 	public Document save(Document document) {
-		return documentRepository.saveDocument(document);
+		return documentRepository.save(document);
 	}
 
 }

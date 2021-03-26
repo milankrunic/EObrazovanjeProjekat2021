@@ -11,5 +11,5 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.StudentPayments;
 
 public interface StudentPaymentsRepository extends JpaRepository<StudentPayments, Long> {
 
-	List<StudentPayments> findByStudent_id(Long id);
+	List<StudentPayments> findByIdStudentPayments(Long id);
 }

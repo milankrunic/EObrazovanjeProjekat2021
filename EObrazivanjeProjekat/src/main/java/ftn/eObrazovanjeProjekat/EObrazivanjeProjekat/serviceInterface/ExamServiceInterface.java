@@ -10,7 +10,7 @@ public interface ExamServiceInterface {
 
 	void remove(Exam exam);
 
-	List<Exam> findAllByStudent(Long id);
+//	List<Exam> findAllByStudent(Long id);
 
 	Exam findOne(Long id);
 

@@ -8,7 +8,7 @@ public interface CourseSpecificationServiceInterface {
 	
 	public List<CourseSpecification> findAll();
 	public CourseSpecification findOne(Long id);
-	public CourseSpecification findById(Long courseSpecificationid);
+	public CourseSpecification findById(Long id);
 	public CourseSpecification save(CourseSpecification courseSpecification);
 	public void remove(Long id);
 

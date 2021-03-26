@@ -16,7 +16,7 @@ public class ExamPartStatusService implements ExamPartStatusServiceInterface {
 	
 	@Override
 	public List<ExamPartStatus> findAllByExamPart(Long id) {
-		return examPartStatusRepository.findByExamPart_id(id);
+		return examPartStatusRepository.findByIdExamPartStatus(id);
 	}
 
 	@Override

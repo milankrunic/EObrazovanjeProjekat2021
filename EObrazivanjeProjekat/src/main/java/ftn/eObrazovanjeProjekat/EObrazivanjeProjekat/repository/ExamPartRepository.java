@@ -8,6 +8,6 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPart;
 
 public interface ExamPartRepository extends JpaRepository<ExamPart, Long>{
 
-	List<ExamPart> findByExam_id(Long id);
+	List<ExamPart> findByIdExamPart(Long id);
 
 }

@@ -7,10 +7,10 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Admin;
 
 public interface AdminRepository extends JpaRepository<Admin, Long> {
 	
-	List<Admin> findAllAdmin(Long idAdmin);
+//	List<Admin> findAllAdmin(Long idAdmin);
 	Admin findByIdAdmin(Long idAdmin);
-	Admin saveAdmin(Admin admin);
-	Admin addById(Long idAdmin);
-	Admin updateById(Long idAdmin);
-	Admin removeById(Long idAdmin);
+//	Admin saveAdmin(Admin admin);
+//	Admin addById(Long idAdmin);
+//	Admin updateById(Long idAdmin);
+//	Admin removeById(Long idAdmin);
 }

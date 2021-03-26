@@ -45,17 +45,17 @@ public class AdminService {
 		return teacherRepository.save(teacher);
 	}
 
-	public void addTeacher(Long idTeacher) {
-		teacherRepository.addById(idTeacher);
-	}
-	
-	public void updateTeacher(Long idTeacher) {
-		teacherRepository.updateById(idTeacher);
-	}
-	
-	public void removeTeacher(Long idTeacher) {
-		teacherRepository.removeById(idTeacher);
-	}
+//	public void addTeacher(Long idTeacher) {
+//		teacherRepository.addById(idTeacher);
+//	}
+//	
+//	public void updateTeacher(Long idTeacher) {
+//		teacherRepository.updateById(idTeacher);
+//	}
+//	
+//	public void removeTeacher(Long idTeacher) {
+//		teacherRepository.removeById(idTeacher);
+//	}
 	
 	
 	
@@ -80,17 +80,17 @@ public class AdminService {
 		return studentRepository.save(student);
 	}
 
-	public void addStudent(Long idStudent) {
-		studentRepository.addById(idStudent);
-	}
-	
-	public void updateStudent(Long idStudent) {
-		studentRepository.updateById(idStudent);
-	}
-	
-	public void removeStudent(Long idStudent) {
-		studentRepository.removeById(idStudent);
-	}
+//	public void addStudent(Long idStudent) {
+//		studentRepository.addById(idStudent);
+//	}
+//	
+//	public void updateStudent(Long idStudent) {
+//		studentRepository.updateById(idStudent);
+//	}
+//	
+//	public void removeStudent(Long idStudent) {
+//		studentRepository.removeById(idStudent);
+//	}
 	
 	
 	
@@ -115,17 +115,17 @@ public class AdminService {
 		return examRepository.save(exam);
 	}
 
-	public void addExam(Long idExam) {
-		examRepository.addById(idExam);
-	}
-	
-	public void updateExam(Long idExam) {
-		examRepository.updateById(idExam);
-	}
-	
-	public void removeExam(Long idExam) {
-		examRepository.removeById(idExam);
-	}
+//	public void addExam(Long idExam) {
+//		examRepository.addById(idExam);
+//	}
+//	
+//	public void updateExam(Long idExam) {
+//		examRepository.updateById(idExam);
+//	}
+//	
+//	public void removeExam(Long idExam) {
+//		examRepository.removeById(idExam);
+//	}
 	
 	
 	
@@ -151,15 +151,15 @@ public class AdminService {
 		return adminRepository.save(admin);
 	}
 
-	public void addAdmin(Long idAdmin) {
-		adminRepository.addById(idAdmin);
-	}
-	
-	public void updateAdmin(Long idAdmin) {
-		adminRepository.updateById(idAdmin);
-	}
-	
-	public void removeAdmin(Long idAdmin) {
-		adminRepository.removeById(idAdmin);
-	}
+//	public void addAdmin(Long idAdmin) {
+//		adminRepository.addById(idAdmin);
+//	}
+//	
+//	public void updateAdmin(Long idAdmin) {
+//		adminRepository.updateById(idAdmin);
+//	}
+//	
+//	public void removeAdmin(Long idAdmin) {
+//		adminRepository.removeById(idAdmin);
+//	}
 }

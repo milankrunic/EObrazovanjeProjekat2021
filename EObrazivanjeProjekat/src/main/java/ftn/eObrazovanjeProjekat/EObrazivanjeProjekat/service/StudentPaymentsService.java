@@ -19,7 +19,7 @@ public class StudentPaymentsService implements StudentPaymentsServiceInterface {
 	
 	@Override
 	public List<StudentPayments> findByStudentId(Long id) {
-		return studentPaymentsRepository.findByStudent_id(id);
+		return studentPaymentsRepository.findByIdStudentPayments(id);
 	}
 
 	@Override

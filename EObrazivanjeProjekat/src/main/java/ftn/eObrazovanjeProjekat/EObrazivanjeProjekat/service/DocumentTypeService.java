@@ -14,7 +14,7 @@ public class DocumentTypeService implements DocumentTypeServiceInterface {
 	DocumentTypeRepository documentTypeRepository;
 	@Override
 	public DocumentType findOne(Long id) {
-		return documentTypeRepository.findOne(id);
+		return documentTypeRepository.getOne(id);
 	}
 
 	@Override
@@ -25,12 +25,12 @@ public class DocumentTypeService implements DocumentTypeServiceInterface {
 
 	@Override
 	public DocumentType findById(Long id) {
-		return documentTypeRepository.findByIdDocumentType(id);
+		return documentTypeRepository.findByIdDokumentType(id);
 	}
 
 	@Override
 	public DocumentType save(DocumentType documentType) {
-		return documentTypeRepository.saveDocumentType(documentType);
+		return documentTypeRepository.save(documentType);
 	}
 
 }
