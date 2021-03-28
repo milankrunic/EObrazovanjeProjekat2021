@@ -2,6 +2,7 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface;
 
 import java.util.List;
 
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Exam;
 
 public interface ExamServiceInterface {
@@ -11,6 +12,8 @@ public interface ExamServiceInterface {
 	void remove(Exam exam);
 
 	Exam findOne(Long id);
+
+	List<Exam> getAllExamsByEnrollments(Long id);
 
 
 }

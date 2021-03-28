@@ -23,8 +23,8 @@ public class User {
 	@Column(name = "idUser", nullable = false, unique = true)
 	private Long idUser;
 	
-	@Column(name = "user_name", nullable = false)
-	private String user_name;
+	@Column(name = "username", nullable = false)
+	private String username;
 	
 	@Column(name = "password", nullable = false)
 	private String password;
@@ -42,11 +42,11 @@ public class User {
 		super();
 	}
 
-	public User(Long idUser, String user_name, String password, List<Student> student, List<Teacher> teacher,
+	public User(Long idUser, String username, String password, List<Student> student, List<Teacher> teacher,
 			List<Admin> admin) {
 		super();
 		this.idUser = idUser;
-		this.user_name = user_name;
+		this.username = username;
 		this.password = password;
 		this.student = student;
 		this.teacher = teacher;
@@ -61,12 +61,12 @@ public class User {
 		this.idUser = idUser;
 	}
 
-	public String getUser_name() {
-		return user_name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {

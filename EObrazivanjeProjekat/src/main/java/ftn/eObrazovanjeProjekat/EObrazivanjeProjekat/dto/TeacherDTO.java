@@ -26,7 +26,7 @@ public class TeacherDTO {
 	}
 	
 	public TeacherDTO(Teacher teacher) {
-		this(teacher.getIdTeacher(), teacher.getFirstName(), teacher.getLastName(), teacher.getEmail(), teacher.getUser().getIdUser(), teacher.getUser().getUser_name());
+		this(teacher.getIdTeacher(), teacher.getFirstName(), teacher.getLastName(), teacher.getEmail(), teacher.getUser().getIdUser(), teacher.getUser().getUsername());
 	}
 
 	public Long getId() {

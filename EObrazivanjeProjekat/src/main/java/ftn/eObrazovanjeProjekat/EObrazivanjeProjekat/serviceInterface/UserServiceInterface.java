@@ -11,5 +11,6 @@ public interface UserServiceInterface {
 	public User findById(Long userId);
 	public User save(User user);
 	public void remove(Long id);
+	public User findByUsernameAndPassword(String username, String password);
 	
 }

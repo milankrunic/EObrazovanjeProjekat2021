@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Exam;
 
 public interface EnrollmentRepository extends JpaRepository<Enrollment, Long>{
 
@@ -14,5 +15,7 @@ public interface EnrollmentRepository extends JpaRepository<Enrollment, Long>{
 	List<Enrollment> findByStudent(Long id);
 
 	List<Enrollment> findAllByCourseInstance(CourseInstance courseInstance);
+
+
 
 }
