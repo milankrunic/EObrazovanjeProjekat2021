@@ -20,6 +20,7 @@ public class ExamDTO {
 		this.grade = grade;
 		this.examParts = examParts;
 	}
+//	
 
 	public ExamDTO(Exam exam) {
 		super();
