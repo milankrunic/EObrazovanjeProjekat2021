@@ -3,21 +3,20 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.EnrollmentRepository;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.EnrollmentServiceInterface;
 
+@Service
 public class EnrollmentService implements EnrollmentServiceInterface {
 	
 	@Autowired
 	EnrollmentRepository enrollmentRepository;
 	
-	@Override
-	public List<Enrollment> findAllByStudent(Long id) {
-		return enrollmentRepository.findByIdEnrollment(id);
-	}
 
 	@Override
 	public Enrollment findOne(Long id) {
@@ -35,5 +34,28 @@ public class EnrollmentService implements EnrollmentServiceInterface {
 		
 		enrollmentRepository.delete(enrollment);
 	}
+//	ennrollments by course
+	@Override
+	public List<Enrollment> getAllEnrollmentsByCourse(CourseInstance courseInstance) {
+		List<Enrollment> enrollments = enrollmentRepository.findAllByCourseInstance(courseInstance);
+		return enrollments;
+	}
 
+//	enrollments by student
+	@Override
+	public List<Enrollment> findAllByStudent(Long id) {
+		return enrollmentRepository.findByStudent(id);
+	}
+	
+//	add enrolment
+//	ovo jos videti ako budemo brisali metodu COurseInstance pa dodavati startDate i endDate u enrollments
+	@Override
+	public Enrollment add(Enrollment newEnrollment) {
+		Enrollment enrollment = new Enrollment();
+		enrollment.setExam(newEnrollment.getExam());
+		
+		enrollment = this.enrollmentRepository.save(enrollment);
+		return enrollment;
+	}
+	
 }

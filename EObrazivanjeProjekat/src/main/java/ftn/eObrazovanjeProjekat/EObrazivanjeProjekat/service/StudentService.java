@@ -23,10 +23,10 @@ public class StudentService implements StudentServiceInterface {
 	@Autowired
 	ExamPartRepository examPartRepository;
 	
-//	@Override
-//	public List<Student> findAllByUser(Long id) {
-//		return studentRepository.findByUser_id(id);
-//	}
+	@Override
+	public List<Student> findAllByUser(Long id) {
+		return studentRepository.findByUser(id);
+	}
 
 	@Override
 	public Student findOne(Long id) {
@@ -56,19 +56,29 @@ public class StudentService implements StudentServiceInterface {
 	}
 
 //	@Override
-//	public void save(Object obj) {
-//		this.studentRepository.save((Student)obj);
-//		
-//	}
+	public void save(Object obj) {
+		this.studentRepository.save((Student)obj);
+		
+	}
 
 //	get exams of student
+	@Override
 	public List<ExamPart> findAllExamParts(Student student) {
 		return examPartRepository.findAll();
 	}
 	
 //	students amount of money
 	
+//	find by card number
+	@Override
+	public Student findByCard(String cardNumber) {
+		return studentRepository.findOneByCardNumber(cardNumber);
+	}
+	
 //	exam information - preko enrollmenta
+	
+//	signUp for exam
+	
 	
 //	remaining exams for student - preko enrollmenta
 	

@@ -1,6 +1,8 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface;
 
 import java.util.List;
+
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPart;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 
 public interface StudentServiceInterface {
@@ -14,5 +16,11 @@ public interface StudentServiceInterface {
 	Student findOne(Long id);
 
 	Student updateStudent(Student student);
+
+	Student findByCard(String cardNumber);
+
+	List<ExamPart> findAllExamParts(Student student);
+
+	List<Student> findAllByUser(Long id);
 
 }

@@ -18,4 +18,8 @@ public interface StudentRepository extends JpaRepository<Student, Long>{
 //	Student updateById(Long idStudent);
 //	Student removeById(Long idStudent);
 
+	List<Student> findByUser(Long id);
+
+	Student findOneByCardNumber(String cardNumber);
+
 }
