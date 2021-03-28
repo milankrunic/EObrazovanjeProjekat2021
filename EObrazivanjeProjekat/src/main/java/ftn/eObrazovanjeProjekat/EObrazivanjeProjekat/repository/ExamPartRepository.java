@@ -10,4 +10,6 @@ public interface ExamPartRepository extends JpaRepository<ExamPart, Long>{
 
 	List<ExamPart> findByIdExamPart(Long id);
 
+	List<ExamPart> findByExam(Long id);
+
 }

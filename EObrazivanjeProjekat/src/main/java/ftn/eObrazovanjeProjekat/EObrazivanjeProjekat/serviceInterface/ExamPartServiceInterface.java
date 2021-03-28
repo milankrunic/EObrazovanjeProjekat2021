@@ -15,5 +15,7 @@ public interface ExamPartServiceInterface {
 	ExamPart findOne(Long id);
 
 	List<ExamPart> findAllByExam(Long id);
+
+	ExamPart add(ExamPart newExamPart);
 	
 }

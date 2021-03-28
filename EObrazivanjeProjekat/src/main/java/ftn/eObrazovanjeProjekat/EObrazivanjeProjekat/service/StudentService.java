@@ -50,9 +50,9 @@ public class StudentService implements StudentServiceInterface {
 
 	@Override
 	@Transactional
-	public void remove(Student student) {
+	public void remove(Long id) {
 		
-		studentRepository.delete(student);
+		studentRepository.deleteById(id);
 	}
 
 //	@Override

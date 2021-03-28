@@ -14,10 +14,6 @@ public class ExamService implements ExamServiceInterface {
 	@Autowired
 	ExamRepository examRepository;
 	
-//	@Override
-//	public List<Exam> findAllByStudent(Long id) {
-//		return examRepository.findByStudent_id(id);
-//	}
 
 	@Override
 	public Exam findOne(Long id) {

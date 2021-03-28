@@ -53,7 +53,7 @@ public class TeacherController {
 		return new ResponseEntity<TeacherDTO>(new TeacherDTO(teacher), HttpStatus.OK);
 	}
 	
-	@PostMapping
+	@PostMapping(consumes = "application/json")
 	public ResponseEntity<TeacherDTO> addTeacher(@RequestBody TeacherDTO teacherDTO){
 
 		User u = userServiceInterface.findById(teacherDTO.getIdUser());
