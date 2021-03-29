@@ -38,7 +38,7 @@ public interface AdminServiceInterface {
 	public void removeExam(Long idExam);
 	
 	
-	public List<Admin> findAllAdmin(Long idAdmin);
+	public List<Admin> findAllAdmin();
 	public Admin findOneAdmin(Long idAdmin);
 	public Admin findByIdAdmin(Long idAdmin);
 	public Admin saveAdmin(Admin admin);
