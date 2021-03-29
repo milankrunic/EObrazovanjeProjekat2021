@@ -9,7 +9,8 @@ public interface StudentPaymentsServiceInterface {
 
 	public StudentPayments findOne(Long id);
 	public StudentPayments save(StudentPayments studentPayments);
-	List<StudentPayments> findByStudentId(Long id);
+//	List<StudentPayments> findByStudentId(Long id);
 	void remove(StudentPayments studentPayments);
+	List<StudentPayments> findByAccountId(Long id);
 
 }

@@ -18,8 +18,8 @@ public class StudentPaymentsService implements StudentPaymentsServiceInterface {
 	
 	
 	@Override
-	public List<StudentPayments> findByStudentId(Long id) {
-		return studentPaymentsRepository.findByIdStudentPayments(id);
+	public List<StudentPayments> findByAccountId(Long id) {
+		return studentPaymentsRepository.findAllByAccount(id);
 	}
 
 	@Override
@@ -38,5 +38,7 @@ public class StudentPaymentsService implements StudentPaymentsServiceInterface {
 		studentPaymentsRepository.delete(studentPayments);
 		
 	}
+
+
 
 }
