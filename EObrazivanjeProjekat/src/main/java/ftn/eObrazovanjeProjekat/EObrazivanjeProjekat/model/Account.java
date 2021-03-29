@@ -78,4 +78,5 @@ public class Account {
 	public void setStudentPayments(List<StudentPayments> studentPayments) {
 		this.studentPayments = studentPayments;
 	}
+
 }
