@@ -3,6 +3,7 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 import java.util.HashSet;
 import java.util.Set;
 
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Account;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 
 public class AccountDTO {
@@ -12,7 +13,7 @@ public class AccountDTO {
 	private Student student;
 	private Set<StudentPaymentsDTO> studentPayments = new HashSet<StudentPaymentsDTO>();
 	
-	public AccountDTO() {
+	public AccountDTO(Account account) {
 		super();
 	}
 	
