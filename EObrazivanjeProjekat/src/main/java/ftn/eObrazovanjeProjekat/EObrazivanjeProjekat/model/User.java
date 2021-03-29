@@ -15,12 +15,12 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table(name = "User")
 public class User {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idUser", nullable = false, unique = true)
+	@Column(name = "id_user", nullable = false, unique = true)
 	private Long idUser;
 	
 	@Column(name = "username", nullable = false)

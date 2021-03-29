@@ -42,7 +42,7 @@ public class Student {
 	private String email;
 	
 	@ManyToOne
-	@JoinColumn(name = "user", referencedColumnName = "idUser", nullable = false)
+	@JoinColumn(name = "user", referencedColumnName = "id_user", nullable = false)
 	private User user;
 	
 	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

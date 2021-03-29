@@ -28,7 +28,7 @@ public class Admin {
 	private String email;
 	
 	@ManyToOne
-	@JoinColumn(name = "user", referencedColumnName = "idUser", nullable = false)
+	@JoinColumn(name = "user", referencedColumnName = "id_user", nullable = false)
 	private User user;
 	
 	public Admin() {

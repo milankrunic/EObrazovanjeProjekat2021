@@ -17,12 +17,12 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Teacher")
+@Table(name = "teacher")
 public class Teacher {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idTeacher", nullable = false, unique = true)
+	@Column(name = "id_teacher", nullable = false, unique = true)
 	private Long idTeacher;
 	
 	@Column(name = "first_name", nullable = false)
@@ -38,7 +38,7 @@ public class Teacher {
 	private List<Teaching> teaching = new ArrayList<Teaching>();
 	
 	@ManyToOne
-	@JoinColumn(name = "user", referencedColumnName = "idUser", nullable = false)
+	@JoinColumn(name = "id_user", referencedColumnName = "id_user", nullable = false)
 	private User user;
 	
 	public Teacher() {

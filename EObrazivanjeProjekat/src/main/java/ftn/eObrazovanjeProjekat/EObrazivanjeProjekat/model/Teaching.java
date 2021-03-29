@@ -23,7 +23,7 @@ public class Teaching {
 	private CourseInstance courseInstance;
 	
 	@ManyToOne
-	@JoinColumn(name = "teacher", referencedColumnName = "idTeacher", nullable = false)
+	@JoinColumn(name = "teacher", referencedColumnName = "id_teacher", nullable = false)
 	private Teacher teacher;
 	
 	@ManyToOne
