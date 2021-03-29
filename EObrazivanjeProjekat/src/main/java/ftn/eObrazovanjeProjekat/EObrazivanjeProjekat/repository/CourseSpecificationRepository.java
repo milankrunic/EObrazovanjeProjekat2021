@@ -6,6 +6,6 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseSpecification;
 
 public interface CourseSpecificationRepository extends JpaRepository<CourseSpecification, Long>{
 
-//	CourseSpecification findByIdCourseSpecification(Long id);
+	CourseSpecification findByIdCourseSpecification(Long id);
 	
 }

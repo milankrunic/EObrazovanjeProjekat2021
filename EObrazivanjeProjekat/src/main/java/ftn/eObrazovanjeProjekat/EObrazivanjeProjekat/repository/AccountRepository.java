@@ -9,6 +9,5 @@ public interface AccountRepository extends JpaRepository<Account,Long> {
 	//Account findById(Long id);
 //	Account remove(Long idAccount);
 	Account findAllByStudent(Long id);
-	Account findOne(Long id);
 	
 }

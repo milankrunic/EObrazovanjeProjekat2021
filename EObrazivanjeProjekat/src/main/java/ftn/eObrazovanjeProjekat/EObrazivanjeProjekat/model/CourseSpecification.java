@@ -21,7 +21,7 @@ public class CourseSpecification {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false, unique = true)
-	private Long id;
+	private Long idCourseSpecification;
 	
 	@Column(name = "title", nullable = false)
 	private String title;
@@ -39,22 +39,22 @@ public class CourseSpecification {
 		super();
 	}
 
-	public CourseSpecification(Long id, String title, Integer ects, String code,
+	public CourseSpecification(Long idCourseSpecification, String title, Integer ects, String code,
 			List<CourseInstance> courseInstance) {
 		super();
-		this.id = id;
+		this.idCourseSpecification = idCourseSpecification;
 		this.title = title;
 		this.ects = ects;
 		this.code = code;
 		this.courseInstance = courseInstance;
 	}
 
-	public Long getId() {
-		return id;
+	public Long getIdCourseSpecification() {
+		return idCourseSpecification;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdCourseSpecification(Long idCourseSpecification) {
+		this.idCourseSpecification = idCourseSpecification;
 	}
 
 	public String getTitle() {

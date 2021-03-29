@@ -27,7 +27,7 @@ public class CourseSpecificationService implements CourseSpecificationServiceInt
 
 	@Override
 	public CourseSpecification findById(Long courseSpecificationid) {
-		return null;//courseSpecificationRepository.findByIdCourseSpecification(courseSpecificationid);
+		return courseSpecificationRepository.findByIdCourseSpecification(courseSpecificationid);
 	}
 
 	@Override

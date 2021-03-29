@@ -21,7 +21,7 @@ public class AccountService implements AccountServiceInterface {
 	
 	@Override
 	public Account findOne(Long id) {
-		return accountRepository.findOne(id);
+		return accountRepository.getOne(id);
 	}
 	
 	
