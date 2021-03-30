@@ -1,5 +1,6 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Document;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.DocumentType;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 
@@ -11,7 +12,7 @@ public class DocumentDTO {
 	private Student student;
 	private DocumentType dokumentType;
 	
-	public DocumentDTO() {
+	public DocumentDTO(Document document) {
 		super();
 	}
 	

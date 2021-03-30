@@ -47,7 +47,7 @@ public class AccountController {
 		return new ResponseEntity<AccountDTO>(new AccountDTO(acc),HttpStatus.CREATED);
 	}
 	
-	@PutMapping(value = "student/{id}", consumes = "application/json")
+	@PutMapping(value = "/{id}", consumes = "application/json")
 	public ResponseEntity<AccountDTO> updateAccount(@RequestBody AccountDTO accountDTO,@PathVariable("id") Long id){
 		Account account = accountServiceInterface.findOne(id);
 		
