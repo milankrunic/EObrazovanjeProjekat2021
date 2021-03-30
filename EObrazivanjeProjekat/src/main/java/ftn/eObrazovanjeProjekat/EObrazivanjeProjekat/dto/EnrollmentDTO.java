@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 
 public class EnrollmentDTO {
@@ -19,6 +20,10 @@ public class EnrollmentDTO {
 		this.courseInstance = courseInstance;
 		this.student = student;
 		this.exams = exams;
+	}
+
+	public EnrollmentDTO(Enrollment enrollment) {
+		super();
 	}
 
 	public Long getId() {
