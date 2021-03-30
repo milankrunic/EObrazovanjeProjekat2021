@@ -3,6 +3,7 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 import java.util.Date;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Account;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.StudentPayments;
 
 public class StudentPaymentsDTO {
 	
@@ -12,7 +13,7 @@ public class StudentPaymentsDTO {
 	private String name;
 	private Account account;
 	
-	public StudentPaymentsDTO() {
+	public StudentPaymentsDTO(StudentPayments payments) {
 		super();
 	}
 	
