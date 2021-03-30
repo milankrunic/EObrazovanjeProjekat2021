@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Admin;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Exam;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.StudentPayments;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.AdminRepository;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.ExamRepository;
@@ -15,9 +16,8 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.StudentRepositor
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.TeacherRepository;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.AdminServiceInterface;
 
-
-
-public class AdminService {
+@Service
+public class AdminService implements AdminServiceInterface{
 
 //	As a Admin, I want to put money into the student account, so that they can pay for the exam.
 //	As an Admin, I want to see my profile, so that I can create and update my profile.
@@ -149,6 +149,102 @@ public class AdminService {
 
 	public Admin saveAdmin(Admin admin) {
 		return adminRepository.save(admin);
+	}
+
+	@Override
+	public List<Teacher> findAllTeacher(Long idTeacher) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addTeacher(Long idTeacher) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateTeacher(Long idTeacher) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeTeacher(Long idTeacher) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Student> findAllStudent(Long idStudent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addStudent(Long idStudent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateStudent(Long idStudent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeStudent(Long idStudent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public StudentPayments findStudentPaymentByStudent(Long idStudent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Exam> findAllExam(Long idExam) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addExam(Long idExam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateExam(Long idExam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeExam(Long idExam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addAdmin(Long idAdmin) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateAdmin(Long idAdmin) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeAdmin(Long idAdmin) {
+		// TODO Auto-generated method stub
+		
 	}
 
 //	public void addAdmin(Long idAdmin) {

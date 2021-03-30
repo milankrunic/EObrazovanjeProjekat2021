@@ -22,11 +22,11 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.AdminServi
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 
 @RestController
-@RequestMapping(value = "api/user")
+@RequestMapping(value = "api/admin")
 public class AdminController {
 	
 	@Autowired
-	private AdminServiceInterface adminServiceInterface;
+	AdminServiceInterface adminServiceInterface;
 	
 	@Autowired
 	UserServiceInterface userServiceInterface;
