@@ -41,6 +41,7 @@ public class AdminService implements AdminServiceInterface{
 		return teacherRepository.findByIdTeacher(idTeacher);
 	}
 
+	@Override
 	public Teacher saveTeacher(Teacher teacher) {
 		return teacherRepository.save(teacher);
 	}
