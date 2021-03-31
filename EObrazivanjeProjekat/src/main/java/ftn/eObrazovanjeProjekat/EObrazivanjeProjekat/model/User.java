@@ -40,7 +40,7 @@ public class User {
 	
 	public User() {
 		super();
-		
+	
 	}
 
 	public User(Long idUser, String username, String password, List<Student> student, List<Teacher> teacher,
