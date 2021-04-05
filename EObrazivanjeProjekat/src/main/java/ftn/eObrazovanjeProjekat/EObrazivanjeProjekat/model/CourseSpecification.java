@@ -37,6 +37,7 @@ public class CourseSpecification {
 	
 	public CourseSpecification() {
 		super();
+		
 	}
 
 	public CourseSpecification(Long idCourseSpecification, String title, Integer ects, String code,
