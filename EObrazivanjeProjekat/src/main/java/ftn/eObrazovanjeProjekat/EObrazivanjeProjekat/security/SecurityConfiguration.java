@@ -66,7 +66,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //				 proba za production
 //				opet proba
 //				proba za master granu
-//		
+//				i u produkciji sam ja radio nesto sada
 		
 		// Custom JWT based authentication
 		httpSecurity.addFilterBefore(authenticationTokenFilterBean(),
