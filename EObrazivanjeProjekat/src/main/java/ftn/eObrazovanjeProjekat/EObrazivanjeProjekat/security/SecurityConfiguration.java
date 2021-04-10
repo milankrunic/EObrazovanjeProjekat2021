@@ -19,6 +19,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService userDetailsService;
+	
+	
+
+	@Bean
+	public UserDetailsService userDetailsService() {
+	    return super.userDetailsService();
+	}
 
 	@Autowired
 	public void configureAuthentication(
@@ -66,7 +73,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //				 proba za production
 //				opet proba
 //				proba za master granu
-//		
+//				i u produkciji sam ja radio nesto sada
 		
 		// Custom JWT based authentication
 		httpSecurity.addFilterBefore(authenticationTokenFilterBean(),
