@@ -19,6 +19,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService userDetailsService;
+	
+	
+
+	@Bean
+	public UserDetailsService userDetailsService() {
+	    return super.userDetailsService();
+	}
 
 	@Autowired
 	public void configureAuthentication(
