@@ -22,10 +22,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	public void configureAuthentication(
-			AuthenticationManagerBuilder authenticationManagerBuilder)
+			AuthenticationManagerBuilder auth)
 			throws Exception {
 		
-		authenticationManagerBuilder
+				auth	
 				.userDetailsService(this.userDetailsService).passwordEncoder(
 						passwordEncoder());
 	}
@@ -58,11 +58,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 				.and()
 			.authorizeRequests()
-				.antMatchers("/index.html", "/api/login", "/api/register").permitAll() 
-				.antMatchers(HttpMethod.POST, "/api/**")
+				.antMatchers("/api/login").permitAll() 
+				.antMatchers("/index.html").authenticated()
+				.antMatchers(HttpMethod.POST, "/api/admin/**")
 					.hasAuthority("ROLE_ADMIN") //only administrator can add and edit data
 				.anyRequest().authenticated();
-				 
+//				 proba za production
 		
 		// Custom JWT based authentication
 		httpSecurity.addFilterBefore(authenticationTokenFilterBean(),
