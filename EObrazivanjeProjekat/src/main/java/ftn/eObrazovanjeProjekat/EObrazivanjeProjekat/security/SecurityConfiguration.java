@@ -64,6 +64,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 					.hasAuthority("ROLE_ADMIN") //only administrator can add and edit data
 				.anyRequest().authenticated();
 //				 proba za production
+//				opet proba
 		
 		// Custom JWT based authentication
 		httpSecurity.addFilterBefore(authenticationTokenFilterBean(),
