@@ -9,6 +9,9 @@ import { StudentsSubjectComponent } from './students-subject/students-subject.co
 import { ExamRegistrationComponent } from './exam-registration/exam-registration.component';
 import { StudentDocumentsComponent } from './student-documents/student-documents.component';
 import { StudentPaymentsComponent } from './student-payments/student-payments.component';
+import { AdminCoursesPageComponent } from './admin-courses-page/admin-courses-page.component';
+import { AdminExamsPageComponent } from './admin-exams-page/admin-exams-page.component';
+import { AdminStudentPageComponent } from './admin-student-page/admin-student-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { StudentPaymentsComponent } from './student-payments/student-payments.co
     StudentsSubjectComponent,
     ExamRegistrationComponent,
     StudentDocumentsComponent,
-    StudentPaymentsComponent
+    StudentPaymentsComponent,
+    AdminCoursesPageComponent,
+    AdminExamsPageComponent,
+    AdminStudentPageComponent
   ],
   imports: [
     BrowserModule,
