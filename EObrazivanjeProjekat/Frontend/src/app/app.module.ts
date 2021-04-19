@@ -16,6 +16,10 @@ import { StudentProfileComponent } from './student-profile/student-profile.compo
 import { TeacherProfileComponent } from './teacher-profile/teacher-profile.component';
 import { TeacherSchedulingExamsComponent } from './teacher-scheduling-exams/teacher-scheduling-exams.component';
 import { StudentExamsReviewComponent } from './student-exams-review/student-exams-review.component';
+import { AdminTeacherPageComponent } from './admin-teacher-page/admin-teacher-page.component';
+import { FailedExamsComponent } from './failed-exams/failed-exams.component';
+import { FinancialAccountComponent } from './financial-account/financial-account.component';
+import { MainPageTeacherComponent } from './main-page-teacher/main-page-teacher.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { StudentExamsReviewComponent } from './student-exams-review/student-exam
     StudentProfileComponent,
     TeacherProfileComponent,
     TeacherSchedulingExamsComponent,
-    StudentExamsReviewComponent
+    StudentExamsReviewComponent,
+    AdminTeacherPageComponent,
+    FailedExamsComponent,
+    FinancialAccountComponent,
+    MainPageTeacherComponent
   ],
   imports: [
     BrowserModule,
