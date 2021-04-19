@@ -12,6 +12,10 @@ import { StudentPaymentsComponent } from './student-payments/student-payments.co
 import { AdminCoursesPageComponent } from './admin-courses-page/admin-courses-page.component';
 import { AdminExamsPageComponent } from './admin-exams-page/admin-exams-page.component';
 import { AdminStudentPageComponent } from './admin-student-page/admin-student-page.component';
+import { StudentProfileComponent } from './student-profile/student-profile.component';
+import { TeacherProfileComponent } from './teacher-profile/teacher-profile.component';
+import { TeacherSchedulingExamsComponent } from './teacher-scheduling-exams/teacher-scheduling-exams.component';
+import { StudentExamsReviewComponent } from './student-exams-review/student-exams-review.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { AdminStudentPageComponent } from './admin-student-page/admin-student-pa
     StudentPaymentsComponent,
     AdminCoursesPageComponent,
     AdminExamsPageComponent,
-    AdminStudentPageComponent
+    AdminStudentPageComponent,
+    StudentProfileComponent,
+    TeacherProfileComponent,
+    TeacherSchedulingExamsComponent,
+    StudentExamsReviewComponent
   ],
   imports: [
     BrowserModule,
