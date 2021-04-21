@@ -21,6 +21,8 @@ import { FailedExamsComponent } from './failed-exams/failed-exams.component';
 import { FinancialAccountComponent } from './financial-account/financial-account.component';
 import { MainPageTeacherComponent } from './main-page-teacher/main-page-teacher.component';
 import { StudentHeaderComponent } from './student-header/student-header.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { AdminAdminPageComponent } from './admin-admin-page/admin-admin-page.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { StudentHeaderComponent } from './student-header/student-header.componen
     FinancialAccountComponent,
     MainPageTeacherComponent,
     StudentHeaderComponent,
+    AdminHeaderComponent,
+    AdminAdminPageComponent,
   ],
   imports: [
     BrowserModule,

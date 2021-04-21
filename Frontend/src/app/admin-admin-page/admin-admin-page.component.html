@@ -1,1 +1,21 @@
-<p>admin-admin-page works!</p>
+
+    
+    <app-admin-header></app-admin-header>
+
+    <table border="1px solid black">
+        <tr>
+          <th *ngFor = "let column of headers">
+          {{column}}
+
+          </th>
+        </tr>
+
+        <tr *ngFor = "let row of rows">
+          <td *ngFor = "let column of headers">
+            {{row[column]}}
+          </td>
+
+        </tr>
+      </table>
+
+
