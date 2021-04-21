@@ -20,6 +20,7 @@ import { AdminTeacherPageComponent } from './admin-teacher-page/admin-teacher-pa
 import { FailedExamsComponent } from './failed-exams/failed-exams.component';
 import { FinancialAccountComponent } from './financial-account/financial-account.component';
 import { MainPageTeacherComponent } from './main-page-teacher/main-page-teacher.component';
+import { StudentHeaderComponent } from './student-header/student-header.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MainPageTeacherComponent } from './main-page-teacher/main-page-teacher.
     AdminTeacherPageComponent,
     FailedExamsComponent,
     FinancialAccountComponent,
-    MainPageTeacherComponent
+    MainPageTeacherComponent,
+    StudentHeaderComponent,
   ],
   imports: [
     BrowserModule,
