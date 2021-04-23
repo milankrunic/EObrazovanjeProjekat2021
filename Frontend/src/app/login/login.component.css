@@ -3,15 +3,22 @@
 	padding: 0px;
 }
 
-#background {
-	background-image: url('/assets/Login.jpg');
-	/* Full height */
-	height: 100%; 
+nav div a {
+	font-size: 30px;
+	margin: 5px 0px 5px 15px;
+}
 
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+#bg {
+    background-image: url("/assets/Login.png");
+
+    /* Full height and width */
+    height: 100%; 
+    width: 100%;
+  
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
 }
 
 #container {
@@ -20,18 +27,6 @@
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-header {
-	background-color: rgba(0, 0, 0, .7);
-	border-radius: 0 0 1000px 1000px;
-	padding: 5px;
-}
-
-header a img {
-	margin-left: 47%;
-	width: 80px;
-	border-radius: 36px;
-}
 
 .box {
 	position: absolute;

@@ -1,3 +1,9 @@
-.bg-dark text-center text-white {
+footer {
     margin-top: auto;
 }
+.flex-wrapper {
+    display: flex;
+    min-height: 70vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
