@@ -3,8 +3,15 @@
 	padding: 0px;
 }
 
-#nesto{
+#background {
 	background-image: url('/assets/Login.jpg');
+	/* Full height */
+	height: 100%; 
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #container {
@@ -13,11 +20,6 @@
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-input {
-	background-image: url('/assets/Login.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-}
 
 header {
 	background-color: rgba(0, 0, 0, .7);

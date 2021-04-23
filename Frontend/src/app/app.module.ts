@@ -24,6 +24,7 @@ import { StudentHeaderComponent } from './student-header/student-header.componen
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminAdminPageComponent } from './admin-admin-page/admin-admin-page.component';
 import { TeacherHeaderComponent } from './teacher-header/teacher-header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { TeacherHeaderComponent } from './teacher-header/teacher-header.componen
     AdminHeaderComponent,
     AdminAdminPageComponent,
     TeacherHeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
