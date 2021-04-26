@@ -25,6 +25,15 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminAdminPageComponent } from './admin-admin-page/admin-admin-page.component';
 import { TeacherHeaderComponent } from './teacher-header/teacher-header.component';
 import { FooterComponent } from './footer/footer.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'main', component: LoginComponent},
+  { path: '',
+    redirectTo: '/main',
+    pathMatch: 'full'},
+  {path: "**", component: AdminAdminPageComponent}
+];
 
 @NgModule({
   declarations: [
@@ -54,7 +63,11 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // < -- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
