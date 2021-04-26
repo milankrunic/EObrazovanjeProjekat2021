@@ -22,6 +22,12 @@ export class AdminAdminPageComponent implements OnInit {
     "Name": "aaa",
     "Surname" : "aaa",
     "Email" : "aaaa"
+  },
+  {
+    "ID" : "bb",
+    "Name": "bbb",
+    "Surname" : "bbb",
+    "Email" : "bbbb"
   }]
 
 }
