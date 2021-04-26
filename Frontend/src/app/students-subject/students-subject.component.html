@@ -1,1 +1,27 @@
-<p>students-subject works!</p>
+<app-student-header></app-student-header>
+
+<h1>Student: </h1>
+
+<h2>Jova Jovic</h2>
+
+<h3>My Subjects</h3>
+
+<table class="table">
+    <thead class="table-light">
+        
+        <tr>
+            <th *ngFor = "let column of headers">
+                {{column}}
+      
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let row of rows">
+            <td *ngFor = "let column of headers">
+              {{row[column]}}
+            </td>  
+        </tr>
+        
+    </tbody>
+</table>

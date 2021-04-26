@@ -28,11 +28,16 @@ import { FooterComponent } from './footer/footer.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: 'main', component: LoginComponent},
+  { path: 'main', component: LoginComponent },
+  { path: 'exam-registration', component: ExamRegistrationComponent },
+  { path: 'student-documents', component: StudentDocumentsComponent },
+  { path: 'student-payments', component: StudentPaymentsComponent },
+  { path: 'student-subject', component: StudentsSubjectComponent },
   { path: '',
     redirectTo: '/main',
-    pathMatch: 'full'},
-  {path: "**", component: AdminAdminPageComponent}
+    pathMatch: 'full' 
+  },
+  { path: '**', component: AdminAdminPageComponent }
 ];
 
 @NgModule({

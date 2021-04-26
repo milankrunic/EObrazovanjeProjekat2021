@@ -12,4 +12,30 @@ export class ExamRegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  headers = ["SR", "Subject code", "Subject name", "Teacher", "Date", "Check-in"];
+
+  rows = [{
+    "SR" : 1,
+    "Subject code": "SIT-04",
+    "Subject name" : "Matematika 1",
+    "Teacher" : "Pera Peric",
+    "Date" : "12.11.2021."
+  },
+  {
+    "SR" : 2,
+    "Subject code": "SIT-05",
+    "Subject name" : "Web dizajn",
+    "Teacher" : "Zika Zikic",
+    "Date" : "10.05.2020."
+  },
+  {
+    "SR" : 3,
+    "Subject code": "SIT-10",
+    "Subject name" : "Menadzment",
+    "Teacher" : "Steva Stevic",
+    "Date" : "03.07.2021."
+  }
+
+  ]
+
 }
