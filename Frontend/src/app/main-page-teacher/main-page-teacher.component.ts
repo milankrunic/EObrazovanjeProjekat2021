@@ -12,4 +12,24 @@ export class MainPageTeacherComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  title = 'My courses table';
+
+  headers = ["Course name", "Exam name", "Teacher", "ESPB"];
+
+  rows = [{
+    "Course name" : "Mehatronika",
+    "Exam name": "Matematika 1",
+    "Teacher" : "Mata Matic",
+    "ESPB" : "8"
+  },
+  {
+    "Course name" : "RAM",
+    "Exam name": "Matematika 2",
+    "Teacher" : "Mata Matic",
+    "ESPB" : "6"
+
+  }]
+
 }
+
+

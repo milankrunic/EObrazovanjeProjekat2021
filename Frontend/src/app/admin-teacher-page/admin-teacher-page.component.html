@@ -1,1 +1,25 @@
-<p>admin-teacher-page works!</p>
+<app-admin-header></app-admin-header>
+
+<h1>All teachers</h1>
+<table class="table" border="1px solid black">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" *ngFor = "let column of headers">{{ column }}
+        </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let row of rows">
+        <td scope="row" *ngFor = "let column of headers">
+          {{row[column]}}
+        </td>
+
+      </tr>
+      
+    </tbody>
+ </table>
+ 
+ <button type="button">Add teacher</button>
+
+ <app-footer></app-footer>
