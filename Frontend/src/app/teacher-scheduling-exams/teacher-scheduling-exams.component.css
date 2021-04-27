@@ -1,0 +1,46 @@
+#bg {
+    background-image: url("/assets/StudentExamsReview.jpg");
+
+    /* Full height */
+    height: 100%; 
+    width: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+h2{
+    margin: 20px;
+    display: inline-block;
+    color: seashell;
+}
+
+#schedulingExams {
+    margin-left: 4%;
+}
+
+table {
+    width: 95%;
+    margin: 15px 0px 15px 0px;
+    text-align:center;
+}
+
+table.table { margin-left:auto; margin-right:auto; }
+
+td {
+    background-color: seashell;
+}
+
+#dugme {
+    margin-left: 90%;
+    background-color: rgb(250, 250, 250);
+    color: black;
+
+}
+
+#dugme:hover {
+    background-color: rgba(250, 250, 250, 0.8);
+}

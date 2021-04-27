@@ -10,6 +10,7 @@ import { StudentPaymentsComponent } from './student-payments/student-payments.co
 import { StudentDocumentsComponent } from './student-documents/student-documents.component';
 import { ExamRegistrationComponent } from './exam-registration/exam-registration.component';
 import { StudentsSubjectComponent } from './students-subject/students-subject.component';
+import { AdminAdminPageComponent } from './admin-admin-page/admin-admin-page.component';
 // import { BrowserModule } from '@angular/platform-browser';
 
 const appRoutes: Routes = [
@@ -17,13 +18,12 @@ const appRoutes: Routes = [
   { path: 'admin', component: AdminHomePageComponent},
   { path: 'student', component: StudentProfileComponent},
   { path: 'teacher', component: MainPageTeacherComponent},
-  { path: 'admin', component: AdminHomePageComponent},
   { path: 'exam-registration', component: ExamRegistrationComponent },
   { path: 'student-documents', component: StudentDocumentsComponent },
   { path: 'student-payments', component: StudentPaymentsComponent },
   { path: 'student-subject', component: StudentsSubjectComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full'},
-  // { path: 'entry/:index', component: BlogEntryPageComponent },
+  // { path: 'admin/:index', component: AdminAdminPageComponent },
   {path: "**", component: ErrorComponent},
 ];
 
