@@ -15,11 +15,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.TeacherDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.UserDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 @RestController
-@RequestMapping(value = "api/user")
+@RequestMapping(value = "api/users")
 public class UserController {
 
 	@Autowired
@@ -63,7 +64,7 @@ public class UserController {
 		
 	}
 	
-	@PostMapping(consumes="application/json")
+	@PostMapping
 	public ResponseEntity<UserDTO> saveUser(@RequestBody UserDTO userDTO){
 		User user = new User();
 		user = userService.save(user);
