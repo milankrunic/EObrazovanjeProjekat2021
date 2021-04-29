@@ -22,7 +22,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentSer
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 
 @RestController
-@RequestMapping(value = "api/students")
+@RequestMapping(value = "api/users/{idUser}/students")
 public class StudentController {
 
 	@Autowired

@@ -1,6 +1,6 @@
-import { User } from "./user";
+import { user } from "./user";
 
-export interface teacher {
+export class teacher {
     _id?:any;
     firstName:string;
     lastName:string;

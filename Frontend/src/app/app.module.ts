@@ -26,7 +26,6 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminAdminPageComponent } from './admin-admin-page/admin-admin-page.component';
 import { TeacherHeaderComponent } from './teacher-header/teacher-header.component';
 import { FooterComponent } from './footer/footer.component';
-import { Routes, RouterModule } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
 
 

@@ -41,7 +41,7 @@ TeacherProfileComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "app-footer");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_teacher_header_teacher_header_component__WEBPACK_IMPORTED_MODULE_1__["TeacherHeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_2__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\n    background-image: url(\"/assets/Profile.jpg\");\n\n    \n    height: 100%; \n    width: 100%;\n  \n    \n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: absolute;\n}\n#box[_ngcontent-%COMP%] {\n    background-color: rgb(255, 255, 255, 0.8);\n    width: 500px;\n    border: 5px solid rgb(15, 158, 241);\n    padding: 40px;\n    margin: 40px 0px 0px 80px;\n}\nh1[_ngcontent-%COMP%] {\n    margin-bottom: 15px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlYWNoZXItcHJvZmlsZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksNENBQTRDOztJQUU1QyxnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLFdBQVc7O0lBRVgsc0NBQXNDO0lBQ3RDLDJCQUEyQjtJQUMzQiw0QkFBNEI7SUFDNUIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0kseUNBQXlDO0lBQ3pDLFlBQVk7SUFDWixtQ0FBbUM7SUFDbkMsYUFBYTtJQUNiLHlCQUF5QjtBQUM3QjtBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InRlYWNoZXItcHJvZmlsZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2JnIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvYXNzZXRzL1Byb2ZpbGUuanBnXCIpO1xuXG4gICAgLyogRnVsbCBoZWlnaHQgKi9cbiAgICBoZWlnaHQ6IDEwMCU7IFxuICAgIHdpZHRoOiAxMDAlO1xuICBcbiAgICAvKiBDZW50ZXIgYW5kIHNjYWxlIHRoZSBpbWFnZSBuaWNlbHkgKi9cbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cbiNib3gge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1LCAwLjgpO1xuICAgIHdpZHRoOiA1MDBweDtcbiAgICBib3JkZXI6IDVweCBzb2xpZCByZ2IoMTUsIDE1OCwgMjQxKTtcbiAgICBwYWRkaW5nOiA0MHB4O1xuICAgIG1hcmdpbjogNDBweCAwcHggMHB4IDgwcHg7XG59XG5cbmgxIHtcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xufSJdfQ== */"] });
+    } }, directives: [_teacher_header_teacher_header_component__WEBPACK_IMPORTED_MODULE_1__["TeacherHeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_2__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\r\n    background-image: url(\"/assets/Profile.jpg\");\r\n\r\n    \r\n    height: 100%; \r\n    width: 100%;\r\n  \r\n    \r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    position: absolute;\r\n}\r\n#box[_ngcontent-%COMP%] {\r\n    background-color: rgb(255, 255, 255, 0.8);\r\n    width: 500px;\r\n    border: 5px solid rgb(15, 158, 241);\r\n    padding: 40px;\r\n    margin: 40px 0px 0px 80px;\r\n}\r\nh1[_ngcontent-%COMP%] {\r\n    margin-bottom: 15px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlYWNoZXItcHJvZmlsZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksNENBQTRDOztJQUU1QyxnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLFdBQVc7O0lBRVgsc0NBQXNDO0lBQ3RDLDJCQUEyQjtJQUMzQiw0QkFBNEI7SUFDNUIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0kseUNBQXlDO0lBQ3pDLFlBQVk7SUFDWixtQ0FBbUM7SUFDbkMsYUFBYTtJQUNiLHlCQUF5QjtBQUM3QjtBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InRlYWNoZXItcHJvZmlsZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2JnIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi9hc3NldHMvUHJvZmlsZS5qcGdcIik7XHJcblxyXG4gICAgLyogRnVsbCBoZWlnaHQgKi9cclxuICAgIGhlaWdodDogMTAwJTsgXHJcbiAgICB3aWR0aDogMTAwJTtcclxuICBcclxuICAgIC8qIENlbnRlciBhbmQgc2NhbGUgdGhlIGltYWdlIG5pY2VseSAqL1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbn1cclxuI2JveCB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSwgMC44KTtcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIGJvcmRlcjogNXB4IHNvbGlkIHJnYigxNSwgMTU4LCAyNDEpO1xyXG4gICAgcGFkZGluZzogNDBweDtcclxuICAgIG1hcmdpbjogNDBweCAwcHggMHB4IDgwcHg7XHJcbn1cclxuXHJcbmgxIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDE1cHg7XHJcbn0iXX0= */"] });
 
 
 /***/ }),
@@ -57,18 +57,87 @@ TeacherProfileComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminCoursesPageComponent", function() { return AdminCoursesPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../admin-header/admin-header.component */ "S0Wx");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../footer/footer.component */ "fp1T");
 
+
+
+
+function AdminCoursesPageComponent_th_6_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const column_r2 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", column_r2, " ");
+} }
+function AdminCoursesPageComponent_tr_8_td_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const column_r5 = ctx.$implicit;
+    const row_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", row_r3[column_r5], " ");
+} }
+function AdminCoursesPageComponent_tr_8_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, AdminCoursesPageComponent_tr_8_td_1_Template, 2, 1, "td", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.headers);
+} }
 class AdminCoursesPageComponent {
-    constructor() { }
+    constructor() {
+        this.title = 'All teachers';
+        this.headers = ["ID", "Name", "Surname", "Email"];
+        this.rows = [{
+                "ID": "1",
+                "Name": "Ivan",
+                "Surname": "Stankovic",
+                "Email": "ivan@ivan.com"
+            },
+            {
+                "ID": "2",
+                "Name": "Mata",
+                "Surname": "Matic",
+                "Email": "maya@mata.com"
+            }];
+    }
     ngOnInit() {
     }
 }
 AdminCoursesPageComponent.ɵfac = function AdminCoursesPageComponent_Factory(t) { return new (t || AdminCoursesPageComponent)(); };
-AdminCoursesPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminCoursesPageComponent, selectors: [["app-admin-courses-page"]], decls: 2, vars: 0, template: function AdminCoursesPageComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "admin-courses-page works!");
+AdminCoursesPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminCoursesPageComponent, selectors: [["app-admin-courses-page"]], decls: 12, vars: 2, consts: [["border", "1px solid black", 1, "table"], [1, "thead-dark"], ["scope", "col", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["type", "button"], ["scope", "col"], ["scope", "row", 4, "ngFor", "ngForOf"], ["scope", "row"]], template: function AdminCoursesPageComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-admin-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "All courses");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi1jb3Vyc2VzLXBhZ2UuY29tcG9uZW50LmNzcyJ9 */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "table", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "thead", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, AdminCoursesPageComponent_th_6_Template, 2, 1, "th", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "tbody");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, AdminCoursesPageComponent_tr_8_Template, 2, 1, "tr", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "button", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Add course");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "app-footer");
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.headers);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.rows);
+    } }, directives: [_admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__["AdminHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi1jb3Vyc2VzLXBhZ2UuY29tcG9uZW50LmNzcyJ9 */"] });
 
 
 /***/ }),
@@ -91,7 +160,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function StudentPaymentsComponent_th_11_Template(rf, ctx) { if (rf & 1) {
+function StudentPaymentsComponent_th_12_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -100,7 +169,7 @@ function StudentPaymentsComponent_th_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", column_r2, " ");
 } }
-function StudentPaymentsComponent_tr_13_td_1_Template(rf, ctx) { if (rf & 1) {
+function StudentPaymentsComponent_tr_14_td_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -110,9 +179,9 @@ function StudentPaymentsComponent_tr_13_td_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", row_r3[column_r5], " ");
 } }
-function StudentPaymentsComponent_tr_13_Template(rf, ctx) { if (rf & 1) {
+function StudentPaymentsComponent_tr_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, StudentPaymentsComponent_tr_13_td_1_Template, 2, 1, "td", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, StudentPaymentsComponent_tr_14_td_1_Template, 2, 1, "td", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -146,37 +215,39 @@ class StudentPaymentsComponent {
     }
 }
 StudentPaymentsComponent.ɵfac = function StudentPaymentsComponent_Factory(t) { return new (t || StudentPaymentsComponent)(); };
-StudentPaymentsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: StudentPaymentsComponent, selectors: [["app-student-payments"]], decls: 15, vars: 2, consts: [["id", "availableFunds", 1, "row", "g-3", "align-items-center"], [1, "col-auto"], [1, "col-form-label"], [1, "table"], [1, "table-light"], [4, "ngFor", "ngForOf"]], template: function StudentPaymentsComponent_Template(rf, ctx) { if (rf & 1) {
+StudentPaymentsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: StudentPaymentsComponent, selectors: [["app-student-payments"]], decls: 16, vars: 2, consts: [["id", "bg"], ["id", "availableFunds", 1, "row", "g-3", "align-items-center"], [1, "col-auto"], [1, "col-form-label"], [1, "table"], [1, "table-light"], [4, "ngFor", "ngForOf"]], template: function StudentPaymentsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-student-header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "label", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Available funds: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "label", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Available funds: ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "label", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "2000 din");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "label", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "2000 din");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "table", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "thead", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, StudentPaymentsComponent_th_11_Template, 2, 1, "th", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "table", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "thead", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, StudentPaymentsComponent_th_12_Template, 2, 1, "th", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "tbody");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, StudentPaymentsComponent_tr_13_Template, 2, 1, "tr", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "tbody");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, StudentPaymentsComponent_tr_14_Template, 2, 1, "tr", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "app-footer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "app-footer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.headers);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.rows);
-    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["#availableFunds[_ngcontent-%COMP%]{\r\n    margin-top: 5%;\r\n}\r\n\r\n.table[_ngcontent-%COMP%]{\r\n    margin-top: 5%;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0dWRlbnQtcGF5bWVudHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCIiwiZmlsZSI6InN0dWRlbnQtcGF5bWVudHMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNhdmFpbGFibGVGdW5kc3tcclxuICAgIG1hcmdpbi10b3A6IDUlO1xyXG59XHJcblxyXG4udGFibGV7XHJcbiAgICBtYXJnaW4tdG9wOiA1JTtcclxufSJdfQ== */"] });
+    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\r\n\r\n    \r\n    height: 100%; \r\n    width: 100%;\r\n  \r\n    \r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    position: absolute;\r\n}\r\n\r\n#availableFunds[_ngcontent-%COMP%]{\r\n    margin-top: 5%;\r\n}\r\n\r\n.table[_ngcontent-%COMP%]{\r\n    margin-top: 5%;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0dWRlbnQtcGF5bWVudHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSxnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLFdBQVc7O0lBRVgsc0NBQXNDO0lBQ3RDLDJCQUEyQjtJQUMzQiw0QkFBNEI7SUFDNUIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCIiwiZmlsZSI6InN0dWRlbnQtcGF5bWVudHMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNiZyB7XHJcblxyXG4gICAgLyogRnVsbCBoZWlnaHQgKi9cclxuICAgIGhlaWdodDogMTAwJTsgXHJcbiAgICB3aWR0aDogMTAwJTtcclxuICBcclxuICAgIC8qIENlbnRlciBhbmQgc2NhbGUgdGhlIGltYWdlIG5pY2VseSAqL1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbn1cclxuXHJcbiNhdmFpbGFibGVGdW5kc3tcclxuICAgIG1hcmdpbi10b3A6IDUlO1xyXG59XHJcblxyXG4udGFibGV7XHJcbiAgICBtYXJnaW4tdG9wOiA1JTtcclxufSJdfQ== */"] });
 
 
 /***/ }),
@@ -188,7 +259,7 @@ StudentPaymentsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ�
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Milan Krunic\git\EObrazovanjeProjekat2021\Frontend\src\main.ts */"zUnb");
+module.exports = __webpack_require__(/*! C:\Users\mihai\git\EObrazovanjeProjekat2021\EObrazovanjeProjekat2021\Frontend\src\main.ts */"zUnb");
 
 
 /***/ }),
@@ -212,7 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function AdminAdminPageComponent_th_6_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -221,7 +292,7 @@ function AdminAdminPageComponent_th_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", column_r2, " ");
 } }
 function AdminAdminPageComponent_tr_8_td_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 7);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -232,7 +303,7 @@ function AdminAdminPageComponent_tr_8_td_1_Template(rf, ctx) { if (rf & 1) {
 } }
 function AdminAdminPageComponent_tr_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, AdminAdminPageComponent_tr_8_td_1_Template, 2, 1, "td", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, AdminAdminPageComponent_tr_8_td_1_Template, 2, 1, "td", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -260,7 +331,7 @@ class AdminAdminPageComponent {
     }
 }
 AdminAdminPageComponent.ɵfac = function AdminAdminPageComponent_Factory(t) { return new (t || AdminAdminPageComponent)(); };
-AdminAdminPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminAdminPageComponent, selectors: [["app-admin-admin-page"]], decls: 10, vars: 2, consts: [["border", "1px solid black", 1, "table"], [1, "thead-dark"], ["scope", "col", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["scope", "col"], ["scope", "row", 4, "ngFor", "ngForOf"], ["scope", "row"]], template: function AdminAdminPageComponent_Template(rf, ctx) { if (rf & 1) {
+AdminAdminPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminAdminPageComponent, selectors: [["app-admin-admin-page"]], decls: 12, vars: 2, consts: [["border", "1px solid black", 1, "table"], [1, "thead-dark"], ["scope", "col", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["type", "button"], ["scope", "col"], ["scope", "row", 4, "ngFor", "ngForOf"], ["scope", "row"]], template: function AdminAdminPageComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-admin-header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h1");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "All admins");
@@ -275,13 +346,16 @@ AdminAdminPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, AdminAdminPageComponent_tr_8_Template, 2, 1, "tr", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "app-footer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "button", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Add admin");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "app-footer");
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.headers);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.rows);
-    } }, directives: [_admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__["AdminHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["h1[_ngcontent-%COMP%]{\n    text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkbWluLWFkbWluLXBhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7OztHQUlHOztBQUVIO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6ImFkbWluLWFkbWluLXBhZ2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIHRhYmxlIHtcbiAgICB3aWR0aDogNTAlO1xuICAgIG1hcmdpbi1sZWZ0OiAyMCU7XG4gICAgbWFyZ2luLXRvcDogMTAlO1xufSAqL1xuXG5oMXtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4iXX0= */"] });
+    } }, directives: [_admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__["AdminHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["h1[_ngcontent-%COMP%]{\r\n    text-align: center;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkbWluLWFkbWluLXBhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7OztHQUlHOztBQUVIO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6ImFkbWluLWFkbWluLXBhZ2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIHRhYmxlIHtcclxuICAgIHdpZHRoOiA1MCU7XHJcbiAgICBtYXJnaW4tbGVmdDogMjAlO1xyXG4gICAgbWFyZ2luLXRvcDogMTAlO1xyXG59ICovXHJcblxyXG5oMXtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4iXX0= */"] });
 
 
 /***/ }),
@@ -423,7 +497,7 @@ StudentExamsReviewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.headers);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.rows);
-    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\n    background-image: url(\"/assets/StudentExamsReview.jpg\");\n\n    \n    height: 100%; \n    width: 100%;\n  \n    \n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: absolute;\n}\n\nh2[_ngcontent-%COMP%]{\n    margin: 20px;\n    display: inline-block;\n    color: seashell;\n}\n\n#examsReview[_ngcontent-%COMP%] {\n    margin-left: 4%;\n}\n\n#student[_ngcontent-%COMP%] {\n    float: right;\n}\n\ntable[_ngcontent-%COMP%] {\n    width: 95%;\n    margin: 15px 0px 15px 0px;\n    text-align:center;\n}\n\ntable.table[_ngcontent-%COMP%] { margin-left:auto; margin-right:auto; }\n\ntd[_ngcontent-%COMP%] {\n    background-color: seashell;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0dWRlbnQtZXhhbXMtcmV2aWV3LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx1REFBdUQ7O0lBRXZELGdCQUFnQjtJQUNoQixZQUFZO0lBQ1osV0FBVzs7SUFFWCxzQ0FBc0M7SUFDdEMsMkJBQTJCO0lBQzNCLDRCQUE0QjtJQUM1QixzQkFBc0I7SUFDdEIsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLHFCQUFxQjtJQUNyQixlQUFlO0FBQ25COztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxVQUFVO0lBQ1YseUJBQXlCO0lBQ3pCLGlCQUFpQjtBQUNyQjs7QUFFQSxjQUFjLGdCQUFnQixFQUFFLGlCQUFpQixFQUFFOztBQUVuRDtJQUNJLDBCQUEwQjtBQUM5QiIsImZpbGUiOiJzdHVkZW50LWV4YW1zLXJldmlldy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2JnIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvYXNzZXRzL1N0dWRlbnRFeGFtc1Jldmlldy5qcGdcIik7XG5cbiAgICAvKiBGdWxsIGhlaWdodCAqL1xuICAgIGhlaWdodDogMTAwJTsgXG4gICAgd2lkdGg6IDEwMCU7XG4gIFxuICAgIC8qIENlbnRlciBhbmQgc2NhbGUgdGhlIGltYWdlIG5pY2VseSAqL1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xufVxuXG5oMntcbiAgICBtYXJnaW46IDIwcHg7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIGNvbG9yOiBzZWFzaGVsbDtcbn1cblxuI2V4YW1zUmV2aWV3IHtcbiAgICBtYXJnaW4tbGVmdDogNCU7XG59XG5cbiNzdHVkZW50IHtcbiAgICBmbG9hdDogcmlnaHQ7XG59XG5cbnRhYmxlIHtcbiAgICB3aWR0aDogOTUlO1xuICAgIG1hcmdpbjogMTVweCAwcHggMTVweCAwcHg7XG4gICAgdGV4dC1hbGlnbjpjZW50ZXI7XG59XG5cbnRhYmxlLnRhYmxlIHsgbWFyZ2luLWxlZnQ6YXV0bzsgbWFyZ2luLXJpZ2h0OmF1dG87IH1cblxudGQge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHNlYXNoZWxsO1xufSJdfQ== */"] });
+    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\r\n    background-image: url(\"/assets/StudentExamsReview.jpg\");\r\n\r\n    \r\n    height: 100%; \r\n    width: 100%;\r\n  \r\n    \r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    position: absolute;\r\n}\r\n\r\nh2[_ngcontent-%COMP%]{\r\n    margin: 20px;\r\n    display: inline-block;\r\n    color: seashell;\r\n}\r\n\r\n#examsReview[_ngcontent-%COMP%] {\r\n    margin-left: 4%;\r\n}\r\n\r\n#student[_ngcontent-%COMP%] {\r\n    float: right;\r\n}\r\n\r\ntable[_ngcontent-%COMP%] {\r\n    width: 95%;\r\n    margin: 15px 0px 15px 0px;\r\n    text-align:center;\r\n}\r\n\r\ntable.table[_ngcontent-%COMP%] { margin-left:auto; margin-right:auto; }\r\n\r\ntd[_ngcontent-%COMP%] {\r\n    background-color: seashell;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0dWRlbnQtZXhhbXMtcmV2aWV3LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx1REFBdUQ7O0lBRXZELGdCQUFnQjtJQUNoQixZQUFZO0lBQ1osV0FBVzs7SUFFWCxzQ0FBc0M7SUFDdEMsMkJBQTJCO0lBQzNCLDRCQUE0QjtJQUM1QixzQkFBc0I7SUFDdEIsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLHFCQUFxQjtJQUNyQixlQUFlO0FBQ25COztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxVQUFVO0lBQ1YseUJBQXlCO0lBQ3pCLGlCQUFpQjtBQUNyQjs7QUFFQSxjQUFjLGdCQUFnQixFQUFFLGlCQUFpQixFQUFFOztBQUVuRDtJQUNJLDBCQUEwQjtBQUM5QiIsImZpbGUiOiJzdHVkZW50LWV4YW1zLXJldmlldy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2JnIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi9hc3NldHMvU3R1ZGVudEV4YW1zUmV2aWV3LmpwZ1wiKTtcclxuXHJcbiAgICAvKiBGdWxsIGhlaWdodCAqL1xyXG4gICAgaGVpZ2h0OiAxMDAlOyBcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gIFxyXG4gICAgLyogQ2VudGVyIGFuZCBzY2FsZSB0aGUgaW1hZ2UgbmljZWx5ICovXHJcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxufVxyXG5cclxuaDJ7XHJcbiAgICBtYXJnaW46IDIwcHg7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICBjb2xvcjogc2Vhc2hlbGw7XHJcbn1cclxuXHJcbiNleGFtc1JldmlldyB7XHJcbiAgICBtYXJnaW4tbGVmdDogNCU7XHJcbn1cclxuXHJcbiNzdHVkZW50IHtcclxuICAgIGZsb2F0OiByaWdodDtcclxufVxyXG5cclxudGFibGUge1xyXG4gICAgd2lkdGg6IDk1JTtcclxuICAgIG1hcmdpbjogMTVweCAwcHggMTVweCAwcHg7XHJcbiAgICB0ZXh0LWFsaWduOmNlbnRlcjtcclxufVxyXG5cclxudGFibGUudGFibGUgeyBtYXJnaW4tbGVmdDphdXRvOyBtYXJnaW4tcmlnaHQ6YXV0bzsgfVxyXG5cclxudGQge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogc2Vhc2hlbGw7XHJcbn0iXX0= */"] });
 
 
 /***/ }),
@@ -623,7 +697,7 @@ FinancialAccountComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "app-footer");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_2__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\n    background-image: url(\"/assets/Profile.jpg\");\n\n    \n    height: 100%; \n    width: 100%;\n  \n    \n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: absolute;\n}\n#box[_ngcontent-%COMP%] {\n    background-color: rgb(255, 255, 255, 0.8);\n    width: 500px;\n    padding: 40px;\n    margin: 40px 0px 0px 80px;\n    position: center;\n}\nh2[_ngcontent-%COMP%] {\n    margin-bottom: 15px;\n    text-align: center;\n}\n#tabela[_ngcontent-%COMP%]{\n\n    background-color: rgb(255, 255, 255, 0.8);\n    width: 500px;\n    border: 5px solid black;\n    padding: 40px;\n    margin: 40px 0px 0px 80px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbmFuY2lhbC1hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSw0Q0FBNEM7O0lBRTVDLGdCQUFnQjtJQUNoQixZQUFZO0lBQ1osV0FBVzs7SUFFWCxzQ0FBc0M7SUFDdEMsMkJBQTJCO0lBQzNCLDRCQUE0QjtJQUM1QixzQkFBc0I7SUFDdEIsa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSx5Q0FBeUM7SUFDekMsWUFBWTtJQUNaLGFBQWE7SUFDYix5QkFBeUI7SUFDekIsZ0JBQWdCO0FBQ3BCO0FBRUE7SUFDSSxtQkFBbUI7SUFDbkIsa0JBQWtCO0FBQ3RCO0FBRUE7O0lBRUkseUNBQXlDO0lBQ3pDLFlBQVk7SUFDWix1QkFBdUI7SUFDdkIsYUFBYTtJQUNiLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJmaW5hbmNpYWwtYWNjb3VudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2JnIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvYXNzZXRzL1Byb2ZpbGUuanBnXCIpO1xuXG4gICAgLyogRnVsbCBoZWlnaHQgKi9cbiAgICBoZWlnaHQ6IDEwMCU7IFxuICAgIHdpZHRoOiAxMDAlO1xuICBcbiAgICAvKiBDZW50ZXIgYW5kIHNjYWxlIHRoZSBpbWFnZSBuaWNlbHkgKi9cbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cbiNib3gge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1LCAwLjgpO1xuICAgIHdpZHRoOiA1MDBweDtcbiAgICBwYWRkaW5nOiA0MHB4O1xuICAgIG1hcmdpbjogNDBweCAwcHggMHB4IDgwcHg7XG4gICAgcG9zaXRpb246IGNlbnRlcjtcbn1cblxuaDIge1xuICAgIG1hcmdpbi1ib3R0b206IDE1cHg7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4jdGFiZWxhe1xuXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUsIDAuOCk7XG4gICAgd2lkdGg6IDUwMHB4O1xuICAgIGJvcmRlcjogNXB4IHNvbGlkIGJsYWNrO1xuICAgIHBhZGRpbmc6IDQwcHg7XG4gICAgbWFyZ2luOiA0MHB4IDBweCAwcHggODBweDtcbn1cbiJdfQ== */"] });
+    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_2__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\r\n    background-image: url(\"/assets/Profile.jpg\");\r\n\r\n    \r\n    height: 100%; \r\n    width: 100%;\r\n  \r\n    \r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    position: absolute;\r\n}\r\n#box[_ngcontent-%COMP%] {\r\n    background-color: rgb(255, 255, 255, 0.8);\r\n    width: 500px;\r\n    padding: 40px;\r\n    margin: 40px 0px 0px 80px;\r\n    position: center;\r\n}\r\nh2[_ngcontent-%COMP%] {\r\n    margin-bottom: 15px;\r\n    text-align: center;\r\n}\r\n#tabela[_ngcontent-%COMP%]{\r\n\r\n    background-color: rgb(255, 255, 255, 0.8);\r\n    width: 500px;\r\n    border: 5px solid black;\r\n    padding: 40px;\r\n    margin: 40px 0px 0px 80px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbmFuY2lhbC1hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSw0Q0FBNEM7O0lBRTVDLGdCQUFnQjtJQUNoQixZQUFZO0lBQ1osV0FBVzs7SUFFWCxzQ0FBc0M7SUFDdEMsMkJBQTJCO0lBQzNCLDRCQUE0QjtJQUM1QixzQkFBc0I7SUFDdEIsa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSx5Q0FBeUM7SUFDekMsWUFBWTtJQUNaLGFBQWE7SUFDYix5QkFBeUI7SUFDekIsZ0JBQWdCO0FBQ3BCO0FBRUE7SUFDSSxtQkFBbUI7SUFDbkIsa0JBQWtCO0FBQ3RCO0FBRUE7O0lBRUkseUNBQXlDO0lBQ3pDLFlBQVk7SUFDWix1QkFBdUI7SUFDdkIsYUFBYTtJQUNiLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJmaW5hbmNpYWwtYWNjb3VudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2JnIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi9hc3NldHMvUHJvZmlsZS5qcGdcIik7XHJcblxyXG4gICAgLyogRnVsbCBoZWlnaHQgKi9cclxuICAgIGhlaWdodDogMTAwJTsgXHJcbiAgICB3aWR0aDogMTAwJTtcclxuICBcclxuICAgIC8qIENlbnRlciBhbmQgc2NhbGUgdGhlIGltYWdlIG5pY2VseSAqL1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbn1cclxuI2JveCB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSwgMC44KTtcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIHBhZGRpbmc6IDQwcHg7XHJcbiAgICBtYXJnaW46IDQwcHggMHB4IDBweCA4MHB4O1xyXG4gICAgcG9zaXRpb246IGNlbnRlcjtcclxufVxyXG5cclxuaDIge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTVweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuI3RhYmVsYXtcclxuXHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSwgMC44KTtcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIGJvcmRlcjogNXB4IHNvbGlkIGJsYWNrO1xyXG4gICAgcGFkZGluZzogNDBweDtcclxuICAgIG1hcmdpbjogNDBweCAwcHggMHB4IDgwcHg7XHJcbn1cclxuIl19 */"] });
 
 
 /***/ }),
@@ -718,7 +792,7 @@ FailedExamsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.headers);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.rows);
-    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["h1[_ngcontent-%COMP%]{\n    text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZhaWxlZC1leGFtcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6ImZhaWxlZC1leGFtcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDF7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */"] });
+    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["h1[_ngcontent-%COMP%]{\r\n    text-align: center;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZhaWxlZC1leGFtcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6ImZhaWxlZC1leGFtcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDF7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn0iXX0= */"] });
 
 
 /***/ }),
@@ -737,14 +811,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "tyNb");
 
 
-const _c0 = function () { return ["/student"]; };
+const _c0 = function () { return ["/admincourses"]; };
+const _c1 = function () { return ["/admin"]; };
+const _c2 = function () { return ["/adminexams"]; };
+const _c3 = function () { return ["/student"]; };
 class AdminHeaderComponent {
     constructor() { }
     ngOnInit() {
     }
 }
 AdminHeaderComponent.ɵfac = function AdminHeaderComponent_Factory(t) { return new (t || AdminHeaderComponent)(); };
-AdminHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminHeaderComponent, selectors: [["app-admin-header"]], decls: 34, vars: 2, consts: [[1, "navbar", "navbar-expand-lg", "navbar-light", "bg-light"], [1, "container-fluid"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-bs-toggle", "collapse", "data-bs-target", "#navbarScroll", "aria-controls", "navbarScroll", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarScroll", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "me-auto", "my-2", "my-lg-0", "navbar-nav-scroll", 2, "--bs-scroll-height", "100px"], [1, "nav-item"], ["href", "#", 1, "nav-link"], [1, "nav-item", "dropdown"], ["href", "#", "id", "navbarScrollingDropdown", "role", "button", "data-bs-toggle", "dropdown", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle"], [3, "routerLink"], ["aria-labelledby", "navbarScrollingDropdown", 1, "dropdown-menu"], ["href", "#", 1, "dropdown-item"]], template: function AdminHeaderComponent_Template(rf, ctx) { if (rf & 1) {
+AdminHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminHeaderComponent, selectors: [["app-admin-header"]], decls: 37, vars: 8, consts: [[1, "navbar", "navbar-expand-lg", "navbar-light", "bg-light"], [1, "container-fluid"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-bs-toggle", "collapse", "data-bs-target", "#navbarScroll", "aria-controls", "navbarScroll", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarScroll", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "me-auto", "my-2", "my-lg-0", "navbar-nav-scroll", 2, "--bs-scroll-height", "100px"], [1, "nav-item"], ["href", "#", 1, "nav-link"], [3, "routerLink"], [1, "nav-item", "dropdown"], ["href", "#", "id", "navbarScrollingDropdown", "role", "button", "data-bs-toggle", "dropdown", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle"], ["aria-labelledby", "navbarScrollingDropdown", 1, "dropdown-menu"], ["href", "#", 1, "dropdown-item"]], template: function AdminHeaderComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 2);
@@ -757,44 +834,50 @@ AdminHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "ul", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Courses");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Courses");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Documents");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "li", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "a", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Documents");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Account");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "li", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "a", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Account");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "li", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "a", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "User");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "li", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "a", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Users");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "li", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "a", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "Exams");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "li", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Exams");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "li", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "a", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "a", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "username");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "li", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "a", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "username");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "ul", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Profile");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "ul", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "li");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "a", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Logout");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Profile");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "a", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "Logout");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -804,8 +887,14 @@ AdminHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](1, _c0));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c0));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c1));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c2));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](7, _c3));
     } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi1oZWFkZXIuY29tcG9uZW50LmNzcyJ9 */"] });
 
 
@@ -823,15 +912,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminHomePageComponent", function() { return AdminHomePageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../admin-header/admin-header.component */ "S0Wx");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "tyNb");
 
 
+
+const _c0 = function () { return ["/adminstudents"]; };
+const _c1 = function () { return ["/adminteachers"]; };
+const _c2 = function () { return ["/adminadmins"]; };
 class AdminHomePageComponent {
     constructor() { }
     ngOnInit() {
     }
 }
 AdminHomePageComponent.ɵfac = function AdminHomePageComponent_Factory(t) { return new (t || AdminHomePageComponent)(); };
-AdminHomePageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminHomePageComponent, selectors: [["app-admin-home-page"]], decls: 20, vars: 0, consts: [["lang", "en"], ["charset", "UTF-8"], ["name", "viewport", "content", "width=device-width, initial-scale=1.0"], ["id", "outer"], [1, "inner"], ["type", "button", 1, "btn", "btn-light", 2, "border", "1px solid black"]], template: function AdminHomePageComponent_Template(rf, ctx) { if (rf & 1) {
+AdminHomePageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminHomePageComponent, selectors: [["app-admin-home-page"]], decls: 23, vars: 6, consts: [["lang", "en"], ["charset", "UTF-8"], ["name", "viewport", "content", "width=device-width, initial-scale=1.0"], ["id", "outer"], [1, "inner"], ["type", "button", 1, "btn", "btn-light", 2, "border", "1px solid black"], [3, "routerLink"]], template: function AdminHomePageComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "html", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "head");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "meta", 1);
@@ -848,23 +942,36 @@ AdminHomePageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "button", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Students");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "button", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Teachers");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "button", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Admins");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "a", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Students");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "button", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "a", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Teachers");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__["AdminHeaderComponent"]], styles: ["h1[_ngcontent-%COMP%] {\n    text-align: center;\n    margin-top: 7%;\n}\n\n#outer[_ngcontent-%COMP%]\n{\n    width:100%;\n    text-align: center;\n    padding: 10px;\n    \n}\n\n.inner[_ngcontent-%COMP%]\n{\n    display: inline-block;\n    padding: 40px;\n    margin-top: 2%;\n    \n}\n\nbutton[_ngcontent-%COMP%] {\n    width: 120px;\n    height: 120px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkbWluLWhvbWUtcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLGNBQWM7QUFDbEI7O0FBRUE7O0lBRUksVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixhQUFhOztBQUVqQjs7QUFDQTs7SUFFSSxxQkFBcUI7SUFDckIsYUFBYTtJQUNiLGNBQWM7O0FBRWxCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7QUFDakIiLCJmaWxlIjoiYWRtaW4taG9tZS1wYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoMSB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi10b3A6IDclO1xufVxuXG4jb3V0ZXJcbntcbiAgICB3aWR0aDoxMDAlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAxMHB4O1xuICAgIFxufVxuLmlubmVyXG57XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIHBhZGRpbmc6IDQwcHg7XG4gICAgbWFyZ2luLXRvcDogMiU7XG4gICAgXG59XG5cbmJ1dHRvbiB7XG4gICAgd2lkdGg6IDEyMHB4O1xuICAgIGhlaWdodDogMTIwcHg7XG59Il19 */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "button", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "a", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "Admins");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c0));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c1));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c2));
+    } }, directives: [_admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__["AdminHeaderComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"]], styles: ["h1[_ngcontent-%COMP%] {\r\n    text-align: center;\r\n    margin-top: 7%;\r\n}\r\n\r\n#outer[_ngcontent-%COMP%]\r\n{\r\n    width:100%;\r\n    text-align: center;\r\n    padding: 10px;\r\n    \r\n}\r\n\r\n.inner[_ngcontent-%COMP%]\r\n{\r\n    display: inline-block;\r\n    padding: 40px;\r\n    margin-top: 2%;\r\n    \r\n}\r\n\r\nbutton[_ngcontent-%COMP%] {\r\n    width: 120px;\r\n    height: 120px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkbWluLWhvbWUtcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLGNBQWM7QUFDbEI7O0FBRUE7O0lBRUksVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixhQUFhOztBQUVqQjs7QUFDQTs7SUFFSSxxQkFBcUI7SUFDckIsYUFBYTtJQUNiLGNBQWM7O0FBRWxCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7QUFDakIiLCJmaWxlIjoiYWRtaW4taG9tZS1wYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoMSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBtYXJnaW4tdG9wOiA3JTtcclxufVxyXG5cclxuI291dGVyXHJcbntcclxuICAgIHdpZHRoOjEwMCU7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgXHJcbn1cclxuLmlubmVyXHJcbntcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHBhZGRpbmc6IDQwcHg7XHJcbiAgICBtYXJnaW4tdG9wOiAyJTtcclxuICAgIFxyXG59XHJcblxyXG5idXR0b24ge1xyXG4gICAgd2lkdGg6IDEyMHB4O1xyXG4gICAgaGVpZ2h0OiAxMjBweDtcclxufSJdfQ== */"] });
 
 
 /***/ }),
@@ -1032,7 +1139,7 @@ StudentProfileComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "app-footer");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_2__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\n    background-image: url(\"/assets/Profile.jpg\");\n\n    \n    height: 100%; \n    width: 100%;\n  \n    \n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: absolute;\n}\n#box[_ngcontent-%COMP%] {\n    background-color: rgb(255, 255, 255, 0.8);\n    width: 500px;\n    border: 5px solid rgb(15, 158, 241);\n    padding: 40px;\n    margin: 40px 0px 0px 80px;\n}\nh1[_ngcontent-%COMP%] {\n    margin-bottom: 15px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0dWRlbnQtcHJvZmlsZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksNENBQTRDOztJQUU1QyxnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLFdBQVc7O0lBRVgsc0NBQXNDO0lBQ3RDLDJCQUEyQjtJQUMzQiw0QkFBNEI7SUFDNUIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0kseUNBQXlDO0lBQ3pDLFlBQVk7SUFDWixtQ0FBbUM7SUFDbkMsYUFBYTtJQUNiLHlCQUF5QjtBQUM3QjtBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InN0dWRlbnQtcHJvZmlsZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2JnIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvYXNzZXRzL1Byb2ZpbGUuanBnXCIpO1xuXG4gICAgLyogRnVsbCBoZWlnaHQgKi9cbiAgICBoZWlnaHQ6IDEwMCU7IFxuICAgIHdpZHRoOiAxMDAlO1xuICBcbiAgICAvKiBDZW50ZXIgYW5kIHNjYWxlIHRoZSBpbWFnZSBuaWNlbHkgKi9cbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cbiNib3gge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1LCAwLjgpO1xuICAgIHdpZHRoOiA1MDBweDtcbiAgICBib3JkZXI6IDVweCBzb2xpZCByZ2IoMTUsIDE1OCwgMjQxKTtcbiAgICBwYWRkaW5nOiA0MHB4O1xuICAgIG1hcmdpbjogNDBweCAwcHggMHB4IDgwcHg7XG59XG5cbmgxIHtcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xufVxuIl19 */"] });
+    } }, directives: [_student_header_student_header_component__WEBPACK_IMPORTED_MODULE_1__["StudentHeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_2__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\r\n    background-image: url(\"/assets/Profile.jpg\");\r\n\r\n    \r\n    height: 100%; \r\n    width: 100%;\r\n  \r\n    \r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    position: absolute;\r\n}\r\n#box[_ngcontent-%COMP%] {\r\n    background-color: rgb(255, 255, 255, 0.8);\r\n    width: 500px;\r\n    border: 5px solid rgb(15, 158, 241);\r\n    padding: 40px;\r\n    margin: 40px 0px 0px 80px;\r\n}\r\nh1[_ngcontent-%COMP%] {\r\n    margin-bottom: 15px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0dWRlbnQtcHJvZmlsZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksNENBQTRDOztJQUU1QyxnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLFdBQVc7O0lBRVgsc0NBQXNDO0lBQ3RDLDJCQUEyQjtJQUMzQiw0QkFBNEI7SUFDNUIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0kseUNBQXlDO0lBQ3pDLFlBQVk7SUFDWixtQ0FBbUM7SUFDbkMsYUFBYTtJQUNiLHlCQUF5QjtBQUM3QjtBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InN0dWRlbnQtcHJvZmlsZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2JnIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi9hc3NldHMvUHJvZmlsZS5qcGdcIik7XHJcblxyXG4gICAgLyogRnVsbCBoZWlnaHQgKi9cclxuICAgIGhlaWdodDogMTAwJTsgXHJcbiAgICB3aWR0aDogMTAwJTtcclxuICBcclxuICAgIC8qIENlbnRlciBhbmQgc2NhbGUgdGhlIGltYWdlIG5pY2VseSAqL1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbn1cclxuI2JveCB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSwgMC44KTtcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIGJvcmRlcjogNXB4IHNvbGlkIHJnYigxNSwgMTU4LCAyNDEpO1xyXG4gICAgcGFkZGluZzogNDBweDtcclxuICAgIG1hcmdpbjogNDBweCAwcHggMHB4IDgwcHg7XHJcbn1cclxuXHJcbmgxIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDE1cHg7XHJcbn1cclxuIl19 */"] });
 
 
 /***/ }),
@@ -1158,32 +1265,34 @@ StudentHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app-routing.module */ "vY5A");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "Sy1n");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login/login.component */ "vtpD");
-/* harmony import */ var _admin_home_page_admin_home_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admin-home-page/admin-home-page.component */ "S4Pf");
-/* harmony import */ var _students_subject_students_subject_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./students-subject/students-subject.component */ "hXji");
-/* harmony import */ var _exam_registration_exam_registration_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./exam-registration/exam-registration.component */ "LbgV");
-/* harmony import */ var _student_documents_student_documents_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./student-documents/student-documents.component */ "mKNg");
-/* harmony import */ var _student_payments_student_payments_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./student-payments/student-payments.component */ "/c3C");
-/* harmony import */ var _admin_courses_page_admin_courses_page_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./admin-courses-page/admin-courses-page.component */ "/WtT");
-/* harmony import */ var _admin_exams_page_admin_exams_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./admin-exams-page/admin-exams-page.component */ "iRdr");
-/* harmony import */ var _admin_student_page_admin_student_page_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin-student-page/admin-student-page.component */ "q15m");
-/* harmony import */ var _student_profile_student_profile_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./student-profile/student-profile.component */ "X0bx");
-/* harmony import */ var _teacher_profile_teacher_profile_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./teacher-profile/teacher-profile.component */ "+d9H");
-/* harmony import */ var _teacher_scheduling_exams_teacher_scheduling_exams_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./teacher-scheduling-exams/teacher-scheduling-exams.component */ "Zdvd");
-/* harmony import */ var _student_exams_review_student_exams_review_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./student-exams-review/student-exams-review.component */ "BIFP");
-/* harmony import */ var _admin_teacher_page_admin_teacher_page_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./admin-teacher-page/admin-teacher-page.component */ "nEVE");
-/* harmony import */ var _failed_exams_failed_exams_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./failed-exams/failed-exams.component */ "Nnlk");
-/* harmony import */ var _financial_account_financial_account_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./financial-account/financial-account.component */ "LqOC");
-/* harmony import */ var _main_page_teacher_main_page_teacher_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./main-page-teacher/main-page-teacher.component */ "TtJy");
-/* harmony import */ var _student_header_student_header_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./student-header/student-header.component */ "YQK1");
-/* harmony import */ var _admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./admin-header/admin-header.component */ "S0Wx");
-/* harmony import */ var _admin_admin_page_admin_admin_page_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./admin-admin-page/admin-admin-page.component */ "1sYj");
-/* harmony import */ var _teacher_header_teacher_header_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./teacher-header/teacher-header.component */ "kebK");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./footer/footer.component */ "fp1T");
-/* harmony import */ var _error_error_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./error/error.component */ "CG0s");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ "vY5A");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "Sy1n");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login/login.component */ "vtpD");
+/* harmony import */ var _admin_home_page_admin_home_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./admin-home-page/admin-home-page.component */ "S4Pf");
+/* harmony import */ var _students_subject_students_subject_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./students-subject/students-subject.component */ "hXji");
+/* harmony import */ var _exam_registration_exam_registration_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./exam-registration/exam-registration.component */ "LbgV");
+/* harmony import */ var _student_documents_student_documents_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./student-documents/student-documents.component */ "mKNg");
+/* harmony import */ var _student_payments_student_payments_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./student-payments/student-payments.component */ "/c3C");
+/* harmony import */ var _admin_courses_page_admin_courses_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./admin-courses-page/admin-courses-page.component */ "/WtT");
+/* harmony import */ var _admin_exams_page_admin_exams_page_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin-exams-page/admin-exams-page.component */ "iRdr");
+/* harmony import */ var _admin_student_page_admin_student_page_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./admin-student-page/admin-student-page.component */ "q15m");
+/* harmony import */ var _student_profile_student_profile_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./student-profile/student-profile.component */ "X0bx");
+/* harmony import */ var _teacher_profile_teacher_profile_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./teacher-profile/teacher-profile.component */ "+d9H");
+/* harmony import */ var _teacher_scheduling_exams_teacher_scheduling_exams_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./teacher-scheduling-exams/teacher-scheduling-exams.component */ "Zdvd");
+/* harmony import */ var _student_exams_review_student_exams_review_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./student-exams-review/student-exams-review.component */ "BIFP");
+/* harmony import */ var _admin_teacher_page_admin_teacher_page_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./admin-teacher-page/admin-teacher-page.component */ "nEVE");
+/* harmony import */ var _failed_exams_failed_exams_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./failed-exams/failed-exams.component */ "Nnlk");
+/* harmony import */ var _financial_account_financial_account_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./financial-account/financial-account.component */ "LqOC");
+/* harmony import */ var _main_page_teacher_main_page_teacher_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./main-page-teacher/main-page-teacher.component */ "TtJy");
+/* harmony import */ var _student_header_student_header_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./student-header/student-header.component */ "YQK1");
+/* harmony import */ var _admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./admin-header/admin-header.component */ "S0Wx");
+/* harmony import */ var _admin_admin_page_admin_admin_page_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./admin-admin-page/admin-admin-page.component */ "1sYj");
+/* harmony import */ var _teacher_header_teacher_header_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./teacher-header/teacher-header.component */ "kebK");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./footer/footer.component */ "fp1T");
+/* harmony import */ var _error_error_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./error/error.component */ "CG0s");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
 
 
 
@@ -1214,36 +1323,38 @@ __webpack_require__.r(__webpack_exports__);
 class AppModule {
 }
 AppModule.ɵfac = function AppModule_Factory(t) { return new (t || AppModule)(); };
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_26__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_26__["ɵɵdefineInjector"]({ providers: [], imports: [[
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_27__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_27__["ɵɵdefineInjector"]({ providers: [], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_1__["AppRoutingModule"],
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClientModule"]
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_26__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-        _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"],
-        _admin_home_page_admin_home_page_component__WEBPACK_IMPORTED_MODULE_4__["AdminHomePageComponent"],
-        _students_subject_students_subject_component__WEBPACK_IMPORTED_MODULE_5__["StudentsSubjectComponent"],
-        _exam_registration_exam_registration_component__WEBPACK_IMPORTED_MODULE_6__["ExamRegistrationComponent"],
-        _student_documents_student_documents_component__WEBPACK_IMPORTED_MODULE_7__["StudentDocumentsComponent"],
-        _student_payments_student_payments_component__WEBPACK_IMPORTED_MODULE_8__["StudentPaymentsComponent"],
-        _admin_courses_page_admin_courses_page_component__WEBPACK_IMPORTED_MODULE_9__["AdminCoursesPageComponent"],
-        _admin_exams_page_admin_exams_page_component__WEBPACK_IMPORTED_MODULE_10__["AdminExamsPageComponent"],
-        _admin_student_page_admin_student_page_component__WEBPACK_IMPORTED_MODULE_11__["AdminStudentPageComponent"],
-        _student_profile_student_profile_component__WEBPACK_IMPORTED_MODULE_12__["StudentProfileComponent"],
-        _teacher_profile_teacher_profile_component__WEBPACK_IMPORTED_MODULE_13__["TeacherProfileComponent"],
-        _teacher_scheduling_exams_teacher_scheduling_exams_component__WEBPACK_IMPORTED_MODULE_14__["TeacherSchedulingExamsComponent"],
-        _student_exams_review_student_exams_review_component__WEBPACK_IMPORTED_MODULE_15__["StudentExamsReviewComponent"],
-        _admin_teacher_page_admin_teacher_page_component__WEBPACK_IMPORTED_MODULE_16__["AdminTeacherPageComponent"],
-        _failed_exams_failed_exams_component__WEBPACK_IMPORTED_MODULE_17__["FailedExamsComponent"],
-        _financial_account_financial_account_component__WEBPACK_IMPORTED_MODULE_18__["FinancialAccountComponent"],
-        _main_page_teacher_main_page_teacher_component__WEBPACK_IMPORTED_MODULE_19__["MainPageTeacherComponent"],
-        _student_header_student_header_component__WEBPACK_IMPORTED_MODULE_20__["StudentHeaderComponent"],
-        _admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_21__["AdminHeaderComponent"],
-        _admin_admin_page_admin_admin_page_component__WEBPACK_IMPORTED_MODULE_22__["AdminAdminPageComponent"],
-        _teacher_header_teacher_header_component__WEBPACK_IMPORTED_MODULE_23__["TeacherHeaderComponent"],
-        _footer_footer_component__WEBPACK_IMPORTED_MODULE_24__["FooterComponent"],
-        _error_error_component__WEBPACK_IMPORTED_MODULE_25__["ErrorComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-        _app_routing_module__WEBPACK_IMPORTED_MODULE_1__["AppRoutingModule"]] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_27__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+        _login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"],
+        _admin_home_page_admin_home_page_component__WEBPACK_IMPORTED_MODULE_5__["AdminHomePageComponent"],
+        _students_subject_students_subject_component__WEBPACK_IMPORTED_MODULE_6__["StudentsSubjectComponent"],
+        _exam_registration_exam_registration_component__WEBPACK_IMPORTED_MODULE_7__["ExamRegistrationComponent"],
+        _student_documents_student_documents_component__WEBPACK_IMPORTED_MODULE_8__["StudentDocumentsComponent"],
+        _student_payments_student_payments_component__WEBPACK_IMPORTED_MODULE_9__["StudentPaymentsComponent"],
+        _admin_courses_page_admin_courses_page_component__WEBPACK_IMPORTED_MODULE_10__["AdminCoursesPageComponent"],
+        _admin_exams_page_admin_exams_page_component__WEBPACK_IMPORTED_MODULE_11__["AdminExamsPageComponent"],
+        _admin_student_page_admin_student_page_component__WEBPACK_IMPORTED_MODULE_12__["AdminStudentPageComponent"],
+        _student_profile_student_profile_component__WEBPACK_IMPORTED_MODULE_13__["StudentProfileComponent"],
+        _teacher_profile_teacher_profile_component__WEBPACK_IMPORTED_MODULE_14__["TeacherProfileComponent"],
+        _teacher_scheduling_exams_teacher_scheduling_exams_component__WEBPACK_IMPORTED_MODULE_15__["TeacherSchedulingExamsComponent"],
+        _student_exams_review_student_exams_review_component__WEBPACK_IMPORTED_MODULE_16__["StudentExamsReviewComponent"],
+        _admin_teacher_page_admin_teacher_page_component__WEBPACK_IMPORTED_MODULE_17__["AdminTeacherPageComponent"],
+        _failed_exams_failed_exams_component__WEBPACK_IMPORTED_MODULE_18__["FailedExamsComponent"],
+        _financial_account_financial_account_component__WEBPACK_IMPORTED_MODULE_19__["FinancialAccountComponent"],
+        _main_page_teacher_main_page_teacher_component__WEBPACK_IMPORTED_MODULE_20__["MainPageTeacherComponent"],
+        _student_header_student_header_component__WEBPACK_IMPORTED_MODULE_21__["StudentHeaderComponent"],
+        _admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_22__["AdminHeaderComponent"],
+        _admin_admin_page_admin_admin_page_component__WEBPACK_IMPORTED_MODULE_23__["AdminAdminPageComponent"],
+        _teacher_header_teacher_header_component__WEBPACK_IMPORTED_MODULE_24__["TeacherHeaderComponent"],
+        _footer_footer_component__WEBPACK_IMPORTED_MODULE_25__["FooterComponent"],
+        _error_error_component__WEBPACK_IMPORTED_MODULE_26__["ErrorComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClientModule"]] }); })();
 
 
 /***/ }),
@@ -1357,7 +1468,7 @@ TeacherSchedulingExamsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.headers);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.rows);
-    } }, directives: [_teacher_header_teacher_header_component__WEBPACK_IMPORTED_MODULE_1__["TeacherHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\n    background-image: url(\"/assets/StudentExamsReview.jpg\");\n\n    \n    height: 100%; \n    width: 100%;\n  \n    \n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: absolute;\n}\n\nh2[_ngcontent-%COMP%]{\n    margin: 20px;\n    display: inline-block;\n    color: seashell;\n}\n\n#schedulingExams[_ngcontent-%COMP%] {\n    margin-left: 4%;\n}\n\ntable[_ngcontent-%COMP%] {\n    width: 95%;\n    margin: 15px 0px 15px 0px;\n    text-align:center;\n}\n\ntable.table[_ngcontent-%COMP%] { margin-left:auto; margin-right:auto; }\n\ntd[_ngcontent-%COMP%] {\n    background-color: seashell;\n}\n\n#dugme[_ngcontent-%COMP%] {\n    margin-left: 90%;\n    background-color: rgb(250, 250, 250);\n    color: black;\n\n}\n\n#dugme[_ngcontent-%COMP%]:hover {\n    background-color: rgba(250, 250, 250, 0.8);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlYWNoZXItc2NoZWR1bGluZy1leGFtcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksdURBQXVEOztJQUV2RCxnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLFdBQVc7O0lBRVgsc0NBQXNDO0lBQ3RDLDJCQUEyQjtJQUMzQiw0QkFBNEI7SUFDNUIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFlBQVk7SUFDWixxQkFBcUI7SUFDckIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxVQUFVO0lBQ1YseUJBQXlCO0lBQ3pCLGlCQUFpQjtBQUNyQjs7QUFFQSxjQUFjLGdCQUFnQixFQUFFLGlCQUFpQixFQUFFOztBQUVuRDtJQUNJLDBCQUEwQjtBQUM5Qjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixvQ0FBb0M7SUFDcEMsWUFBWTs7QUFFaEI7O0FBRUE7SUFDSSwwQ0FBMEM7QUFDOUMiLCJmaWxlIjoidGVhY2hlci1zY2hlZHVsaW5nLWV4YW1zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjYmcge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi9hc3NldHMvU3R1ZGVudEV4YW1zUmV2aWV3LmpwZ1wiKTtcblxuICAgIC8qIEZ1bGwgaGVpZ2h0ICovXG4gICAgaGVpZ2h0OiAxMDAlOyBcbiAgICB3aWR0aDogMTAwJTtcbiAgXG4gICAgLyogQ2VudGVyIGFuZCBzY2FsZSB0aGUgaW1hZ2UgbmljZWx5ICovXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG59XG5cbmgye1xuICAgIG1hcmdpbjogMjBweDtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgY29sb3I6IHNlYXNoZWxsO1xufVxuXG4jc2NoZWR1bGluZ0V4YW1zIHtcbiAgICBtYXJnaW4tbGVmdDogNCU7XG59XG5cbnRhYmxlIHtcbiAgICB3aWR0aDogOTUlO1xuICAgIG1hcmdpbjogMTVweCAwcHggMTVweCAwcHg7XG4gICAgdGV4dC1hbGlnbjpjZW50ZXI7XG59XG5cbnRhYmxlLnRhYmxlIHsgbWFyZ2luLWxlZnQ6YXV0bzsgbWFyZ2luLXJpZ2h0OmF1dG87IH1cblxudGQge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHNlYXNoZWxsO1xufVxuXG4jZHVnbWUge1xuICAgIG1hcmdpbi1sZWZ0OiA5MCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1MCwgMjUwLCAyNTApO1xuICAgIGNvbG9yOiBibGFjaztcblxufVxuXG4jZHVnbWU6aG92ZXIge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjUwLCAyNTAsIDI1MCwgMC44KTtcbn0iXX0= */"] });
+    } }, directives: [_teacher_header_teacher_header_component__WEBPACK_IMPORTED_MODULE_1__["TeacherHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["#bg[_ngcontent-%COMP%] {\r\n    background-image: url(\"/assets/StudentExamsReview.jpg\");\r\n\r\n    \r\n    height: 100%; \r\n    width: 100%;\r\n  \r\n    \r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    position: absolute;\r\n}\r\n\r\nh2[_ngcontent-%COMP%]{\r\n    margin: 20px;\r\n    display: inline-block;\r\n    color: seashell;\r\n}\r\n\r\n#schedulingExams[_ngcontent-%COMP%] {\r\n    margin-left: 4%;\r\n}\r\n\r\ntable[_ngcontent-%COMP%] {\r\n    width: 95%;\r\n    margin: 15px 0px 15px 0px;\r\n    text-align:center;\r\n}\r\n\r\ntable.table[_ngcontent-%COMP%] { margin-left:auto; margin-right:auto; }\r\n\r\ntd[_ngcontent-%COMP%] {\r\n    background-color: seashell;\r\n}\r\n\r\n#dugme[_ngcontent-%COMP%] {\r\n    margin-left: 90%;\r\n    background-color: rgb(250, 250, 250);\r\n    color: black;\r\n\r\n}\r\n\r\n#dugme[_ngcontent-%COMP%]:hover {\r\n    background-color: rgba(250, 250, 250, 0.8);\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlYWNoZXItc2NoZWR1bGluZy1leGFtcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksdURBQXVEOztJQUV2RCxnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLFdBQVc7O0lBRVgsc0NBQXNDO0lBQ3RDLDJCQUEyQjtJQUMzQiw0QkFBNEI7SUFDNUIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFlBQVk7SUFDWixxQkFBcUI7SUFDckIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxVQUFVO0lBQ1YseUJBQXlCO0lBQ3pCLGlCQUFpQjtBQUNyQjs7QUFFQSxjQUFjLGdCQUFnQixFQUFFLGlCQUFpQixFQUFFOztBQUVuRDtJQUNJLDBCQUEwQjtBQUM5Qjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixvQ0FBb0M7SUFDcEMsWUFBWTs7QUFFaEI7O0FBRUE7SUFDSSwwQ0FBMEM7QUFDOUMiLCJmaWxlIjoidGVhY2hlci1zY2hlZHVsaW5nLWV4YW1zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjYmcge1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiL2Fzc2V0cy9TdHVkZW50RXhhbXNSZXZpZXcuanBnXCIpO1xyXG5cclxuICAgIC8qIEZ1bGwgaGVpZ2h0ICovXHJcbiAgICBoZWlnaHQ6IDEwMCU7IFxyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgXHJcbiAgICAvKiBDZW50ZXIgYW5kIHNjYWxlIHRoZSBpbWFnZSBuaWNlbHkgKi9cclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG59XHJcblxyXG5oMntcclxuICAgIG1hcmdpbjogMjBweDtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIGNvbG9yOiBzZWFzaGVsbDtcclxufVxyXG5cclxuI3NjaGVkdWxpbmdFeGFtcyB7XHJcbiAgICBtYXJnaW4tbGVmdDogNCU7XHJcbn1cclxuXHJcbnRhYmxlIHtcclxuICAgIHdpZHRoOiA5NSU7XHJcbiAgICBtYXJnaW46IDE1cHggMHB4IDE1cHggMHB4O1xyXG4gICAgdGV4dC1hbGlnbjpjZW50ZXI7XHJcbn1cclxuXHJcbnRhYmxlLnRhYmxlIHsgbWFyZ2luLWxlZnQ6YXV0bzsgbWFyZ2luLXJpZ2h0OmF1dG87IH1cclxuXHJcbnRkIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHNlYXNoZWxsO1xyXG59XHJcblxyXG4jZHVnbWUge1xyXG4gICAgbWFyZ2luLWxlZnQ6IDkwJTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTAsIDI1MCwgMjUwKTtcclxuICAgIGNvbG9yOiBibGFjaztcclxuXHJcbn1cclxuXHJcbiNkdWdtZTpob3ZlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDI1MCwgMjUwLCAyNTAsIDAuOCk7XHJcbn0iXX0= */"] });
 
 
 /***/ }),
@@ -1415,7 +1526,7 @@ FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: ["footer[_ngcontent-%COMP%] {\n    margin-top: auto;\n}\n.flex-wrapper[_ngcontent-%COMP%] {\n    display: flex;\n    min-height: 70vh;\n    flex-direction: column;\n    justify-content: space-between;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxhQUFhO0lBQ2IsZ0JBQWdCO0lBQ2hCLHNCQUFzQjtJQUN0Qiw4QkFBOEI7RUFDaEMiLCJmaWxlIjoiZm9vdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJmb290ZXIge1xuICAgIG1hcmdpbi10b3A6IGF1dG87XG59XG4uZmxleC13cmFwcGVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIG1pbi1oZWlnaHQ6IDcwdmg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIH0iXX0= */"] });
+    } }, styles: ["footer[_ngcontent-%COMP%] {\r\n    margin-top: auto;\r\n}\r\n.flex-wrapper[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    min-height: 70vh;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxhQUFhO0lBQ2IsZ0JBQWdCO0lBQ2hCLHNCQUFzQjtJQUN0Qiw4QkFBOEI7RUFDaEMiLCJmaWxlIjoiZm9vdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJmb290ZXIge1xyXG4gICAgbWFyZ2luLXRvcDogYXV0bztcclxufVxyXG4uZmxleC13cmFwcGVyIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBtaW4taGVpZ2h0OiA3MHZoO1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICB9Il19 */"] });
 
 
 /***/ }),
@@ -1551,6 +1662,35 @@ AdminExamsPageComponent.ɵfac = function AdminExamsPageComponent_Factory(t) { re
 AdminExamsPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminExamsPageComponent, selectors: [["app-admin-exams-page"]], decls: 1, vars: 0, template: function AdminExamsPageComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-admin-header");
     } }, directives: [_admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__["AdminHeaderComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi1leGFtcy1wYWdlLmNvbXBvbmVudC5jc3MifQ== */"] });
+
+
+/***/ }),
+
+/***/ "j7lE":
+/*!*************************************************!*\
+  !*** ./src/app/services/users/users.service.ts ***!
+  \*************************************************/
+/*! exports provided: UsersService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersService", function() { return UsersService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+
+
+class UsersService {
+    constructor(http) {
+        this.http = http;
+        this.usersUrl = 'http://localhost:8080/api/users';
+    }
+    getUsers() {
+        return this.http.get(this.usersUrl);
+    }
+}
+UsersService.ɵfac = function UsersService_Factory(t) { return new (t || UsersService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+UsersService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: UsersService, factory: UsersService.ɵfac, providedIn: 'root' });
 
 
 /***/ }),
@@ -1776,7 +1916,7 @@ AdminTeacherPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.headers);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.rows);
-    } }, directives: [_admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__["AdminHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["h1[_ngcontent-%COMP%]{\n    text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkbWluLXRlYWNoZXItcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6ImFkbWluLXRlYWNoZXItcGFnZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDF7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */"] });
+    } }, directives: [_admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_1__["AdminHeaderComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]], styles: ["h1[_ngcontent-%COMP%]{\r\n    text-align: center;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkbWluLXRlYWNoZXItcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6ImFkbWluLXRlYWNoZXItcGFnZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDF7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn0iXX0= */"] });
 
 
 /***/ }),
@@ -1792,18 +1932,91 @@ AdminTeacherPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminStudentPageComponent", function() { return AdminStudentPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _services_users_users_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/users/users.service */ "j7lE");
+/* harmony import */ var _admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../admin-header/admin-header.component */ "S0Wx");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../footer/footer.component */ "fp1T");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "ofXK");
 
+
+
+
+
+function AdminStudentPageComponent_tr_20_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.users.id);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.users.username);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.users.password);
+} }
 class AdminStudentPageComponent {
-    constructor() { }
+    // konstruktor se prvi poziva
+    constructor(userService) {
+        this.userService = userService;
+        this.headers = ["id", "first_name", "last_name", "email", "cardNumber", "enrollments", "documents", "accounts"];
+    }
     ngOnInit() {
+        // this.userService.getAll().subscribe(users => {
+        //   this.users = users;
+        // });
+        this.userService.getUsers().subscribe((data) => {
+            console.log(data);
+            this.users = data;
+        });
     }
 }
-AdminStudentPageComponent.ɵfac = function AdminStudentPageComponent_Factory(t) { return new (t || AdminStudentPageComponent)(); };
-AdminStudentPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminStudentPageComponent, selectors: [["app-admin-student-page"]], decls: 2, vars: 0, template: function AdminStudentPageComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "admin-student-page works!");
+AdminStudentPageComponent.ɵfac = function AdminStudentPageComponent_Factory(t) { return new (t || AdminStudentPageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_users_users_service__WEBPACK_IMPORTED_MODULE_1__["UsersService"])); };
+AdminStudentPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminStudentPageComponent, selectors: [["app-admin-student-page"]], decls: 21, vars: 1, consts: [[2, "text-align", "center"], ["type", "button"], [1, "container"], [1, "card"], [1, "text-center"], [1, "card-body"], [1, "table", "table-striped"], [4, "ngFor", "ngForOf"]], template: function AdminStudentPageComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-admin-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h1", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "All students");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi1zdHVkZW50LXBhZ2UuY29tcG9uZW50LmNzcyJ9 */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "button", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Add student");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "app-footer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "h3", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Users");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "table", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "thead");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "th");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Id");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "th");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "username");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "th");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "password");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "tbody");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, AdminStudentPageComponent_tr_20_Template, 7, 3, "tr", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.users);
+    } }, directives: [_admin_header_admin_header_component__WEBPACK_IMPORTED_MODULE_2__["AdminHeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi1zdHVkZW50LXBhZ2UuY29tcG9uZW50LmNzcyJ9 */"] });
 
 
 /***/ }),
@@ -1828,7 +2041,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _student_documents_student_documents_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./student-documents/student-documents.component */ "mKNg");
 /* harmony import */ var _exam_registration_exam_registration_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./exam-registration/exam-registration.component */ "LbgV");
 /* harmony import */ var _students_subject_students_subject_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./students-subject/students-subject.component */ "hXji");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _admin_admin_page_admin_admin_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./admin-admin-page/admin-admin-page.component */ "1sYj");
+/* harmony import */ var _admin_student_page_admin_student_page_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin-student-page/admin-student-page.component */ "q15m");
+/* harmony import */ var _admin_teacher_page_admin_teacher_page_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./admin-teacher-page/admin-teacher-page.component */ "nEVE");
+/* harmony import */ var _admin_exams_page_admin_exams_page_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./admin-exams-page/admin-exams-page.component */ "iRdr");
+/* harmony import */ var _admin_courses_page_admin_courses_page_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./admin-courses-page/admin-courses-page.component */ "/WtT");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+
+
+
 
 
 
@@ -1845,6 +2068,11 @@ __webpack_require__.r(__webpack_exports__);
 const appRoutes = [
     { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"] },
     { path: 'admin', component: _admin_home_page_admin_home_page_component__WEBPACK_IMPORTED_MODULE_2__["AdminHomePageComponent"] },
+    { path: 'adminstudents', component: _admin_student_page_admin_student_page_component__WEBPACK_IMPORTED_MODULE_11__["AdminStudentPageComponent"] },
+    { path: 'adminteachers', component: _admin_teacher_page_admin_teacher_page_component__WEBPACK_IMPORTED_MODULE_12__["AdminTeacherPageComponent"] },
+    { path: 'adminadmins', component: _admin_admin_page_admin_admin_page_component__WEBPACK_IMPORTED_MODULE_10__["AdminAdminPageComponent"] },
+    { path: 'adminexams', component: _admin_exams_page_admin_exams_page_component__WEBPACK_IMPORTED_MODULE_13__["AdminExamsPageComponent"] },
+    { path: 'admincourses', component: _admin_courses_page_admin_courses_page_component__WEBPACK_IMPORTED_MODULE_14__["AdminCoursesPageComponent"] },
     { path: 'student', component: _student_profile_student_profile_component__WEBPACK_IMPORTED_MODULE_4__["StudentProfileComponent"] },
     { path: 'teacher', component: _main_page_teacher_main_page_teacher_component__WEBPACK_IMPORTED_MODULE_5__["MainPageTeacherComponent"] },
     { path: 'exam-registration', component: _exam_registration_exam_registration_component__WEBPACK_IMPORTED_MODULE_8__["ExamRegistrationComponent"] },
@@ -1858,10 +2086,10 @@ const appRoutes = [
 class AppRoutingModule {
 }
 AppRoutingModule.ɵfac = function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); };
-AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
-AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdefineInjector"]({ imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes, { enableTracing: true })
+AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_15__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
+AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_15__["ɵɵdefineInjector"]({ imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes, { enableTracing: true })
         ], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_15__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] }); })();
 
 
 /***/ }),

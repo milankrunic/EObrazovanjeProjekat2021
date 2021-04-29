@@ -11,11 +11,20 @@ import { StudentDocumentsComponent } from './student-documents/student-documents
 import { ExamRegistrationComponent } from './exam-registration/exam-registration.component';
 import { StudentsSubjectComponent } from './students-subject/students-subject.component';
 import { AdminAdminPageComponent } from './admin-admin-page/admin-admin-page.component';
+import { AdminStudentPageComponent } from './admin-student-page/admin-student-page.component';
+import { AdminTeacherPageComponent } from './admin-teacher-page/admin-teacher-page.component';
+import { AdminExamsPageComponent } from './admin-exams-page/admin-exams-page.component';
+import { AdminCoursesPageComponent } from './admin-courses-page/admin-courses-page.component';
 // import { BrowserModule } from '@angular/platform-browser';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'admin', component: AdminHomePageComponent},
+  { path: 'adminstudents', component: AdminStudentPageComponent},
+  { path: 'adminteachers', component: AdminTeacherPageComponent},
+  { path: 'adminadmins', component: AdminAdminPageComponent},
+  { path: 'adminexams', component: AdminExamsPageComponent},
+  { path: 'admincourses', component: AdminCoursesPageComponent},
   { path: 'student', component: StudentProfileComponent},
   { path: 'teacher', component: MainPageTeacherComponent},
   { path: 'exam-registration', component: ExamRegistrationComponent },
