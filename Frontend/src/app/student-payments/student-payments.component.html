@@ -1,33 +1,36 @@
 <app-student-header></app-student-header>
 
-<div class="row g-3 align-items-center" id="availableFunds">
-    <div class="col-auto">
-      <label class="col-form-label">Available funds: </label>
-    </div>
-    <div class="col-auto">
-      <label class="col-form-label">2000 din</label>
+<div id="bg">
+    <div class="row g-3 align-items-center" id="availableFunds">
+        <div class="col-auto">
+        <label class="col-form-label">Available funds: </label>
+        </div>
+        <div class="col-auto">
+        <label class="col-form-label">2000 din</label>
+        </div>
+
     </div>
 
-</div>
-
-<table class="table">
-    <thead class="table-light">
-        <tr>
-            <th *ngFor = "let column of headers">
-                {{column}}
-      
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let row of rows">
-            <td *ngFor = "let column of headers">
-              {{row[column]}}
-            </td>
-    
-        </tr>
+    <table class="table">
+        <thead class="table-light">
+            <tr>
+                <th *ngFor = "let column of headers">
+                    {{column}}
         
-    </tbody>
-</table>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let row of rows">
+                <td *ngFor = "let column of headers">
+                {{row[column]}}
+                </td>
+        
+            </tr>
+            
+        </tbody>
+    </table>
 
 <app-footer></app-footer>
+
+</div>

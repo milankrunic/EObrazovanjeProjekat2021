@@ -35,7 +35,7 @@ public class Student {
 	@Column(name = "last_name", nullable = false)
 	private String lastName;
 	
-	@Column(name = "cardNumber", nullable = false)
+	@Column(name = "card_number", nullable = false)
 	private String cardNumber;
 	
 	@Column(name = "email", nullable = false)

@@ -17,7 +17,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "CourseInstance")
+@Table(name = "course_instance")
 public class CourseInstance {
 	
 	@Id
@@ -32,7 +32,7 @@ public class CourseInstance {
 	private String endDate;
 	
 	@ManyToOne
-	@JoinColumn(name = "courseSpecification", referencedColumnName = "id", nullable = false)
+	@JoinColumn(name = "course_specification", referencedColumnName = "id", nullable = false)
 	private CourseSpecification courseSpecification;
 	
 	@OneToMany(cascade = {ALL}, fetch=LAZY, mappedBy="courseInstance")

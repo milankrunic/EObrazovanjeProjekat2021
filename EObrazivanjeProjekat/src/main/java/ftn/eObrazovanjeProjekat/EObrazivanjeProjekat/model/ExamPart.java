@@ -20,7 +20,7 @@ public class ExamPart {
 	@Column(name = "idExamPart", nullable = false, unique = true)
 	private Long idExamPart;
 	
-	@Column(name = "date", nullable = false)
+	@Column(name = "date_exam_part", nullable = false)
 	private Date date;
 	
 	@Column(name = "location", nullable = false)
