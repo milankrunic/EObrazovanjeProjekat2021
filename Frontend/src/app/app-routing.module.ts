@@ -15,6 +15,8 @@ import { AdminStudentPageComponent } from './admin-student-page/admin-student-pa
 import { AdminTeacherPageComponent } from './admin-teacher-page/admin-teacher-page.component';
 import { AdminExamsPageComponent } from './admin-exams-page/admin-exams-page.component';
 import { AdminCoursesPageComponent } from './admin-courses-page/admin-courses-page.component';
+import { AddStudentComponent } from './add components/add-student/add-student.component';
+
 // import { BrowserModule } from '@angular/platform-browser';
 
 const appRoutes: Routes = [
@@ -25,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'adminadmins', component: AdminAdminPageComponent},
   { path: 'adminexams', component: AdminExamsPageComponent},
   { path: 'admincourses', component: AdminCoursesPageComponent},
+  { path: 'addstudent', component: AddStudentComponent },
   { path: 'student', component: StudentProfileComponent},
   { path: 'teacher', component: MainPageTeacherComponent},
   { path: 'exam-registration', component: ExamRegistrationComponent },

@@ -21,7 +21,7 @@
   </tbody>
 </table> -->
  
- <button type="button">Add student</button>
+ <button type="button" >Add student</button>
 
 
  <app-footer></app-footer>
@@ -43,11 +43,18 @@
             <td>{{user.idUser }}</td>
             <td>{{user.user_name }}</td>
             <td>{{user.password }}</td>
-          </tr>
+
+            <td><button style='margin-right:16px' (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
+              <button style='margin-right:16px' (click)="updateEmployee(employee.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
+            </td>
+          </tr> 
         </tbody>
       </table>
     </div>
   </div>
+
+  
+
 
 
  </div>

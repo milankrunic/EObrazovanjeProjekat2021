@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPart;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.ExamPartRepository;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.ExamRepository;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.StudentRepository;
@@ -26,6 +27,11 @@ public class StudentService implements StudentServiceInterface {
 	@Override
 	public List<Student> findAllByUser(Long id) {
 		return studentRepository.findByUser(id);
+	}
+	
+	@Override
+	public List<Student> findAll() {
+		return studentRepository.findAll();
 	}
 
 	@Override
@@ -74,6 +80,8 @@ public class StudentService implements StudentServiceInterface {
 	public Student findByCard(String cardNumber) {
 		return studentRepository.findOneByCardNumber(cardNumber);
 	}
+
+	
 	
 //	exam information - preko enrollmenta
 	

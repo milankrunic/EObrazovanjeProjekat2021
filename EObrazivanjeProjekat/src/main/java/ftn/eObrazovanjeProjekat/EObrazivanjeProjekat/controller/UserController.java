@@ -16,8 +16,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.DocumentDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.TeacherDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.UserDTO;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Document;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 @CrossOrigin(origins = "http://localhost:4200")
@@ -66,31 +69,44 @@ public class UserController {
 		
 	}
 	
-	@PostMapping
+//	@PostMapping
+//	public ResponseEntity<UserDTO> saveUser(@RequestBody UserDTO userDTO){
+//		User user = new User();
+//		user = userService.save(user);
+//		return new ResponseEntity<UserDTO>(new UserDTO(user), HttpStatus.CREATED);	
+//	}
+	
+	@PostMapping(consumes = "application/json")
 	public ResponseEntity<UserDTO> saveUser(@RequestBody UserDTO userDTO){
+		
 		User user = new User();
+		user.setUsername(userDTO.getUser_name());
+		user.setPassword(userDTO.getPassword());
+		
 		user = userService.save(user);
-		return new ResponseEntity<UserDTO>(new UserDTO(user), HttpStatus.CREATED);	
+		return new ResponseEntity<UserDTO>(new UserDTO(user),HttpStatus.CREATED);
 	}
 	
-	@PutMapping(value="/{id}", consumes="application/json")
-	public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO, @PathVariable("id") Long id){
+	@PutMapping(value ="/{id}",consumes = "application/json")
+	public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO,@PathVariable("id") Long id){
 		
-		if(!id.equals(userDTO.getIdUser())) {
+		User user = userService.findOne(id);
+		
+		if(user == null) {
 			return new ResponseEntity<UserDTO>(HttpStatus.BAD_REQUEST);
 		}
 		
-		User user = userService.findOne(id); 
-		if (user == null) {
-			return new ResponseEntity<UserDTO>(HttpStatus.BAD_REQUEST);
-		}
+		user.setUsername(userDTO.getUser_name());
+		user.setPassword(userDTO.getPassword());
 		
-	
+		
 		User izmenjenUser = new User();
 		user = userService.save(izmenjenUser);
 		
-		return new ResponseEntity<UserDTO>(new UserDTO(user), HttpStatus.OK);	
+		return new ResponseEntity<UserDTO>(new UserDTO(user),HttpStatus.OK);
 	}
+	
+	
 	
 	@DeleteMapping(value="/{id}")
 	public ResponseEntity<Void> deleteUser(@PathVariable("id") Long id){

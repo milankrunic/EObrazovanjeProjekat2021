@@ -25,13 +25,16 @@ export class UsersService {
   }
 
   save(users:user){
-    return this.http.post(this.usersUrl,user);
+    return this.http.post(this.usersUrl,users);
+  }
+
+  update(id:number, users: user):Observable<user> {
+    return this.http.put<user>(this.usersUrl+`/${id}`, users);
   }
 
   delete(idUser:any){
     return this.http.delete(this.usersUrl+`/${idUser}`);
   }
-
   
 
 }

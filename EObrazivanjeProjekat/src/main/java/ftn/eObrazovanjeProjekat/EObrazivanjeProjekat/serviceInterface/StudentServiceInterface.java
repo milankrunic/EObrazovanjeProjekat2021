@@ -4,6 +4,7 @@ import java.util.List;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPart;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 
 public interface StudentServiceInterface {
 	
@@ -22,5 +23,7 @@ public interface StudentServiceInterface {
 	List<ExamPart> findAllExamParts(Student student);
 
 	List<Student> findAllByUser(Long id);
+
+	List<Student> findAll();
 
 }

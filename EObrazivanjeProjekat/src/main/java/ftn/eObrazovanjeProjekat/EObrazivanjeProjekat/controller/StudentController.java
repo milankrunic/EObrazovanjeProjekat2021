@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,13 +17,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.StudentDTO;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.TeacherDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
-
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping(value = "api/users/{idUser}/students")
+@RequestMapping(value = "api/students")
 public class StudentController {
 
 	@Autowired
@@ -31,10 +34,23 @@ public class StudentController {
 	@Autowired
 	UserServiceInterface userServiceInterface;
 	
+//	@GetMapping
+//	public ResponseEntity<List<StudentDTO>> getStudentsByUser(@PathVariable("idUser") Long id){
+//
+//		List<Student> students = studentServiceInterface.findAllByUser(id);
+//		
+//		List<StudentDTO> studentDTO = new ArrayList<StudentDTO>();
+//		for(Student student: students) {
+//			studentDTO.add(new StudentDTO(student));
+//		}
+//		return new ResponseEntity<List<StudentDTO>>(studentDTO, HttpStatus.OK);
+//	}
+	
+	
 	@GetMapping
-	public ResponseEntity<List<StudentDTO>> getStudentsByUser(@PathVariable("idUser") Long id){
+	public ResponseEntity<List<StudentDTO>> getStudentsByUser(){
 
-		List<Student> students = studentServiceInterface.findAllByUser(id);
+		List<Student> students = studentServiceInterface.findAll();
 		
 		List<StudentDTO> studentDTO = new ArrayList<StudentDTO>();
 		for(Student student: students) {
@@ -61,6 +77,8 @@ public class StudentController {
 		s.setFirstName(studentDTO.getFirstName());	
 		s.setLastName(studentDTO.getLastName());
 		s.setEmail(studentDTO.getEmail());
+		s.setCardNumber(studentDTO.getCardNumber());
+
 		s.setUser(u);
 		
 		s = studentServiceInterface.save(s);

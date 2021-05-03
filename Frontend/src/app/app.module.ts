@@ -27,7 +27,11 @@ import { AdminAdminPageComponent } from './admin-admin-page/admin-admin-page.com
 import { TeacherHeaderComponent } from './teacher-header/teacher-header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorComponent } from './error/error.component';
-
+import { AddStudentComponent } from './add components/add-student/add-student.component';
+import { AddAdminComponent } from './add components/add-admin/add-admin.component';
+import { AddTeacherComponent } from './add components/add-teacher/add-teacher.component';
+import { FormsModule } from '@angular/forms';
+import { UsersService } from './services/users/users.service';
 
 
 
@@ -57,14 +61,18 @@ import { ErrorComponent } from './error/error.component';
     TeacherHeaderComponent,
     FooterComponent,
     ErrorComponent,
+    AddStudentComponent,
+    AddAdminComponent,
+    AddTeacherComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
     
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
