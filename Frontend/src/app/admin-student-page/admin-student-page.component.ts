@@ -17,12 +17,14 @@ export class AdminStudentPageComponent implements OnInit {
   @Output()
   saveUserEvent = new EventEmitter<user>()
 
+  students:student[];
+
   users:user[];
   
   // users: user;
   
 // konstruktor se prvi poziva
-  constructor(private userService:UsersService, private router:Router) {
+  constructor(private userService:UsersService, private studentsService:StudentsService, private router:Router) {
    
   }
 
@@ -34,6 +36,11 @@ export class AdminStudentPageComponent implements OnInit {
     this.userService.getUsers().subscribe((data: user[]) => {
       console.log(data);
       this.users = data;
+    });
+
+    this.studentsService.getStudents().subscribe((data: student[]) => {
+      console.log(data);
+      this.students = data;
     });
 
    

@@ -1,6 +1,6 @@
 INSERT INTO user(username, password) VALUES ('perap','pera123');
 INSERT INTO user(username, password) VALUES ('jovaj','jova123');
-INSERT INTO user(username, password) VALUES ('laza','laza123');
+INSERT INTO user(username, password) VALUES ('lazal','laza123');
 INSERT INTO user(username, password) VALUES ('mikam','mika123');
 INSERT INTO user(username, password) VALUES ('zikaz','zika123');
 INSERT INTO user(username, password) VALUES ('simas','sima123');

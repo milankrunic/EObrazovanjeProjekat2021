@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { teacher } from '../model/teacher';
+import { TeachersService } from '../services/teachers/teachers.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-teacher-page',
@@ -7,26 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminTeacherPageComponent implements OnInit {
 
-  constructor() { }
+  @Output()
+  saveTeacherEvent = new EventEmitter<teacher>()
+
+  teachers: teacher[];
+
+  constructor(private teachersService:TeachersService, private router:Router) { }
 
   ngOnInit(): void {
+    this.teachersService.getTeachers().subscribe((data: teacher[]) => {
+      console.log(data);
+      this.teachers = data;
+    });
   }
 
-  title = 'All teachers';
-
-  headers = ["ID", "Name", "Surname", "Email"];
-
-  rows = [{
-    "ID" : "1",
-    "Name": "Ivan",
-    "Surname" : "Stankovic",
-    "Email" : "ivan@ivan.com"
-  },
-  {
-    "ID" : "2",
-    "Name": "Mata",
-    "Surname" : "Matic",
-    "Email" : "maya@mata.com"
-  }]
+  updateEmployee(id: number){
+    this.router.navigate(['update', id]);
+  }
 
 }

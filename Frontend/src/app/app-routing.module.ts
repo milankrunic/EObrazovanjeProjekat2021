@@ -22,9 +22,9 @@ import { AddStudentComponent } from './add components/add-student/add-student.co
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'admin', component: AdminHomePageComponent},
-  { path: 'adminstudents', component: AdminStudentPageComponent},
-  { path: 'adminteachers', component: AdminTeacherPageComponent},
-  { path: 'adminadmins', component: AdminAdminPageComponent},
+  { path: 'admin-students', component: AdminStudentPageComponent},
+  { path: 'admin-teachers', component: AdminTeacherPageComponent},
+  { path: 'admin-admins', component: AdminAdminPageComponent},
   { path: 'adminexams', component: AdminExamsPageComponent},
   { path: 'admincourses', component: AdminCoursesPageComponent},
   { path: 'addstudent', component: AddStudentComponent },

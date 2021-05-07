@@ -4,17 +4,31 @@
 <table class="table" border="1px solid black">
     <thead class="thead-dark">
       <tr>
-        <th scope="col" *ngFor = "let column of headers">{{ column }}
-        </th>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Username</th>
         
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = "let row of rows">
-        <td scope="row" *ngFor = "let column of headers">
-          {{row[column]}}
+      <tr *ngFor = "let teacher of teachers">
+        <td>
+          {{teacher.id}}        
         </td>
-
+        <td>
+          {{teacher.firstName}}        
+        </td>
+        <td>
+          {{teacher.lastName}}        
+        </td>
+        <td>
+          {{teacher.email}}        
+        </td>
+        <td>
+          {{teacher.user}}        
+        </td>
       </tr>
       
     </tbody>

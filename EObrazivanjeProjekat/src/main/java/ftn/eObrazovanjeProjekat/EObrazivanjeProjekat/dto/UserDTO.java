@@ -1,8 +1,7 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 

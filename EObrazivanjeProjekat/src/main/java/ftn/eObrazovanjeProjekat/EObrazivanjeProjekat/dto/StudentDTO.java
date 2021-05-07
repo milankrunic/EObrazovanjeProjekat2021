@@ -6,8 +6,6 @@ import java.util.Set;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 
-
-
 public class StudentDTO {
 	
 	private Long id;
@@ -17,20 +15,17 @@ public class StudentDTO {
 	private String cardNumber;
 	private Long userId;
 	private String user;
-	private Set<EnrollmentDTO> enrollments = new HashSet<EnrollmentDTO>();
-	private Set<DocumentDTO> documents = new HashSet<DocumentDTO>();
-	private Set<AccountDTO> accounts = new HashSet<AccountDTO>();
+//	private Set<EnrollmentDTO> enrollments = new HashSet<EnrollmentDTO>();
+//	private Set<DocumentDTO> documents = new HashSet<DocumentDTO>();
+//	private Set<AccountDTO> accounts = new HashSet<AccountDTO>();
 	
 	
 	public StudentDTO() {
 		super();
 	}
 	
-	
-
-
 	public StudentDTO(Long id, String firstName, String lastName, String email, String cardNumber, Long userId,
-			String user, Set<EnrollmentDTO> enrollments, Set<DocumentDTO> documents, Set<AccountDTO> accounts) {
+			String user) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -39,13 +34,13 @@ public class StudentDTO {
 		this.cardNumber = cardNumber;
 		this.userId = userId;
 		this.user = user;
-		this.enrollments = enrollments;
-		this.documents = documents;
-		this.accounts = accounts;
+//		this.enrollments = enrollments;
+//		this.documents = documents;
+//		this.accounts = accounts;
 	}
 	
 	public StudentDTO(Student student) {
-		this();
+		this(student.getIdStudent(), student.getFirstName(), student.getLastName(), student.getEmail(), student.getCardNumber(), student.getUser().getIdUser(), student.getUser().getUsername());
 	}
 
 
@@ -119,37 +114,33 @@ public class StudentDTO {
 	}
 
 
-	public Set<EnrollmentDTO> getEnrollments() {
-		return enrollments;
-	}
-
-
-	public void setEnrollments(Set<EnrollmentDTO> enrollments) {
-		this.enrollments = enrollments;
-	}
-
-
-	public Set<DocumentDTO> getDocuments() {
-		return documents;
-	}
-
-
-	public void setDocuments(Set<DocumentDTO> documents) {
-		this.documents = documents;
-	}
-
-
-	public Set<AccountDTO> getAccounts() {
-		return accounts;
-	}
-
-
-	public void setAccounts(Set<AccountDTO> accounts) {
-		this.accounts = accounts;
-	}
-
-
-
-
+//	public Set<EnrollmentDTO> getEnrollments() {
+//		return enrollments;
+//	}
+//
+//
+//	public void setEnrollments(Set<EnrollmentDTO> enrollments) {
+//		this.enrollments = enrollments;
+//	}
+//
+//
+//	public Set<DocumentDTO> getDocuments() {
+//		return documents;
+//	}
+//
+//
+//	public void setDocuments(Set<DocumentDTO> documents) {
+//		this.documents = documents;
+//	}
+//
+//
+//	public Set<AccountDTO> getAccounts() {
+//		return accounts;
+//	}
+//
+//
+//	public void setAccounts(Set<AccountDTO> accounts) {
+//		this.accounts = accounts;
+//	}
 
 }

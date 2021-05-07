@@ -1,32 +1,47 @@
 <app-admin-header></app-admin-header>
 
 <h1 style="text-align: center;">All students</h1>
-<!-- <table class="table" border="1px solid black">
+ <table class="table" border="1px solid black">
   <thead class="thead-dark">
-    <tr>
-      <th scope="col" *ngFor = "let column of headers">
-      </th>
-      
-    </tr>
+    <th>ID</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Email</th>
+    <th>CardNumber</th>
+    <th>Username</th>
   </thead>
   <tbody>
-    <tr *ngFor = "let student of studentss">
-      <td scope="row" *ngFor = "let column of headers">
-        
-        
+    <tr *ngFor = "let student of students">
+      <td>
+        {{student.id}}        
+      </td>
+      <td>
+        {{student.firstName}}        
+      </td>
+      <td>
+        {{student.lastName}}        
+      </td>
+      <td>
+        {{student.email}}        
+      </td>
+      <td>
+        {{student.cardNumber}}        
+      </td>
+      <td>
+        {{student.user}}        
       </td>
 
     </tr>
     
   </tbody>
-</table> -->
+</table> 
  
  <button type="button" >Add student</button>
 
 
  <app-footer></app-footer>
  
-
+<!--
  <div class="container">
   <div class="card">
     <h3 class="text-center">Users</h3>
@@ -52,13 +67,5 @@
       </table>
     </div>
   </div>
-
-  
-
-
-
  </div>
-
-
-
- 
+-->

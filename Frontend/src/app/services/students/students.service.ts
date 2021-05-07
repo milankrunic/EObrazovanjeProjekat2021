@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { student } from '../../model/student';
+import {Observable} from 'rxjs';
 
 
 @Injectable({
@@ -7,22 +9,36 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class StudentsService {
 
-  studentsUrl: '';
+  studentsUrl:string = 'http://localhost:8080/api/students';
 
   constructor(private http:HttpClient) { }
-
   
+  getStudents():Observable<student[]> {
+    return this.http.get<student[]>(this.studentsUrl);
+  }
 
-  getStudents() {
+  getStudent(id:any):Observable<student>{
+    // const params: HttpParams = new HttpParams().set('_id',id);
+    return this.http.get<student>(this.studentsUrl+`/${id}`);
+  }
 
+  save(students:student){
+    return this.http.post(this.studentsUrl,students);
+  }
 
+  update(id:number, students: student):Observable<student> {
+    return this.http.put<student>(this.studentsUrl+`/${id}`, students);
+  }
 
+  delete(idStudent:any){
+    return this.http.delete(this.studentsUrl+`/${idStudent}`);
+  }
 
+ // studentsUrl: '';
 
+ // constructor(private http:HttpClient) { }
 
-
-
-
+ // getStudents() {
       // return [ {
       //   id: 1,
       //   first_name: "mihailo",
@@ -55,5 +71,5 @@ export class StudentsService {
   
       //  },
       //  ]
-  }
+ // }
 }
