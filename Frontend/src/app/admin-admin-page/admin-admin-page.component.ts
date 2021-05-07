@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { admin } from '../model/admin';
+import { AdminService } from '../services/admin/admin.service';
 
 @Component({
   selector: 'app-admin-admin-page',
@@ -6,30 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-admin-page.component.css']
 })
 export class AdminAdminPageComponent implements OnInit {
-  constructor() { }
+
+  admins:admin[];
+
+  constructor(private adminService:AdminService) { }
 
   ngOnInit(): void {
 
+    this.adminService.getAdmins().subscribe((data: admin[]) => {
+      console.log(data);
+      this.admins = data;
+    });
     
   }
-
-  
-
-  title = 'Admin table';
-
-  headers = ["ID", "Name", "Surname", "Email"];
-
-  rows = [{
-    "ID" : "aa",
-    "Name": "aaa",
-    "Surname" : "aaa",
-    "Email" : "aaaa"
-  },
-  {
-    "ID" : "bb",
-    "Name": "bbb",
-    "Surname" : "bbb",
-    "Email" : "bbbb"
-  }]
 
 }
