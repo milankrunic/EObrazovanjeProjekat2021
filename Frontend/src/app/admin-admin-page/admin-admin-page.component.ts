@@ -22,4 +22,11 @@ export class AdminAdminPageComponent implements OnInit {
     
   }
 
+  deleteAdmin(idAdmin: number): void {
+    this.adminService.delete(idAdmin).subscribe(
+      () => this.adminService.getAdmins()
+    );
+    location.reload();
+  }
+
 }

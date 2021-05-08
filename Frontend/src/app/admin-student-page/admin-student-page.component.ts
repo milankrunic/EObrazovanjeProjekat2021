@@ -27,12 +27,22 @@ export class AdminStudentPageComponent implements OnInit {
   constructor(private userService:UsersService, private studentsService:StudentsService, private router:Router) {
    
   }
+  // constructor(private studentService: StudentService, private router: Router) {
+  //   this.subscription = studentService.RegenerateData$.subscribe(() =>
+  //     this.getStudents()
+  //   );
+  // }
 
+  // ngOnInit(): void {
+  //   this.getStudents();
+  // }
+
+  // getStudents() {
+  //   this.studentService.getStudents().subscribe(
+  //     res => this.students = res.body);
+  // }
 
   ngOnInit() {
-    // this.userService.getAll().subscribe(users => {
-    //   this.users = users;
-    // });
     this.userService.getUsers().subscribe((data: user[]) => {
       console.log(data);
       this.users = data;
@@ -51,18 +61,24 @@ export class AdminStudentPageComponent implements OnInit {
     
   // }
   
-  // deleteUser(id: number) {
-  //   this.userService.delete(id)
+  // deleteStudent(id: number) {
+  //   this.studentsService.delete(id)
   //     .subscribe(
   //       data => {
   //         console.log(data);
-  //         this.users = this.userService.getUsers();
+  //         this.studentsService.getStudents();
   //       },
   //       error => console.log(error));
   // }
 
+  deleteStudent(studentId: number): void {
+    this.studentsService.delete(studentId).subscribe(
+      () => this.studentsService.getStudents()
+    );
+    location.reload()
+  }
+
   updateEmployee(id: number){
     this.router.navigate(['update', id]);
   }
-
 }

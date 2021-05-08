@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { student } from '../../model/student';
 import {Observable} from 'rxjs';
 
@@ -30,8 +30,9 @@ export class StudentsService {
     return this.http.put<student>(this.studentsUrl+`/${id}`, students);
   }
 
-  delete(idStudent:any){
-    return this.http.delete(this.studentsUrl+`/${idStudent}`);
+  delete(studentId: number): Observable<HttpResponse<any>> {
+    const url = `${this.studentsUrl}/${studentId}`;
+    return this.http.delete<any>(url, {observe: 'response'});
   }
 
  // studentsUrl: '';

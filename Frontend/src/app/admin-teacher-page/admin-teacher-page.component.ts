@@ -22,10 +22,18 @@ export class AdminTeacherPageComponent implements OnInit {
       console.log(data);
       this.teachers = data;
     });
+    
   }
 
   updateEmployee(id: number){
     this.router.navigate(['update', id]);
+  }
+
+  deleteTeacher(teacherId: number): void {
+    this.teachersService.delete(teacherId).subscribe(
+      () => this.teachersService.getTeachers()
+    );
+    location.reload();
   }
 
 }

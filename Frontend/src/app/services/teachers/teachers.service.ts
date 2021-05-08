@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { teacher } from '../../model/teacher';
 
 @Injectable({
@@ -29,7 +29,8 @@ export class TeachersService {
     return this.http.put<teacher>(this.teachersUrl+`/${id}`, teachers);
   }
 
-  delete(idTeacher:any){
-    return this.http.delete(this.teachersUrl+`/${idTeacher}`);
+  delete(idTeacher: number): Observable<HttpResponse<any>> {
+    const url = `${this.teachersUrl}/${idTeacher}`;
+    return this.http.delete<any>(url, {observe: 'response'});
   }
 }
