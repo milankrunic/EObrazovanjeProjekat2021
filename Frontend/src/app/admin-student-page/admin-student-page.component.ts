@@ -81,4 +81,8 @@ export class AdminStudentPageComponent implements OnInit {
   updateEmployee(id: number){
     this.router.navigate(['update', id]);
   }
+  
+  gotoAdd(): void {
+    this.router.navigate(['/addStudent']);
+  }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { user } from 'src/app/model/user';
 import { UsersService } from 'src/app/services/users/users.service';
 import {Router, Routes} from '@angular/router';
+import { student } from 'src/app/model/student';
 
 @Component({
   selector: 'app-add-student',
@@ -10,6 +11,7 @@ import {Router, Routes} from '@angular/router';
 })
 export class AddStudentComponent implements OnInit {
 
+  student: student;
   users:user = new user();
   submitted = false;
 

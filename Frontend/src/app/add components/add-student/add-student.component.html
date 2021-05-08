@@ -1,27 +1,38 @@
 <app-admin-header></app-admin-header>
+<div id="bg">
+  <h3>Add Student</h3>
+  <div [hidden]="submitted" style="width: 400px;" id="container">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">First Name</label>
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="student.first_name" name="firstName">
+      </div>
 
-<h3>Add user</h3>
-<div [hidden]="submitted" style="width: 400px;">
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="name">Username</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="users.username" name="username">
-    </div>
+      <div class="form-group">
+        <label for="name">Last Name</label>
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="student.last_name" name="lastName">
+      </div>
 
-    <div class="form-group">
-      <label for="name">Password</label>
-      <input type="text" class="form-control" id="password" required [(ngModel)]="users.password" name="password">
-    </div>
+      <div class="form-group">
+        <label for="name">Email</label>
+        <input type="text" class="form-control" id="email" required [(ngModel)]="student.email" name="email">
+      </div>
 
-    <!-- <div class="form-group">
-      <label for="name">Phone number</label>
-      <input type="text" class="form-control" id="phone" required [(ngModel)]="employee.phone" name="phone">
-    </div>
-    <div class="form-group">
-      <label for="name">Department</label>
-      <input type="text" class="form-control" id="department" required [(ngModel)]="employee.department" name="department">
-    </div> -->
+      <div class="form-group">
+        <label for="name">Card Number</label>
+        <input type="text" class="form-control" id="cardNumber" required [(ngModel)]="student.cardNumber" name="cardNumber">
+      </div>
 
-    <button class="btn btn-success">Submit</button>
-  </form>
+      <!-- <div class="form-group">
+        <label for="name">Phone number</label>
+        <input type="text" class="form-control" id="phone" required [(ngModel)]="employee.phone" name="phone">
+      </div>
+      <div class="form-group">
+        <label for="name">Department</label>
+        <input type="text" class="form-control" id="department" required [(ngModel)]="employee.department" name="department">
+      </div> -->
+
+      <button class="btn btn-success">Submit</button>
+    </form>
+  </div>
 </div>

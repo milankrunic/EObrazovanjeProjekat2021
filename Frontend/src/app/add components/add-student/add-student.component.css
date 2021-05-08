@@ -1,0 +1,22 @@
+#bg {
+    background-image: url("/assets/Profile.jpg");
+    /* Full height */
+    height: 100%; 
+    width: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+#container{
+    margin-left: 37%;
+    color: white;
+}
+
+h3{
+    color: white;
+    text-align: center;
+}
