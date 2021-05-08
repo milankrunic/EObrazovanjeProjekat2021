@@ -73,7 +73,7 @@ public class AdminController {
 	@PutMapping(value = "/{idAdmin}", consumes = "application/json")
 	public ResponseEntity<AdminDTO> updateAdmin(@RequestBody AdminDTO adminDTO, @PathVariable("idAdmin") Long idAdmin){
 
-		Admin admin = adminServiceInterface.findByIdAdmin(idAdmin);
+		Admin admin = adminServiceInterface.findById(idAdmin);
 		User user = userServiceInterface.findById(adminDTO.getIdUser());
 		
 		if(admin == null) {
@@ -88,11 +88,11 @@ public class AdminController {
 	}
 	
 	
-	@DeleteMapping(value = "/{idAdmin}")
-	public ResponseEntity<Void> deleteTeacher(@PathVariable("idAdmin") Long idAdmin){
-		Admin admin = adminServiceInterface.findByIdAdmin(idAdmin);
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> deleteAdmin(@PathVariable("id") Long id){
+		Admin admin = adminServiceInterface.findById(id);
 		if(admin != null) {
-			adminServiceInterface.removeAdmin(idAdmin);
+			adminServiceInterface.remove(id);
 			
 			return new ResponseEntity<Void>(HttpStatus.OK);
 		}

@@ -9,6 +9,7 @@
     <th>Email</th>
     <th>CardNumber</th>
     <th>Username</th>
+    <th></th>
   </thead>
   <tbody>
     <tr *ngFor = "let student of students">
@@ -29,6 +30,9 @@
       </td>
       <td>
         {{student.user}}        
+      </td>
+      <td><button style='margin-right:16px' (click)="deleteStudent(student.id)" class="btn btn-danger">Delete</button>
+        <button style='margin-right:16px' (click)="updateEmployee(employee.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
       </td>
 
     </tr>

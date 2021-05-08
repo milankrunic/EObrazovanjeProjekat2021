@@ -40,9 +40,9 @@ public interface AdminServiceInterface {
 	
 	public List<Admin> findAllAdmin();
 	public Admin findOneAdmin(Long idAdmin);
-	public Admin findByIdAdmin(Long idAdmin);
+	public Admin findById(Long idAdmin);
 	public Admin saveAdmin(Admin admin);
 	public void addAdmin(Long idAdmin);
 	public void updateAdmin(Long idAdmin);
-	public void removeAdmin(Long idAdmin);
+	public void remove(Long idAdmin);
 }

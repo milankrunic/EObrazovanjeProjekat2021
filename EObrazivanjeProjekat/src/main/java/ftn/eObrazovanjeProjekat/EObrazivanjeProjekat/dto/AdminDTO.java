@@ -4,7 +4,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Admin;
 
 public class AdminDTO {
 	
-	private Long idAdmin;
+	private Long id;
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -15,9 +15,9 @@ public class AdminDTO {
 		super();
 	}
 	
-	public AdminDTO(Long idAdmin, String firstName, String lastName, String email, Long idUser, String user) {
+	public AdminDTO(Long id, String firstName, String lastName, String email, Long idUser, String user) {
 		super();
-		this.idAdmin = idAdmin;
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -30,11 +30,11 @@ public class AdminDTO {
 	}
 
 	public Long getIdAdmin() {
-		return idAdmin;
+		return id;
 	}
 
-	public void setIdAdmin(Long idAdmin) {
-		this.idAdmin = idAdmin;
+	public void setIdAdmin(Long id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {

@@ -9,7 +9,7 @@
         <th>LastName</th>
         <th>Email</th>
         <th>Username</th>
-        
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +28,9 @@
         </td>
         <td>
           {{teacher.user}}        
+        </td>
+        <td><button style='margin-right:16px' (click)="deleteTeacher(teacher.id)" class="btn btn-danger">Delete</button>
+          <button style='margin-right:16px' (click)="updateEmployee(employee.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
         </td>
       </tr>
       

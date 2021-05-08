@@ -243,9 +243,14 @@ public class AdminService implements AdminServiceInterface{
 	}
 
 	@Override
-	public void removeAdmin(Long idAdmin) {
-		// TODO Auto-generated method stub
+	public void remove(Long idAdmin) {
+		adminRepository.deleteById(idAdmin);
 		
+	}
+
+	@Override
+	public Admin findById(Long idAdmin) {
+		return adminRepository.findByIdAdmin(idAdmin);
 	}
 
 //	public void addAdmin(Long idAdmin) {
