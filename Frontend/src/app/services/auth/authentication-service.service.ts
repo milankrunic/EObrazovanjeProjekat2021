@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { JwtUtilsService } from './jwt-utils.service';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable()
 export class AuthenticationService {
@@ -13,7 +14,7 @@ export class AuthenticationService {
   login(name: string, password: string): Observable<boolean> {
     var headers: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post(this.loginPath, JSON.stringify({ name, password }), { headers })
-      .map((res: any) => {
+      .pipe(map((res: any) => {
         let token = res && res['token'];
         if (token) {
           localStorage.setItem('currentUser', JSON.stringify({
@@ -26,15 +27,16 @@ export class AuthenticationService {
         else {
           return false;
         }
-      })
-      .catch((error: any) => {
+      }),
+      catchError((error: any) => {
         if (error.status === 400) {
           return Observable.throw('Ilegal login');
         }
         else {
           return Observable.throw(error.json().error || 'Server error');
         }
-      });
+      }));
+
   }
 
   getToken(): String {
