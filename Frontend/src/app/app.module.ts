@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +33,10 @@ import { AddTeacherComponent } from './add components/add-teacher/add-teacher.co
 import { FormsModule } from '@angular/forms';
 import { UsersService } from './services/users/users.service';
 import { StudentDetailsComponent } from './details components/student-details/student-details.component';
+import { AuthenticationService } from './services/auth/authentication-service.service';
+import { CanActivateAuthGuard } from './services/auth/can-activate-auth.service';
+import { JwtUtilsService } from './services/auth/jwt-utils.service';
+import { TokenInterceptorService } from './services/auth/token-interceptor.service';
 
 
 
@@ -74,7 +78,16 @@ import { StudentDetailsComponent } from './details components/student-details/st
     FormsModule
     
   ],
-  providers: [UsersService],
+  providers: [UsersService,
+    AuthenticationService,
+    CanActivateAuthGuard,
+    JwtUtilsService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
