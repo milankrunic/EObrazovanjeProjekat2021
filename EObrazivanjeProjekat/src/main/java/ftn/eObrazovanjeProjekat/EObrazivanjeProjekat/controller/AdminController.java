@@ -23,7 +23,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.AdminServi
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 
 @CrossOrigin(origins = "http://localhost:4200")
-@RestController
+@RestController 
 @RequestMapping(value = "api/admin")
 public class AdminController {
 	
