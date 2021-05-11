@@ -16,6 +16,7 @@ import { AdminTeacherPageComponent } from './admin-teacher-page/admin-teacher-pa
 import { AdminExamsPageComponent } from './admin-exams-page/admin-exams-page.component';
 import { AdminCoursesPageComponent } from './admin-courses-page/admin-courses-page.component';
 import { AddStudentComponent } from './add components/add-student/add-student.component';
+import { StudentDetailsComponent } from './details components/student-details/student-details.component';
 
 // import { BrowserModule } from '@angular/platform-browser';
 
@@ -35,7 +36,7 @@ const appRoutes: Routes = [
   { path: 'student-payments', component: StudentPaymentsComponent },
   { path: 'student-subject', component: StudentsSubjectComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full'},
-  // { path: 'admin/:index', component: AdminAdminPageComponent },
+  { path: 'editstudent/:id', component: StudentDetailsComponent },
   {path: "**", component: ErrorComponent},
 ];
 

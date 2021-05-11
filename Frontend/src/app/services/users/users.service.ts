@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { user } from '../../model/user';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 
 @Injectable({
@@ -11,29 +11,57 @@ export class UsersService {
 
   usersUrl:string = 'http://localhost:8080/api/users'
 
-
-  
   constructor(private http:HttpClient) { }
+
+  private RegenerateData = new Subject<void>();
+
+  RegenerateData$ = this.RegenerateData.asObservable();
+
+  announceChange() {
+      this.RegenerateData.next();
+  }
   
-  getUsers():Observable<user[]> {
-    return this.http.get<user[]>(this.usersUrl);
+  // getUsers():Observable<any[]> {
+  //   return this.http.get<user[]>(this.usersUrl);
+  // }
+
+  getUsers(): Observable<HttpResponse<user[]>> {
+    return this.http.get<user[]>(this.usersUrl, {observe: 'response'});
   }
 
-  get(id:any):Observable<user>{
-    // const params: HttpParams = new HttpParams().set('_id',id);
-    return this.http.get<user>(this.usersUrl+`/${id}`);
+  // get(id:any):Observable<user>{
+  //   return this.http.get<user>(`${this.usersUrl}/${id}`);
+  // }
+
+  getUser(id: number): Observable<HttpResponse<user>> {
+    const url = `${this.usersUrl}/${id}`;
+    return this.http.get<user>(url, {observe: 'response'});
+    
   }
 
-  save(users:user){
-    return this.http.post(this.usersUrl,users);
+  // save(users):Observable<any>{
+  //   return this.http.post(this.usersUrl,users);
+  // }
+
+  addStudent(users: user): Observable<HttpResponse<user>> {
+    return this.http.post<user>(this.usersUrl, users, {observe: 'response'});
   }
 
-  update(id:number, users: user):Observable<user> {
-    return this.http.put<user>(this.usersUrl+`/${id}`, users);
+  // update(id:number, users: user):Observable<user> {
+  //   return this.http.put<user>(this.usersUrl+`/${id}`, users);
+  // }
+
+  // delete(id:any){
+  //   return this.http.delete(this.usersUrl+`/${id}`);
+  // }
+
+  edit(users:user, id:number): Observable<HttpResponse<user>> {
+    return this.http.put<user>(this.usersUrl+`/${id}`, users, {observe: 'response'});
   }
 
-  delete(idUser:any){
-    return this.http.delete(this.usersUrl+`/${idUser}`);
+  delete(id: number): Observable<HttpResponse<any>> {
+      const url = `${this.usersUrl}/${id}`;
+      return this.http.delete<any>(url, {observe: 'response'});
   }
   
 

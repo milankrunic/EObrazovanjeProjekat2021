@@ -4,28 +4,55 @@ import { UsersService } from 'src/app/services/users/users.service';
 import {Router, Routes} from '@angular/router';
 import { student } from 'src/app/model/student';
 
+
 @Component({
   selector: 'app-add-student',
   templateUrl: './add-student.component.html',
   styleUrls: ['./add-student.component.css']
 })
 export class AddStudentComponent implements OnInit {
+  // user = {
+  //   username: '',
+  //   password: ''
+  // }
 
   student: student;
-  users:user = new user();
+  // users:user = new user();
+  users:user;
+  
   submitted = false;
+  
 
   constructor(private userService:UsersService, private router: Router ) { }
 
   ngOnInit(): void {
+    this.submitted = false;
   }
 
-  onSubmit() {
-    this.submitted = true;
-    this.userService.save(this.users)
-    .subscribe(data => console.log(data), error => console.log(error));
-    this.users = new user();
-    // this.router.navigate(['/adminstudents']);
-    console.log(this.users);
+  onSubmit(): void {
+    
+    this.userService.addStudent(this.users)
+    .subscribe(
+      response => {
+        console.log(response);
+        this.submitted = true;
+      },
+      error => {
+        // console.log(this.aaaa);
+          console.log(error);
+        });
   }
+      newUser(): void {
+        this.submitted = false;
+        this.users = {
+          username: '',
+          password: ''
+        };
+      }
+
+      backToUsers() {
+        this.router.navigate(['/adminstudents']);
+      }
+
+      
 }

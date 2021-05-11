@@ -23,10 +23,10 @@ public class User {
 	@Column(name = "id_user", nullable = false, unique = true)
 	private Long idUser;
 	
-	@Column(name = "username", nullable = false)
+	@Column(name = "username", nullable = true)
 	private String username;
 	
-	@Column(name = "password", nullable = false)
+	@Column(name = "password", nullable = true)
 	private String password;
 	
 	@OneToMany(cascade = {ALL}, fetch=LAZY, mappedBy="user")

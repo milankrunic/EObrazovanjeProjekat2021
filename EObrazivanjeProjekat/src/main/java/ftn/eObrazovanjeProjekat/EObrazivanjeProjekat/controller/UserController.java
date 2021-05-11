@@ -87,6 +87,11 @@ public class UserController {
 		return new ResponseEntity<UserDTO>(new UserDTO(user),HttpStatus.CREATED);
 	}
 	
+//	@PostMapping
+//	public User addUser(@RequestBody User user) {
+//		return userService.save(user);
+//	}
+	
 	@PutMapping(value ="/{id}",consumes = "application/json")
 	public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO,@PathVariable("id") Long id){
 		
@@ -101,7 +106,7 @@ public class UserController {
 		
 		
 		User izmenjenUser = new User();
-		user = userService.save(izmenjenUser);
+		izmenjenUser = userService.save(izmenjenUser);
 		
 		return new ResponseEntity<UserDTO>(new UserDTO(user),HttpStatus.OK);
 	}

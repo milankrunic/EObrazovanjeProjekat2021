@@ -32,6 +32,7 @@ import { AddAdminComponent } from './add components/add-admin/add-admin.componen
 import { AddTeacherComponent } from './add components/add-teacher/add-teacher.component';
 import { FormsModule } from '@angular/forms';
 import { UsersService } from './services/users/users.service';
+import { StudentDetailsComponent } from './details components/student-details/student-details.component';
 
 
 
@@ -64,6 +65,7 @@ import { UsersService } from './services/users/users.service';
     AddStudentComponent,
     AddAdminComponent,
     AddTeacherComponent,
+    StudentDetailsComponent,
   ],
   imports: [
     BrowserModule,
