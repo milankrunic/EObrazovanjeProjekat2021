@@ -4,6 +4,8 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 import { user } from 'src/app/model/user';
 import {switchMap} from 'rxjs/operators';
 import { Location } from '@angular/common';
+import { student } from 'src/app/model/student';
+import { StudentsService } from 'src/app/services/students/students.service';
 
 @Component({
   selector: 'app-student-details',
@@ -11,17 +13,12 @@ import { Location } from '@angular/common';
   styleUrls: ['./student-details.component.css']
 })
 export class StudentDetailsComponent implements OnInit {
-  users:user;
+  student: student = new student();
 
   mode:string;
 
-  constructor(private userService: UsersService, private route: ActivatedRoute, private location: Location) {
-    this.users = new user({ // if we add a new student, create an empty student
-      username: '',
-      password: ''
-    });
-
-  this.mode = 'ADD'
+  constructor(private studentService: StudentsService, private route: ActivatedRoute, private location: Location) {
+    
 }
 
 ngOnInit() {
@@ -29,37 +26,24 @@ ngOnInit() {
     this.mode = 'EDIT'; 
     // fetch student if we edit the existing student
     this.route.params.pipe(switchMap((params: Params) => 
-        this.userService.getUser(+params['id']))) // convert to number
+        this.studentService.getStudent(+params['id']))) // convert to number
       .subscribe(res => {
-        this.users = res.body;
+        this.student = res.id;
       }
       );
   } 
 }
 
-save(): void {
-  this.mode == 'ADD' ? this.add() : this.edit();    
-  console.log(this.users.id);
-}
-
-private add(): void {
-  this.userService.addStudent(this.users)
-    .subscribe(res => {
-      this.userService.announceChange();
-      // this.goBack();
-    });
-}
-
-private edit(): void {
-  this.userService.edit(this.users, this.users.id)
+edit(): void {
+  this.studentService.update(this.student.id, this.student)
     .subscribe(student => {
-      this.userService.announceChange();
-      // this.goBack();
+      this.studentService.announceChange();
+      this.goBack();
     });
 }
 
-// goBack(): void {
-//   this.location.back();
-// }
+goBack(): void {
+  this.location.back();
+}
 
 }

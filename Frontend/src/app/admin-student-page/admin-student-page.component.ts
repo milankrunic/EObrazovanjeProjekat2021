@@ -16,63 +16,23 @@ export class AdminStudentPageComponent implements OnInit {
 
   students:student[];
 
-  users:user[];
   
-  // users: user;
   
 // konstruktor se prvi poziva
-  constructor(private userService:UsersService, private studentsService:StudentsService, private router:Router) {
+  constructor(private studentsService:StudentsService, private router:Router) {
    
   subscription: Subscription;
 
-  // constructor(private userService:UsersService, private router:Router) {
-  //   this.subscription = userService.RegenerateData$.subscribe(() =>
-  //   this.getUsers());
-  //   console.log(this.users);
   }
-  // constructor(private studentService: StudentService, private router: Router) {
-  //   this.subscription = studentService.RegenerateData$.subscribe(() =>
-  //     this.getStudents()
-  //   );
-  // }
 
-  // ngOnInit(): void {
-  //   this.getStudents();
-  // }
-
-  // getStudents() {
-  //   this.studentService.getStudents().subscribe(
-  //     res => this.students = res.body);
-  // }
 
   ngOnInit() {
-    // this.userService.getUsers().subscribe((data: user[]) => {
-    //   console.log(data);
-    //   this.users = data;
-    // });
-
     this.studentsService.getStudents().subscribe((data: student[]) => {
       console.log(data);
       this.students = data;
     });
-
-   
   }
 
-  // onSubmit() {
-  //   this.userService.save(this.users).subscribe(data=>console.log(data), error=>console.log(error));
-    
-  // }
-  
-  // deleteStudent(id: number) {
-  //   this.studentsService.delete(id)
-  //     .subscribe(
-  //       data => {
-  //         console.log(data);
-  //         this.studentsService.getStudents();
-  //       },
-  //       error => console.log(error));
-  // }
 
   deleteStudent(studentId: number): void {
     this.studentsService.delete(studentId).subscribe(
@@ -81,38 +41,13 @@ export class AdminStudentPageComponent implements OnInit {
     location.reload()
   }
 
-  updateEmployee(id: number){
-    this.router.navigate(['update', id]);
+  updateStudent(id: number){
+    this.router.navigate(['/editstudent', id]);
   }
   
-  // gotoAdd(): void {
-  //   this.router.navigate(['/addStudent']);
-  // }
-  //   this.getUsers();
-  // }
-
-  // getUsers() {
-  //   this.userService.getUsers().subscribe(
-  //     res => this.users = res.body);
-  // }
-
-  // editUser(users:user): void {
-  //   console.log(users.id);
-  //   this.router.navigate(['/editstudent', users.id]);
-  // }
-
-  // addUser() {
-  //   this.router.navigate(['/addstudent']);
-  // }
-
-
-  // deleteUser(id: number): void {
-  //   this.userService.delete(id).subscribe(
-  //     () => this.getUsers()
-  //   );
-  // }
+  gotoAdd(): void {
+    this.router.navigate(['/addStudent']);
+    
+  }
   
-  
-
-
 }

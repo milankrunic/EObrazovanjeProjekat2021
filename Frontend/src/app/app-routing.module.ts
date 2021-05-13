@@ -17,6 +17,7 @@ import { AdminExamsPageComponent } from './admin-exams-page/admin-exams-page.com
 import { AdminCoursesPageComponent } from './admin-courses-page/admin-courses-page.component';
 import { AddStudentComponent } from './add components/add-student/add-student.component';
 import { StudentDetailsComponent } from './details components/student-details/student-details.component';
+import { CanActivateAuthGuard } from './services/auth/can-activate-auth.service';
 
 // import { BrowserModule } from '@angular/platform-browser';
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { student } from '../../model/student';
-import {Observable} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 
 
 @Injectable({
@@ -12,6 +12,14 @@ export class StudentsService {
   studentsUrl:string = 'http://localhost:8080/api/students';
 
   constructor(private http:HttpClient) { }
+
+  private RegenerateData = new Subject<void>();
+
+  RegenerateData$ = this.RegenerateData.asObservable();
+
+  announceChange() {
+      this.RegenerateData.next();
+  }
   
   getStudents():Observable<student[]> {
     return this.http.get<student[]>(this.studentsUrl);
@@ -26,51 +34,21 @@ export class StudentsService {
     return this.http.post(this.studentsUrl,students);
   }
 
-  update(id:number, students: student):Observable<student> {
-    return this.http.put<student>(this.studentsUrl+`/${id}`, students);
+  // update(students:student, id:number):Observable<student> {
+  //   return this.http.put<student>(this.studentsUrl+`/${id}`, students);
+  // }
+  update(id:any, student: student):Observable<student> {
+    return this.http.put<student>(this.studentsUrl+`/${id}`, student);
+    console.log("AAAAAAAAAAAA");
   }
+
+  // edit(users:user, id:number): Observable<HttpResponse<user>> {
+  //   return this.http.put<user>(this.usersUrl+`/${id}`, users, {observe: 'response'});
+  // }
 
   delete(studentId: number): Observable<HttpResponse<any>> {
     const url = `${this.studentsUrl}/${studentId}`;
     return this.http.delete<any>(url, {observe: 'response'});
   }
 
- // studentsUrl: '';
-
- // constructor(private http:HttpClient) { }
-
- // getStudents() {
-      // return [ {
-      //   id: 1,
-      //   first_name: "mihailo",
-      //   last_name: "maric",
-      //   email: "aaaa",
-      //   cardNumber: "11",
-      //   enrollments: [1],
-      //   documents: [1],
-      //   accounts: [1]
-      //  },
-      //  {
-      //   id: 2,
-      //   first_name: "mihailo",
-      //   last_name: "maric",
-      //   email: "aaaa",
-      //   cardNumber: "11",
-      //   enrollments: ["1"],
-      //   documents: [1],
-      //   accounts: [1]
-      //  },
-      //  {
-      //   id: 3,
-      //   first_name: "mihailo",
-      //   last_name: "maric",
-      //   email: "aaaa",
-      //   cardNumber: "11",
-      //   enrollments: [1],
-      //   documents: [1],
-      //   accounts: [1]
-  
-      //  },
-      //  ]
- // }
 }

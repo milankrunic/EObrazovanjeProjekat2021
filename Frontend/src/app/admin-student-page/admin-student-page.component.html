@@ -32,7 +32,7 @@
         {{student.user}}        
       </td>
       <td><button style='margin-right:16px' (click)="deleteStudent(student.id)" class="btn btn-danger">Delete</button>
-        <button style='margin-right:16px' (click)="updateEmployee(employee.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
+        <button style='margin-right:16px' (click)="updateStudent(student.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
       </td>
 
     </tr>
@@ -44,32 +44,3 @@
 
 
  <app-footer></app-footer>
- 
-<!--
- <div class="container">
-  <div class="card">
-    <h3 class="text-center">Users</h3>
-    <div class="card-body">
-      <table class="table table-striped">
-        <thead>
-          <th>Id</th>
-          <th>username</th>
-          <th>password</th>
-          
-        </thead>
-        <tbody>
-          <tr *ngFor = "let user of users">
-            <td>{{user.idUser }}</td>
-            <td>{{user.user_name }}</td>
-            <td>{{user.password }}</td>
-
-            <td><button style='margin-right:16px' (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
-              <button style='margin-right:16px' (click)="updateEmployee(employee.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
-            </td>
-          </tr> 
-        </tbody>
-      </table>
-    </div>
-  </div>
- </div>
--->

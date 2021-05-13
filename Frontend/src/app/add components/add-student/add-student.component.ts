@@ -3,6 +3,7 @@ import { user } from 'src/app/model/user';
 import { UsersService } from 'src/app/services/users/users.service';
 import {Router, Routes} from '@angular/router';
 import { student } from 'src/app/model/student';
+import { StudentsService } from 'src/app/services/students/students.service';
 
 
 @Component({
@@ -11,48 +12,75 @@ import { student } from 'src/app/model/student';
   styleUrls: ['./add-student.component.css']
 })
 export class AddStudentComponent implements OnInit {
-  // user = {
-  //   username: '',
-  //   password: ''
-  // }
 
   student: student;
-  // users:user = new user();
-  users:user;
   
   submitted = false;
   
 
-  constructor(private userService:UsersService, private router: Router ) { }
+  constructor(private studentService:StudentsService, private router: Router ) { }
 
-  ngOnInit(): void {
-    this.submitted = false;
+
+
+  ngOnInit() {
+    this.student = {
+      firstName:'',
+      lastName: '',
+      email: '',
+      cardNumber: '',
+      userId: ''
+    };
   }
 
-  onSubmit(): void {
-    
-    this.userService.addStudent(this.users)
-    .subscribe(
-      response => {
-        console.log(response);
-        this.submitted = true;
-      },
+  onSubmit(){
+    this.studentService.save(this.student).subscribe
+    (response => {
+      console.log(response);
+     },
       error => {
-        // console.log(this.aaaa);
-          console.log(error);
-        });
+        console.log(error);
+      });
+    
+    this.student = {
+      firstName:'',
+      lastName: '',
+      email: '',
+      cardNumber: '',
+      userId: ''
+    };    
   }
-      newUser(): void {
-        this.submitted = false;
-        this.users = {
-          username: '',
-          password: ''
-        };
-      }
 
-      backToUsers() {
-        this.router.navigate(['/adminstudents']);
-      }
+  // ngOnInit(): void {
+  //   this.submitted = false;
+    
+  // }
+
+  // onSubmit(): void {
+    
+  //   this.studentService.save(this.student)
+  //   .subscribe(
+  //     response => {
+  //       console.log(response);
+  //       this.submitted = true;
+  //     },
+  //     error => {
+          
+  //         console.log(error);
+  //       });
+  // }
+  //     newUser(): void {
+  //       this.submitted = false;
+  //       this.student = {
+  //         first_name: '',
+  //         cardNumber: '',
+  //         last_name: '',
+  //         email: ''
+  //       };
+  //     }
+
+  //     backToUsers() {
+  //       this.router.navigate(['/adminstudents']);
+  //     }
 
       
 }

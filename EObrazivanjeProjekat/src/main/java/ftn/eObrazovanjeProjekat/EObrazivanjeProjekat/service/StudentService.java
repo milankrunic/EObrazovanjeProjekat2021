@@ -33,6 +33,11 @@ public class StudentService implements StudentServiceInterface {
 	public List<Student> findAll() {
 		return studentRepository.findAll();
 	}
+	
+	@Override
+	public Student findById(Long studentId) {
+		return studentRepository.findByIdStudent(studentId);
+	}
 
 	@Override
 	public Student findOne(Long id) {

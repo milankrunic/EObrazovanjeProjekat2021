@@ -15,6 +15,8 @@ public interface StudentServiceInterface {
 //	List<Student> findAllByUser(Long id);
 
 	Student findOne(Long id);
+	
+	public Student findById(Long studentId);
 
 	Student updateStudent(Student student);
 

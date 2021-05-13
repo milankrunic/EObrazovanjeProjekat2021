@@ -86,9 +86,9 @@ public class StudentController {
 	}
 
 	@PutMapping(value = "/{id}", consumes = "application/json")
-	public ResponseEntity<StudentDTO> updateStudent(@RequestBody StudentDTO studentDTO, @PathVariable("id") Long id){
+	public ResponseEntity<StudentDTO> updateStudent(@RequestBody StudentDTO studentDTO, @PathVariable("id") Long studentId){
 
-		Student student = studentServiceInterface.findOne(id);
+		Student student = studentServiceInterface.findById(studentId);
 		User user = userServiceInterface.findById(studentDTO.getUserId());
 		
 		if(student == null) {
@@ -97,7 +97,7 @@ public class StudentController {
 		student.setFirstName(studentDTO.getFirstName());
 		student.setLastName(studentDTO.getLastName());
 		student.setEmail(studentDTO.getEmail());
-		student.setEmail(studentDTO.getCardNumber());
+		student.setCardNumber(studentDTO.getCardNumber());
 		
 		student.setUser(user);
 
