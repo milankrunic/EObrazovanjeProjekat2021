@@ -86,9 +86,9 @@ public class StudentController {
 	}
 
 	@PutMapping(value = "/{id}", consumes = "application/json")
-	public ResponseEntity<StudentDTO> updateStudent(@RequestBody StudentDTO studentDTO, @PathVariable("id") Long studentId){
+	public ResponseEntity<StudentDTO> updateStudent(@RequestBody StudentDTO studentDTO, @PathVariable("id") Long id){
 
-		Student student = studentServiceInterface.findById(studentId);
+		Student student = studentServiceInterface.findById(id);
 		User user = userServiceInterface.findById(studentDTO.getUserId());
 		
 		if(student == null) {

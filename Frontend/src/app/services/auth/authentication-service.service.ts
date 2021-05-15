@@ -7,18 +7,18 @@ import { catchError, map } from 'rxjs/operators';
 @Injectable()
 export class AuthenticationService {
 
-  private readonly loginPath = '/api/users/authenticate';
+  private readonly loginPath = '/api/users/login';
 
   constructor(private http: HttpClient, private jwtUtilsService: JwtUtilsService) { }
 
-  login(name: string, password: string): Observable<boolean> {
+  login(username: string, password: string): Observable<boolean> {
     var headers: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(this.loginPath, JSON.stringify({ name, password }), { headers })
+    return this.http.post(this.loginPath, JSON.stringify({ username, password }), { headers })
       .pipe(map((res: any) => {
         let token = res && res['token'];
         if (token) {
           localStorage.setItem('currentUser', JSON.stringify({
-            username: name,
+            username: username,
             roles: this.jwtUtilsService.getRoles(token),
             token: token.split(' ')[1]
           }));

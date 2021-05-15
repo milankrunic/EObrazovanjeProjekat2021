@@ -41,13 +41,12 @@ export class AdminStudentPageComponent implements OnInit {
     location.reload()
   }
 
-  updateStudent(id: number){
+  updateStudent(id : number){
     this.router.navigate(['/editstudent', id]);
   }
   
   gotoAdd(): void {
     this.router.navigate(['/addStudent']);
-    
   }
   
 }

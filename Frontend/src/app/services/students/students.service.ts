@@ -26,9 +26,10 @@ export class StudentsService {
   }
 
   getStudent(id:any):Observable<student>{
-    // const params: HttpParams = new HttpParams().set('_id',id);
+  //   // const params: HttpParams = new HttpParams().set('_id',id);
     return this.http.get<student>(this.studentsUrl+`/${id}`);
   }
+
 
   save(students:student){
     return this.http.post(this.studentsUrl,students);
@@ -39,7 +40,6 @@ export class StudentsService {
   // }
   update(id:any, student: student):Observable<student> {
     return this.http.put<student>(this.studentsUrl+`/${id}`, student);
-    console.log("AAAAAAAAAAAA");
   }
 
   // edit(users:user, id:number): Observable<HttpResponse<user>> {

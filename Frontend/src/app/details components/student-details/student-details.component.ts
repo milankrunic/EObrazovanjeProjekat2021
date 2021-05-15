@@ -13,34 +13,57 @@ import { StudentsService } from 'src/app/services/students/students.service';
   styleUrls: ['./student-details.component.css']
 })
 export class StudentDetailsComponent implements OnInit {
-  student: student = new student();
-
-  mode:string;
+  
+  student: student = {
+    firstName: '',
+    lastName: '',
+    cardNumber: '',
+    email: '',
+    userId: ''
+  };
 
   constructor(private studentService: StudentsService, private route: ActivatedRoute, private location: Location) {
     
 }
 
 ngOnInit() {
-  if (this.route.snapshot.params['id']) {
-    this.mode = 'EDIT'; 
-    // fetch student if we edit the existing student
-    this.route.params.pipe(switchMap((params: Params) => 
-        this.studentService.getStudent(+params['id']))) // convert to number
-      .subscribe(res => {
-        this.student = res.id;
-      }
-      );
-  } 
+  this.getStudent(this.route.snapshot.params["id"]);
+}
+
+getStudent(id: any): void {
+  this.studentService.getStudent(id)
+    .subscribe(
+      data => {
+          this.student = data;
+          console.log(data);
+          console.log(this.student.firstName);
+          console.log(this.student.lastName);
+      },
+      error => {
+        console.log(error);
+      });
 }
 
 edit(): void {
   this.studentService.update(this.student.id, this.student)
-    .subscribe(student => {
-      this.studentService.announceChange();
-      this.goBack();
-    });
+    .subscribe(
+      response => {
+        console.log(response);
+        
+      },
+      error => {
+        console.log(error);
+      });
 }
+
+
+// edit(): void {
+//   this.studentService.update(this.student.id, this.student)
+//     .subscribe(student => {
+//       this.studentService.announceChange();
+//       this.goBack();
+//     });
+// }
 
 goBack(): void {
   this.location.back();
