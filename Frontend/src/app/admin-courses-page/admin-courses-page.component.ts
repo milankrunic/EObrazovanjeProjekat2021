@@ -14,7 +14,9 @@ export class AdminCoursesPageComponent implements OnInit {
 
   courseInstance:courseInstance[];
 
-  constructor(private courseInstanceService:CourseInstanceService, private router:Router) { }
+  constructor(private courseInstanceService:CourseInstanceService, private router:Router) { 
+    subscription: Subscription;
+  }
 
   ngOnInit() {
     this.courseInstanceService.getCourses().subscribe((data: courseInstance[]) => {
