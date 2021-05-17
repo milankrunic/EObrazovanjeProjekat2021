@@ -1,5 +1,8 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.DocumentDTO;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.StudentDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Document;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.DocumentServiceInterface;
 
 @RestController
@@ -23,17 +28,30 @@ public class DocumentController {
 	@Autowired
 	DocumentServiceInterface documentServiceInterface;
 	
-	@GetMapping(value ="/{id}")
-	public ResponseEntity<DocumentDTO> getDocument(@PathVariable("id") Long id){
+	
+	@GetMapping
+	public ResponseEntity<List<DocumentDTO>> getDocuments(){
+
+		List<Document> documents = documentServiceInterface.findAll();
 		
-		Document document = documentServiceInterface.findOne(id);
-		
-		if(document == null) {
-			return new ResponseEntity<DocumentDTO>(HttpStatus.NOT_FOUND);
+		List<DocumentDTO> documentDTO = new ArrayList<DocumentDTO>();
+		for(Document document: documents) {
+			documentDTO.add(new DocumentDTO(document));
 		}
-		
-		return new ResponseEntity<DocumentDTO>(new DocumentDTO(document),HttpStatus.OK);
+		return new ResponseEntity<List<DocumentDTO>>(documentDTO, HttpStatus.OK);
 	}
+	
+//	@GetMapping(value ="/{id}")
+//	public ResponseEntity<DocumentDTO> getDocument(@PathVariable("id") Long id){
+//		
+//		Document document = documentServiceInterface.findOne(id);
+//		
+//		if(document == null) {
+//			return new ResponseEntity<DocumentDTO>(HttpStatus.NOT_FOUND);
+//		}
+//		
+//		return new ResponseEntity<DocumentDTO>(new DocumentDTO(document),HttpStatus.OK);
+//	}
 	
 	@PostMapping(consumes = "application/json")
 	public ResponseEntity<DocumentDTO> addDocument(@RequestBody DocumentDTO documentDTO){
