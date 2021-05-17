@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/auth/authentication-service.service';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  public user;
+  public user: { user_name?: any; password?: any; };
   public wrongUsernameOrPass:boolean;
 
   constructor(private authenticationService:AuthenticationService,
@@ -23,10 +23,13 @@ export class LoginComponent implements OnInit {
   }
 
   login():void{
-    this.authenticationService.login(this.user.username, this.user.password).subscribe(
+    console.log(this.user.user_name);
+    console.log(this.user.password);
+    this.authenticationService.login(this.user.user_name, this.user.password).subscribe(
       (loggedIn:boolean) => {
         if(loggedIn){
           this.router.navigate(['/admin']);
+          console.log('aaaa!!!!')
         }
       }
     ,
@@ -36,7 +39,7 @@ export class LoginComponent implements OnInit {
         console.log(err);
       }
       else{
-        Observable.throw(err);
+        throwError(err);
       }
     });
   }

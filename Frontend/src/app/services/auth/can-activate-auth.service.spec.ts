@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async, inject } from '@angular/core/testing';
+import { CanActivateAuthGuard } from './can-activate-auth.service';
 
-import { CanActivateAuthService } from './can-activate-auth.service';
 
-describe('CanActivateAuthService', () => {
-  let service: CanActivateAuthService;
 
+describe('CanActivateAuthGuard', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(CanActivateAuthService);
+    TestBed.configureTestingModule({
+      providers: [CanActivateAuthGuard]
+    });
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+  it('should ...', inject([CanActivateAuthGuard], (guard: CanActivateAuthGuard) => {
+    expect(guard).toBeTruthy();
+  }));
 });

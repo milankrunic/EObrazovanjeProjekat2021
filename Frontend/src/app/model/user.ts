@@ -6,7 +6,7 @@
 
 export class user implements userInterface{
      id?:any;
-     username:string;
+     user_name:string;
      password:string;
      // students?:student[];
      // teachers?:teacher[];
@@ -15,7 +15,7 @@ export class user implements userInterface{
      constructor(userCfg:userInterface)
 	{	
 		this.id = userCfg.id;
-		this.username = userCfg.username;
+		this.user_name = userCfg.user_name;
 		this.password = userCfg.password;	
 	}
      
@@ -23,6 +23,6 @@ export class user implements userInterface{
 
 interface userInterface{
 	id?: any;
-	username:string;
+	user_name:string;
      password:string;
 }
