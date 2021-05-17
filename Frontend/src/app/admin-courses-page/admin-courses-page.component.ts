@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { courseInstance } from '../model/courseInstance';
+import { CourseInstanceService } from '../services/courseInstance/courseInstance.service';;
+import { Observable, Subscription } from 'rxjs';
+import { EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-courses-page',
@@ -7,25 +12,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminCoursesPageComponent implements OnInit {
 
-  constructor() { }
+  courseInstance:courseInstance[];
 
-  ngOnInit(): void {
+  constructor(private courseInstanceService:CourseInstanceService, private router:Router) { }
+
+  ngOnInit() {
+    this.courseInstanceService.getCourses().subscribe((data: courseInstance[]) => {
+      console.log(data);
+      this.courseInstance = data;
+    });
   }
 
-  title = 'All teachers';
+  deleteCourse(courseInstanceId: number): void {
+    this.courseInstanceService.delete(courseInstanceId).subscribe(
+      () => this.courseInstanceService.getCourses()
+    );
+    location.reload()
+  }
 
-  headers = ["ID", "Name", "Surname", "Email"];
-
-  rows = [{
-    "ID" : "1",
-    "Name": "Ivan",
-    "Surname" : "Stankovic",
-    "Email" : "ivan@ivan.com"
-  },
-  {
-    "ID" : "2",
-    "Name": "Mata",
-    "Surname" : "Matic",
-    "Email" : "maya@mata.com"
-  }]
+  updateCourse(id : number){
+    this.router.navigate(['/editcourse', id]);
+  }
+  
+  gotoAdd(): void {
+    this.router.navigate(['/addCourse']);
+  }
 }

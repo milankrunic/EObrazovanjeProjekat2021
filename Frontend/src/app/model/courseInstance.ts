@@ -6,5 +6,5 @@ export class courseInstance{
     startDate:string;
     endDate:string;
     courseSpecification:courseSpecification;
-    enrollments:enrollment[];
+    //enrollments:enrollment[];
 }

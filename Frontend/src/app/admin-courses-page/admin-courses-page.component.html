@@ -1,26 +1,38 @@
 <app-admin-header></app-admin-header>
 
 
-<h1>All courses</h1>
+<h1 style="text-align: center;">All courses</h1>
 <table class="table" border="1px solid black">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col" *ngFor = "let column of headers">{{ column }}
-        </th>
-        
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor = "let row of rows">
-        <td scope="row" *ngFor = "let column of headers">
-          {{row[column]}}
-        </td>
+ <thead class="thead-dark">
+   <th>ID</th>
+   <th>EndDate</th>
+   <th>StartDate</th>
+   <th>CourseSpecification</th>
+   <th></th>
+ </thead>
+ <tbody>
+   <tr *ngFor = "let courseInstance of courseInstance">
+     <td>
+       {{courseInstance.id}}        
+     </td>
+     <td>
+       {{courseInstance.EndDate}}        
+     </td>
+     <td>
+       {{courseInstance.StartDate}}        
+     </td>
+     <td>
+       {{courseInstance.CourseSpecification}}        
+     </td>
+     <td><button style='margin-right:16px' (click)="deleteCourse(courseInstance.id)" class="btn btn-danger">Delete</button>
+       <button style='margin-right:16px' (click)="updateCourse(courseInstance.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
+     </td>
 
-      </tr>
-      
-    </tbody>
- </table>
- 
- <button type="button">Add course</button>
+   </tr>
+   
+ </tbody>
+</table> 
 
- <app-footer></app-footer>
+<button type="button" class="btn btn-primary" (click)="gotoAdd()">Add Course</button>
+
+<app-footer></app-footer>
