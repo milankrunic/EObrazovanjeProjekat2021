@@ -102,6 +102,7 @@ public class StudentController {
 		student.setUser(user);
 		student = studentServiceInterface.save(student);
 
+		student = studentServiceInterface.save(student);
 		return new ResponseEntity<StudentDTO>(new StudentDTO(student), HttpStatus.OK);
 	}
 	
