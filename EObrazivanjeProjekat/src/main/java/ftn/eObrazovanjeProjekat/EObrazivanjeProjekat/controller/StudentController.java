@@ -100,6 +100,7 @@ public class StudentController {
 		student.setCardNumber(studentDTO.getCardNumber());
 		
 		student.setUser(user);
+		student = studentServiceInterface.save(student);
 
 		return new ResponseEntity<StudentDTO>(new StudentDTO(student), HttpStatus.OK);
 	}
