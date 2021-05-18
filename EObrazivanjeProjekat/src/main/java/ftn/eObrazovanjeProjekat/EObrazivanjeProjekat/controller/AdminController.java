@@ -84,6 +84,7 @@ public class AdminController {
 		admin.setEmail(adminDTO.getEmail());
 		admin.setUser(user);
 
+		admin = adminServiceInterface.saveAdmin(admin);
 		return new ResponseEntity<AdminDTO>(new AdminDTO(admin), HttpStatus.OK);
 	}
 	

@@ -80,8 +80,7 @@ public class DocumentController {
 		document.setUrl(documentDTO.getUrl());
 		document.setStudent(documentDTO.getStudent());
 		
-		Document izmenjenDocument = new Document();
-		document = documentServiceInterface.save(izmenjenDocument);
+		document = documentServiceInterface.save(document);
 		
 		return new ResponseEntity<DocumentDTO>(new DocumentDTO(document),HttpStatus.OK);
 	}

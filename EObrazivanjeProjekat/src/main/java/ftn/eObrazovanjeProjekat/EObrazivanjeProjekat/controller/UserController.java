@@ -104,9 +104,7 @@ public class UserController {
 		user.setUsername(userDTO.getUser_name());
 		user.setPassword(userDTO.getPassword());
 		
-		
-		User izmenjenUser = new User();
-		izmenjenUser = userService.save(izmenjenUser);
+		user = userService.save(user);
 		
 		return new ResponseEntity<UserDTO>(new UserDTO(user),HttpStatus.OK);
 	}

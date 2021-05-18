@@ -85,6 +85,7 @@ public class CourseInstanceController {
 		courseInstance.setEndDate(courseInstanceDTO.getEndDate());
 		courseInstance.setCourseSpecification(cs);
 
+		courseInstance = courseInstanceServiceInterface.save(courseInstance);
 		return new ResponseEntity<CourseInstanceDTO>(new CourseInstanceDTO(courseInstance), HttpStatus.OK);
 	}
 	

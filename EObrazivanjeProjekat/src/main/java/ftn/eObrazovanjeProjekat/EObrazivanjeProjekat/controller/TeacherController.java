@@ -83,6 +83,7 @@ public class TeacherController {
 		teacher.setEmail(teacherDTO.getEmail());
 		teacher.setUser(user);
 
+		teacher = teacherServiceInterface.save(teacher);
 		return new ResponseEntity<TeacherDTO>(new TeacherDTO(teacher), HttpStatus.OK);
 	}
 	

@@ -85,6 +85,7 @@ public class ExamController {
 		exam.setGrade(examDTO.getGrade());
 //		exam.setExamParts(examDTO.getExamParts());
 		
+		exam = examServiceInterface.save(exam);
 		return new ResponseEntity<ExamDTO>(new ExamDTO(exam), HttpStatus.OK);
 	}
 	

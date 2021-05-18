@@ -75,6 +75,7 @@ public class CourseSpecificationController {
 		courseSpecification.setEcts(courseSpecificationDTO.getEcts());
 		courseSpecification.setCode(courseSpecificationDTO.getCode());
 
+		courseSpecification = courseSpecificationServiceInterface.save(courseSpecification);
 		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(courseSpecification), HttpStatus.OK);
 	}
 	

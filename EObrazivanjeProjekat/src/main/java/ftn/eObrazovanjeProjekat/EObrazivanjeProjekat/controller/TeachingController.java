@@ -98,6 +98,7 @@ public class TeachingController {
 		tea.setTeacher(t);
 		tea.setTeachingType(tt);
 
+		tea = teachingServiceInterface.save(tea);
 		return new ResponseEntity<TeachingDTO>(new TeachingDTO(tea), HttpStatus.OK);
 	}
 	
