@@ -18,6 +18,7 @@ import { AdminCoursesPageComponent } from './admin-courses-page/admin-courses-pa
 import { AddStudentComponent } from './add components/add-student/add-student.component';
 import { StudentDetailsComponent } from './details components/student-details/student-details.component';
 import { CanActivateAuthGuard } from './services/auth/can-activate-auth.service';
+import { TeacherDetailsComponent } from './details components/teacher-details/teacher-details.component';
 
 // import { BrowserModule } from '@angular/platform-browser';
 
@@ -38,6 +39,7 @@ const appRoutes: Routes = [
   { path: 'student-subject', component: StudentsSubjectComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'editstudent/:id', component: StudentDetailsComponent },
+  { path: 'editteacher/:id', component: TeacherDetailsComponent },
   {path: "**", component: ErrorComponent},
 ];
 

@@ -38,6 +38,7 @@ import { CanActivateAuthGuard } from './services/auth/can-activate-auth.service'
 import { JwtUtilsService } from './services/auth/jwt-utils.service';
 import { TokenInterceptorService } from './services/auth/token-interceptor.service';
 import { AddAccountComponent } from './add components/add-account/add-account.component';
+import { TeacherDetailsComponent } from './details components/teacher-details/teacher-details.component';
 
 
 
@@ -72,6 +73,7 @@ import { AddAccountComponent } from './add components/add-account/add-account.co
     AddTeacherComponent,
     StudentDetailsComponent,
     AddAccountComponent,
+    TeacherDetailsComponent,
   ],
   imports: [
     BrowserModule,

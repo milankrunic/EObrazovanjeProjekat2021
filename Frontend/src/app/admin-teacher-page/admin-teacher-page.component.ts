@@ -25,8 +25,8 @@ export class AdminTeacherPageComponent implements OnInit {
     
   }
 
-  updateEmployee(id: number){
-    this.router.navigate(['update', id]);
+  updateTeacher(id : number){
+    this.router.navigate(['/editteacher', id]);
   }
 
   deleteTeacher(teacherId: number): void {
