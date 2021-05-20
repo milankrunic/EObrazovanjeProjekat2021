@@ -42,6 +42,11 @@ public class EnrollmentService implements EnrollmentServiceInterface {
 	}
 
 //	enrollments by student
+//	@Override
+//	public List<Enrollment> findAllByStudent(Long id) {
+//		return enrollmentRepository.findAllByStudent(id);
+//	}
+	
 	@Override
 	public List<Enrollment> findAllByStudent(Long id) {
 		return enrollmentRepository.findByStudent(id);

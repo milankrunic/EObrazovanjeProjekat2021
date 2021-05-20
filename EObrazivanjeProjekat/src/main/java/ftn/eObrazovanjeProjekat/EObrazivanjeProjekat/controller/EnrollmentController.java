@@ -19,23 +19,25 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.Enrollment
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentServiceInterface;
 
 @RestController
-@RequestMapping(value = "api/enrollments")
+@RequestMapping(value = "api/students/{idStudent}/enrollments")
 public class EnrollmentController {
 	
 	@Autowired
 	EnrollmentServiceInterface enrollmentServiceInterface;
 	
 	@GetMapping
-	public ResponseEntity<List<EnrollmentDTO>> getEnrollmentByStudent(@PathVariable("idStudent") Long id){
+	public ResponseEntity<List<EnrollmentDTO>> getEnrollmentByStudent(@PathVariable("idStudent") Long idStudent){
 
-		List<Enrollment> enrollments = enrollmentServiceInterface.findAllByStudent(id);
+		List<Enrollment> enrollments = enrollmentServiceInterface.findAllByStudent(idStudent);
 		
-		List<EnrollmentDTO> enrollmentDTO = new ArrayList<EnrollmentDTO>();
+		List<EnrollmentDTO> enrollmentDTO = new ArrayList<>();
 		for(Enrollment enrollment: enrollments) {
 			enrollmentDTO.add(new EnrollmentDTO(enrollment));
-		}
+		}	
 		return new ResponseEntity<List<EnrollmentDTO>>(enrollmentDTO, HttpStatus.OK);
 	}
+	
+
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<EnrollmentDTO> getEnrollment(@PathVariable("id") Long id){

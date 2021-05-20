@@ -26,7 +26,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentSer
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping(value = "api/exam")
+@RequestMapping(value = "api/enrollments/{idEnrollment}/exams")
 public class ExamController {
 
 	@Autowired
@@ -37,7 +37,7 @@ public class ExamController {
 	
 	@GetMapping
 	public ResponseEntity<List<ExamDTO>> getExamsByEnrollments(@PathVariable("idEnrollment") Long id){
-
+		
 		List<Exam> exams = examServiceInterface.getAllExamsByEnrollments(id);
 		
 		List<ExamDTO> examDTO = new ArrayList<ExamDTO>();

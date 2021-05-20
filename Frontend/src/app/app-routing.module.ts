@@ -31,7 +31,7 @@ const appRoutes: Routes = [
   { path: 'adminexams', component: AdminExamsPageComponent},
   { path: 'admincourses', component: AdminCoursesPageComponent},
   { path: 'addStudent', component: AddStudentComponent },
-  { path: 'student', component: StudentProfileComponent},
+  { path: 'student/:id', component: StudentProfileComponent},
   { path: 'teacher', component: MainPageTeacherComponent},
   { path: 'exam-registration', component: ExamRegistrationComponent },
   { path: 'student-documents', component: StudentDocumentsComponent },

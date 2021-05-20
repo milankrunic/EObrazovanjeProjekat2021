@@ -21,7 +21,7 @@ export class StudentDetailsComponent implements OnInit {
     email: '',
     userId: ''
   };
-
+    
   constructor(private studentService: StudentsService, private route: ActivatedRoute, private location: Location) {
     
 }
