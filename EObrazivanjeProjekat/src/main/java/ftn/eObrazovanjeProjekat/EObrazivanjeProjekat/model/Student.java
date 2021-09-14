@@ -18,6 +18,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -41,8 +42,12 @@ public class Student {
 	@Column(name = "email", nullable = false)
 	private String email;
 	
-	@ManyToOne
-	@JoinColumn(name = "user", referencedColumnName = "id_user", nullable = false)
+//	@ManyToOne
+//	@JoinColumn(name = "id_user", referencedColumnName = "id_user", nullable = false)
+//	private User user;
+	
+	@OneToOne(optional = false, cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_user", referencedColumnName = "id")
 	private User user;
 	
 	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

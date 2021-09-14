@@ -9,7 +9,7 @@
 	<div id="container">
 		<div class="box">
 			<h2>Login</h2>
-			<form (ngSubmit)="login()">
+			<form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
 				<div class="inputBox">
 					<input type="text" name="user_name" [(ngModel)]="user.user_name" id="userNameInput" required="">
 					<label>Username:</label>
