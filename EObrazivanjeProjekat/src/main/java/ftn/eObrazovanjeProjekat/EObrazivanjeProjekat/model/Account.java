@@ -18,13 +18,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "account")
-public class Account {
+public class Account extends JpaEntity {
 	
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idAccount", nullable = false, unique = true)
-	private Long idAccount;
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Column(name = "amount", nullable = false)
 	private Double amount;
 	
@@ -39,21 +40,13 @@ public class Account {
 		super();
 	}
 
-	public Account(Long idAccount, Double amount, Student student, List<StudentPayments> studentPayments) {
-		super();
-		this.idAccount = idAccount;
+	public Account(Long id, Double amount, Student student, List<StudentPayments> studentPayments) {
+		super(id);
 		this.amount = amount;
 		this.student = student;
 		this.studentPayments = studentPayments;
 	}
 
-	public Long getIdAccount() {
-		return idAccount;
-	}
-
-	public void setIdAccount(Long idAccount) {
-		this.idAccount = idAccount;
-	}
 
 	public Double getAmount() {
 		return amount;

@@ -18,12 +18,8 @@ import javax.persistence.Table;
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "User")
-public class User {
+public class User extends JpaEntity {
 	
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false, unique = true)
-	private Long id;
 	
 	@Column(name = "username", nullable = true)
 	private String username;
@@ -51,9 +47,7 @@ public class User {
 
 	public User(Long id, String username, String password, List<UserRole> role,
 			List<Admin> administrators, List<Student> students, List<Teacher> teachers) {
-		super();
-		this.id = id;
-
+		super(id);
 		this.username = username;
 		this.password = password;
 		this.userRoles = role;
@@ -62,13 +56,6 @@ public class User {
 		this.teachers = teachers;
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getUsername() {
 		return username;

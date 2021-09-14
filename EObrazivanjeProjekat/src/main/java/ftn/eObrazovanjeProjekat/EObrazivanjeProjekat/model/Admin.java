@@ -13,13 +13,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Admin")
-public class Admin {
+public class Admin extends JpaEntity {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idAdmin", nullable = false, unique = true)
-	private Long idAdmin;
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Column(name = "first_name", nullable = false)
 	private String firstName;
 	
@@ -41,21 +42,12 @@ public class Admin {
 		super();
 	}
 
-	public Admin(Long idAdmin, String firstName, String lastName, String email, User user) {
-		super();
-		this.idAdmin = idAdmin;
+	public Admin(Long id, String firstName, String lastName, String email, User user) {
+		super(id);
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.user = user;
-	}
-
-	public Long getIdAdmin() {
-		return idAdmin;
-	}
-
-	public void setIdAdmin(Long idAdmin) {
-		this.idAdmin = idAdmin;
 	}
 
 	public String getFirstName() {

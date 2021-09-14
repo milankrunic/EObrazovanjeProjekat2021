@@ -20,13 +20,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "teacher")
-public class Teacher {
+public class Teacher extends JpaEntity {
+
 	
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_teacher", nullable = false, unique = true)
-	private Long idTeacher;
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Column(name = "first_name", nullable = false)
 	private String firstName;
 	 
@@ -51,10 +52,9 @@ public class Teacher {
 		super();
 	}
 
-	public Teacher(Long idTeacher, String firstName, String lastName, String email, List<Teaching> teaching,
+	public Teacher(Long id, String firstName, String lastName, String email, List<Teaching> teaching,
 			User user) {
-		super();
-		this.idTeacher = idTeacher;
+		super(id);
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -62,13 +62,6 @@ public class Teacher {
 		this.user = user;
 	}
 
-	public Long getIdTeacher() {
-		return idTeacher;
-	}
-
-	public void setIdTeacher(Long idTeacher) {
-		this.idTeacher = idTeacher;
-	}
 
 	public String getFirstName() {
 		return firstName;

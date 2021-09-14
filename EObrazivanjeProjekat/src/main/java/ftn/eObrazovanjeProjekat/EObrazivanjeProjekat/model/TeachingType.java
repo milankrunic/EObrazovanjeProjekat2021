@@ -16,13 +16,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Teaching_type")
-public class TeachingType {
+public class TeachingType extends JpaEntity {
+
 	
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idTeachingType", nullable = false, unique = true)
-	private Long idTeachingType;
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Column(name = "name_teaching_type", nullable = false)
 	private String name;
 	
@@ -36,21 +37,13 @@ public class TeachingType {
 		super();
 	}
 
-	public TeachingType(Long idTeachingType, String name, String code, List<Teaching> teaching) {
-		super();
-		this.idTeachingType = idTeachingType;
+	public TeachingType(Long id, String name, String code, List<Teaching> teaching) {
+		super(id);
 		this.name = name;
 		this.code = code;
 		this.teaching = teaching;
 	}
 
-	public Long getIdTeachingType() {
-		return idTeachingType;
-	}
-
-	public void setIdTeachingType(Long idTeachingType) {
-		this.idTeachingType = idTeachingType;
-	}
 
 	public String getName() {
 		return name;
