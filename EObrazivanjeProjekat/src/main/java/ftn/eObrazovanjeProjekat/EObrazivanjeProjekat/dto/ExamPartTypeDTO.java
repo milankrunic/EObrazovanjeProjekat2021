@@ -14,7 +14,7 @@ public class ExamPartTypeDTO {
 	private String code;
 	private Set<ExamPartDTO> examParts = new HashSet<ExamPartDTO>();
 	
-	public ExamPartTypeDTO(ExamPartType examPartType) {
+	public ExamPartTypeDTO() {
 		super();
 	}
 
@@ -25,7 +25,11 @@ public class ExamPartTypeDTO {
 		this.code = code;
 		this.examParts = examParts;
 	}
-
+	
+//	public ExamPartTypeDTO(ExamPartType ept) {
+//		this(ept.getId(),ept.getName(),ept.getCode(),ept.getExamPart());
+//	}
+	
 	public Long getId() {
 		return id;
 	}

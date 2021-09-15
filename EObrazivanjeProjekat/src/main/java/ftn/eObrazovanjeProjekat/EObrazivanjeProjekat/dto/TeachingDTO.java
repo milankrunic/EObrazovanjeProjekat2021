@@ -4,7 +4,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teaching;
 
 public class TeachingDTO {
 	
-	private Long idTeaching;
+	private Long id;
 	private Long courseInstance;
 	private Long teacher;
 	private Long teachingType;
@@ -15,10 +15,10 @@ public class TeachingDTO {
 		super();
 	}
 
-	public TeachingDTO(Long idTeaching, Long courseInstance, Long teacher, Long teachingType, String nameTeacher,
+	public TeachingDTO(Long id, Long courseInstance, Long teacher, Long teachingType, String nameTeacher,
 			String nameTeachingType) {
 		super();
-		this.idTeaching = idTeaching;
+		this.id = id;
 		this.courseInstance = courseInstance;
 		this.teacher = teacher;
 		this.teachingType = teachingType;
@@ -27,15 +27,15 @@ public class TeachingDTO {
 	}
 	
 	public TeachingDTO(Teaching te) {
-		this(te.getIdTeaching(), te.getCourseInstance().getIdCourseInstance(), te.getTeacher().getIdTeacher(), te.getTeachingType().getIdTeachingType(), te.getTeacher().getLastName(), te.getTeachingType().getName());
+		this(te.getId(), te.getCourseInstance().getId(), te.getTeacher().getId(), te.getTeachingType().getId(), te.getTeacher().getLastName(), te.getTeachingType().getName());
 	}
 
-	public Long getIdTeaching() {
-		return idTeaching;
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdTeaching(Long idTeaching) {
-		this.idTeaching = idTeaching;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Long getCourseInstance() {

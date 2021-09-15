@@ -13,7 +13,7 @@ public class StudentPaymentsDTO {
 	private String name;
 	private Account account;
 	
-	public StudentPaymentsDTO(StudentPayments payments) {
+	public StudentPaymentsDTO() {
 		super();
 	}
 	
@@ -27,7 +27,9 @@ public class StudentPaymentsDTO {
 	}
 	
 	
-
+	public StudentPaymentsDTO(StudentPayments sp) {
+		this(sp.getId(),sp.getAmount(),sp.getDate(),sp.getName(),sp.getAccount());
+	}
 
 	public Long getId() {
 		return id;

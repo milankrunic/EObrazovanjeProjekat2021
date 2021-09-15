@@ -5,32 +5,37 @@ import java.util.Set;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Account;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
+import ftn.projekat.eObrazovanje.ProjekatEObrazovanje20212022.dtos.StudentDTO;
 
 public class AccountDTO {
 	
-	private Long idAccount;
+	private Long id;
 	private Double amount;
 	private Student student;
 	private Set<StudentPaymentsDTO> studentPayments = new HashSet<StudentPaymentsDTO>();
 	
-	public AccountDTO(Account account) {
+	public AccountDTO() {
 		super();
 	}
 	
-	public AccountDTO(Long idAccount,Double amount,Student student,Set<StudentPaymentsDTO> studentPayments) {
+	public AccountDTO(Long id,Double amount,Student student,Set<StudentPaymentsDTO> studentPayments) {
 		super();
-		this.idAccount = idAccount;
+		this.id = id;
 		this.amount = amount;
 		this.student = student;
 		this.studentPayments = studentPayments;
 	}
-
-	public Long getIdAccount() {
-		return idAccount;
+	
+	public AccountDTO(Account account) {
+		this(account.getId(),account.getAmount(),account.getStudent(),account.getStudentPayments());
 	}
 
-	public void setIdAccount(Long idAccount) {
-		this.idAccount = idAccount;
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Double getAmount() {

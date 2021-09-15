@@ -4,7 +4,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 
 public class CourseInstanceDTO {
 	
-	private Long idCourseInstance;
+	private Long id;
 	private String startDate;
 	private String endDate;
 	private Long idCourseSpecification;
@@ -14,10 +14,10 @@ public class CourseInstanceDTO {
 		super();
 	}
 
-	public CourseInstanceDTO(Long idCourseInstance, String startDate, String endDate, Long idCourseSpecification,
+	public CourseInstanceDTO(Long id, String startDate, String endDate, Long idCourseSpecification,
 			String nameCourseSpecification) {
 		super();
-		this.idCourseInstance = idCourseInstance;
+		this.id = id;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.idCourseSpecification = idCourseSpecification;
@@ -25,15 +25,15 @@ public class CourseInstanceDTO {
 	}
 	
 	public CourseInstanceDTO(CourseInstance ci) {
-		this(ci.getIdCourseInstance(), ci.getStartDate(), ci.getEndDate(), ci.getCourseSpecification().getIdCourseSpecification(), ci.getCourseSpecification().getTitle());
+		this(ci.getId(), ci.getStartDate(), ci.getEndDate(), ci.getCourseSpecification().getId(), ci.getCourseSpecification().getTitle());
 	}
 
-	public Long getIdCourseInstance() {
-		return idCourseInstance;
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdCourseInstance(Long idCourseInstance) {
-		this.idCourseInstance = idCourseInstance;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getStartDate() {

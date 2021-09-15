@@ -6,31 +6,35 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 
 public class DocumentDTO {
 	
-	private Long idDokument;
+	private Long id;
 	private String title;
 	private String url;
 	private Student student;
 	private DocumentType dokumentType;
 	
-	public DocumentDTO(Document document) {
+	public DocumentDTO() {
 		super();
 	}
 	
-	public DocumentDTO(Long idDokument,String title,String url,Student student,DocumentType dokumentType) {
+	public DocumentDTO(Long id,String title,String url,Student student,DocumentType dokumentType) {
 		super();
-		this.idDokument = idDokument;
+		this.id = id;
 		this.title = title;
 		this.url = url;
 		this.student = student;
 		this.dokumentType = dokumentType;
 	}
-
-	public Long getIdDokument() {
-		return idDokument;
+	
+	public DocumentDTO(Document doc) {
+		this(doc.getId(),doc.getTitle(),doc.getUrl(),doc.getStudent(),doc.getDokumentType());
 	}
 
-	public void setIdDokument(Long idDokument) {
-		this.idDokument = idDokument;
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getTitle() {

@@ -4,7 +4,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.TeachingType;
 
 public class TeachingTypeDTO {
 	
-	private Long idTeachingType;
+	private Long id;
 	private String name;
 	private String code;
 	
@@ -12,23 +12,23 @@ public class TeachingTypeDTO {
 		super();
 	}
 
-	public TeachingTypeDTO(Long idTeachingType, String name, String code) {
+	public TeachingTypeDTO(Long id, String name, String code) {
 		super();
-		this.idTeachingType = idTeachingType;
+		this.id = id;
 		this.name = name;
 		this.code = code;
 	}
 	
 	public TeachingTypeDTO(TeachingType tt) {
-		this(tt.getIdTeachingType(), tt.getName(), tt.getCode());
+		this(tt.getId(), tt.getName(), tt.getCode());
 	}
 
-	public Long getIdTeachingType() {
-		return idTeachingType;
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdTeachingType(Long idTeachingType) {
-		this.idTeachingType = idTeachingType;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName() {
