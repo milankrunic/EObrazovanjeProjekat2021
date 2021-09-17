@@ -1,11 +1,3 @@
-INSERT INTO role(id, name, code) VALUES(1, 'ROLE_STUDENT', 'st');
-INSERT INTO role(id, name, code) VALUES(2, 'ROLE_ADMINISTRATOR', 'admin');
-INSERT INTO role(id, name, code) VALUES(3, 'ROLE_TEACHER', 'teach');
-
-
-
-
-
 INSERT INTO user(username, password) VALUES ('perap','pera123');
 INSERT INTO user(username, password) VALUES ('jovaj','jova123');
 INSERT INTO user(username, password) VALUES ('lazal','laza123');
@@ -14,20 +6,15 @@ INSERT INTO user(username, password) VALUES ('zikaz','zika123');
 INSERT INTO user(username, password) VALUES ('simas','sima123');
 INSERT INTO user(username, password) VALUES ('markom','marko123');
 
-INSERT INTO user_role(user_id, role_id) VALUES(1, 1);
-INSERT INTO user_role(user_id, role_id) VALUES(4, 1);
-INSERT INTO user_role(user_id, role_id) VALUES(2, 2);
-INSERT INTO user_role(user_id, role_id) VALUES(3, 3);
-
-INSERT INTO Admin(first_name,last_name,email,id_user) VALUES ('Marko','Markovic','marko@gmail.com',7);
+INSERT INTO Admin(first_name,last_name,email,user) VALUES ('Marko','Markovic','marko@gmail.com',7);
 
 INSERT INTO teacher(first_name,last_name,email,id_user) VALUES ('Pera','Peric','pera@gmail.com',1);
 INSERT INTO teacher(first_name,last_name,email,id_user) VALUES ('Jova','Jovic','jova@gmail.com',2);
 INSERT INTO teacher(first_name,last_name,email,id_user) VALUES ('Laza','Lazic','laza@gmail.com',3);
 
-INSERT INTO Student(first_name,last_name,card_number,email, id_user) VALUES ('Mika','Mikic', 'SF-12-2020','mika@gmail.com',4);
-INSERT INTO Student(first_name,last_name,card_number,email, id_user) VALUES ('Zika','Zikic', 'SF-19-2020','zika@gmail.com',5);
-INSERT INTO Student(first_name,last_name,card_number,email, id_user) VALUES ('Sima','Simic', 'SF-25-2020','sima@gmail.com',6);
+INSERT INTO Student(first_name,last_name,card_number,email, user) VALUES ('Mika','Mikic', 'SF-12-2020','mika@gmail.com',4);
+INSERT INTO Student(first_name,last_name,card_number,email, user) VALUES ('Zika','Zikic', 'SF-19-2020','zika@gmail.com',5);
+INSERT INTO Student(first_name,last_name,card_number,email, user) VALUES ('Sima','Simic', 'SF-25-2020','sima@gmail.com',6);
 
 INSERT INTO document_type(name, code) VALUES ('document1','D1');
 INSERT INTO document_type(name, code) VALUES ('document2','D2');

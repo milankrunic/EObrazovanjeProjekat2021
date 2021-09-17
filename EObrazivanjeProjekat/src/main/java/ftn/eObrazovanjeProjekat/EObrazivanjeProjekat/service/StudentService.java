@@ -25,8 +25,8 @@ public class StudentService implements StudentServiceInterface {
 	ExamPartRepository examPartRepository;
 	
 	@Override
-	public List<Student> findAllByUser(Long id) {	
-		return studentRepository.findByUser_id(id);
+	public List<Student> findAllByUser(Long id) {
+		return studentRepository.findByUser(id);
 	}
 	
 	@Override

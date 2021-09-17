@@ -25,7 +25,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentSer
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping(value = "api/users/{idUser}/students")
+@RequestMapping(value = "api/students")
 public class StudentController {
 
 	@Autowired
@@ -34,23 +34,10 @@ public class StudentController {
 	@Autowired
 	UserServiceInterface userServiceInterface;
 	
-	@GetMapping
-	public ResponseEntity<List<StudentDTO>> getStudentsByUser(@PathVariable("idUser") Long id){
-
-		List<Student> students = studentServiceInterface.findAllByUser(id);
-		
-		List<StudentDTO> studentDTO = new ArrayList<StudentDTO>();
-		for(Student student: students) {
-			studentDTO.add(new StudentDTO(student));
-		}
-		return new ResponseEntity<List<StudentDTO>>(studentDTO, HttpStatus.OK);
-	}
-	
-	
 //	@GetMapping
-//	public ResponseEntity<List<StudentDTO>> getStudentsByUser(){
+//	public ResponseEntity<List<StudentDTO>> getStudentsByUser(@PathVariable("idUser") Long id){
 //
-//		List<Student> students = studentServiceInterface.findAll();
+//		List<Student> students = studentServiceInterface.findAllByUser(id);
 //		
 //		List<StudentDTO> studentDTO = new ArrayList<StudentDTO>();
 //		for(Student student: students) {
@@ -58,6 +45,19 @@ public class StudentController {
 //		}
 //		return new ResponseEntity<List<StudentDTO>>(studentDTO, HttpStatus.OK);
 //	}
+	
+	
+	@GetMapping
+	public ResponseEntity<List<StudentDTO>> getStudentsByUser(){
+
+		List<Student> students = studentServiceInterface.findAll();
+		
+		List<StudentDTO> studentDTO = new ArrayList<StudentDTO>();
+		for(Student student: students) {
+			studentDTO.add(new StudentDTO(student));
+		}
+		return new ResponseEntity<List<StudentDTO>>(studentDTO, HttpStatus.OK);
+	}
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<StudentDTO> getStudent(@PathVariable("id") Long id){

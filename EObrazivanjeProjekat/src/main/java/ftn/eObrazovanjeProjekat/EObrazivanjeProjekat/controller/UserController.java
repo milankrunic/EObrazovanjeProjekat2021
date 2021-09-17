@@ -53,24 +53,21 @@ public class UserController {
 	}
 	
 	
-//	@PostMapping(value = "/login", consumes ="application/json")
-//	public ResponseEntity<UserDTO> login(@RequestBody UserDTO userDTO){
-//		String userName = userDTO.getUser_name();
-//		String password = userDTO.getPassword();
-//		
-//		User matchUser = userService.findByUsernameAndPassword(userName, password);
-//		
-//		if(matchUser == null){
-//			return new ResponseEntity<UserDTO>(HttpStatus.NOT_FOUND);
-//		}
-//
-//		
-//		return new ResponseEntity<UserDTO>(new UserDTO(matchUser), HttpStatus.OK);
-//		
-//	}
-	
-	
-	
+	@PostMapping(value = "/login", consumes ="application/json")
+	public ResponseEntity<UserDTO> login(@RequestBody UserDTO userDTO){
+		String userName = userDTO.getUser_name();
+		String password = userDTO.getPassword();
+		
+		User matchUser = userService.findByUsernameAndPassword(userName, password);
+		
+		if(matchUser == null){
+			return new ResponseEntity<UserDTO>(HttpStatus.NOT_FOUND);
+		}
+
+		
+		return new ResponseEntity<UserDTO>(new UserDTO(matchUser), HttpStatus.OK);
+		
+	}
 	
 //	@PostMapping
 //	public ResponseEntity<UserDTO> saveUser(@RequestBody UserDTO userDTO){

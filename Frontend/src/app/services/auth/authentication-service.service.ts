@@ -13,16 +13,16 @@ export class AuthenticationService {
 
   login(user_name: string, password: string): Observable<boolean> {
     var headers: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(this.loginPath, JSON.stringify({ user_name, password }), { headers:headers, responseType: "text" })
+    return this.http.post(this.loginPath, JSON.stringify({ user_name, password }), { headers })
     .pipe(map((res: any) => {
-      let token = res;
+      let token = res && res['token'];
       console.log(user_name)
       if (token) {
         console.log("ALO")
         localStorage.setItem('currentUser', JSON.stringify({
           username: user_name, 
           roles: this.jwtUtilsService.getRoles(token),
-          token: token
+          token: token.split(' ')[1]
         }));
         return true;
       }
@@ -33,10 +33,10 @@ export class AuthenticationService {
       }),
       catchError((error: any) => {
         if (error.status === 400) {
-          return Observable.throw('Ilegal login');
+          return throwError('Ilegal login');
         }
         else {
-          return Observable.throw(error.json().error || 'Server error');
+          return throwError(error.json().error || 'Server error');
         }
       }));
 
