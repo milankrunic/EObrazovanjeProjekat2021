@@ -8,14 +8,22 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "role")
-public class Role extends JpaEntity{
-
+public class Role {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
+	private Long id;
+	
 	@Column(name = "name", nullable = false)
 	private String name;
 	
@@ -30,7 +38,7 @@ public class Role extends JpaEntity{
 	}
 
 	public Role(Long id, String name, String code, List<UserRole> users) {
-		super(id);
+		super();
 		this.name = name;
 		this.code = code;
 		this.users = users;

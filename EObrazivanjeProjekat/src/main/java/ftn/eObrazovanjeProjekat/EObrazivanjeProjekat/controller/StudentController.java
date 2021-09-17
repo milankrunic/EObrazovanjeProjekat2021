@@ -72,7 +72,7 @@ public class StudentController {
 	@PostMapping(consumes = "application/json")
 	public ResponseEntity<StudentDTO> addStudent(@RequestBody StudentDTO studentDTO){
 
-		User u = userServiceInterface.findById(studentDTO.getUserId());
+		User u = userServiceInterface.findOne(studentDTO.getUserId());
 		Student s = new Student();
 		s.setFirstName(studentDTO.getFirstName());	
 		s.setLastName(studentDTO.getLastName());
@@ -89,7 +89,7 @@ public class StudentController {
 	public ResponseEntity<StudentDTO> updateStudent(@RequestBody StudentDTO studentDTO, @PathVariable("id") Long id){
 
 		Student student = studentServiceInterface.findById(id);
-		User user = userServiceInterface.findById(studentDTO.getUserId());
+		User user = userServiceInterface.findOne(studentDTO.getUserId());
 		
 		if(student == null) {
 			return new ResponseEntity<StudentDTO>(HttpStatus.BAD_REQUEST);

@@ -25,10 +25,7 @@ public class UserService implements UserServiceInterface{
 		return userRepository.getOne(id);
 	}
 
-	@Override
-	public User findById(Long userId) {
-		return userRepository.findByIdUser(userId);
-	}
+
 
 	@Override
 	public User save(User user) {

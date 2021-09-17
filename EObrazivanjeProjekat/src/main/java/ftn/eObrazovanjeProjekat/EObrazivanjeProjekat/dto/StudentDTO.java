@@ -40,7 +40,7 @@ public class StudentDTO {
 	}
 	
 	public StudentDTO(Student student) {
-		this(student.getIdStudent(), student.getFirstName(), student.getLastName(), student.getEmail(), student.getCardNumber(), student.getUser().getIdUser(), student.getUser().getUsername());
+		this(student.getIdStudent(), student.getFirstName(), student.getLastName(), student.getEmail(), student.getCardNumber(), student.getUser().getId(), student.getUser().getUsername());
 	}
 
 

@@ -65,12 +65,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 				.and()
 			.authorizeRequests()
-				.antMatchers("/", "/api/login", "/styles.css", "/profile",
+				.antMatchers("/", "/api/login", "/styles.css", "/profile", 
+						"api/admin",
                         "/runtime.js", "/polyfills.js", "/vendor.js", "/main.js", "/images/**", "/js/**",
                         "/runtime-es2015.js", "/polyfills-es2015.js", "/vendor-es2015.js", "/main-es2015.js").permitAll()
 				.antMatchers("/index.html").authenticated()
-				.antMatchers(HttpMethod.POST, "/api/admin/**")
-					.hasAuthority("ROLE_ADMIN") //only administrator can add and edit data
+//				.antMatchers(HttpMethod.POST, "/api/admin/**")
+//					.hasAuthority("ROLE_ADMIN") //only administrator can add and edit data
 				.anyRequest().authenticated();
 
 		

@@ -58,7 +58,7 @@ public class AdminController {
 	@PostMapping
 	public ResponseEntity<AdminDTO> addAdmin(@RequestBody AdminDTO adminDTO){
 
-		User u = userServiceInterface.findById(adminDTO.getIdUser());
+		User u = userServiceInterface.findOne(adminDTO.getIdUser());
 		Admin a = new Admin();
 		a.setFirstName(adminDTO.getFirstName());	
 		a.setLastName(adminDTO.getLastName());
@@ -74,7 +74,7 @@ public class AdminController {
 	public ResponseEntity<AdminDTO> updateAdmin(@RequestBody AdminDTO adminDTO, @PathVariable("idAdmin") Long idAdmin){
 
 		Admin admin = adminServiceInterface.findById(idAdmin);
-		User user = userServiceInterface.findById(adminDTO.getIdUser());
+		User user = userServiceInterface.findOne(adminDTO.getIdUser());
 		
 		if(admin == null) {
 			return new ResponseEntity<AdminDTO>(HttpStatus.BAD_REQUEST);
