@@ -4,7 +4,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseSpecification;
 
 public class CourseSpecificationDTO {
 	
-	private Long id;
+	private Long idCourseSpecification;
 	private String title;
 	private Integer ects;
 	private String code;
@@ -13,24 +13,24 @@ public class CourseSpecificationDTO {
 		super();
 	}
 
-	public CourseSpecificationDTO(Long id, String title, Integer ects, String code) {
+	public CourseSpecificationDTO(Long idCourseSpecification, String title, Integer ects, String code) {
 		super();
-		this.id = id;
+		this.idCourseSpecification = idCourseSpecification;
 		this.title = title;
 		this.ects = ects;
 		this.code = code;
 	}
 
 	public CourseSpecificationDTO(CourseSpecification cs) {
-		this(cs.getId(), cs.getTitle(), cs.getEcts(), cs.getCode());
+		this(cs.getIdCourseSpecification(), cs.getTitle(), cs.getEcts(), cs.getCode());
 	}
 	
-	public Long getId() {
-		return id;
+	public Long getIdCourseSpecification() {
+		return idCourseSpecification;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdCourseSpecification(Long idCourseSpecification) {
+		this.idCourseSpecification = idCourseSpecification;
 	}
 
 	public String getTitle() {

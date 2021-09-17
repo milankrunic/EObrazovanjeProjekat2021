@@ -12,7 +12,7 @@ public class ExamPartStatusDTO {
 	private String code;
 	private Set<ExamPartDTO> examParts = new HashSet<ExamPartDTO>();
 	
-	public ExamPartStatusDTO() {
+	public ExamPartStatusDTO(ExamPartStatus examPartStatus) {
 		super();
 	}
 
@@ -23,11 +23,7 @@ public class ExamPartStatusDTO {
 		this.code = code;
 		this.examParts = examParts;
 	}
-	
-//	public ExamPartStatusDTO(ExamPartStatus eps) {
-//		this(eps.getId(),eps.getName(),eps.getCode(),eps.getExamPart());
-//	}
-	
+
 	public Long getId() {
 		return id;
 	}

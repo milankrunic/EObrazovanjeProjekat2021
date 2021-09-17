@@ -17,7 +17,7 @@ public class ExamPartDTO {
 	private ExamPartType examPartType;
 	private ExamPartStatus examPartStatus;
 	
-	public ExamPartDTO() {
+	public ExamPartDTO(ExamPart examPart) {
 		super();
 	}
 
@@ -32,11 +32,7 @@ public class ExamPartDTO {
 		this.examPartType = examPartType;
 		this.examPartStatus = examPartStatus;
 	}
-	
-//	public ExamPartDTO(ExamPart ep) {
-//		this(ep.getId(),ep.getDate(),ep.getLocation(),ep.getPoints(),ep.getExam(),ep.getExamPartType(),ep.getExamPartStatus());
-//	}
-	
+
 	public Long getId() {
 		return id;
 	}

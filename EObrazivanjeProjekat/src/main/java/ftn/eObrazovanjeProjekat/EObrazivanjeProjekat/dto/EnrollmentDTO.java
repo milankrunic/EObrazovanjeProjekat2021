@@ -14,10 +14,6 @@ public class EnrollmentDTO {
 	private Student student;
 	private Set<ExamDTO> exams = new HashSet<ExamDTO>();
 	
-	public EnrollmentDTO() {
-		super();
-	}
-	
 	public EnrollmentDTO(Long id, CourseInstance courseInstance, Student student, Set<ExamDTO> exams) {
 		super();
 		this.id = id;
@@ -25,12 +21,10 @@ public class EnrollmentDTO {
 		this.student = student;
 		this.exams = exams;
 	}
-	
-//	public EnrollmentDTO(Enrollment e) {
-//		this.(e.getId(),new CourseInstanceDTO(e.getCourseInstance()),e.getStudent(),e.getExam());
-//	}
 
-
+	public EnrollmentDTO(Enrollment enrollment) {
+		super();
+	}
 
 	public Long getId() {
 		return id;

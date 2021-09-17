@@ -12,9 +12,6 @@ public class ExamDTO {
 	private Integer grade;
 	private Set<ExamPartDTO> examParts = new HashSet<ExamPartDTO>();
 	
-	public ExamDTO() {
-		super();
-	}
 	
 	public ExamDTO(Long id, Integer points, Integer grade, Set<ExamPartDTO> examParts) {
 		super();
@@ -23,11 +20,11 @@ public class ExamDTO {
 		this.grade = grade;
 		this.examParts = examParts;
 	}
-	
-//	public ExamDTO(Exam exam) {
-//		this(exam.getId(),exam.getPoints(),exam.getGrade(),exam.getExamPart());
-//	}
+//	
 
+	public ExamDTO(Exam exam) {
+		super();
+	}
 
 	public Long getId() {
 		return id;

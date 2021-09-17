@@ -8,7 +8,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 public class UserDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
+	private Long idUser;
 	private String user_name;
 	private String password;
 	
@@ -16,26 +16,13 @@ public class UserDTO implements Serializable {
 	public UserDTO() {
 		super();
 	}
-	
 
-	public UserDTO(Long id, String user_name, String password) {
-		super();
-		this.id = id;
-		this.user_name = user_name;
-		this.password = password;
+	public Long getIdUser() {
+		return idUser;
 	}
 
-	public UserDTO(User u) {
-		this(u.getId(), u.getUsername(), u.getPassword());
-	}
-
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdUser(Long idUser) {
+		this.idUser = idUser;
 	}
 
 	public String getUser_name() {
@@ -59,4 +46,14 @@ public class UserDTO implements Serializable {
 		return serialVersionUID;
 	}
 
+	public UserDTO(Long idUser, String user_name, String password) {
+		super();
+		this.idUser = idUser;
+		this.user_name = user_name;
+		this.password = password;
+	}
+
+	public UserDTO(User u) {
+		this(u.getIdUser(), u.getUsername(), u.getPassword());
+	}
 }
