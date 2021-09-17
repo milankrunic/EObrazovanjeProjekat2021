@@ -49,15 +49,15 @@ public class StudentService implements StudentServiceInterface {
 		return studentRepository.save(student);
 	}
 	
-	@Override
-	public Student updateStudent(Student student) {
-		Student studentUpdate = studentRepository.findById(student.getIdStudent()).get();
-		studentUpdate.setFirstName(student.getFirstName());
-		studentUpdate.setLastName(student.getLastName());
-		
-		return studentUpdate;
-		
-	}
+//	@Override
+//	public Student updateStudent(Student student) {
+//		Student studentUpdate = studentRepository.findById(student.getIdStudent()).get();
+//		studentUpdate.setFirstName(student.getFirstName());
+//		studentUpdate.setLastName(student.getLastName());
+//		
+//		return studentUpdate;
+//		
+//	}
 
 	@Override
 	@Transactional

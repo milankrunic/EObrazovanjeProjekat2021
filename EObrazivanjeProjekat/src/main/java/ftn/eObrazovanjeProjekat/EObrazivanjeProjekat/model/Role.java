@@ -24,6 +24,7 @@ public class Role {
 	@Column(name = "id", nullable = false)
 	private Long id;
 	
+
 	@Column(name = "name", nullable = false)
 	private String name;
 	
@@ -44,6 +45,15 @@ public class Role {
 		this.users = users;
 	}
 
+	public Long getId() {
+		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
 	public String getName() {
 		return name;
 	}

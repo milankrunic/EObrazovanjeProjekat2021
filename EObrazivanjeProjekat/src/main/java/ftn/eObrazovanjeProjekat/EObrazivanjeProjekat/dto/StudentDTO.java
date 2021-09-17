@@ -1,16 +1,12 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 
-import java.util.HashSet;
-import java.util.Set;
+
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 
 public class StudentDTO {
 	
 	private Long id;
-	private String firstName;
-	private String lastName;
 	private String email; 
 	private String cardNumber;
 	private Long userId;
@@ -24,12 +20,11 @@ public class StudentDTO {
 		super();
 	}
 	
-	public StudentDTO(Long id, String firstName, String lastName, String email, String cardNumber, Long userId,
+	public StudentDTO(Long id, String email, String cardNumber, Long userId,
 			String user) {
 		super();
 		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
+
 		this.email = email;
 		this.cardNumber = cardNumber;
 		this.userId = userId;
@@ -40,7 +35,7 @@ public class StudentDTO {
 	}
 	
 	public StudentDTO(Student student) {
-		this(student.getIdStudent(), student.getFirstName(), student.getLastName(), student.getEmail(), student.getCardNumber(), student.getUser().getId(), student.getUser().getUsername());
+		this(student.getIdStudent(), student.getEmail(), student.getCardNumber(), student.getUser().getId(), student.getUser().getUsername());
 	}
 
 
@@ -54,24 +49,6 @@ public class StudentDTO {
 	}
 
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-
-	public String getLastName() {
-		return lastName;
-	}
-
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
 
 
 	public String getEmail() {

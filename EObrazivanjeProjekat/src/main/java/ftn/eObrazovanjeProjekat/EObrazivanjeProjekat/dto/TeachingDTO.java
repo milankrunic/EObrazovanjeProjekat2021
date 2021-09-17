@@ -8,26 +8,24 @@ public class TeachingDTO {
 	private Long courseInstance;
 	private Long teacher;
 	private Long teachingType;
-	private String nameTeacher;
 	private String nameTeachingType;
 	
 	public TeachingDTO() {
 		super();
 	}
 
-	public TeachingDTO(Long idTeaching, Long courseInstance, Long teacher, Long teachingType, String nameTeacher,
+	public TeachingDTO(Long idTeaching, Long courseInstance, Long teacher, Long teachingType,
 			String nameTeachingType) {
 		super();
 		this.idTeaching = idTeaching;
 		this.courseInstance = courseInstance;
 		this.teacher = teacher;
 		this.teachingType = teachingType;
-		this.nameTeacher = nameTeacher;
 		this.nameTeachingType = nameTeachingType;
 	}
 	
 	public TeachingDTO(Teaching te) {
-		this(te.getIdTeaching(), te.getCourseInstance().getIdCourseInstance(), te.getTeacher().getIdTeacher(), te.getTeachingType().getIdTeachingType(), te.getTeacher().getLastName(), te.getTeachingType().getName());
+		this(te.getIdTeaching(), te.getCourseInstance().getIdCourseInstance(), te.getTeacher().getIdTeacher(), te.getTeachingType().getIdTeachingType(), te.getTeachingType().getName());
 	}
 
 	public Long getIdTeaching() {
@@ -62,13 +60,6 @@ public class TeachingDTO {
 		this.teachingType = teachingType;
 	}
 
-	public String getNameTeacher() {
-		return nameTeacher;
-	}
-
-	public void setNameTeacher(String nameTeacher) {
-		this.nameTeacher = nameTeacher;
-	}
 
 	public String getNameTeachingType() {
 		return nameTeachingType;

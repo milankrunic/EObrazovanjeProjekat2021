@@ -17,15 +17,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.StudentDTO;
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.TeacherDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping(value = "api/users/{idUser}/students")
+@RequestMapping(value = "api/students")
 public class StudentController {
 
 	@Autowired
@@ -74,8 +72,7 @@ public class StudentController {
 
 		User u = userServiceInterface.findOne(studentDTO.getUserId());
 		Student s = new Student();
-		s.setFirstName(studentDTO.getFirstName());	
-		s.setLastName(studentDTO.getLastName());
+
 		s.setEmail(studentDTO.getEmail());
 		s.setCardNumber(studentDTO.getCardNumber());
 
@@ -94,8 +91,7 @@ public class StudentController {
 		if(student == null) {
 			return new ResponseEntity<StudentDTO>(HttpStatus.BAD_REQUEST);
 		}
-		student.setFirstName(studentDTO.getFirstName());
-		student.setLastName(studentDTO.getLastName());
+
 		student.setEmail(studentDTO.getEmail());
 		student.setCardNumber(studentDTO.getCardNumber());
 		

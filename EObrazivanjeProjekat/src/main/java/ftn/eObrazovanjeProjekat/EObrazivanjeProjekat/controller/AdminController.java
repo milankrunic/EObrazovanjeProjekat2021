@@ -60,8 +60,6 @@ public class AdminController {
 
 		User u = userServiceInterface.findOne(adminDTO.getIdUser());
 		Admin a = new Admin();
-		a.setFirstName(adminDTO.getFirstName());	
-		a.setLastName(adminDTO.getLastName());
 		a.setEmail(adminDTO.getEmail());
 		a.setUser(u);
 		
@@ -79,8 +77,7 @@ public class AdminController {
 		if(admin == null) {
 			return new ResponseEntity<AdminDTO>(HttpStatus.BAD_REQUEST);
 		}
-		admin.setFirstName(adminDTO.getFirstName());
-		admin.setLastName(adminDTO.getLastName());
+
 		admin.setEmail(adminDTO.getEmail());
 		admin.setUser(user);
 

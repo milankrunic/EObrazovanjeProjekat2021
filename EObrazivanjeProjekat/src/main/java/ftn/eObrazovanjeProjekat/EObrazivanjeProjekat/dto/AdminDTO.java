@@ -5,8 +5,6 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Admin;
 public class AdminDTO {
 	
 	private Long id;
-	private String firstName;
-	private String lastName;
 	private String email;
 	private Long idUser;
 	private String user;
@@ -15,18 +13,16 @@ public class AdminDTO {
 		super();
 	}
 	
-	public AdminDTO(Long id, String firstName, String lastName, String email, Long idUser, String user) {
+	public AdminDTO(Long id, String email, Long idUser, String user) {
 		super();
 		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
 		this.email = email;
 		this.idUser = idUser;
 		this.user = user;
 	}
 
 	public AdminDTO(Admin admin) {
-		this(admin.getIdAdmin(), admin.getFirstName(), admin.getLastName(), admin.getEmail(), admin.getUser().getId(), admin.getUser().getUsername());
+		this(admin.getIdAdmin(), admin.getEmail(), admin.getUser().getId(), admin.getUser().getUsername());
 	}
 
 	public Long getIdAdmin() {
@@ -37,21 +33,6 @@ public class AdminDTO {
 		this.id = id;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
 
 	public String getEmail() {
 		return email;

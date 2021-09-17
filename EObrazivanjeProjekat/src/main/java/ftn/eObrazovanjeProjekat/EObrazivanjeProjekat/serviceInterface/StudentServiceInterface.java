@@ -18,7 +18,7 @@ public interface StudentServiceInterface {
 	
 	public Student findById(Long studentId);
 
-	Student updateStudent(Student student);
+//	Student updateStudent(Student student);
 
 	Student findByCard(String cardNumber);
 

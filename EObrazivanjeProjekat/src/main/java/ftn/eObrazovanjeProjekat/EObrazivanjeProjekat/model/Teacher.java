@@ -26,12 +26,7 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_teacher", nullable = false, unique = true)
 	private Long idTeacher;
-	
-	@Column(name = "first_name", nullable = false)
-	private String firstName;
-	 
-	@Column(name = "last_name", nullable = false)
-	private String lastName;
+
 	
 	@Column(name = "email", nullable = false)
 	private String email;
@@ -51,12 +46,11 @@ public class Teacher {
 		super();
 	}
 
-	public Teacher(Long idTeacher, String firstName, String lastName, String email, List<Teaching> teaching,
+	public Teacher(Long idTeacher, String email, List<Teaching> teaching,
 			User user) {
 		super();
 		this.idTeacher = idTeacher;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		
 		this.email = email;
 		this.teaching = teaching;
 		this.user = user;
@@ -70,22 +64,7 @@ public class Teacher {
 		this.idTeacher = idTeacher;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
+	
 	public String getEmail() {
 		return email;
 	}

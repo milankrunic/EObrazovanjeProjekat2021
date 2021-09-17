@@ -29,12 +29,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idStudent", nullable = false, unique = true)
 	private Long idStudent;
-	
-	@Column(name = "first_name", nullable = false)
-	private String firstName;
-	
-	@Column(name = "last_name", nullable = false)
-	private String lastName;
+
 	
 	@Column(name = "card_number", nullable = false)
 	private String cardNumber;
@@ -63,12 +58,11 @@ public class Student {
 		super();
 	}
 
-	public Student(Long idStudent, String firstName, String lastName, String cardNumber, String email, User user,
+	public Student(Long idStudent, String cardNumber, String email, User user,
 			Set<Enrollment> enrollments, Set<Document> document, Set<Account> account) {
 		super();
 		this.idStudent = idStudent;
-		this.firstName = firstName;
-		this.lastName = lastName;
+
 		this.cardNumber = cardNumber;
 		this.email = email;
 		this.user = user;
@@ -85,21 +79,6 @@ public class Student {
 		this.idStudent = idStudent;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
 
 	public String getCardNumber() {
 		return cardNumber;

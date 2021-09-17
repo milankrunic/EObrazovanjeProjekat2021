@@ -25,6 +25,13 @@ public class User {
 	@Column(name = "id", nullable = false, unique = true)
 	private Long id;
 	
+	@Column(name = "firstName", nullable = true)
+	private String firstName;
+	
+	@Column(name = "lastName", nullable = true)
+	private String lastName;
+	
+	
 	@Column(name = "username", nullable = true)
 	private String username;
 	
@@ -44,19 +51,21 @@ public class User {
 	private List<Teacher> teachers = new ArrayList<Teacher>();
 	
 	
+
 	public User() {
 		super();
-	
+
 	}
 
-	public User(Long id, String username, String password, List<UserRole> role,
+	public User(Long id, String firstName, String lastName, String username, String password, List<UserRole> userRoles,
 			List<Admin> administrators, List<Student> students, List<Teacher> teachers) {
 		super();
 		this.id = id;
-
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.username = username;
 		this.password = password;
-		this.userRoles = role;
+		this.userRoles = userRoles;
 		this.administrators = administrators;
 		this.students = students;
 		this.teachers = teachers;
@@ -68,6 +77,22 @@ public class User {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getUsername() {
@@ -117,7 +142,7 @@ public class User {
 	public void setTeachers(List<Teacher> teachers) {
 		this.teachers = teachers;
 	}
-
+	
 	
 	
 	
