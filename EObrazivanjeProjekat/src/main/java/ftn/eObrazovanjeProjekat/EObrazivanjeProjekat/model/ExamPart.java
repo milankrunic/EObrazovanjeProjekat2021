@@ -13,14 +13,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "exam_part")
-public class ExamPart extends JpaEntity {
+public class ExamPart {
 	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idExamPart", nullable = false, unique = true)
+	private Long idExamPart;
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@Column(name = "date_exam_part", nullable = false)
 	private Date date;
 	
@@ -46,9 +45,10 @@ public class ExamPart extends JpaEntity {
 		super();
 	}
 
-	public ExamPart(Long id, Date date, String location, Integer points, Exam exam, ExamPartType examPartType,
+	public ExamPart(Long idExamPart, Date date, String location, Integer points, Exam exam, ExamPartType examPartType,
 			ExamPartStatus examPartStatus) {
-		super(id);
+		super();
+		this.idExamPart = idExamPart;
 		this.date = date;
 		this.location = location;
 		this.points = points;
@@ -57,6 +57,13 @@ public class ExamPart extends JpaEntity {
 		this.examPartStatus = examPartStatus;
 	}
 
+	public Long getIdExamPart() {
+		return idExamPart;
+	}
+
+	public void setIdExamPart(Long idExamPart) {
+		this.idExamPart = idExamPart;
+	}
 
 	public Date getDate() {
 		return date;

@@ -16,14 +16,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "exam_part_status")
-public class ExamPartStatus extends JpaEntity {
+public class ExamPartStatus {
 	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idExamPartStatus", nullable = false, unique = true)
+	private Long idExamPartStatus;
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@Column(name = "name", nullable = false)
 	private String name;
 
@@ -37,13 +36,21 @@ public class ExamPartStatus extends JpaEntity {
 		super();
 	}
 
-	public ExamPartStatus(Long id, String name, String code, List<ExamPart> examPart) {
-		super(id);
+	public ExamPartStatus(Long idExamPartStatus, String name, String code, List<ExamPart> examPart) {
+		super();
+		this.idExamPartStatus = idExamPartStatus;
 		this.name = name;
 		this.code = code;
 		this.examPart = examPart;
 	}
 
+	public Long getIdExamPartStatus() {
+		return idExamPartStatus;
+	}
+
+	public void setIdExamPartStatus(Long idExamPartStatus) {
+		this.idExamPartStatus = idExamPartStatus;
+	}
 
 	public String getName() {
 		return name;

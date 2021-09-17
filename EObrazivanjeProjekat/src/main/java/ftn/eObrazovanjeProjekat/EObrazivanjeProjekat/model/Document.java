@@ -11,14 +11,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Document")
-public class Document extends JpaEntity {
+public class Document {
 
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idDokument", nullable = false, unique = true)
+	private Long idDokument;
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@Column(name = "title", unique = false, nullable = false)
 	private String title;
 	
@@ -37,14 +36,22 @@ public class Document extends JpaEntity {
 		super();
 	}
 
-	public Document(Long id, String title, String url, Student student, DocumentType dokumentType) {
-		super(id);
+	public Document(Long idDokument, String title, String url, Student student, DocumentType dokumentType) {
+		super();
+		this.idDokument = idDokument;
 		this.title = title;
 		this.url = url;
 		this.student = student;
 		this.dokumentType = dokumentType;
 	}
 
+	public Long getIdDokument() {
+		return idDokument;
+	}
+
+	public void setIdDokument(Long idDokument) {
+		this.idDokument = idDokument;
+	}
 
 	public String getTitle() {
 		return title;

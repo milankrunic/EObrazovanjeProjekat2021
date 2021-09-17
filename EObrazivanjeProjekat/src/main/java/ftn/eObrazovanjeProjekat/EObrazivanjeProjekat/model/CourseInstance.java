@@ -18,14 +18,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "course_instance")
-public class CourseInstance extends JpaEntity {
+public class CourseInstance {
 	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idCourseInstance", nullable = false, unique = true)
+	private Long idCourseInstance;
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@Column(name = "start_date", nullable = false)
 	private String startDate;
 	
@@ -46,9 +45,10 @@ public class CourseInstance extends JpaEntity {
 		super();
 	}
 
-	public CourseInstance(Long id, String startDate, String endDate, CourseSpecification courseSpecification,
+	public CourseInstance(Long idCourseInstance, String startDate, String endDate, CourseSpecification courseSpecification,
 			List<Teaching> teaching, List<Enrollment> enrollment) {
-		super(id);
+		super();
+		this.idCourseInstance = idCourseInstance;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.courseSpecification = courseSpecification;
@@ -56,6 +56,13 @@ public class CourseInstance extends JpaEntity {
 		this.enrollment = enrollment;
 	}
 
+	public Long getIdCourseInstance() {
+		return idCourseInstance;
+	}
+
+	public void setIdCourseInstance(Long idCourseInstance) {
+		this.idCourseInstance = idCourseInstance;
+	}
 
 	public String getStartDate() {
 		return startDate;

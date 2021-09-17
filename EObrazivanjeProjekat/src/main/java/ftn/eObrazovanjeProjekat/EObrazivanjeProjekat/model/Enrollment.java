@@ -18,14 +18,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Enrollment")
-public class Enrollment extends JpaEntity{
+public class Enrollment {
 	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idEnrollment", nullable = false, unique = true)
+	private Long idEnrollment;
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@ManyToOne
 	@JoinColumn(name = "course_instance", referencedColumnName = "idCourseInstance", nullable = false)
 	private CourseInstance courseInstance;
@@ -41,13 +40,21 @@ public class Enrollment extends JpaEntity{
 		super();
 	}
 
-	public Enrollment(Long id, CourseInstance courseInstance, Student student, List<Exam> exam) {
-		super(id);
+	public Enrollment(Long idEnrollment, CourseInstance courseInstance, Student student, List<Exam> exam) {
+		super();
+		this.idEnrollment = idEnrollment;
 		this.courseInstance = courseInstance;
 		this.student = student;
 		this.exam = exam;
 	}
 
+	public Long getIdEnrollment() {
+		return idEnrollment;
+	}
+
+	public void setIdEnrollment(Long idEnrollment) {
+		this.idEnrollment = idEnrollment;
+	}
 
 	public CourseInstance getCourseInstance() {
 		return courseInstance;

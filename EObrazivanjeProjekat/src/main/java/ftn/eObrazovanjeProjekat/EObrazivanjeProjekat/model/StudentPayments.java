@@ -13,14 +13,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "student_payments")
-public class StudentPayments extends JpaEntity {
+public class StudentPayments {
 	
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idStudentPayments", nullable = false, unique = true)
+	private Long idStudentPayments;
+	
 	@Column(name = "amount", unique = false, nullable = false)
 	private Integer amount;
 	
@@ -38,14 +38,22 @@ public class StudentPayments extends JpaEntity {
 		super();
 	}
 
-	public StudentPayments(Long id, Integer amount, Date date, String name, Account account) {
-		super(id);
+	public StudentPayments(Long idStudentPayments, Integer amount, Date date, String name, Account account) {
+		super();
+		this.idStudentPayments = idStudentPayments;
 		this.amount = amount;
 		this.date = date;
 		this.name = name;
 		this.account = account;
 	}
 
+	public Long getIdStudentPayments() {
+		return idStudentPayments;
+	}
+
+	public void setIdStudentPayments(Long idStudentPayments) {
+		this.idStudentPayments = idStudentPayments;
+	}
 
 	public Integer getAmount() {
 		return amount;

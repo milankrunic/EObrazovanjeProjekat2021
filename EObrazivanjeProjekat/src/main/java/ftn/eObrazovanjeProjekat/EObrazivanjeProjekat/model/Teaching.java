@@ -11,13 +11,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Teaching")
-public class Teaching extends JpaEntity{
-
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class Teaching {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idTeaching", nullable = false, unique = true)
+	private Long idTeaching;
 
 	@ManyToOne
 	@JoinColumn(name = "course_instance", referencedColumnName = "idCourseInstance", nullable = false)
@@ -35,11 +34,20 @@ public class Teaching extends JpaEntity{
 		super();
 	}
 
-	public Teaching(Long id, CourseInstance courseInstance, Teacher teacher, TeachingType teachingType) {
-		super(id);
+	public Teaching(Long idTeaching, CourseInstance courseInstance, Teacher teacher, TeachingType teachingType) {
+		super();
+		this.idTeaching = idTeaching;
 		this.courseInstance = courseInstance;
 		this.teacher = teacher;
 		this.teachingType = teachingType;
+	}
+
+	public Long getIdTeaching() {
+		return idTeaching;
+	}
+
+	public void setIdTeaching(Long idTeaching) {
+		this.idTeaching = idTeaching;
 	}
 
 	public CourseInstance getCourseInstance() {

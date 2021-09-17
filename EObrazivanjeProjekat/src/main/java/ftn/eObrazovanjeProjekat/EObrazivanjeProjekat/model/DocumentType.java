@@ -16,13 +16,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="document_type")
-public class DocumentType extends JpaEntity {
+public class DocumentType {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idDokumentType", nullable = false, unique = true)
+	private Long idDokumentType;
+	
 	@Column(name = "name", unique = false, nullable = false)
 	private String name;
 	
@@ -36,14 +36,23 @@ public class DocumentType extends JpaEntity {
 		super();
 	}
 
-	public DocumentType(Long id, String name, String code, List<Document> document) {
-		super(id);
+	public DocumentType(Long idDokumentType, String name, String code, List<Document> document) {
+		super();
+		this.idDokumentType = idDokumentType;
 		this.name = name;
 		this.code = code;
 		this.document = document;
 	}
-	
-	String getName() {
+
+	public Long getIdDokumentType() {
+		return idDokumentType;
+	}
+
+	public void setIdDokumentType(Long idDokumentType) {
+		this.idDokumentType = idDokumentType;
+	}
+
+	public String getName() {
 		return name;
 	}
 

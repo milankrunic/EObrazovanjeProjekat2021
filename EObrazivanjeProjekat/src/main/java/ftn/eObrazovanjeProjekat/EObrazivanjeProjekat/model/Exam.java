@@ -21,14 +21,13 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.ExamPartDTO;
 
 @Entity
 @Table(name = "exam")
-public class Exam extends JpaEntity{
+public class Exam {
 	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idExam", nullable = false, unique = true)
+	private Long idExam;
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@Column(name = "points", nullable = false)
 	private Integer points;
 	
@@ -46,14 +45,22 @@ public class Exam extends JpaEntity{
 		super();
 	}
 
-	public Exam(Long id, Integer points, Integer grade, Enrollment enrollment, List<ExamPart> examPart) {
-		super(id);
+	public Exam(Long idExam, Integer points, Integer grade, Enrollment enrollment, List<ExamPart> examPart) {
+		super();
+		this.idExam = idExam;
 		this.points = points;
 		this.grade = grade;
 		this.enrollment = enrollment;
 		this.examPart = examPart;
 	}
 
+	public Long getIdExam() {
+		return idExam;
+	}
+
+	public void setIdExam(Long idExam) {
+		this.idExam = idExam;
+	}
 
 	public Integer getPoints() {
 		return points;

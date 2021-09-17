@@ -16,14 +16,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "course_specification")
-public class CourseSpecification extends JpaEntity {
+public class CourseSpecification {
 	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false, unique = true)
+	private Long idCourseSpecification;
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@Column(name = "title", nullable = false)
 	private String title;
 	
@@ -40,13 +39,22 @@ public class CourseSpecification extends JpaEntity {
 		super();
 	}
 
-	public CourseSpecification(Long id, String title, Integer ects, String code,
+	public CourseSpecification(Long idCourseSpecification, String title, Integer ects, String code,
 			List<CourseInstance> courseInstance) {
-		super(id);
+		super();
+		this.idCourseSpecification = idCourseSpecification;
 		this.title = title;
 		this.ects = ects;
 		this.code = code;
 		this.courseInstance = courseInstance;
+	}
+
+	public Long getIdCourseSpecification() {
+		return idCourseSpecification;
+	}
+
+	public void setIdCourseSpecification(Long idCourseSpecification) {
+		this.idCourseSpecification = idCourseSpecification;
 	}
 
 	public String getTitle() {
