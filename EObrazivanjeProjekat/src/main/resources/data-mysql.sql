@@ -13,14 +13,6 @@ VALUES(3, 'Milan', 'Krunic', 'kruna99', 'kruna99');
 
 
 
---INSERT INTO user(username, password) VALUES ('perap','pera123');
---INSERT INTO user(username, password) VALUES ('jovaj','jova123');
---INSERT INTO user(username, password) VALUES ('lazal','laza123');
---INSERT INTO user(username, password) VALUES ('mikam','mika123');
---INSERT INTO user(username, password) VALUES ('zikaz','zika123');
---INSERT INTO user(username, password) VALUES ('simas','sima123');
---INSERT INTO user(username, password) VALUES ('markom','marko123');
-
 INSERT INTO user_role(user_id, role_id) VALUES(1, 1);
 INSERT INTO user_role(user_id, role_id) VALUES(4, 1);
 INSERT INTO user_role(user_id, role_id) VALUES(2, 2);
@@ -29,12 +21,11 @@ INSERT INTO user_role(user_id, role_id) VALUES(3, 3);
 INSERT INTO Admin(id_admin, email,id_user) VALUES (1,'marko@gmail.com',3);
 
 INSERT INTO teacher(id_teacher, email,id_user) VALUES (1, 'pera@gmail.com',4);
---INSERT INTO teacher(email,id_user) VALUES ('jova@gmail.com',2);
---INSERT INTO teacher(email,id_user) VALUES ('laza@gmail.com',3);
+
 
 INSERT INTO Student(id_student, card_number,email, id_user) VALUES (1, 'SF-12-2020','mika@gmail.com',1);
 INSERT INTO Student(id_student, card_number,email, id_user) VALUES (2, 'SF-19-2020','zika@gmail.com',2);
---INSERT INTO Student(card_number,email, id_user) VALUES ('Sima','Simic', 'SF-25-2020','sima@gmail.com',6);
+
 
 INSERT INTO document_type(id_dokument_type, name, code) VALUES (1, 'document1','D1');
 INSERT INTO document_type(id_dokument_type, name, code) VALUES (2, 'document2','D2');
@@ -52,13 +43,12 @@ INSERT INTO course_instance(id_course_instance,start_date,end_date,course_specif
 
 INSERT INTO account(id_account,amount, student) VALUES (1,2000.00, 2);
 INSERT INTO account(id_account,amount, student) VALUES (2,1500.00,1);
---INSERT INTO account(amount, student) VALUES (500.00,3);
+
 
 INSERT INTO Enrollment(id_enrollment,course_instance, student) VALUES (1, 2, 1);
 INSERT INTO Enrollment(id_enrollment,course_instance, student) VALUES (2, 1, 2);
 
 INSERT INTO exam(id_exam,points, grade, enrollment) VALUES (1, 40, 3, 1);
---INSERT INTO exam(points, grade, enrollment) VALUES (50, 4, 2);
 INSERT INTO exam(id_exam,points, grade, enrollment) VALUES (2, 70, 1, 2);
 
 INSERT INTO exam_part_status(id_exam_part_status,name, code) VALUES (1, 'ZAKAZAN', 'ZA');

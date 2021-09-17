@@ -69,20 +69,14 @@ public class UserController {
 //		
 //	}
 	
-	
-	
-	
-//	@PostMapping
-//	public ResponseEntity<UserDTO> saveUser(@RequestBody UserDTO userDTO){
-//		User user = new User();
-//		user = userService.save(user);
-//		return new ResponseEntity<UserDTO>(new UserDTO(user), HttpStatus.CREATED);	
-//	}
+
 	
 	@PostMapping(consumes = "application/json")
 	public ResponseEntity<UserDTO> saveUser(@RequestBody UserDTO userDTO){
 		
 		User user = new User();
+		user.setFirstName(userDTO.getFirstName());
+		user.setLastName(userDTO.getLastName());
 		user.setUsername(userDTO.getUser_name());
 		user.setPassword(userDTO.getPassword());
 		
@@ -90,10 +84,7 @@ public class UserController {
 		return new ResponseEntity<UserDTO>(new UserDTO(user),HttpStatus.CREATED);
 	}
 	
-//	@PostMapping
-//	public User addUser(@RequestBody User user) {
-//		return userService.save(user);
-//	}
+
 	
 	@PutMapping(value ="/{id}",consumes = "application/json")
 	public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO,@PathVariable("id") Long id){
@@ -104,6 +95,8 @@ public class UserController {
 			return new ResponseEntity<UserDTO>(HttpStatus.BAD_REQUEST);
 		}
 		
+		user.setFirstName(userDTO.getFirstName());
+		user.setLastName(userDTO.getLastName());
 		user.setUsername(userDTO.getUser_name());
 		user.setPassword(userDTO.getPassword());
 		

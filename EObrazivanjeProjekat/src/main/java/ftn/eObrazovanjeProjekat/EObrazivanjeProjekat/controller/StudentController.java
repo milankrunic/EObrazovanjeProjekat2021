@@ -78,6 +78,7 @@ public class StudentController {
 
 		s.setUser(u);
 		
+		
 		s = studentServiceInterface.save(s);
 		return new ResponseEntity<StudentDTO>(new StudentDTO(s), HttpStatus.CREATED);
 	}

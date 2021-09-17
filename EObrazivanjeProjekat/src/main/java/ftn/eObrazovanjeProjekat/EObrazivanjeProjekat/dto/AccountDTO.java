@@ -10,19 +10,34 @@ public class AccountDTO {
 	
 	private Long idAccount;
 	private Double amount;
-	private Student student;
+	private Long student_id;
 	private Set<StudentPaymentsDTO> studentPayments = new HashSet<StudentPaymentsDTO>();
 	
+	
 	public AccountDTO(Account account) {
-		super();
+		this.idAccount = account.getIdAccount();
+		this.amount = account.getAmount();
+		this.student_id = account.getStudent().getIdStudent();
+		
+
 	}
 	
-	public AccountDTO(Long idAccount,Double amount,Student student,Set<StudentPaymentsDTO> studentPayments) {
+	public AccountDTO(Long idAccount,Double amount,Long student_id,Set<StudentPaymentsDTO> studentPayments) {
 		super();
 		this.idAccount = idAccount;
 		this.amount = amount;
-		this.student = student;
+		this.student_id = student_id;
 		this.studentPayments = studentPayments;
+	}
+
+	
+	
+	public Long getStudent_id() {
+		return student_id;
+	}
+
+	public void setStudent_id(Long student_id) {
+		this.student_id = student_id;
 	}
 
 	public Long getIdAccount() {
@@ -41,13 +56,13 @@ public class AccountDTO {
 		this.amount = amount;
 	}
 
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
+//	public Student getStudent() {
+//		return student;
+//	}
+//
+//	public void setStudent(Student student) {
+//		this.student = student;
+//	}
 
 	public Set<StudentPaymentsDTO> getStudentPayments() {
 		return studentPayments;
