@@ -26,7 +26,7 @@ public class AdminDTO {
 	}
 
 	public AdminDTO(Admin admin) {
-		this(admin.getId(), admin.getFirstName(), admin.getLastName(), admin.getEmail(), admin.getUser().getId(), admin.getUser().getUsername());
+		this(admin.getIdAdmin(), admin.getFirstName(), admin.getLastName(), admin.getEmail(), admin.getUser().getIdUser(), admin.getUser().getUsername());
 	}
 
 	public Long getIdAdmin() {
