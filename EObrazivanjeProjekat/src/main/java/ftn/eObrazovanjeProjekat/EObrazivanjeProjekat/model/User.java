@@ -1,27 +1,29 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model;
 
-import static javax.persistence.CascadeType.ALL;
-import static javax.persistence.FetchType.LAZY;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+@SuppressWarnings("serial")
 @Entity
 @Table(name = "User")
 public class User {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_user", nullable = false, unique = true)
-	private Long idUser;
+	@Column(name = "id", nullable = false, unique = true)
+	private Long id;
 	
 	@Column(name = "username", nullable = true)
 	private String username;
@@ -29,37 +31,43 @@ public class User {
 	@Column(name = "password", nullable = true)
 	private String password;
 	
-	@OneToMany(cascade = {ALL}, fetch=LAZY, mappedBy="user")
-	private List<Student> student = new ArrayList<Student>();
+	@OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "user")
+	private List<UserRole> userRoles = new ArrayList<UserRole>();
+
+	@OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "user")
+	private List<Admin> administrators = new ArrayList<Admin>();
 	
-	@OneToMany(cascade = {ALL}, fetch=LAZY, mappedBy="user")
-	private List<Teacher> teacher = new ArrayList<Teacher>();
+	@OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "user")
+	private List<Student> students = new ArrayList<Student>();
 	
-	@OneToMany(cascade = {ALL}, fetch=LAZY, mappedBy="user")
-	private List<Admin> admin = new ArrayList<Admin>();
+	@OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "user")
+	private List<Teacher> teachers = new ArrayList<Teacher>();
+	
 	
 	public User() {
 		super();
 	
 	}
 
-	public User(Long idUser, String username, String password, List<Student> student, List<Teacher> teacher,
-			List<Admin> admin) {
+	public User(Long id, String username, String password, List<UserRole> role,
+			List<Admin> administrators, List<Student> students, List<Teacher> teachers) {
 		super();
-		this.idUser = idUser;
+		this.id = id;
+
 		this.username = username;
 		this.password = password;
-		this.student = student;
-		this.teacher = teacher;
-		this.admin = admin;
+		this.userRoles = role;
+		this.administrators = administrators;
+		this.students = students;
+		this.teachers = teachers;
 	}
 
-	public Long getIdUser() {
-		return idUser;
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdUser(Long idUser) {
-		this.idUser = idUser;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getUsername() {
@@ -78,27 +86,37 @@ public class User {
 		this.password = password;
 	}
 
-	public List<Student> getStudent() {
-		return student;
+	public List<UserRole> getUserRoles() {
+		return userRoles;
 	}
 
-	public void setStudent(List<Student> student) {
-		this.student = student;
+	public void setUserRoles(List<UserRole> userRoles) {
+		this.userRoles = userRoles;
 	}
 
-	public List<Teacher> getTeacher() {
-		return teacher;
+	public List<Admin> getAdministrators() {
+		return administrators;
 	}
 
-	public void setTeacher(List<Teacher> teacher) {
-		this.teacher = teacher;
+	public void setAdministrators(List<Admin> administrators) {
+		this.administrators = administrators;
 	}
 
-	public List<Admin> getAdmin() {
-		return admin;
+	public List<Student> getStudents() {
+		return students;
 	}
 
-	public void setAdmin(List<Admin> admin) {
-		this.admin = admin;
+	public void setStudents(List<Student> students) {
+		this.students = students;
 	}
+
+	public List<Teacher> getTeachers() {
+		return teachers;
+	}
+
+	public void setTeachers(List<Teacher> teachers) {
+		this.teachers = teachers;
+	}
+	
+	
 }

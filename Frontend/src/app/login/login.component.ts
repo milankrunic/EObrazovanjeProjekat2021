@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/auth/authentication-service.service';
 import { Router } from '@angular/router';
 import { Observable, throwError } from 'rxjs';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -22,10 +23,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login():void{
-    console.log(this.user.user_name);
-    console.log(this.user.password);
-    this.authenticationService.login(this.user.user_name, this.user.password).subscribe(
+  login(form:NgForm):void{
+    console.log(form.value);
+    var user_name: string = form.value.user_name;
+    var password: string = form.value.password;
+
+    this.authenticationService.login(user_name, password).subscribe(
       (loggedIn:boolean) => {
         if(loggedIn){
           this.router.navigate(['/admin']);
