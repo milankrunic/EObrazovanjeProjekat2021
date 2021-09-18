@@ -1,5 +1,8 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.controller;
 
+import java.security.Principal;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +43,7 @@ public class AccountController {
 		
 		return new ResponseEntity<AccountDTO>(new AccountDTO(account),HttpStatus.OK);
 	}
+
 	
 	@PostMapping(consumes = "application/json", value = "/{id}")
 	public ResponseEntity<AccountDTO> addAccount(@RequestBody AccountDTO accountDTO, @PathVariable("id") Long id){

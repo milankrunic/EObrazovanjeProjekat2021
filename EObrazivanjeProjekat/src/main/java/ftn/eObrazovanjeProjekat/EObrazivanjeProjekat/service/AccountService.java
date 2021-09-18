@@ -1,5 +1,7 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,4 +47,8 @@ public class AccountService implements AccountServiceInterface {
 				return accountUpdate;
 	}
 	
+	@Override
+	public List<Account> findByUsername(String username) {
+		return accountRepository.findByStudent_user_username(username);
+	}
 }

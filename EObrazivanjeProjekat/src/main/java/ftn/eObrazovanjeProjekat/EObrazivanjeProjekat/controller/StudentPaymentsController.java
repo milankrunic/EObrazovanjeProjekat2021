@@ -20,17 +20,7 @@ public class StudentPaymentsController {
 	@Autowired
 	StudentPaymentsServiceInterface studentPaymentsServiceInterface;
 	
-	@GetMapping(value = "/{id}")
-	public ResponseEntity<StudentPaymentsDTO> getPayment(@PathVariable("id") Long id){
-		
-		StudentPayments payments = studentPaymentsServiceInterface.findOne(id);
-		
-		if(payments == null) {
-			return new ResponseEntity<StudentPaymentsDTO>(HttpStatus.NOT_FOUND);
-		}
-		 return new ResponseEntity<StudentPaymentsDTO>(new StudentPaymentsDTO(payments),HttpStatus.OK);
-	}
-	
+
 	@GetMapping(value = "/student/account/payment{id}")
 	public ResponseEntity<StudentPaymentsDTO> getPaymentByAccountId(@PathVariable("id") Long id){
 		

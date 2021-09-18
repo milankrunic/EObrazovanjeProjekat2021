@@ -58,7 +58,7 @@ public class TeacherController {
 	@PostMapping
 	public ResponseEntity<TeacherDTO> addTeacher(@RequestBody TeacherDTO teacherDTO){
 
-		User u = userServiceInterface.findOne(teacherDTO.getId());
+		User u = userServiceInterface.findOne(teacherDTO.getIdUser());
 		Teacher t = new Teacher();
 		t.setEmail(teacherDTO.getEmail());
 		t.setUser(u);
@@ -71,7 +71,7 @@ public class TeacherController {
 	public ResponseEntity<TeacherDTO> updateTeacher(@RequestBody TeacherDTO teacherDTO, @PathVariable("id") Long id){
 
 		Teacher teacher = teacherServiceInterface.findById(id);
-		User user = userServiceInterface.findOne(teacherDTO.getId());
+		User user = userServiceInterface.findOne(teacherDTO.getIdUser());
 		
 		if(teacher == null) {
 			return new ResponseEntity<TeacherDTO>(HttpStatus.BAD_REQUEST);

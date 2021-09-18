@@ -66,9 +66,10 @@ public class TeachingController {
 	@PostMapping
 	public ResponseEntity<TeachingDTO> addTeaching(@RequestBody TeachingDTO teachingDTO){
 
-		CourseInstance ci = courseInstanceServiceInterface.findById(teachingDTO.getCourseInstance());
-		Teacher t = teacherServiceInterface.findById(teachingDTO.getTeacher());
-		TeachingType tt = teachingTypeServiceInterface.findById(teachingDTO.getTeachingType());
+		CourseInstance ci = courseInstanceServiceInterface.findById(teachingDTO.getCourseInstance().getIdCourseInstance());
+		Teacher t = teacherServiceInterface.findById(teachingDTO.getTeacher().getId());
+		TeachingType tt = teachingTypeServiceInterface.findById(teachingDTO.getTeachingType().getIdTeachingType());
+		
 		
 		Teaching tea = new Teaching();
 		
@@ -84,9 +85,9 @@ public class TeachingController {
 	@PutMapping(value = "/{id}", consumes = "application/json")
 	public ResponseEntity<TeachingDTO> updateTeaching(@RequestBody TeachingDTO teachingDTO, @PathVariable("id") Long id){
 
-		CourseInstance ci = courseInstanceServiceInterface.findById(teachingDTO.getCourseInstance());
-		Teacher t = teacherServiceInterface.findById(teachingDTO.getTeacher());
-		TeachingType tt = teachingTypeServiceInterface.findById(teachingDTO.getTeachingType());
+		CourseInstance ci = courseInstanceServiceInterface.findById(teachingDTO.getCourseInstance().getIdCourseInstance());
+		Teacher t = teacherServiceInterface.findById(teachingDTO.getTeacher().getId());
+		TeachingType tt = teachingTypeServiceInterface.findById(teachingDTO.getTeachingType().getIdTeachingType());
 		
 		Teaching tea = teachingServiceInterface.findById(id);
 		

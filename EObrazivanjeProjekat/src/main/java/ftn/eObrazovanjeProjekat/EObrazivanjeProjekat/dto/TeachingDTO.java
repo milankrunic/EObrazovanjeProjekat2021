@@ -1,31 +1,30 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teaching;
-
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.*;
 public class TeachingDTO {
 	
 	private Long idTeaching;
-	private Long courseInstance;
-	private Long teacher;
-	private Long teachingType;
-	private String nameTeachingType;
+	private CourseInstanceDTO courseInstance;
+	private TeacherDTO teacher;
+	private TeachingTypeDTO teachingType;
+	
 	
 	public TeachingDTO() {
 		super();
 	}
 
-	public TeachingDTO(Long idTeaching, Long courseInstance, Long teacher, Long teachingType,
-			String nameTeachingType) {
+	public TeachingDTO(Long idTeaching, CourseInstanceDTO courseInstance, TeacherDTO teacher, TeachingTypeDTO teachingType) {
 		super();
 		this.idTeaching = idTeaching;
 		this.courseInstance = courseInstance;
 		this.teacher = teacher;
 		this.teachingType = teachingType;
-		this.nameTeachingType = nameTeachingType;
+		
 	}
 	
 	public TeachingDTO(Teaching te) {
-		this(te.getIdTeaching(), te.getCourseInstance().getIdCourseInstance(), te.getTeacher().getIdTeacher(), te.getTeachingType().getIdTeachingType(), te.getTeachingType().getName());
+		this(te.getIdTeaching(), new CourseInstanceDTO(te.getCourseInstance()), new TeacherDTO(te.getTeacher()), new TeachingTypeDTO(te.getTeachingType()));
 	}
 
 	public Long getIdTeaching() {
@@ -36,36 +35,32 @@ public class TeachingDTO {
 		this.idTeaching = idTeaching;
 	}
 
-	public Long getCourseInstance() {
+	public CourseInstanceDTO getCourseInstance() {
 		return courseInstance;
 	}
 
-	public void setCourseInstance(Long courseInstance) {
+	public void setCourseInstance(CourseInstanceDTO courseInstance) {
 		this.courseInstance = courseInstance;
 	}
 
-	public Long getTeacher() {
+	public TeacherDTO getTeacher() {
 		return teacher;
 	}
 
-	public void setTeacher(Long teacher) {
+	public void setTeacher(TeacherDTO teacher) {
 		this.teacher = teacher;
 	}
 
-	public Long getTeachingType() {
+	public TeachingTypeDTO getTeachingType() {
 		return teachingType;
 	}
 
-	public void setTeachingType(Long teachingType) {
+	public void setTeachingType(TeachingTypeDTO teachingType) {
 		this.teachingType = teachingType;
 	}
 
 
-	public String getNameTeachingType() {
-		return nameTeachingType;
-	}
-
-	public void setNameTeachingType(String nameTeachingType) {
-		this.nameTeachingType = nameTeachingType;
-	}
+	
+	
+	
 }
