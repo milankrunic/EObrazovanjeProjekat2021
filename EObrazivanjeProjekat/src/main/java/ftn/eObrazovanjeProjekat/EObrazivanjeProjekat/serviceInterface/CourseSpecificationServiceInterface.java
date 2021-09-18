@@ -11,5 +11,5 @@ public interface CourseSpecificationServiceInterface {
 	public CourseSpecification findById(Long id);
 	public CourseSpecification save(CourseSpecification courseSpecification);
 	public void remove(Long id);
-
+	
 }

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.CourseInstanceDTO;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.CourseSpecificationDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseSpecification;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.CourseInstanceServiceInterface;
@@ -58,7 +59,7 @@ public class CourseInstanceController {
 	@PostMapping
 	public ResponseEntity<CourseInstanceDTO> addCourseInstance(@RequestBody CourseInstanceDTO courseInstanceDTO){
 
-		CourseSpecification cs = courseSpecificationServiceInterface.findById(courseInstanceDTO.getIdCourseSpecification());
+		CourseSpecification cs = courseSpecificationServiceInterface.findById(courseInstanceDTO.getCourseSpecificationDTO().getIdCourseSpecification());
 		
 		CourseInstance ci = new CourseInstance();
 		ci.setIdCourseInstance(courseInstanceDTO.getIdCourseInstance());
@@ -73,7 +74,8 @@ public class CourseInstanceController {
 	@PutMapping(value = "/{id}", consumes = "application/json")
 	public ResponseEntity<CourseInstanceDTO> updateCourseInstance(@RequestBody CourseInstanceDTO courseInstanceDTO, @PathVariable("id") Long id){
 
-		CourseSpecification cs = courseSpecificationServiceInterface.findById(courseInstanceDTO.getIdCourseSpecification());
+		CourseSpecification cs = courseSpecificationServiceInterface.findById(courseInstanceDTO.getCourseSpecificationDTO().getIdCourseSpecification());
+	
 		
 		CourseInstance courseInstance = courseInstanceServiceInterface.findById(id);
 		
@@ -84,6 +86,7 @@ public class CourseInstanceController {
 		courseInstance.setStartDate(courseInstanceDTO.getStartDate());
 		courseInstance.setEndDate(courseInstanceDTO.getEndDate());
 		courseInstance.setCourseSpecification(cs);
+		
 
 		courseInstance = courseInstanceServiceInterface.save(courseInstance);
 		return new ResponseEntity<CourseInstanceDTO>(new CourseInstanceDTO(courseInstance), HttpStatus.OK);

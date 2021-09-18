@@ -1,31 +1,31 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.CourseSpecificationDTO;
 
 public class CourseInstanceDTO {
 	
 	private Long idCourseInstance;
 	private String startDate;
 	private String endDate;
-	private Long idCourseSpecification;
-	private String nameCourseSpecification;
+	private CourseSpecificationDTO courseSpecificationDTO;
 	
 	public CourseInstanceDTO() {
 		super();
 	}
 
-	public CourseInstanceDTO(Long idCourseInstance, String startDate, String endDate, Long idCourseSpecification,
-			String nameCourseSpecification) {
+	public CourseInstanceDTO(Long idCourseInstance, String startDate, String endDate, CourseSpecificationDTO courseSpecificationDTO 
+			 ) {
 		super();
 		this.idCourseInstance = idCourseInstance;
 		this.startDate = startDate;
 		this.endDate = endDate;
-		this.idCourseSpecification = idCourseSpecification;
-		this.nameCourseSpecification = nameCourseSpecification;
+		this.courseSpecificationDTO = courseSpecificationDTO;
+		
 	}
 	
 	public CourseInstanceDTO(CourseInstance ci) {
-		this(ci.getIdCourseInstance(), ci.getStartDate(), ci.getEndDate(), ci.getCourseSpecification().getIdCourseSpecification(), ci.getCourseSpecification().getTitle());
+		this(ci.getIdCourseInstance(), ci.getStartDate(), ci.getEndDate(),  new CourseSpecificationDTO(ci.getCourseSpecification()));
 	}
 
 	public Long getIdCourseInstance() {
@@ -52,19 +52,13 @@ public class CourseInstanceDTO {
 		this.endDate = endDate;
 	}
 
-	public Long getIdCourseSpecification() {
-		return idCourseSpecification;
+	public CourseSpecificationDTO getCourseSpecificationDTO() {
+		return courseSpecificationDTO;
 	}
 
-	public void setIdCourseSpecification(Long idCourseSpecification) {
-		this.idCourseSpecification = idCourseSpecification;
+	public void setCourseSpecificationDTO(CourseSpecificationDTO courseSpecificationDTO) {
+		this.courseSpecificationDTO = courseSpecificationDTO;
 	}
 
-	public String getNameCourseSpecification() {
-		return nameCourseSpecification;
-	}
-
-	public void setNameCourseSpecification(String nameCourseSpecification) {
-		this.nameCourseSpecification = nameCourseSpecification;
-	}
+	
 }

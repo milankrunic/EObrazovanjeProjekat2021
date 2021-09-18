@@ -20,6 +20,7 @@ public class CourseSpecificationService implements CourseSpecificationServiceInt
 		return courseSpecificationRepository.findAll();
 	}
 
+
 	@Override
 	public CourseSpecification findOne(Long id) {
 		return courseSpecificationRepository.getOne(id);
