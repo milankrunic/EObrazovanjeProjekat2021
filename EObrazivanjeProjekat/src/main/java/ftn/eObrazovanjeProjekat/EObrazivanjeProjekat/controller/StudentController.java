@@ -33,9 +33,9 @@ public class StudentController {
 	UserServiceInterface userServiceInterface;
 	
 	@GetMapping
-	public ResponseEntity<List<StudentDTO>> getStudentsByUser(@PathVariable("idUser") Long id){
+	public ResponseEntity<List<StudentDTO>> getStudents(){
 
-		List<Student> students = studentServiceInterface.findAllByUser(id);
+		List<Student> students = studentServiceInterface.findAll();
 		
 		List<StudentDTO> studentDTO = new ArrayList<StudentDTO>();
 		for(Student student: students) {
@@ -44,19 +44,7 @@ public class StudentController {
 		return new ResponseEntity<List<StudentDTO>>(studentDTO, HttpStatus.OK);
 	}
 	
-	
-//	@GetMapping
-//	public ResponseEntity<List<StudentDTO>> getStudentsByUser(){
-//
-//		List<Student> students = studentServiceInterface.findAll();
-//		
-//		List<StudentDTO> studentDTO = new ArrayList<StudentDTO>();
-//		for(Student student: students) {
-//			studentDTO.add(new StudentDTO(student));
-//		}
-//		return new ResponseEntity<List<StudentDTO>>(studentDTO, HttpStatus.OK);
-//	}
-	
+
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<StudentDTO> getStudent(@PathVariable("id") Long id){
 		Student student = studentServiceInterface.findOne(id);
@@ -70,7 +58,7 @@ public class StudentController {
 	@PostMapping(consumes = "application/json")
 	public ResponseEntity<StudentDTO> addStudent(@RequestBody StudentDTO studentDTO){
 
-		User u = userServiceInterface.findOne(studentDTO.getUserId());
+		User u = userServiceInterface.findOne(studentDTO.getUserDTO().getIdUser());
 		Student s = new Student();
 
 		s.setEmail(studentDTO.getEmail());
@@ -87,7 +75,7 @@ public class StudentController {
 	public ResponseEntity<StudentDTO> updateStudent(@RequestBody StudentDTO studentDTO, @PathVariable("id") Long id){
 
 		Student student = studentServiceInterface.findById(id);
-		User user = userServiceInterface.findOne(studentDTO.getUserId());
+		User user = userServiceInterface.findOne(studentDTO.getUserDTO().getIdUser());
 		
 		if(student == null) {
 			return new ResponseEntity<StudentDTO>(HttpStatus.BAD_REQUEST);

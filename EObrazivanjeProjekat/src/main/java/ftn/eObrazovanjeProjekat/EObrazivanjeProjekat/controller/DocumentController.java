@@ -27,22 +27,10 @@ public class DocumentController {
 
 	@Autowired
 	DocumentServiceInterface documentServiceInterface;
-	
-	
-	@GetMapping
-	public ResponseEntity<List<DocumentDTO>> getDocuments(){
 
-		List<Document> documents = documentServiceInterface.findAll();
-		
-		List<DocumentDTO> documentDTO = new ArrayList<DocumentDTO>();
-		for(Document document: documents) {
-			documentDTO.add(new DocumentDTO(document));
-		}
-		return new ResponseEntity<List<DocumentDTO>>(documentDTO, HttpStatus.OK);
-	}
 	
 //	@GetMapping(value ="/{id}")
-//	public ResponseEntity<DocumentDTO> getDocument(@PathVariable("id") Long id){
+//	public ResponseEntity<DocumentDTO> getDocumentByStudent(@PathVariable("id") Long id){
 //		
 //		Document document = documentServiceInterface.findOne(id);
 //		

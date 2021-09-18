@@ -21,7 +21,7 @@ public class StudentPaymentsController {
 	StudentPaymentsServiceInterface studentPaymentsServiceInterface;
 	
 
-	@GetMapping(value = "/student/account/payment{id}")
+	@GetMapping(value = "{id}")
 	public ResponseEntity<StudentPaymentsDTO> getPaymentByAccountId(@PathVariable("id") Long id){
 		
 		StudentPayments payments = (StudentPayments) studentPaymentsServiceInterface.findByAccountId(id);

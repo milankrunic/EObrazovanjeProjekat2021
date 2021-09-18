@@ -11,19 +11,19 @@ public class StudentPaymentsDTO {
 	private Integer amount;
 	private Date date;
 	private String name;
-	private Account account;
+	private AccountDTO accountDTO;
 	
 	public StudentPaymentsDTO(StudentPayments payments) {
 		super();
 	}
 	
-	public StudentPaymentsDTO(Long id,Integer amount,Date date,String name,Account account) {
+	public StudentPaymentsDTO(Long id,Integer amount,Date date,String name,AccountDTO accountDTO) {
 		super();
 		this.id = id;
 		this.amount = amount;
 		this.date = date;
 		this.name = name;
-		this.account = account;
+		this.accountDTO = accountDTO;
 	}
 	
 	
@@ -61,11 +61,13 @@ public class StudentPaymentsDTO {
 		this.name = name;
 	}
 
-	public Account getAccount() {
-		return account;
+	public AccountDTO getAccountDTO() {
+		return accountDTO;
 	}
 
-	public void setAccount(Account account) {
-		this.account = account;
+	public void setAccountDTO(AccountDTO accountDTO) {
+		this.accountDTO = accountDTO;
 	}
+
+
 }
