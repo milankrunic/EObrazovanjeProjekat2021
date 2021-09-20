@@ -1,38 +1,42 @@
+<link href="admin-student-page.component.css">
 <app-admin-header></app-admin-header>
 
+<div id="bg">
+    <div id="container">
+  <h1 style="text-align: center;">All courses</h1>
+  <table class="table" border="1px solid black">
+  <thead class="thead-dark">
+    <th>ID</th>
+    <th>EndDate</th>
+    <th>StartDate</th>
+    <th>CourseSpecification</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let courseInstance of courseInstance">
+      <td>
+        {{courseInstance.id}}        
+      </td>
+      <td>
+        {{courseInstance.EndDate}}        
+      </td>
+      <td>
+        {{courseInstance.StartDate}}        
+      </td>
+      <td>
+        {{courseInstance.CourseSpecification}}        
+      </td>
+      <td><button style='margin-right:16px' (click)="deleteCourse(courseInstance.id)" class="btn btn-danger">Delete</button>
+        <button style='margin-right:16px' (click)="updateCourse(courseInstance.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
+      </td>
 
-<h1 style="text-align: center;">All courses</h1>
-<table class="table" border="1px solid black">
- <thead class="thead-dark">
-   <th>ID</th>
-   <th>EndDate</th>
-   <th>StartDate</th>
-   <th>CourseSpecification</th>
-   <th></th>
- </thead>
- <tbody>
-   <tr *ngFor = "let courseInstance of courseInstance">
-     <td>
-       {{courseInstance.id}}        
-     </td>
-     <td>
-       {{courseInstance.EndDate}}        
-     </td>
-     <td>
-       {{courseInstance.StartDate}}        
-     </td>
-     <td>
-       {{courseInstance.CourseSpecification}}        
-     </td>
-     <td><button style='margin-right:16px' (click)="deleteCourse(courseInstance.id)" class="btn btn-danger">Delete</button>
-       <button style='margin-right:16px' (click)="updateCourse(courseInstance.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
-     </td>
+    </tr>
+    
+  </tbody>
+  </table> 
 
-   </tr>
-   
- </tbody>
-</table> 
+  <button type="button" class="btn btn-primary" (click)="gotoAdd()">Add Course</button>
 
-<button type="button" class="btn btn-primary" (click)="gotoAdd()">Add Course</button>
-
-<app-footer></app-footer>
+  </div>
+  <app-footer></app-footer>
+</div>

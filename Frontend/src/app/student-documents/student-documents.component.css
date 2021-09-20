@@ -21,3 +21,14 @@
 h1 {
     margin-bottom: 15px;
 }
+
+#download {
+    padding: 10px;
+    border-radius: 5%;
+    background-color: rgb(15, 158, 241);
+    color: black;
+}
+
+#download:hover{
+    background-color: rgb(83, 192, 255);
+}

@@ -1,39 +1,42 @@
+<link href="admin-exams-page.component.css">
 <app-admin-header></app-admin-header>
 
-<h1 style="text-align: center;">All exams</h1>
- <table class="table" border="1px solid black">
-  <thead class="thead-dark">
-    <th>ID</th>
-    <th>Grade</th>
-    <th>Points</th>
-    <th>Enrollment</th>
-    <th></th>
-  </thead>
-  <tbody>
-    <tr *ngFor = "let exam of exams">
-      <td>
-        {{exam.id}}        
-      </td>
-      <td>
-        {{exam.grade}}        
-      </td>
-      <td>
-        {{exam.points}}        
-      </td>
-      <td>
-        {{exam.enrollment}}        
-      </td>
-      <td><button style='margin-right:16px' (click)="deleteExam(exam.id)" class="btn btn-danger">Delete</button>
-        <button style='margin-right:16px' (click)="updateExam(exam.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
-      </td>
+<div id="bg">
+  <div id="container">
+  <h1 style="text-align: center;">All exams</h1>
+  <table class="table" border="1px solid black">
+    <thead class="thead-dark">
+      <th>ID</th>
+      <th>Grade</th>
+      <th>Points</th>
+      <th>Enrollment</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let exam of exams">
+        <td>
+          {{exam.id}}        
+        </td>
+        <td>
+          {{exam.grade}}        
+        </td>
+        <td>
+          {{exam.points}}        
+        </td>
+        <td>
+          {{exam.enrollment}}        
+        </td>
+        <td><button style='margin-right:16px' (click)="deleteExam(exam.id)" class="btn btn-danger">Delete</button>
+          <button style='margin-right:16px' (click)="updateExam(exam.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
+        </td>
 
-    </tr>
-    
-  </tbody>
-</table> 
- 
-<button type="button" class="btn btn-primary" (click)="gotoAdd()">Add Exam</button>
+      </tr>
+      
+    </tbody>
+  </table> 
+  
+  <button type="button" class="btn btn-primary" (click)="gotoAdd()">Add Exam</button>
 
-
- <app-footer></app-footer>
-
+  </div>
+  <app-footer></app-footer>
+</div>

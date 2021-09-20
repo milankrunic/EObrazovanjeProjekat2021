@@ -16,6 +16,8 @@ import { AdminTeacherPageComponent } from './admin-teacher-page/admin-teacher-pa
 import { AdminExamsPageComponent } from './admin-exams-page/admin-exams-page.component';
 import { AdminCoursesPageComponent } from './admin-courses-page/admin-courses-page.component';
 import { AddStudentComponent } from './add components/add-student/add-student.component';
+import { AddTeacherComponent } from './add components/add-teacher/add-teacher.component';
+import { AddAdminComponent } from './add components/add-admin/add-admin.component';
 import { StudentDetailsComponent } from './details components/student-details/student-details.component';
 import { CanActivateAuthGuard } from './services/auth/can-activate-auth.service';
 import { TeacherDetailsComponent } from './details components/teacher-details/teacher-details.component';
@@ -31,6 +33,8 @@ const appRoutes: Routes = [
   { path: 'adminexams', component: AdminExamsPageComponent},
   { path: 'admincourses', component: AdminCoursesPageComponent},
   { path: 'addStudent', component: AddStudentComponent },
+  { path: 'addTeacher', component: AddTeacherComponent },
+  { path: 'addAdmin', component: AddAdminComponent },
   { path: 'student/:id', component: StudentProfileComponent},
   { path: 'teacher', component: MainPageTeacherComponent},
   { path: 'exam-registration', component: ExamRegistrationComponent },

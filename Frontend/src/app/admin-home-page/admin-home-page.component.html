@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin home page</title>
-</head>
-<body>
-    <app-admin-header></app-admin-header>
+<link href="admin-home-page.component.css">
+<app-admin-header></app-admin-header>
+<div id="bg">
     <h1>Users</h1>
     <div id="outer">
-        <div class="inner"><button type="button" class="btn btn-light" style="border: 1px solid black;"><a [routerLink]="['/admin-students']">Students</a></button></div>
-        <div class="inner"><button type="button" class="btn btn-light" style="border: 1px solid black;"><a [routerLink]="['/admin-teachers']">Teachers</a></button></div>
-        <div class="inner"><button type="button" class="btn btn-light" style="border: 1px solid black;"><a [routerLink]="['/admin-admins']">Admins</a></button></div>
+        <div class="inner"><button [routerLink]="['/admin-students']" type="button" class="btn btn-light" style="border: 1px solid black;"><a>Students</a></button></div>
+        <div class="inner"><button [routerLink]="['/admin-teachers']" type="button" class="btn btn-light" style="border: 1px solid black;"><a>Teachers</a></button></div>
+        <div class="inner"><button [routerLink]="['/admin-admins']" type="button" class="btn btn-light" style="border: 1px solid black;"><a>Admins</a></button></div>
       </div>
-    
-</body>
-</html>
+      <app-footer></app-footer>
+</div>
+
