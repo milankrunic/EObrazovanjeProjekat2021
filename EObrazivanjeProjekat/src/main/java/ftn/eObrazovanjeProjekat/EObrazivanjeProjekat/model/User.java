@@ -31,6 +31,8 @@ public class User {
 	@Column(name = "lastName", nullable = true)
 	private String lastName;
 	
+	@Column(name = "email", nullable = false)
+	private String email;
 	
 	@Column(name = "username", nullable = true)
 	private String username;
@@ -57,12 +59,13 @@ public class User {
 
 	}
 
-	public User(Long id, String firstName, String lastName, String username, String password, List<UserRole> userRoles,
+	public User(Long id, String firstName, String lastName, String email, String username, String password, List<UserRole> userRoles,
 			List<Admin> administrators, List<Student> students, List<Teacher> teachers) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.email = email;
 		this.username = username;
 		this.password = password;
 		this.userRoles = userRoles;
@@ -93,6 +96,14 @@ public class User {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getUsername() {

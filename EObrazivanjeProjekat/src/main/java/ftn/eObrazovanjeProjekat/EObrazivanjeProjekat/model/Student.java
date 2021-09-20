@@ -36,8 +36,8 @@ public class Student {
 	@Column(name = "card_number", nullable = false)
 	private String cardNumber;
 	
-	@Column(name = "email", nullable = false)
-	private String email;
+//	@Column(name = "email", nullable = false)
+//	private String email;
 	
 //	@ManyToOne
 //	@JoinColumn(name = "id_user", referencedColumnName = "id_user", nullable = false)
@@ -61,13 +61,13 @@ public class Student {
 		super();
 	}
 
-	public Student(Long idStudent, String cardNumber, String email, User user,
+	public Student(Long idStudent, String cardNumber, User user,
 			Set<Enrollment> enrollments, Set<Document> document, Set<Account> account) {
 		super();
 		this.idStudent = idStudent;
 
 		this.cardNumber = cardNumber;
-		this.email = email;
+
 		this.user = user;
 		this.enrollments = enrollments;
 		this.document = document;
@@ -91,13 +91,13 @@ public class Student {
 		this.cardNumber = cardNumber;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+//	public String getEmail() {
+//		return email;
+//	}
+//
+//	public void setEmail(String email) {
+//		this.email = email;
+//	}
 
 	public User getUser() {
 		return user;

@@ -13,7 +13,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -28,8 +27,8 @@ public class Teacher {
 	private Long idTeacher;
 
 	
-	@Column(name = "email", nullable = false)
-	private String email;
+//	@Column(name = "email", nullable = false)
+//	private String email;
 	
 	@OneToMany(cascade = {ALL}, fetch=LAZY, mappedBy="teacher")
 	private List<Teaching> teaching = new ArrayList<Teaching>();
@@ -50,8 +49,7 @@ public class Teacher {
 			User user) {
 		super();
 		this.idTeacher = idTeacher;
-		
-		this.email = email;
+
 		this.teaching = teaching;
 		this.user = user;
 	}
@@ -65,13 +63,13 @@ public class Teacher {
 	}
 
 	
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+//	public String getEmail() {
+//		return email;
+//	}
+//
+//	public void setEmail(String email) {
+//		this.email = email;
+//	}
 
 	public List<Teaching> getTeaching() {
 		return teaching;

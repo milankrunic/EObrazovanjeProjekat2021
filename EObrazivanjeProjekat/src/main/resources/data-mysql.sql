@@ -2,14 +2,14 @@ INSERT INTO role(id, name, code) VALUES(1, 'ROLE_STUDENT', 'st');
 INSERT INTO role(id, name, code) VALUES(2, 'ROLE_ADMINISTRATOR', 'admin');
 INSERT INTO role(id, name, code) VALUES(3, 'ROLE_TEACHER', 'teach');
 
-INSERT INTO USER(id, first_name, last_name, username, password)--student2
-VALUES(1, 'Mihailo', 'Maric', 'maric99', 'maric99');
-INSERT INTO USER(id, first_name, last_name, username, password)-- student1
-VALUES(4, 'Ivan', 'Stankovic', 'ivan99', 'ivan99');
-INSERT INTO USER(id, first_name, last_name, username, password)-- admin
-VALUES(2, 'Dario', 'Ziga', 'ziga99', 'ziga99');
-INSERT INTO USER(id, first_name, last_name, username, password)-- teacher1
-VALUES(3, 'Milan', 'Krunic', 'kruna99', 'kruna99');
+INSERT INTO USER(id, first_name, last_name, email, username, password)--student2
+VALUES(1, 'Mihailo', 'Maric', 'maric@gmail.com', 'maric99', 'maric99');
+INSERT INTO USER(id, first_name, last_name, email, username, password)-- student1
+VALUES(4, 'Ivan', 'Stankovic', 'stankovic@gmail.com', 'ivan99', 'ivan99');
+INSERT INTO USER(id, first_name, last_name, email, username, password)-- admin
+VALUES(2, 'Dario', 'Ziga', 'ziga@gmail.com', 'ziga99', 'ziga99');
+INSERT INTO USER(id, first_name, last_name, email, username, password)-- teacher1
+VALUES(3, 'Milan', 'Krunic', 'krunic@gmail.com', 'kruna99', 'kruna99');
 
 
 
@@ -18,13 +18,13 @@ INSERT INTO user_role(user_id, role_id) VALUES(4, 1);
 INSERT INTO user_role(user_id, role_id) VALUES(2, 2);
 INSERT INTO user_role(user_id, role_id) VALUES(3, 3);
 
-INSERT INTO Admin(id_admin, email,id_user) VALUES (1,'marko@gmail.com',3);
+INSERT INTO Admin(id_admin, id_user) VALUES (1,3);
 
-INSERT INTO teacher(id_teacher, email,id_user) VALUES (1, 'pera@gmail.com',4);
+INSERT INTO teacher(id_teacher, id_user) VALUES (1,4);
 
 
-INSERT INTO Student(id_student, card_number,email, id_user) VALUES (1, 'SF-12-2020','mika@gmail.com',1);
-INSERT INTO Student(id_student, card_number,email, id_user) VALUES (2, 'SF-19-2020','zika@gmail.com',2);
+INSERT INTO Student(id_student, card_number, id_user) VALUES (1, 'SF-12-2020',1);
+INSERT INTO Student(id_student, card_number, id_user) VALUES (2, 'SF-19-2020',2);
 
 
 INSERT INTO document_type(id_dokument_type, name, code) VALUES (1, 'document1','D1');

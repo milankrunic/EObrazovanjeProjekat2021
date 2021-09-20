@@ -5,25 +5,25 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 public class TeacherDTO {
 	
 	private Long id;
-	private String email;
 	private Long idUser;
 	private String user;
+	private UserDTO userDTO;
 	
 	public TeacherDTO() {
 		super();
 	}
 
-	public TeacherDTO(Long id, String email, Long idUser, String user) {
+	public TeacherDTO(Long id, Long idUser, String user, UserDTO userDTO) {
 		super();
 		this.id = id;
 
-		this.email = email;
 		this.idUser = idUser;
 		this.user = user;
+		this.userDTO = userDTO;
 	}
 	
 	public TeacherDTO(Teacher teacher) {
-		this(teacher.getIdTeacher(), teacher.getEmail(), teacher.getUser().getId(), teacher.getUser().getUsername());
+		this(teacher.getIdTeacher(), teacher.getUser().getId(), teacher.getUser().getUsername(), new UserDTO(teacher.getUser()));
 	}
 
 	public Long getId() {
@@ -36,13 +36,13 @@ public class TeacherDTO {
 
 
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+//	public String getEmail() {
+//		return email;
+//	}
+//
+//	public void setEmail(String email) {
+//		this.email = email;
+//	}
 
 	public Long getIdUser() {
 		return idUser;
@@ -58,6 +58,14 @@ public class TeacherDTO {
 
 	public void setUser(String user) {
 		this.user = user;
+	}
+	
+	public UserDTO getUserDTO() {
+		return userDTO;
+	}
+
+	public void setUserDTO(UserDTO userDTO) {
+		this.userDTO = userDTO;
 	}
 
 }
