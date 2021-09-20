@@ -11,11 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 export class StudentProfileComponent implements OnInit {
 
   student: student = {
-    firstName: '',
-    lastName: '',
     cardNumber: '',
-    email: '',
-    userId: ''
+    userDTO:{
+       firstName:'',
+       lastName:'',
+       email:'',
+       userName:'',
+       password:'',
+ //      roles:[]
+    }
   };
 
   constructor(private studentService: StudentsService, private route: ActivatedRoute) { }
@@ -31,8 +35,8 @@ export class StudentProfileComponent implements OnInit {
         data => {
             this.student = data;
             console.log(data);
-            console.log(this.student.firstName);
-            console.log(this.student.lastName);
+            // console.log(this.student.firstName);
+            // console.log(this.student.lastName);
         },
         error => {
           console.log(error);

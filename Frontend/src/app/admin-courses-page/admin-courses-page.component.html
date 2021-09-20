@@ -7,24 +7,24 @@
   <table class="table" border="1px solid black">
   <thead class="thead-dark">
     <th>ID</th>
-    <th>EndDate</th>
     <th>StartDate</th>
+    <th>EndDate</th>
     <th>CourseSpecification</th>
     <th></th>
   </thead>
   <tbody>
     <tr *ngFor = "let courseInstance of courseInstance">
       <td>
-        {{courseInstance.id}}        
+        {{courseInstance.idCourseInstance}}        
       </td>
       <td>
-        {{courseInstance.EndDate}}        
+        {{courseInstance.startDate}}        
       </td>
       <td>
-        {{courseInstance.StartDate}}        
+        {{courseInstance.endDate}}        
       </td>
       <td>
-        {{courseInstance.CourseSpecification}}        
+        {{courseInstance.courseSpecificationDTO.title}}        
       </td>
       <td><button style='margin-right:16px' (click)="deleteCourse(courseInstance.id)" class="btn btn-danger">Delete</button>
         <button style='margin-right:16px' (click)="updateCourse(courseInstance.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>

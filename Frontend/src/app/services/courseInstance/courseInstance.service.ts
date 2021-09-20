@@ -9,7 +9,7 @@ import {Observable, Subject} from 'rxjs';
 })
 export class CourseInstanceService {
 
-    courseInstanceUrl:string = 'http://localhost:8080/api/courseInstance';
+    courseInstanceUrl:string = 'http://localhost:8080/api/course_instance';
 
   constructor(private http:HttpClient) { }
 

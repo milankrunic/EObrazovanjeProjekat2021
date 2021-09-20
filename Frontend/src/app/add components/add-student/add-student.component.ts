@@ -23,13 +23,17 @@ export class AddStudentComponent implements OnInit {
 
 
   ngOnInit() {
-    this.student = {
-      firstName:'',
-      lastName: '',
-      email: '',
-      cardNumber: '',
-      userId: ''
-    };
+      this.student = {
+        cardNumber: '',
+        userDTO:{
+           firstName:'',
+           lastName:'',
+           email:'',
+           userName:'',
+           password:'',
+     //      roles:[]
+        }
+      };
   }
 
   onSubmit(){
@@ -40,14 +44,18 @@ export class AddStudentComponent implements OnInit {
       error => {
         console.log(error);
       });
-    
-    this.student = {
-      firstName:'',
-      lastName: '',
-      email: '',
-      cardNumber: '',
-      userId: ''
-    };    
+
+      this.student = {
+        cardNumber: '',
+        userDTO:{
+           firstName:'',
+           lastName:'',
+           email:'',
+           userName:'',
+           password:'',
+     //      roles:[]
+        }
+      };   
   }
 
   // ngOnInit(): void {

@@ -5,17 +5,17 @@
     <form (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="name">First Name</label>
-        <input type="text" class="form-control" id="firstName" required [(ngModel)]="student.firstName" name="firstName">
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="student.userDTO.firstName" name="firstName">
       </div>
 
       <div class="form-group">
         <label for="name">Last Name</label>
-        <input type="text" class="form-control" id="lastName" required [(ngModel)]="student.lastName" name="lastName">
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="student.userDTO.lastName" name="lastName">
       </div>
 
       <div class="form-group">
         <label for="name">Email</label>
-        <input type="text" class="form-control" id="email" required [(ngModel)]="student.email" name="email">
+        <input type="text" class="form-control" id="email" required [(ngModel)]="student.userDTO.email" name="email">
       </div>
 
       <div class="form-group">
@@ -23,10 +23,10 @@
         <input type="text" class="form-control" id="cardNumber" required [(ngModel)]="student.cardNumber" name="cardNumber">
       </div>
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="name">User id</label>
         <input type="text" class="form-control" id="User Id" required [(ngModel)]="student.userId" name="userId">
-      </div>
+      </div> -->
 
       <!-- <div class="form-group">
         <label for="name">Phone number</label>
