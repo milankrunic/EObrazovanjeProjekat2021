@@ -20,8 +20,8 @@ public class Admin {
 	private Long idAdmin;
 	
 	
-	@Column(name = "email", nullable = false)
-	private String email;
+//	@Column(name = "email", nullable = false)
+//	private String email;
 	
 //	@ManyToOne
 //	@JoinColumn(name = "user", referencedColumnName = "id_user", nullable = false)
@@ -35,11 +35,10 @@ public class Admin {
 		super();
 	}
 
-	public Admin(Long idAdmin, String email, User user) {
+	public Admin(Long idAdmin, User user) {
 		super();
 		this.idAdmin = idAdmin;
 
-		this.email = email;
 		this.user = user;
 	}
 
@@ -53,13 +52,13 @@ public class Admin {
 
 
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+//	public String getEmail() {
+//		return email;
+//	}
+//
+//	public void setEmail(String email) {
+//		this.email = email;
+//	}
 
 	public User getUser() {
 		return user;

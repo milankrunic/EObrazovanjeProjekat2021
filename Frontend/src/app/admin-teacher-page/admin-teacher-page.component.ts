@@ -36,4 +36,8 @@ export class AdminTeacherPageComponent implements OnInit {
     location.reload();
   }
 
+  gotoAdd(): void {
+    this.router.navigate(['/addTeacher']);
+  }
+
 }

@@ -1,46 +1,48 @@
+<link href="admin-student-page.component.css">
 <app-admin-header></app-admin-header>
 
-<h1 style="text-align: center;">All students</h1>
- <table class="table" border="1px solid black">
-  <thead class="thead-dark">
-    <th>ID</th>
-    <th>FirstName</th>
-    <th>LastName</th>
-    <th>Email</th>
-    <th>CardNumber</th>
-    <th>Username</th>
-    <th></th>
-  </thead>
-  <tbody>
-    <tr *ngFor = "let student of students">
-      <td>
-        {{student.id}}        
-      </td>
-      <td>
-        {{student.firstName}}        
-      </td>
-      <td>
-        {{student.lastName}}        
-      </td>
-      <td>
-        {{student.email}}        
-      </td>
-      <td>
-        {{student.cardNumber}}        
-      </td>
-      <td>
-        {{student.user}}        
-      </td>
-      <td><button style='margin-right:16px' (click)="deleteStudent(student.id)" class="btn btn-danger">Delete</button>
-        <button style='margin-right:16px' (click)="updateStudent(student.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
-      </td>
-
-    </tr>
+<div id="bg">
+  <div id="container">
+    <h1 style="text-align: center;">All students</h1>
+    <table class="table" border="1px solid black">
+      <thead class="thead-dark">
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>CardNumber</th>
+        <th>Username</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let student of students">
+          <td>
+            {{student.id}}        
+          </td>
+          <td>
+            {{student.userDTO.firstName}}        
+          </td>
+          <td>
+            {{student.userDTO.lastName}}        
+          </td>
+          <td>
+            {{student.userDTO.email}}        
+          </td>
+          <td>
+            {{student.cardNumber}}        
+          </td>
+          <td>
+            {{student.userDTO.user_name}}        
+          </td>
+          <td><button style='margin-right:16px' (click)="deleteStudent(student.id)" class="btn btn-danger">Delete</button>
+            <button style='margin-right:16px' (click)="updateStudent(student.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table> 
     
-  </tbody>
-</table> 
- 
-<button type="button" class="btn btn-primary" (click)="gotoAdd()">Add Student</button>
+    <button type="button" class="btn btn-primary" (click)="gotoAdd()">Add Student</button>
 
-
- <app-footer></app-footer>
+    </div>
+  <app-footer></app-footer>
+</div>

@@ -7,7 +7,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 public class StudentDTO {
 	
 	private Long id;
-	private String email; 
+
 	private String cardNumber;
 	private UserDTO userDTO;
 
@@ -17,18 +17,17 @@ public class StudentDTO {
 		super();
 	}
 	
-	public StudentDTO(Long id, String email, String cardNumber, UserDTO userDTO) {
+	public StudentDTO(Long id, String cardNumber, UserDTO userDTO) {
 		super();
 		this.id = id;
 
-		this.email = email;
 		this.cardNumber = cardNumber;
 		this.userDTO = userDTO;
 
 	}
 	
 	public StudentDTO(Student student) {
-		this(student.getIdStudent(), student.getEmail(), student.getCardNumber(), new UserDTO(student.getUser()));
+		this(student.getIdStudent(), student.getCardNumber(), new UserDTO(student.getUser()));
 	}
 
 
@@ -44,14 +43,14 @@ public class StudentDTO {
 
 
 
-	public String getEmail() {
-		return email;
-	}
-
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+//	public String getEmail() {
+//		return email;
+//	}
+//
+//
+//	public void setEmail(String email) {
+//		this.email = email;
+//	}
 
 
 	public String getCardNumber() {

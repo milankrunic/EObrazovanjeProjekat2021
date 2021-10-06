@@ -1,42 +1,45 @@
+<link href="admin-teacher-page.component.css">
 <app-admin-header></app-admin-header>
-
-<h1>All teachers</h1>
-<table class="table" border="1px solid black">
-    <thead class="thead-dark">
-      <tr>
-        <th>Id</th>
-        <th>FirstName</th>
-        <th>LastName</th>
-        <th>Email</th>
-        <th>Username</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor = "let teacher of teachers">
-        <td>
-          {{teacher.id}}        
-        </td>
-        <td>
-          {{teacher.firstName}}        
-        </td>
-        <td>
-          {{teacher.lastName}}        
-        </td>
-        <td>
-          {{teacher.email}}        
-        </td>
-        <td>
-          {{teacher.user}}        
-        </td>
-        <td><button style='margin-right:16px' (click)="deleteTeacher(teacher.id)" class="btn btn-danger">Delete</button>
-          <button style='margin-right:16px' (click)="updateTeacher(teacher.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
-        </td>
-      </tr>
-      
-    </tbody>
- </table>
- 
- <button type="button">Add teacher</button>
-
+<div id="bg">
+  <div id="container">
+    <h1>All teachers</h1>
+    <table class="table" border="1px solid black">
+        <thead class="thead-dark">
+          <tr>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let teacher of teachers">
+            <td>
+              {{teacher.id}}        
+            </td>
+            <td>
+              {{teacher.userDTO.firstName}}        
+            </td>
+            <td>
+              {{teacher.userDTO.lastName}}        
+            </td>
+            <td>
+              {{teacher.userDTO.email}}        
+            </td>
+            <td>
+              {{teacher.userDTO.user_name}}        
+            </td>
+            <td><button style='margin-right:16px' (click)="deleteTeacher(teacher.id)" class="btn btn-danger">Delete</button>
+              <button style='margin-right:16px' (click)="updateTeacher(teacher.id)" class="btn btn-success" style="margin-left: 10px">Edit details</button>
+            </td>
+          </tr>
+          
+        </tbody>
+    </table>
+    
+    <button type="button" class="btn btn-primary" (click)="gotoAdd()">Add Teacher</button>
+  </div>
  <app-footer></app-footer>
+</div>

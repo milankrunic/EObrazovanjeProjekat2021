@@ -15,14 +15,26 @@ import { StudentsService } from 'src/app/services/students/students.service';
 export class StudentDetailsComponent implements OnInit {
   
   student: student = {
-    firstName: '',
-    lastName: '',
     cardNumber: '',
-    email: '',
-    userId: ''
+    userDTO:{
+       firstName:'',
+       lastName:'',
+       email:'',
+       userName:'',
+       password:'',
+ //      roles:[]
+    }
   };
+
+  user: user = {
+    firstName:'',
+    lastName:'',
+    email:'',
+    userName:'',
+    password:'',
+  }
     
-  constructor(private studentService: StudentsService, private route: ActivatedRoute, private location: Location) {
+  constructor(private studentService: StudentsService, private route: ActivatedRoute, private location: Location, userService: UsersService) {
     
 }
 
@@ -36,8 +48,8 @@ getStudent(id: any): void {
       data => {
           this.student = data;
           console.log(data);
-          console.log(this.student.firstName);
-          console.log(this.student.lastName);
+          // console.log(this.student.firstName);
+          // console.log(this.student.lastName);
       },
       error => {
         console.log(error);
@@ -55,6 +67,7 @@ edit(): void {
         console.log(error);
       });
 }
+
 
 
 // edit(): void {

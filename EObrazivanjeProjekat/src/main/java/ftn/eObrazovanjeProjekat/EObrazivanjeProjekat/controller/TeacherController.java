@@ -60,7 +60,7 @@ public class TeacherController {
 
 		User u = userServiceInterface.findOne(teacherDTO.getIdUser());
 		Teacher t = new Teacher();
-		t.setEmail(teacherDTO.getEmail());
+//		t.setEmail(teacherDTO.getEmail());
 		t.setUser(u);
 		
 		t = teacherServiceInterface.save(t);
@@ -76,7 +76,7 @@ public class TeacherController {
 		if(teacher == null) {
 			return new ResponseEntity<TeacherDTO>(HttpStatus.BAD_REQUEST);
 		}
-		teacher.setEmail(teacherDTO.getEmail());
+//		teacher.setEmail(teacherDTO.getEmail());
 		teacher.setUser(user);
 
 		teacher = teacherServiceInterface.save(teacher);

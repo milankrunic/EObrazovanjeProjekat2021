@@ -1,9 +1,21 @@
-/* table {
-    width: 50%;
-    margin-left: 20%;
-    margin-top: 10%;
-} */
-
 h1{
     text-align: center;
+    padding: 25px 0 15px 0;
+}
+
+#container {
+    margin: 0% 1% 0% 1%;
+}
+
+#bg {
+    background-image: url("/assets/Admin.png");
+
+    /* Full height and width */
+    height: 100%; 
+    width: 100%;
+  
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }

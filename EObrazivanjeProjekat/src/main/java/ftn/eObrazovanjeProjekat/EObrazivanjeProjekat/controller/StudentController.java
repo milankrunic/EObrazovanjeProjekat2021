@@ -61,7 +61,7 @@ public class StudentController {
 		User u = userServiceInterface.findOne(studentDTO.getUserDTO().getIdUser());
 		Student s = new Student();
 
-		s.setEmail(studentDTO.getEmail());
+//		s.setEmail(studentDTO.getEmail());
 		s.setCardNumber(studentDTO.getCardNumber());
 
 		s.setUser(u);
@@ -81,7 +81,7 @@ public class StudentController {
 			return new ResponseEntity<StudentDTO>(HttpStatus.BAD_REQUEST);
 		}
 
-		student.setEmail(studentDTO.getEmail());
+//		student.setEmail(studentDTO.getEmail());
 		student.setCardNumber(studentDTO.getCardNumber());
 		
 		student.setUser(user);

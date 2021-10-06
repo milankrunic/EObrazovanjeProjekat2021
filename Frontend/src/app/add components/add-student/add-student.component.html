@@ -1,21 +1,21 @@
 <app-admin-header></app-admin-header>
 <div id="bg">
-  <h3>Add Student</h3>
+  <h2>Add Student</h2>
   <div [hidden]="submitted" style="width: 400px;" id="container">
     <form (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="name">First Name</label>
-        <input type="text" class="form-control" id="firstName" required [(ngModel)]="student.firstName" name="firstName">
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="student.userDTO.firstName" name="firstName">
       </div>
 
       <div class="form-group">
         <label for="name">Last Name</label>
-        <input type="text" class="form-control" id="lastName" required [(ngModel)]="student.lastName" name="lastName">
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="student.userDTO.lastName" name="lastName">
       </div>
 
       <div class="form-group">
         <label for="name">Email</label>
-        <input type="text" class="form-control" id="email" required [(ngModel)]="student.email" name="email">
+        <input type="text" class="form-control" id="email" required [(ngModel)]="student.userDTO.email" name="email">
       </div>
 
       <div class="form-group">
@@ -23,10 +23,10 @@
         <input type="text" class="form-control" id="cardNumber" required [(ngModel)]="student.cardNumber" name="cardNumber">
       </div>
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="name">User id</label>
         <input type="text" class="form-control" id="User Id" required [(ngModel)]="student.userId" name="userId">
-      </div>
+      </div> -->
 
       <!-- <div class="form-group">
         <label for="name">Phone number</label>
@@ -74,4 +74,5 @@
       <button class="btn btn-success" (click)="backToUsers()">Back to users</button>
     </div> -->
   </div>
+    <app-footer></app-footer>
 </div>
