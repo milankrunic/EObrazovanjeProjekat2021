@@ -2,14 +2,14 @@ INSERT INTO role(id, name, code) VALUES(1, 'ROLE_STUDENT', 'st');
 INSERT INTO role(id, name, code) VALUES(2, 'ROLE_ADMINISTRATOR', 'admin');
 INSERT INTO role(id, name, code) VALUES(3, 'ROLE_TEACHER', 'teach');
 
-INSERT INTO USER(id, first_name, last_name, email, username, password)--student2
-VALUES(1, 'Mihailo', 'Maric', 'maric@gmail.com', 'maric99', 'maric99');
-INSERT INTO USER(id, first_name, last_name, email, username, password)-- student1
-VALUES(4, 'Ivan', 'Stankovic', 'stankovic@gmail.com', 'ivan99', 'ivan99');
-INSERT INTO USER(id, first_name, last_name, email, username, password)-- admin
-VALUES(2, 'Dario', 'Ziga', 'ziga@gmail.com', 'ziga99', 'ziga99');
-INSERT INTO USER(id, first_name, last_name, email, username, password)-- teacher1
-VALUES(3, 'Milan', 'Krunic', 'krunic@gmail.com', 'kruna99', 'kruna99');
+INSERT INTO USER(id, first_name, last_name, email, username, password)--maric99
+VALUES(1, 'Mihailo', 'Maric', 'maric@gmail.com', 'maric99', '$2a$12$XlgmvSXFkvNAF4dzxZ/gvebt9QnMavqw54w8Bf2SkH5rOxeABtG2K');
+INSERT INTO USER(id, first_name, last_name, email, username, password)-- ivan99
+VALUES(4, 'Ivan', 'Stankovic', 'stankovic@gmail.com', 'ivan99', '$2a$12$21qZE5wGxTy2XYZVts0Ahe9mwi8sYNwF4z2nRkObIlo9bvz25SEiq');
+INSERT INTO USER(id, first_name, last_name, email, username, password)-- ziga99
+VALUES(2, 'Dario', 'Ziga', 'ziga@gmail.com', 'ziga99', '$2a$12$aEvdU3Zn9HHwGSuwmmPsI.Wx/g8oXbYJMmF54GcKPFfR.pVZIHzLC');
+INSERT INTO USER(id, first_name, last_name, email, username, password)-- kruna99
+VALUES(3, 'Milan', 'Krunic', 'krunic@gmail.com', 'kruna99', '$2a$12$zdUwdyVKM0ngD/a4UbFs.OkPTmrh70Jjn24obI3in88YChRH.7oRu');
 
 
 
