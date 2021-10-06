@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.ExamPartDTO;
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.StudentDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPart;
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.ExamPartServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 
