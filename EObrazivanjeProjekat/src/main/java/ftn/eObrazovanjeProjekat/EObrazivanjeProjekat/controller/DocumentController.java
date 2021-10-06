@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,6 +41,14 @@ public class DocumentController {
 //		
 //		return new ResponseEntity<DocumentDTO>(new DocumentDTO(document),HttpStatus.OK);
 //	}
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<DocumentDTO> getOneDocument(@PathVariable("id") Long id){
+		Document document = documentServiceInterface.findOne(id);
+		if(document == null) {
+			return new ResponseEntity<DocumentDTO>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<DocumentDTO>(new DocumentDTO(document), HttpStatus.OK);
+	}
 	
 	@PostMapping(consumes = "application/json")
 	public ResponseEntity<DocumentDTO> addDocument(@RequestBody DocumentDTO documentDTO){
