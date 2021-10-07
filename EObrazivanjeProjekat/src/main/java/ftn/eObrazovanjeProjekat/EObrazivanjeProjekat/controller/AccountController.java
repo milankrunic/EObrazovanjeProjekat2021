@@ -2,9 +2,13 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.controller;
 
 
 
+import java.security.Principal;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,6 +35,7 @@ public class AccountController {
 	AccountServiceInterface accountServiceInterface;
 	
 	@GetMapping(value = "/{id}")
+	@PreAuthorize("hasAnyRole('ROLE_STUDENT', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<AccountDTO> getAccount(@PathVariable("id") Long id){
 		Account account = accountServiceInterface.findOne(id);
 		
@@ -41,6 +46,14 @@ public class AccountController {
 		
 		
 		return new ResponseEntity<AccountDTO>(new AccountDTO(account),HttpStatus.OK);
+	}
+	@GetMapping()
+	public ResponseEntity<AccountDTO> getAccountsByStudent(Principal principal){
+		List<Account> accounts = accountServiceInterface.findByUsername(principal.getName());
+		if(accounts.size() == 0) {
+			return new ResponseEntity<AccountDTO>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<AccountDTO>(new AccountDTO(accounts.get(0)), HttpStatus.OK);
 	}
 
 	

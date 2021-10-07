@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,7 +35,8 @@ public class AdminController {
 	UserServiceInterface userServiceInterface;
 
 	@GetMapping
-	public ResponseEntity<List<AdminDTO>> getAdmin() {
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+	public ResponseEntity<List<AdminDTO>> getAdmins() {
 		List<Admin> admins = adminServiceInterface.findAllAdmin();
 		
 		List<AdminDTO> adminDTO = new ArrayList<AdminDTO>();
@@ -45,7 +47,7 @@ public class AdminController {
 	}
 	
 	@GetMapping(value = "/{idAdmin}")
-	public ResponseEntity<AdminDTO> getTeacher(@PathVariable("idAdmin") Long idAdmin){
+	public ResponseEntity<AdminDTO> getAdmin(@PathVariable("idAdmin") Long idAdmin){
 		Admin admin = adminServiceInterface.findOneAdmin(idAdmin);
 		
 		if(admin == null) {

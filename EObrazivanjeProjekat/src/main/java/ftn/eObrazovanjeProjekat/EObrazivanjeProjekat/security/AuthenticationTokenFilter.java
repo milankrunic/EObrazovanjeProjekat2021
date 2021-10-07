@@ -16,13 +16,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service.UserDetailsServiceImpl;
+
 public class AuthenticationTokenFilter extends UsernamePasswordAuthenticationFilter {
 
 	@Autowired
 	private TokenUtils tokenUtils;
 
 	@Autowired
-	private UserDetailsService userDetailsService;
+	private UserDetailsServiceImpl userDetailsService;
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,

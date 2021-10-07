@@ -2,11 +2,14 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.security;
 
 
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -69,8 +72,16 @@ public class TokenUtils {
 	
 	public String generateToken(UserDetails userDetails) {
 		Map<String, Object> claims = new HashMap<String, Object>();
+		List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
 		claims.put("sub", userDetails.getUsername());
 		claims.put("created", new Date(System.currentTimeMillis()));
+		
+		for (GrantedAuthority r : userDetails.getAuthorities()) {
+			System.out.println("AUTHORITY: " + r.getAuthority().toString());
+			roles.add(r);
+		};
+		
+		claims.put("roles", roles);
 		return Jwts.builder().setClaims(claims)
 				.setExpiration(new Date(System.currentTimeMillis() + expiration * 1000))
 				.signWith(SignatureAlgorithm.HS512, secret).compact();

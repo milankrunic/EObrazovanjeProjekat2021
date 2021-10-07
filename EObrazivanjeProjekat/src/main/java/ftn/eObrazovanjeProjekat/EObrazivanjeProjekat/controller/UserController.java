@@ -54,7 +54,7 @@ public class UserController {
 	@SuppressWarnings("unused")
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public ResponseEntity<JwtDTO> login(@RequestBody LoginDTO loginDTO) {
-		System.out.println("\nLogin-------<<<<");
+		System.out.println("\nLOGIN");
         try {
         	// imamo request i response klase(jwt dto i login dto)  	 
 			UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(
