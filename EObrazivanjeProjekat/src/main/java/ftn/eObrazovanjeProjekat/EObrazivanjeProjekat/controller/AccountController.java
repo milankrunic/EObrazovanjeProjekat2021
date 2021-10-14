@@ -47,14 +47,7 @@ public class AccountController {
 		
 		return new ResponseEntity<AccountDTO>(new AccountDTO(account),HttpStatus.OK);
 	}
-	@GetMapping()
-	public ResponseEntity<AccountDTO> getAccountsByStudent(Principal principal){
-		List<Account> accounts = accountServiceInterface.findByUsername(principal.getName());
-		if(accounts.size() == 0) {
-			return new ResponseEntity<AccountDTO>(HttpStatus.NOT_FOUND);
-		}
-		return new ResponseEntity<AccountDTO>(new AccountDTO(accounts.get(0)), HttpStatus.OK);
-	}
+	
 
 	
 	@PostMapping(consumes = "application/json", value = "/{id}")

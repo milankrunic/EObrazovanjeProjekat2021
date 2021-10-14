@@ -35,7 +35,7 @@ public class AdminController {
 	UserServiceInterface userServiceInterface;
 
 	@GetMapping
-	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+	@PreAuthorize("hasAuthority('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<List<AdminDTO>> getAdmins() {
 		List<Admin> admins = adminServiceInterface.findAllAdmin();
 		
@@ -46,7 +46,9 @@ public class AdminController {
 		return new ResponseEntity<List<AdminDTO>>(adminDTO, HttpStatus.OK);
 	}
 	
+	
 	@GetMapping(value = "/{idAdmin}")
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<AdminDTO> getAdmin(@PathVariable("idAdmin") Long idAdmin){
 		Admin admin = adminServiceInterface.findOneAdmin(idAdmin);
 		

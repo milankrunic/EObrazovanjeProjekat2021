@@ -5,10 +5,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,6 +29,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.JwtDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.LoginDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.TeacherDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.UserDTO;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.exceptions.BadRequestException;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Document;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
@@ -51,7 +55,7 @@ public class UserController {
 	private UserServiceInterface userService;
 	
 	
-	@SuppressWarnings("unused")
+	@SuppressWarnings("unused")    
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public ResponseEntity<JwtDTO> login(@RequestBody LoginDTO loginDTO) {
 		System.out.println("\nLOGIN");
@@ -69,6 +73,20 @@ public class UserController {
             return ResponseEntity.status(401).build();
         }
 	}
+	
+	@GetMapping(value = "/logout", produces = MediaType.TEXT_PLAIN_VALUE)
+    public ResponseEntity<String> logoutUser() {
+		System.out.println("\nLog out!");
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        if (!(auth instanceof AnonymousAuthenticationToken)){
+            SecurityContextHolder.clearContext();
+
+            return new ResponseEntity<>("You successfully logged out!", HttpStatus.OK);
+        } else {
+            throw new BadRequestException("User is not authenticated!");
+        }
+    }
 
 	
 	@GetMapping

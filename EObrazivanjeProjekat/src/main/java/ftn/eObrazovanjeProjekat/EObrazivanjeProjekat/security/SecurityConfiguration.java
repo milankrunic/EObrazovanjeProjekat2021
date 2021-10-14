@@ -57,7 +57,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.setAuthenticationManager(authenticationManagerBean());
 		return authenticationTokenFilter;
 	}
-
+	
+	
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity
@@ -66,19 +67,39 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 				.and()
 			.authorizeRequests()
-				.antMatchers("/index.html", "/api/users/login", "/styles.css", "/profile", 
-						 "/**",
-                        "/runtime.js", "/polyfills.js", "/vendor.js", "/main.js", "/images/**", "/js/**",
-                        "/runtime-es2015.js", "/polyfills-es2015.js", "/vendor-es2015.js", "/main-es2015.js").permitAll()
-
-//				.antMatchers(HttpMethod.POST, "/api/admin/**")
-//					.hasAuthority("ROLE_ADMIN") //only administrator can add and edit data
+				.antMatchers("/index.html", "/api/users/login", "/api/logOut", "/api/signup").permitAll() //, "/api/register"
+//				.antMatchers(HttpMethod.POST, "/api/**")
+//					.hasAuthority("ROLE_ADMINISTRATOR") //only administrator can add and edit data
 				.anyRequest().authenticated();
-
+				 
 		
 		// Custom JWT based authentication
 		httpSecurity.addFilterBefore(authenticationTokenFilterBean(),
 				UsernamePasswordAuthenticationFilter.class);
 	}
+
+
+//	@Override
+//	protected void configure(HttpSecurity httpSecurity) throws Exception {
+//		httpSecurity
+//			.csrf().disable()
+//			.sessionManagement()
+//				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//				.and()
+//			.authorizeRequests()
+//				.antMatchers("/index.html", "/api/users/login", "/styles.css", "/profile", 
+//						
+//                        "/runtime.js", "/polyfills.js", "/vendor.js", "/main.js", "/images/**", "/js/**",
+//                        "/runtime-es2015.js", "/polyfills-es2015.js", "/vendor-es2015.js", "/main-es2015.js").permitAll()
+//
+////				.antMatchers(HttpMethod.POST, "/api/admin/**")
+////					.hasAuthority("ROLE_ADMIN") //only administrator can add and edit data
+//				.anyRequest().authenticated();
+//
+//		
+//		// Custom JWT based authentication
+//		httpSecurity.addFilterBefore(authenticationTokenFilterBean(),
+//				UsernamePasswordAuthenticationFilter.class);
+//	}
 }
 
