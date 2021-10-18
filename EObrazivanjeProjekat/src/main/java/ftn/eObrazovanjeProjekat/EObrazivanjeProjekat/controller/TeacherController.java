@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.TeacherDTO;
@@ -32,67 +36,62 @@ public class TeacherController {
 	
 	@Autowired
 	UserServiceInterface userServiceInterface;
-	
-	@GetMapping
-	public ResponseEntity<List<TeacherDTO>> getTeacher(){
 
+	@GetMapping
+	public ResponseEntity<List<TeacherDTO>> getAllTeachers(){
 		List<Teacher> teachers = teacherServiceInterface.findAll();
 		
-		List<TeacherDTO> teacherDTO = new ArrayList<TeacherDTO>();
-		for(Teacher tea: teachers) {
-			teacherDTO.add(new TeacherDTO(tea));
+		List<TeacherDTO> teachersDTO = new ArrayList<TeacherDTO>();
+		
+		for (Teacher teacher : teachers) {
+			teachersDTO.add(new TeacherDTO(teacher));
 		}
-		return new ResponseEntity<List<TeacherDTO>>(teacherDTO, HttpStatus.OK);
+		return new ResponseEntity<List<TeacherDTO>>(teachersDTO, HttpStatus.OK);
 	}
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<TeacherDTO> getTeacher(@PathVariable("id") Long id){
-		Teacher teacher = teacherServiceInterface.findOne(id);
-		
+	public ResponseEntity<TeacherDTO> getOneTeacher(@PathVariable("id") Long id){
+		Teacher teacher = teacherServiceInterface.findById(id);
 		if(teacher == null) {
 			return new ResponseEntity<TeacherDTO>(HttpStatus.NOT_FOUND);
 		}
 		return new ResponseEntity<TeacherDTO>(new TeacherDTO(teacher), HttpStatus.OK);
 	}
 	
-	@PostMapping
-	public ResponseEntity<TeacherDTO> addTeacher(@RequestBody TeacherDTO teacherDTO){
-
-		User u = userServiceInterface.findOne(teacherDTO.getIdUser());
-		Teacher t = new Teacher();
-//		t.setEmail(teacherDTO.getEmail());
-		t.setUser(u);
+	
+	@PutMapping()
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+	public ResponseEntity<TeacherDTO> updateTeacher(@RequestBody TeacherDTO teacherDTO){
 		
-		t = teacherServiceInterface.save(t);
-		return new ResponseEntity<TeacherDTO>(new TeacherDTO(t), HttpStatus.CREATED);
-	}
-
-	@PutMapping(value = "/{id}", consumes = "application/json")
-	public ResponseEntity<TeacherDTO> updateTeacher(@RequestBody TeacherDTO teacherDTO, @PathVariable("id") Long id){
-
-		Teacher teacher = teacherServiceInterface.findById(id);
-		User user = userServiceInterface.findOne(teacherDTO.getIdUser());
-		
+		User user = userServiceInterface.findOne(teacherDTO.getUserDTO().getIdUser());
+		Teacher teacher = teacherServiceInterface.findById(teacherDTO.getId());
 		if(teacher == null) {
-			return new ResponseEntity<TeacherDTO>(HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<TeacherDTO>(HttpStatus.NOT_FOUND);
 		}
-//		teacher.setEmail(teacherDTO.getEmail());
 		teacher.setUser(user);
-
+		teacherServiceInterface.save(teacher);
+		return new ResponseEntity<TeacherDTO>(new TeacherDTO(teacher), HttpStatus.OK);	
+	}
+	
+	@PostMapping
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+	public ResponseEntity<TeacherDTO> saveTeacher(@RequestBody TeacherDTO teacherDTO){
+		User user = userServiceInterface.findOne(teacherDTO.getUserDTO().getIdUser());
+		Teacher teacher = new Teacher();
+		teacher.setUser(user);
 		teacher = teacherServiceInterface.save(teacher);
-		return new ResponseEntity<TeacherDTO>(new TeacherDTO(teacher), HttpStatus.OK);
+		
+		return new ResponseEntity<TeacherDTO>(new TeacherDTO(teacher), HttpStatus.CREATED);
 	}
 	
 	@DeleteMapping(value = "/{id}")
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<Void> deleteTeacher(@PathVariable("id") Long id){
 		Teacher teacher = teacherServiceInterface.findById(id);
 		if(teacher != null) {
 			teacherServiceInterface.remove(id);
-			
 			return new ResponseEntity<Void>(HttpStatus.OK);
 		}
 		return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
 	}
-	
-	
 }
