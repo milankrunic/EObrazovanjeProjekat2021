@@ -59,46 +59,39 @@ public class AdminController {
 	}
 	
 	
-	@PostMapping
-	public ResponseEntity<AdminDTO> addAdmin(@RequestBody AdminDTO adminDTO){
-
-		User u = userServiceInterface.findOne(adminDTO.getIdUser());
-		Admin a = new Admin();
-//		a.setEmail(adminDTO.getEmail());
-		a.setUser(u);
+	@PutMapping()
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+	public ResponseEntity<AdminDTO> updateAdministrator(@RequestBody AdminDTO adminDTO){
 		
-		a = adminServiceInterface.saveAdmin(a);
-		return new ResponseEntity<AdminDTO>(new AdminDTO(a), HttpStatus.CREATED);
-	}
-	
-	
-	@PutMapping(value = "/{idAdmin}", consumes = "application/json")
-	public ResponseEntity<AdminDTO> updateAdmin(@RequestBody AdminDTO adminDTO, @PathVariable("idAdmin") Long idAdmin){
-
-		Admin admin = adminServiceInterface.findById(idAdmin);
-		User user = userServiceInterface.findOne(adminDTO.getIdUser());
-		
+		User user = userServiceInterface.findOne(adminDTO.getUserDTO().getIdUser());
+		Admin admin = adminServiceInterface.findById(adminDTO.getIdUser());
 		if(admin == null) {
-			return new ResponseEntity<AdminDTO>(HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<AdminDTO>(HttpStatus.NOT_FOUND);
 		}
-
-//		admin.setEmail(adminDTO.getEmail());
 		admin.setUser(user);
-
-		admin = adminServiceInterface.saveAdmin(admin);
-		return new ResponseEntity<AdminDTO>(new AdminDTO(admin), HttpStatus.OK);
+		adminServiceInterface.saveAdmin(admin);
+		return new ResponseEntity<AdminDTO>(new AdminDTO(admin), HttpStatus.OK);	
 	}
 	
+	@PostMapping
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+	public ResponseEntity<AdminDTO> saveAdmin(@RequestBody AdminDTO adminDTO){
+		User user = userServiceInterface.findOne(adminDTO.getUserDTO().getIdUser());
+		Admin admin = new Admin();
+		admin.setUser(user);
+		admin = adminServiceInterface.saveAdmin(admin);
+		
+		return new ResponseEntity<AdminDTO>(new AdminDTO(admin), HttpStatus.CREATED);
+	}
 	
 	@DeleteMapping(value = "/{id}")
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<Void> deleteAdmin(@PathVariable("id") Long id){
 		Admin admin = adminServiceInterface.findById(id);
 		if(admin != null) {
 			adminServiceInterface.remove(id);
-			
 			return new ResponseEntity<Void>(HttpStatus.OK);
 		}
 		return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
 	}
-	
 }
