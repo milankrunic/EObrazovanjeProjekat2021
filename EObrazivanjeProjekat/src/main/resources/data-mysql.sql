@@ -5,11 +5,11 @@ INSERT INTO role(id, name, code) VALUES(3, 'ROLE_TEACHER', 'teach');
 INSERT INTO USER(id, first_name, last_name, email, username, password)--maric99
 VALUES(1, 'Mihailo', 'Maric', 'maric@gmail.com', 'maric99', '$2a$12$XlgmvSXFkvNAF4dzxZ/gvebt9QnMavqw54w8Bf2SkH5rOxeABtG2K');
 INSERT INTO USER(id, first_name, last_name, email, username, password)-- ivan99
-VALUES(4, 'Ivan', 'Stankovic', 'stankovic@gmail.com', 'ivan99', '$2a$12$21qZE5wGxTy2XYZVts0Ahe9mwi8sYNwF4z2nRkObIlo9bvz25SEiq');
+VALUES(2, 'Ivan', 'Stankovic', 'stankovic@gmail.com', 'ivan99', '$2a$12$21qZE5wGxTy2XYZVts0Ahe9mwi8sYNwF4z2nRkObIlo9bvz25SEiq');
 INSERT INTO USER(id, first_name, last_name, email, username, password)-- ziga99
-VALUES(2, 'Dario', 'Ziga', 'ziga@gmail.com', 'ziga99', '$2a$12$aEvdU3Zn9HHwGSuwmmPsI.Wx/g8oXbYJMmF54GcKPFfR.pVZIHzLC');
+VALUES(3, 'Dario', 'Ziga', 'ziga@gmail.com', 'ziga99', '$2a$12$aEvdU3Zn9HHwGSuwmmPsI.Wx/g8oXbYJMmF54GcKPFfR.pVZIHzLC');
 INSERT INTO USER(id, first_name, last_name, email, username, password)-- kruna99
-VALUES(3, 'Milan', 'Krunic', 'krunic@gmail.com', 'kruna99', '$2a$12$zdUwdyVKM0ngD/a4UbFs.OkPTmrh70Jjn24obI3in88YChRH.7oRu');
+VALUES(4, 'Milan', 'Krunic', 'krunic@gmail.com', 'kruna99', '$2a$12$zdUwdyVKM0ngD/a4UbFs.OkPTmrh70Jjn24obI3in88YChRH.7oRu');
 
 
 
@@ -18,13 +18,13 @@ INSERT INTO user_role(user_id, role_id) VALUES(4, 1);
 INSERT INTO user_role(user_id, role_id) VALUES(2, 2);
 INSERT INTO user_role(user_id, role_id) VALUES(3, 3);
 
-INSERT INTO Admin(id_admin, id_user) VALUES (1,3);
+INSERT INTO Admin(id_admin, id_user) VALUES (1,2);
 
-INSERT INTO teacher(id_teacher, id_user) VALUES (1,4);
+INSERT INTO teacher(id_teacher, id_user) VALUES (1,3);
 
 
 INSERT INTO Student(id_student, card_number, id_user) VALUES (1, 'SF-12-2020',1);
-INSERT INTO Student(id_student, card_number, id_user) VALUES (2, 'SF-19-2020',2);
+INSERT INTO Student(id_student, card_number, id_user) VALUES (2, 'SF-19-2020',4);
 
 
 INSERT INTO document_type(id_dokument_type, name, code) VALUES (1, 'document1','D1');

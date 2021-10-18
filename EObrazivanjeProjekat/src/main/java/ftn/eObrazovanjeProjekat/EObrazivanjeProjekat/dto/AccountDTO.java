@@ -8,44 +8,34 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 
 public class AccountDTO {
 	
-	private Long idAccount;
+	private Long id;
+	
 	private Double amount;
-	private Long student_id;
-	private Set<StudentPaymentsDTO> studentPayments = new HashSet<StudentPaymentsDTO>();
 	
-	
-	public AccountDTO(Account account) {
-		this.idAccount = account.getIdAccount();
-		this.amount = account.getAmount();
-		this.student_id = account.getStudent().getIdStudent();
-		
+	private StudentDTO studentDTO;
 
-	}
-	
-	public AccountDTO(Long idAccount,Double amount,Long student_id,Set<StudentPaymentsDTO> studentPayments) {
+	public AccountDTO() {
 		super();
-		this.idAccount = idAccount;
+		// TODO Auto-generated constructor stub
+	}
+
+	public AccountDTO(Long id, Double amount, StudentDTO studentDTO) {
+		super();
+		this.id = id;
 		this.amount = amount;
-		this.student_id = student_id;
-		this.studentPayments = studentPayments;
+		this.studentDTO = studentDTO;
 	}
 
+	public AccountDTO(Account account) {
+		this(account.getIdAccount(), account.getAmount(), new StudentDTO(account.getStudent()));
+	}
 	
-	
-	public Long getStudent_id() {
-		return student_id;
+	public Long getId() {
+		return id;
 	}
 
-	public void setStudent_id(Long student_id) {
-		this.student_id = student_id;
-	}
-
-	public Long getIdAccount() {
-		return idAccount;
-	}
-
-	public void setIdAccount(Long idAccount) {
-		this.idAccount = idAccount;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Double getAmount() {
@@ -56,21 +46,12 @@ public class AccountDTO {
 		this.amount = amount;
 	}
 
-//	public Student getStudent() {
-//		return student;
-//	}
-//
-//	public void setStudent(Student student) {
-//		this.student = student;
-//	}
-
-	public Set<StudentPaymentsDTO> getStudentPayments() {
-		return studentPayments;
+	public StudentDTO getStudentDTO() {
+		return studentDTO;
 	}
 
-	public void setStudentPayments(Set<StudentPaymentsDTO> studentPayments) {
-		this.studentPayments = studentPayments;
+	public void setStudentDTO(StudentDTO studentDTO) {
+		this.studentDTO = studentDTO;
 	}
-	
-	
+
 }

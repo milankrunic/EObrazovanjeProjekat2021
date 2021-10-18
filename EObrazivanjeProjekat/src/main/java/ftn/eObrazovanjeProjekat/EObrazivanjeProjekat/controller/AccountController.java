@@ -33,63 +33,64 @@ public class AccountController {
 	
 	@Autowired
 	AccountServiceInterface accountServiceInterface;
+
 	
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/one-account")
 	@PreAuthorize("hasAnyRole('ROLE_STUDENT', 'ROLE_ADMINISTRATOR')")
-	public ResponseEntity<AccountDTO> getAccount(@PathVariable("id") Long id){
-		Account account = accountServiceInterface.findOne(id);
-		
+	public ResponseEntity<AccountDTO> getOneAccount(Principal principal){
+		Account account = accountServiceInterface.findByUsername(principal.getName()).get(0);
 		if(account == null) {
 			return new ResponseEntity<AccountDTO>(HttpStatus.NOT_FOUND);
-			
 		}
-		
-		
-		return new ResponseEntity<AccountDTO>(new AccountDTO(account),HttpStatus.OK);
+		return new ResponseEntity<AccountDTO>(new AccountDTO(account), HttpStatus.OK);
 	}
 	
-
+	@GetMapping()
+	@PreAuthorize("hasAnyRole('ROLE_STUDENT', 'ROLE_ADMINISTRATOR')")
+	public ResponseEntity<AccountDTO> getAccountsByStudent(Principal principal){
+		List<Account> accounts = accountServiceInterface.findByUsername(principal.getName());
+		if(accounts.size() == 0) {
+			return new ResponseEntity<AccountDTO>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<AccountDTO>(new AccountDTO(accounts.get(0)), HttpStatus.OK);
+	}
 	
-	@PostMapping(consumes = "application/json", value = "/{id}")
-	public ResponseEntity<AccountDTO> addAccount(@RequestBody AccountDTO accountDTO, @PathVariable("id") Long id){
-		Student student = studentService.findById(id);
+	@PutMapping()
+	@PreAuthorize("hasAnyRole('ROLE_STUDENT', 'ROLE_ADMINISTRATOR')")
+	public ResponseEntity<AccountDTO> updateAccount(@RequestBody AccountDTO accountDTO){
 		
-		Account acc = new Account();
+		Student student = studentService.findById(accountDTO.getStudentDTO().getId());
+		
+		Account acc = accountServiceInterface.findOne(accountDTO.getId());
+		if(acc == null) {
+			return new ResponseEntity<AccountDTO>(HttpStatus.NOT_FOUND);
+		}
 		acc.setAmount(accountDTO.getAmount());
 		acc.setStudent(student);
-		acc.setIdAccount(accountDTO.getIdAccount());
-
-		
-//		acc = accountServiceInterface.save(acc);
-		return new ResponseEntity<AccountDTO>(new AccountDTO(acc),HttpStatus.CREATED);
+		acc = accountServiceInterface.save(acc);
+		return new ResponseEntity<AccountDTO>(new AccountDTO(acc), HttpStatus.OK);
 	}
 	
-	@PutMapping(value = "/{id}", consumes = "application/json")
-	public ResponseEntity<AccountDTO> updateAccount(@RequestBody AccountDTO accountDTO,@PathVariable("id") Long id){
-		Account account = accountServiceInterface.findOne(id);
+	@PostMapping
+	@PreAuthorize("hasAnyRole('ROLE_STUDENT', 'ROLE_ADMINISTRATOR')")
+	public ResponseEntity<AccountDTO> saveAccount(@RequestBody AccountDTO accountDTO){
+		Student student = studentService.findById(accountDTO.getStudentDTO().getId());
 		
-		if(account == null) {
-			return new ResponseEntity<AccountDTO>(HttpStatus.BAD_REQUEST);
-		}
-		
+		Account account = new Account();
 		account.setAmount(accountDTO.getAmount());
-//		account.setStudent(accountDTO.getStudent());
-//		account.setStudentPayments(accountDTO.getStudentPayments());
+		account.setStudent(student);
 		
-//		Account izmenjenAccount = new Account();
-//		account = accountServiceInterface.save(izmenjenAccount);
+		account = accountServiceInterface.save(account);
 		
-		
-		
-		return new ResponseEntity<AccountDTO>(new AccountDTO(account),HttpStatus.OK);
+		return new ResponseEntity<AccountDTO>(new AccountDTO(account), HttpStatus.CREATED);
 	}
 	
-	@DeleteMapping(value ="/{id}")
+	@DeleteMapping(value = "/{id}")
+	@PreAuthorize("hasAnyRole('ROLE_STUDENT', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<Void> deleteAccount(@PathVariable("id") Long id){
 		Account account = accountServiceInterface.findOne(id);
 		if(account != null) {
 			accountServiceInterface.remove(id);
-			
 			return new ResponseEntity<Void>(HttpStatus.OK);
 		}
 		return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
