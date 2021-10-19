@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.CourseSpecificationDTO;
@@ -21,11 +25,24 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.CourseSpec
 
 
 @RestController
-@RequestMapping(value = "api/course_specification")
+@RequestMapping(value = "api/course-specification")
 public class CourseSpecificationController {
 	
 	@Autowired
 	CourseSpecificationServiceInterface courseSpecificationServiceInterface;
+	
+//	@GetMapping
+//	public ResponseEntity<List<CourseSpecificationDTO>> getAllCourseSpecifications(@RequestParam String searchString,Pageable page){
+//		Page<CourseSpecification> csspecs = courseSpecificationServiceInterface.findAll(searchString,page);
+//		
+//		List<CourseSpecificationDTO> cspecsDTO = new ArrayList<CourseSpecificationDTO>();
+//		
+//		for(CourseSpecification css : csspecs) {
+//			cspecsDTO.add(new CourseSpecificationDTO(css));
+//		}
+//		
+//		return new ResponseEntity<List<CourseSpecificationDTO>>(cspecsDTO, HttpStatus.OK);
+//	}
 	
 	@GetMapping
 	public ResponseEntity<List<CourseSpecificationDTO>> getCourseSpecification(){
@@ -38,6 +55,7 @@ public class CourseSpecificationController {
 		}
 		return new ResponseEntity<List<CourseSpecificationDTO>>(courseSpecificationDTO, HttpStatus.OK);
 	}
+
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<CourseSpecificationDTO> getCourseSpecification(@PathVariable("id") Long id){
@@ -50,6 +68,7 @@ public class CourseSpecificationController {
 	}
 	
 	@PostMapping
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<CourseSpecificationDTO> addCourseSpecification(@RequestBody CourseSpecificationDTO courseSpecificationDTO){
 
 		CourseSpecification cs = new CourseSpecification();
@@ -63,6 +82,7 @@ public class CourseSpecificationController {
 	}
 
 	@PutMapping(value = "/{id}", consumes = "application/json")
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<CourseSpecificationDTO> updateCourseSpecification(@RequestBody CourseSpecificationDTO courseSpecificationDTO, @PathVariable("id") Long id){
 
 		CourseSpecification courseSpecification = courseSpecificationServiceInterface.findById(id);
@@ -80,6 +100,7 @@ public class CourseSpecificationController {
 	}
 	
 	@DeleteMapping(value = "/{id}")
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<Void> deleteCourseSpecification(@PathVariable("id") Long id){
 		CourseSpecification cs = courseSpecificationServiceInterface.findById(id);
 		if(cs != null) {

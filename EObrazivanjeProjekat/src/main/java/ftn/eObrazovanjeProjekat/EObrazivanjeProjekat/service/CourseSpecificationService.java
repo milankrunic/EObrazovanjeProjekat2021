@@ -1,9 +1,12 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseSpecification;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.CourseSpecificationRepository;
@@ -41,5 +44,10 @@ public class CourseSpecificationService implements CourseSpecificationServiceInt
 		courseSpecificationRepository.deleteById(id);
 		
 	}
+	
+//	@Override
+//	public Page<CourseSpecification> findAll(String searchString, Pageable page) {
+//		return courseSpecificationRepository.findAll(searchString, page);
+//	}
 
 }
