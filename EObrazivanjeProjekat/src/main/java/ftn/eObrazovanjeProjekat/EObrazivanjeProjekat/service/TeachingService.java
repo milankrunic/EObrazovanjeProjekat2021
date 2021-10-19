@@ -50,6 +50,12 @@ public class TeachingService implements TeachingServiceInterface{
 	public List<Teaching> findAllTeachingByTeacher(Long id) {
 		return teachingRepository.findAllTeachingByTeacher_idTeacher(id);
 	}
+	
+	@Override
+	public List<Teaching> findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return teachingRepository.findByTeacher_user_username(username);
+	}
 
 
 }

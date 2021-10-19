@@ -26,7 +26,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentSer
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping(value = "api/enrollments/{idEnrollment}/exams")
+@RequestMapping(value = "api/exam")
 public class ExamController {
 
 	@Autowired

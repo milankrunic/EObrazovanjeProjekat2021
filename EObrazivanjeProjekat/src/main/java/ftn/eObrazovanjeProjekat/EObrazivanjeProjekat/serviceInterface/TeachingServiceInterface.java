@@ -13,5 +13,6 @@ public interface TeachingServiceInterface {
 	public void remove(Long id);
 	public Teaching findByTeacher(Long id);
 	public List<Teaching> findAllTeachingByTeacher(Long id);
+	public List<Teaching> findByUsername(String username);
 
 }

@@ -1,11 +1,13 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.controller;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,12 +44,13 @@ public class TeachingController {
 	TeachingTypeServiceInterface teachingTypeServiceInterface;
 	
 	@GetMapping
-	public ResponseEntity<List<TeachingDTO>> getTeaching(){
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+	public ResponseEntity<List<TeachingDTO>> getTeaching(Principal principal){
 
-		List<Teaching> teaching = teachingServiceInterface.findAll();
+		List<Teaching> teachings = teachingServiceInterface.findByUsername(principal.getName());
 		
 		List<TeachingDTO> teachingDTO = new ArrayList<TeachingDTO>();
-		for(Teaching te: teaching) {
+		for(Teaching te: teachings) {
 			teachingDTO.add(new TeachingDTO(te));
 		}
 		return new ResponseEntity<List<TeachingDTO>>(teachingDTO, HttpStatus.OK);
