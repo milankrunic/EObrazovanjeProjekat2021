@@ -49,9 +49,9 @@ public class TeachingTypeController {
 		return new ResponseEntity<TeachingTypeDTO>(new TeachingTypeDTO(tt), HttpStatus.OK);
 	}
 
-	@PutMapping()
+	@PutMapping(value = "/{id}", consumes = "application/json")
 	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
-	public ResponseEntity<TeachingTypeDTO> updateTeachingType(@RequestBody TeachingTypeDTO ttDTO){
+	public ResponseEntity<TeachingTypeDTO> updateTeachingType(@RequestBody TeachingTypeDTO ttDTO, @PathVariable("id") Long id){
 		TeachingType tt = teachingTypeServiceInterface.findById(ttDTO.getIdTeachingType());
 		
 		if(tt == null) {
