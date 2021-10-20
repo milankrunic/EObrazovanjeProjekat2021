@@ -62,5 +62,10 @@ public class EnrollmentService implements EnrollmentServiceInterface {
 		enrollment = this.enrollmentRepository.save(enrollment);
 		return enrollment;
 	}
+
+	@Override
+	public List<Enrollment> findAll() {
+		return enrollmentRepository.findAll();
+	}
 	
 }

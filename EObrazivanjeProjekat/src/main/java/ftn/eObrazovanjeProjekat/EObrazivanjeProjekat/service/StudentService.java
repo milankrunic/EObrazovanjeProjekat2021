@@ -86,6 +86,12 @@ public class StudentService implements StudentServiceInterface {
 		return studentRepository.findOneByCardNumber(cardNumber);
 	}
 
+	@Override
+	public Student findByUser(String username) {
+		// TODO Auto-generated method stub
+		return studentRepository.findOneByUser_username(username);
+	}
+
 	
 	
 //	exam information - preko enrollmenta

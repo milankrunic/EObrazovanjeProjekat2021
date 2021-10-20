@@ -1,64 +1,53 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 
 public class EnrollmentDTO {
 	
-	private Long id;
-	private CourseInstance courseInstance;
-	private Student student;
-	private Set<ExamDTO> exams = new HashSet<ExamDTO>();
+	private Long idEnrollment;
 	
-	public EnrollmentDTO(Long id, CourseInstance courseInstance, Student student, Set<ExamDTO> exams) {
+	private StudentDTO studentDTO;
+	
+	private CourseInstanceDTO courseInstanceDTO;
+
+	public EnrollmentDTO() {
 		super();
-		this.id = id;
-		this.courseInstance = courseInstance;
-		this.student = student;
-		this.exams = exams;
+		// TODO Auto-generated constructor stub
+	}
+	
+	public EnrollmentDTO(Enrollment e) {
+		this(e.getIdEnrollment(), new StudentDTO(e.getStudent()), new CourseInstanceDTO(e.getCourseInstance()));
 	}
 
-	public EnrollmentDTO(Enrollment enrollment) {
+	public EnrollmentDTO(Long idEnrollment, StudentDTO studentDTO, CourseInstanceDTO courseInstanceDTO) {
 		super();
+		this.idEnrollment = idEnrollment;
+		this.studentDTO = studentDTO;
+		this.courseInstanceDTO = courseInstanceDTO;
 	}
 
-	public Long getId() {
-		return id;
+	public Long getIdEnrollment() {
+		return idEnrollment;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdEnrollment(Long idEnrollment) {
+		this.idEnrollment = idEnrollment;
 	}
 
-	public CourseInstance getCourseInstance() {
-		return courseInstance;
+	public StudentDTO getStudentDTO() {
+		return studentDTO;
 	}
 
-	public void setCourseInstance(CourseInstance courseInstance) {
-		this.courseInstance = courseInstance;
+	public void setStudentDTO(StudentDTO studentDTO) {
+		this.studentDTO = studentDTO;
 	}
 
-	public Student getStudent() {
-		return student;
+	public CourseInstanceDTO getCourseInstanceDTO() {
+		return courseInstanceDTO;
 	}
 
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setCourseInstanceDTO(CourseInstanceDTO courseInstanceDTO) {
+		this.courseInstanceDTO = courseInstanceDTO;
 	}
-
-	public Set<ExamDTO> getExams() {
-		return exams;
-	}
-
-	public void setExams(Set<ExamDTO> exams) {
-		this.exams = exams;
-	}
-	
-	
-	
-	
 }
+

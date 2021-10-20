@@ -6,7 +6,9 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
 
 public interface EnrollmentServiceInterface {
-
+	
+	public List<Enrollment> findAll();
+	
 	List<Enrollment> findAllByStudent(Long id);
 
 	Enrollment findOne(Long id);

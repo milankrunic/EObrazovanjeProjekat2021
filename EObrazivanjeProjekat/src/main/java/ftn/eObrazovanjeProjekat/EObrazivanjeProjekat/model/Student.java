@@ -48,7 +48,7 @@ public class Student {
 	private User user;
 	
 	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private Set<Enrollment> enrollments = new HashSet<Enrollment>();
+	private List<Enrollment> enrollments = new ArrayList<Enrollment>();
 	
 	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<Document> document = new HashSet<Document>();
@@ -62,7 +62,7 @@ public class Student {
 	}
 
 	public Student(Long idStudent, String cardNumber, User user,
-			Set<Enrollment> enrollments, Set<Document> document, Set<Account> account) {
+			List<Enrollment> enrollments, Set<Document> document, Set<Account> account) {
 		super();
 		this.idStudent = idStudent;
 
@@ -107,11 +107,11 @@ public class Student {
 		this.user = user;
 	}
 
-	public Set<Enrollment> getEnrollments() {
+	public List<Enrollment> getEnrollments() {
 		return enrollments;
 	}
 
-	public void setEnrollments(Set<Enrollment> enrollments) {
+	public void setEnrollments(List<Enrollment> enrollments) {
 		this.enrollments = enrollments;
 	}
 
