@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -90,6 +91,16 @@ public class EnrollmentController {
 			endto.add(new EnrollmentDTO(e));
 		}
 		return new ResponseEntity<List<EnrollmentDTO>>(endto, HttpStatus.OK);
+	}
+	
+	@DeleteMapping(value = "/{idCourseInstance}/{cardNumber}")
+	public ResponseEntity<Void> deleteEnrollment(@PathVariable("idCourseInstance") Long idCourseInstance,@PathVariable("cardNumber") String cardNumber){
+		Enrollment enrollment = enrollmentServiceInterface.findByCourseInstanceAndStudent(idCourseInstance, cardNumber);
+		if(enrollment != null) {
+			enrollmentServiceInterface.delete(enrollment.getIdEnrollment());
+			return new ResponseEntity<Void>(HttpStatus.OK);
+		}
+		return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
 	}
 	
 	

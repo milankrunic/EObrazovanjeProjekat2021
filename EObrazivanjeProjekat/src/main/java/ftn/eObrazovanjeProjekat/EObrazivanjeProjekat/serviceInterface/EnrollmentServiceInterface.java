@@ -16,9 +16,14 @@ public interface EnrollmentServiceInterface {
 	Enrollment save(Enrollment enrollment);
 
 	void remove(Enrollment enrollment);
+	
+	public void delete(Long id);
 
 	Enrollment add(Enrollment newEnrollment);
 
 	List<Enrollment> getAllEnrollmentsByCourse(CourseInstance courseInstance);
+	
+	public Enrollment findByCourseInstanceAndStudent(Long idCourseInstance,String cardNumber);
+	
 
 }

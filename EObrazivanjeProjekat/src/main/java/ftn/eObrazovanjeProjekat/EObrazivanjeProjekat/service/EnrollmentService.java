@@ -68,4 +68,15 @@ public class EnrollmentService implements EnrollmentServiceInterface {
 		return enrollmentRepository.findAll();
 	}
 	
+	@Override
+	public Enrollment findByCourseInstanceAndStudent(Long idCourseInstance, String cardNumber) {
+		return enrollmentRepository.findByCourseInstance_idAndStudent_cardNumber(idCourseInstance, cardNumber);
+	}
+
+	@Override
+	public void delete(Long id) {
+		 enrollmentRepository.deleteById(id);
+		
+	}
+	
 }
