@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -55,42 +56,34 @@ public class StudentController {
 		return new ResponseEntity<StudentDTO>(new StudentDTO(student), HttpStatus.OK);
 	}
 	
-	@PostMapping(consumes = "application/json")
-	public ResponseEntity<StudentDTO> addStudent(@RequestBody StudentDTO studentDTO){
-
-		User u = userServiceInterface.findOne(studentDTO.getUserDTO().getIdUser());
-		Student s = new Student();
-
-//		s.setEmail(studentDTO.getEmail());
-		s.setCardNumber(studentDTO.getCardNumber());
-
-		s.setUser(u);
+	@PostMapping
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+	public ResponseEntity<StudentDTO> saveStudent(@RequestBody StudentDTO studentDTO){
+		User user = userServiceInterface.findOne(studentDTO.getUserDTO().getIdUser());
+		Student student = new Student();
+		student.setCardNumber(studentDTO.getCardNumber());
+		student.setUser(user);
+		student = studentServiceInterface.save(student);
 		
-		
-		s = studentServiceInterface.save(s);
-		return new ResponseEntity<StudentDTO>(new StudentDTO(s), HttpStatus.CREATED);
+		return new ResponseEntity<StudentDTO>(new StudentDTO(student), HttpStatus.CREATED);
 	}
 
-	@PutMapping(value = "/{id}", consumes = "application/json")
-	public ResponseEntity<StudentDTO> updateStudent(@RequestBody StudentDTO studentDTO, @PathVariable("id") Long id){
-
-		Student student = studentServiceInterface.findById(id);
+	@PutMapping()
+	@PreAuthorize("hasAnyRole('ROLE_STUDENT', 'ROLE_ADMINISTRATOR')")
+	public ResponseEntity<StudentDTO> updateStudent(@RequestBody StudentDTO studentDTO){
 		User user = userServiceInterface.findOne(studentDTO.getUserDTO().getIdUser());
-		
+		Student student = studentServiceInterface.findById(studentDTO.getId());
 		if(student == null) {
-			return new ResponseEntity<StudentDTO>(HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<StudentDTO>(HttpStatus.NOT_FOUND);
 		}
-
-//		student.setEmail(studentDTO.getEmail());
 		student.setCardNumber(studentDTO.getCardNumber());
-		
 		student.setUser(user);
-		
-		student = studentServiceInterface.save(student);
+		studentServiceInterface.save(student);
 		return new ResponseEntity<StudentDTO>(new StudentDTO(student), HttpStatus.OK);
 	}
 	
 	@DeleteMapping(value = "/{id}")
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<Void> deleteStudent(@PathVariable("id") Long id){
 		Student student = studentServiceInterface.findOne(id);
 		if(student != null) {

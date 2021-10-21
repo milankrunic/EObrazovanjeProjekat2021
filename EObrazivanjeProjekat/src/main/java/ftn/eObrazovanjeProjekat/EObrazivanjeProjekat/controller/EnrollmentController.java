@@ -12,18 +12,28 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.EnrollmentDTO;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.ExamPartDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.StudentDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Exam;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPart;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPartStatus;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPartType;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.CourseInstanceServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.EnrollmentServiceInterface;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.ExamPartServiceInterface;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.ExamPartStatusServiceInterface;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.ExamPartTypeServiceInterface;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.ExamServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentServiceInterface;
 
 @RestController
@@ -39,6 +49,18 @@ public class EnrollmentController {
 	@Autowired
 	CourseInstanceServiceInterface courseInstanceServiceInterface;
 	
+//	@Autowired
+//	private ExamPartServiceInterface examPartServiceInterface;
+//	
+//	@Autowired
+//	private ExamPartStatusServiceInterface examPartStatusServiceInterface;
+//	
+//	@Autowired
+//	private ExamServiceInterface examServiceInterface;
+//	
+//	@Autowired
+//	private ExamPartTypeServiceInterface examPartTypeServiceInterface;
+//	
 	@GetMapping
 	public ResponseEntity<List<EnrollmentDTO>> getAll(){
 		List<Enrollment> enrollments = enrollmentServiceInterface.findAll();
@@ -92,16 +114,54 @@ public class EnrollmentController {
 		}
 		return new ResponseEntity<List<EnrollmentDTO>>(endto, HttpStatus.OK);
 	}
-	
-	@DeleteMapping(value = "/{idCourseInstance}/{cardNumber}")
-	public ResponseEntity<Void> deleteEnrollment(@PathVariable("idCourseInstance") Long idCourseInstance,@PathVariable("cardNumber") String cardNumber){
-		Enrollment enrollment = enrollmentServiceInterface.findByCourseInstanceAndStudent(idCourseInstance, cardNumber);
-		if(enrollment != null) {
-			enrollmentServiceInterface.delete(enrollment.getIdEnrollment());
-			return new ResponseEntity<Void>(HttpStatus.OK);
-		}
-		return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
-	}
-	
-	
 }
+//	@PostMapping
+//	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+//	public ResponseEntity<EnrollmentDTO> add(@RequestBody EnrollmentDTO edto){
+//		Student student = studentServiceInterface.findById(edto.getStudentDTO().getId());
+//		CourseInstance cii = courseInstanceServiceInterface.findById(edto.getCourseInstanceDTO().getIdCourseInstance());
+//		Enrollment enr = new Enrollment();
+//		
+//		List<ExamPart> examParts = examPartServiceInterface.findByCourseInstance(cii.getIdCourseInstance());
+//		List<ExamPartDTO> dtos = new ArrayList<ExamPartDTO>();
+//		
+//		
+//		for (ExamPart examPart : examParts) {
+//				dtos.add(new ExamPartDTO(examPart));
+//		}
+//		enr.setStudent(student);
+//		enr.setCourseInstance(cii);
+//		enr = enrollmentServiceInterface.save(enr);
+//		Exam exam = new Exam();
+//		exam.setEnrollment(enr);
+//		exam = examServiceInterface.save(exam);
+//		for (ExamPartDTO examPartDTO : dtos) {
+//			ExamPartType examPartType = examPartTypeServiceInterface.findById(examPartDTO.getExamPartTypeDTO().getId());
+//			ExamPartStatus examPartStatus = examPartStatusServiceInterface.expsByCode("cr");
+//			ExamPart examPart = new ExamPart();
+//			examPart.setDate(examPartDTO.getDate());
+//			examPart.setLocation(examPartDTO.getLocation());
+//			examPart.setPoints(examPartDTO.getPoints());
+//			examPart.setWonPoints(0);
+//			examPart.setExam(exam);
+//			examPart.setExamPartType(examPartType);
+//			examPart.setExamPartStatus(examPartStatus);
+//			examPart.setCode(examPartDTO.getCode());
+//			examPartServiceInterface.save(examPart);
+//		}
+//		
+//		return new ResponseEntity<EnrollmentDTO>(new EnrollmentDTO(enr), HttpStatus.CREATED);
+//	}
+//	
+//	@DeleteMapping(value = "/{idCourseInstance}/{cardNumber}")
+//	public ResponseEntity<Void> deleteEnrollment(@PathVariable("idCourseInstance") Long idCourseInstance,@PathVariable("cardNumber") String cardNumber){
+//		Enrollment enrollment = enrollmentServiceInterface.findByCourseInstanceAndStudent(idCourseInstance, cardNumber);
+//		if(enrollment != null) {
+//			enrollmentServiceInterface.delete(enrollment.getIdEnrollment());
+//			return new ResponseEntity<Void>(HttpStatus.OK);
+//		}
+//		return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+//	}
+//	
+//	
+//}

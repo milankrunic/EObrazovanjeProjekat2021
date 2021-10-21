@@ -23,7 +23,7 @@ public interface EnrollmentServiceInterface {
 
 	List<Enrollment> getAllEnrollmentsByCourse(CourseInstance courseInstance);
 	
-	public Enrollment findByCourseInstanceAndStudent(Long idCourseInstance,String cardNumber);
+//	public Enrollment findByCourseInstanceAndStudent(Long idCourseInstance,String cardNumber);
 	
 
 }
