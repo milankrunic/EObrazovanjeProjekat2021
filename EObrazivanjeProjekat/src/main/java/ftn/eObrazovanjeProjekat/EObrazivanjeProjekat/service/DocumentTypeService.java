@@ -1,5 +1,7 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +33,18 @@ public class DocumentTypeService implements DocumentTypeServiceInterface {
 	@Override
 	public DocumentType save(DocumentType documentType) {
 		return documentTypeRepository.save(documentType);
+	}
+
+	@Override
+	public List<DocumentType> findAll() {
+		// TODO Auto-generated method stub
+		return documentTypeRepository.findAll();
+	}
+
+	@Override
+	public DocumentType docTypeByCode(String code) {
+		// TODO Auto-generated method stub
+		return documentTypeRepository.findOneByCode(code);
 	}
 
 }

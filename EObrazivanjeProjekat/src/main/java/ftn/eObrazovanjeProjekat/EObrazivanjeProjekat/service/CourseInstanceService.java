@@ -43,10 +43,10 @@ public class CourseInstanceService implements CourseInstanceServiceInterface{
 		
 	}
 
-	@Override
-	public Page<CourseInstance> findByStudent(String username, Pageable page) {
-		// TODO Auto-generated method stub
-		return courseInstanceRepository.findByStudent(username, page);
-	}
+//	@Override
+//	public Page<CourseInstance> findByStudent(String username, Pageable page) {
+//		// TODO Auto-generated method stub
+//		return courseInstanceRepository.findByStudent(username, page);
+//	}
 
 }
