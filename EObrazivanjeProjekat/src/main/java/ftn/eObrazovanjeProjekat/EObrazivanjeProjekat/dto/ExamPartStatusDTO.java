@@ -6,22 +6,26 @@ import java.util.Set;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPartStatus;
 
 public class ExamPartStatusDTO {
-
+	
+	
 	private Long id;
 	private String name;
 	private String code;
-	private Set<ExamPartDTO> examParts = new HashSet<ExamPartDTO>();
 	
-	public ExamPartStatusDTO(ExamPartStatus examPartStatus) {
-		super();
-	}
-
-	public ExamPartStatusDTO(Long id, String name, String code, Set<ExamPartDTO> examParts) {
+	public ExamPartStatusDTO(Long id, String name, String code) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.code = code;
-		this.examParts = examParts;
+	}
+
+	public ExamPartStatusDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public ExamPartStatusDTO(ExamPartStatus e) {
+		this(e.getIdExamPartStatus(),e.getName(),e.getCode());
 	}
 
 	public Long getId() {
@@ -46,14 +50,6 @@ public class ExamPartStatusDTO {
 
 	public void setCode(String code) {
 		this.code = code;
-	}
-
-	public Set<ExamPartDTO> getExamParts() {
-		return examParts;
-	}
-
-	public void setExamParts(Set<ExamPartDTO> examParts) {
-		this.examParts = examParts;
-	}
+	};
 	
 }

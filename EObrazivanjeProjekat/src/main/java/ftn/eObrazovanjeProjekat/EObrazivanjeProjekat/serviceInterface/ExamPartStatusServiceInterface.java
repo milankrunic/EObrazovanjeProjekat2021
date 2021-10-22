@@ -14,5 +14,11 @@ public interface ExamPartStatusServiceInterface {
 	List<ExamPartStatus> findAllByExamPart(Long id);
 
 	ExamPartStatus findOne(Long id);
+	
+	public ExamPartStatus examPartStatusByCode(String code);
+	
+	public List<ExamPartStatus> findAll();
+	
+	public void delete(Long id);
 
 }

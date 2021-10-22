@@ -35,4 +35,22 @@ public class ExamPartStatusService implements ExamPartStatusServiceInterface {
 		
 		examPartStatusRepository.delete(examPartStatus);
 	}
+
+	@Override
+	public ExamPartStatus examPartStatusByCode(String code) {
+		// TODO Auto-generated method stub
+		return examPartStatusRepository.findOneByCode(code);
+	}
+
+	@Override
+	public List<ExamPartStatus> findAll() {
+		// TODO Auto-generated method stub
+		return examPartStatusRepository.findAll();
+	}
+
+	@Override
+	public void delete(Long id) {
+		 examPartStatusRepository.deleteById(id);
+		
+	}
 }
