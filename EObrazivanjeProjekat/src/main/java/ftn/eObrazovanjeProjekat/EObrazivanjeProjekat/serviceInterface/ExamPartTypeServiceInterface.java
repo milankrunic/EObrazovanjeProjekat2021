@@ -13,5 +13,11 @@ public interface ExamPartTypeServiceInterface {
 	ExamPartType save(ExamPartType examPartType);
 
 	void remove(ExamPartType examPartType);
+	
+	public List<ExamPartType> findAll();
+	
+	public ExamPartType findByCode(String code);
+	
+	public void delete(Long id);
 
 }

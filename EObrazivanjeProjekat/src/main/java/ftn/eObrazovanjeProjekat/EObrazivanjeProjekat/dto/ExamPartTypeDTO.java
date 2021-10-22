@@ -12,18 +12,20 @@ public class ExamPartTypeDTO {
 	private Long id;
 	private String name;
 	private String code;
-	private Set<ExamPartDTO> examParts = new HashSet<ExamPartDTO>();
 	
-	public ExamPartTypeDTO(ExamPartType examPartType) {
+	public ExamPartTypeDTO() {
 		super();
 	}
 
-	public ExamPartTypeDTO(Long id, String name, String code, Set<ExamPartDTO> examParts) {
+	public ExamPartTypeDTO(Long id, String name, String code) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.code = code;
-		this.examParts = examParts;
+	}
+	
+	public ExamPartTypeDTO(ExamPartType e) {
+		this(e.getIdExamPartType(),e.getName(),e.getCode());
 	}
 
 	public Long getId() {
@@ -49,14 +51,5 @@ public class ExamPartTypeDTO {
 	public void setCode(String code) {
 		this.code = code;
 	}
-
-	public Set<ExamPartDTO> getExamParts() {
-		return examParts;
-	}
-
-	public void setExamParts(Set<ExamPartDTO> examParts) {
-		this.examParts = examParts;
-	}
-	
 	
 }

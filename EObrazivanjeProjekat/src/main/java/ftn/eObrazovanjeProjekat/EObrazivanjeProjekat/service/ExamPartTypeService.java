@@ -35,4 +35,23 @@ public class ExamPartTypeService implements ExamPartTypeServiceInterface {
 		
 		examPartTypeRepository.delete(examPartType);
 	}
+
+	@Override
+	public List<ExamPartType> findAll() {
+		// TODO Auto-generated method stub
+		return examPartTypeRepository.findAll();
+	}
+
+	@Override
+	public ExamPartType findByCode(String code) {
+		// TODO Auto-generated method stub
+		return examPartTypeRepository.findOneByCode(code);
+	}
+
+	@Override
+	public void delete(Long id) {
+		
+		examPartTypeRepository.deleteById(id);
+		
+	}
 }
