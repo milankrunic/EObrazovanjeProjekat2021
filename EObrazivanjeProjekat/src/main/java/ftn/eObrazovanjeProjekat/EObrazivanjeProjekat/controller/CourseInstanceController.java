@@ -5,8 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +28,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.CourseInst
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.CourseSpecificationServiceInterface;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping(value = "api/course_instance")
+@RequestMapping(value = "api/course-instance")
 public class CourseInstanceController {
 	
 	@Autowired
@@ -35,7 +38,7 @@ public class CourseInstanceController {
 	CourseSpecificationServiceInterface courseSpecificationServiceInterface;
 	
 	@GetMapping
-	public ResponseEntity<List<CourseInstanceDTO>> getCourseInstance(){
+	public ResponseEntity<List<CourseInstanceDTO>> getAllCourseInstance(){
 
 		List<CourseInstance> courseInstances = courseInstanceServiceInterface.findAll();
 		
@@ -57,6 +60,7 @@ public class CourseInstanceController {
 	}
 	
 	@PostMapping
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<CourseInstanceDTO> addCourseInstance(@RequestBody CourseInstanceDTO courseInstanceDTO){
 
 		CourseSpecification cs = courseSpecificationServiceInterface.findById(courseInstanceDTO.getCourseSpecificationDTO().getIdCourseSpecification());
@@ -72,6 +76,7 @@ public class CourseInstanceController {
 	}
 
 	@PutMapping(value = "/{id}", consumes = "application/json")
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<CourseInstanceDTO> updateCourseInstance(@RequestBody CourseInstanceDTO courseInstanceDTO, @PathVariable("id") Long id){
 
 		CourseSpecification cs = courseSpecificationServiceInterface.findById(courseInstanceDTO.getCourseSpecificationDTO().getIdCourseSpecification());
@@ -92,7 +97,22 @@ public class CourseInstanceController {
 		return new ResponseEntity<CourseInstanceDTO>(new CourseInstanceDTO(courseInstance), HttpStatus.OK);
 	}
 	
+//	@GetMapping(value = "/all/for-student/{username}")
+//	public ResponseEntity<List<CourseInstanceDTO>> getAllByStudent(@PathVariable("username") String username,Pageable page){
+//		Page<CourseInstance> cis = courseInstanceServiceInterface.findByStudent(username, page);
+//		
+//		System.out.println("cis for student: " + cis);
+//		
+//		List<CourseInstanceDTO> cisdto = new ArrayList<CourseInstanceDTO>();
+//		
+//		for(CourseInstance ci : cis) {
+//			cisdto.add(new CourseInstanceDTO(ci));
+//		}
+//		return new ResponseEntity<List<CourseInstanceDTO>>(cisdto, HttpStatus.OK);
+//	}
+	
 	@DeleteMapping(value = "/{id}")
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<Void> deleteCourseInstance(@PathVariable("id") Long id){
 		CourseInstance ci = courseInstanceServiceInterface.findById(id);
 		if(ci != null) {

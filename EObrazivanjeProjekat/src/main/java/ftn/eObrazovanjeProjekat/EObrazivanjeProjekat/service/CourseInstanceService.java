@@ -3,6 +3,8 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
@@ -39,6 +41,12 @@ public class CourseInstanceService implements CourseInstanceServiceInterface{
 	public void remove(Long id) {
 		courseInstanceRepository.deleteById(id);
 		
+	}
+
+	@Override
+	public Page<CourseInstance> findByStudent(String username, Pageable page) {
+		// TODO Auto-generated method stub
+		return courseInstanceRepository.findByStudent(username, page);
 	}
 
 }
