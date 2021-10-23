@@ -3,12 +3,14 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPartStatus;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.repository.ExamPartStatusRepository;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.ExamPartStatusServiceInterface;
 
+@Service
 public class ExamPartStatusService implements ExamPartStatusServiceInterface {
 
 	@Autowired
