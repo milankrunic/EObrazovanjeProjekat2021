@@ -1,8 +1,8 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 
-import java.util.HashSet;
-import java.util.Set;
 
+
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Enrollment;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Exam;
 
 public class ExamDTO {
@@ -10,20 +10,21 @@ public class ExamDTO {
 	private Long id;
 	private Integer points;
 	private Integer grade;
-	private Set<ExamPartDTO> examParts = new HashSet<ExamPartDTO>();
+	private EnrollmentDTO enrollmentDTO;
 	
 	
-	public ExamDTO(Long id, Integer points, Integer grade, Set<ExamPartDTO> examParts) {
+	public ExamDTO(Long id, Integer points, Integer grade, EnrollmentDTO enrollmentDTO) {
 		super();
 		this.id = id;
 		this.points = points;
 		this.grade = grade;
-		this.examParts = examParts;
+		this.enrollmentDTO = enrollmentDTO;
 	}
-//	
+
 
 	public ExamDTO(Exam exam) {
-		super();
+		this(exam.getIdExam(), exam.getPoints(), exam.getGrade(), new EnrollmentDTO(exam.getEnrollment()));
+		
 	}
 
 	public Long getId() {
@@ -50,13 +51,17 @@ public class ExamDTO {
 		this.grade = grade;
 	}
 
-	public Set<ExamPartDTO> getExamParts() {
-		return examParts;
+
+	public EnrollmentDTO getEnrollmentDTO() {
+		return enrollmentDTO;
 	}
 
-	public void setExamParts(Set<ExamPartDTO> examParts) {
-		this.examParts = examParts;
+
+	public void setEnrollmentDTO(EnrollmentDTO enrollmentDTO) {
+		this.enrollmentDTO = enrollmentDTO;
 	}
+
+	
 	
 	
 }
