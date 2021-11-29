@@ -9,20 +9,20 @@ public class DocumentDTO {
 	private Long idDokument;
 	private String title;
 	private String url;
-	private Student student;
-	private DocumentType dokumentType;
+	private StudentDTO studentDTO;
+	private DocumentTypeDTO dokumentTypeDTO;
 	
 	public DocumentDTO(Document document) {
-		super();
+		this(document.getIdDokument(), document.getTitle(), document.getUrl(), new StudentDTO(document.getStudent()), new DocumentTypeDTO(document.getDokumentType()));
 	}
 	
-	public DocumentDTO(Long idDokument,String title,String url,Student student,DocumentType dokumentType) {
+	public DocumentDTO(Long idDokument,String title,String url,StudentDTO studentDTO,DocumentTypeDTO dokumentTypeDTO) {
 		super();
 		this.idDokument = idDokument;
 		this.title = title;
 		this.url = url;
-		this.student = student;
-		this.dokumentType = dokumentType;
+		this.studentDTO = studentDTO;
+		this.dokumentTypeDTO = dokumentTypeDTO;
 	}
 
 	public Long getIdDokument() {
@@ -49,21 +49,23 @@ public class DocumentDTO {
 		this.url = url;
 	}
 
-	public Student getStudent() {
-		return student;
+	public StudentDTO getStudentDTO() {
+		return studentDTO;
 	}
 
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setStudentDTO(StudentDTO studentDTO) {
+		this.studentDTO = studentDTO;
 	}
 
-	public DocumentType getDokumentType() {
-		return dokumentType;
+	public DocumentTypeDTO getDokumentTypeDTO() {
+		return dokumentTypeDTO;
 	}
 
-	public void setDokumentType(DocumentType dokumentType) {
-		this.dokumentType = dokumentType;
+	public void setDokumentTypeDTO(DocumentTypeDTO dokumentTypeDTO) {
+		this.dokumentTypeDTO = dokumentTypeDTO;
 	}
+
+	
 	
 	
 }
