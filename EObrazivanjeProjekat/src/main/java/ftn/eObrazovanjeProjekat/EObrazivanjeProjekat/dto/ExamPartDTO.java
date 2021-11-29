@@ -2,10 +2,8 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto;
 
 import java.sql.Date;
 
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Exam;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPart;
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPartStatus;
-import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.ExamPartType;
+
 
 public class ExamPartDTO {
 
@@ -13,24 +11,24 @@ public class ExamPartDTO {
 	private Date date;
 	private String location;
 	private Integer points;
-	private Exam exam;
-	private ExamPartType examPartType;
-	private ExamPartStatus examPartStatus;
+	private ExamDTO examDTO;
+	private ExamPartTypeDTO examPartTypeDTO;
+	private ExamPartStatusDTO examPartStatusDTO;
 	
 	public ExamPartDTO(ExamPart examPart) {
 		super();
 	}
 
-	public ExamPartDTO(Long id, Date date, String location, Integer points, Exam exam, ExamPartType examPartType,
-			ExamPartStatus examPartStatus) {
+	public ExamPartDTO(Long id, Date date, String location, Integer points, ExamDTO examDTO, ExamPartTypeDTO examPartTypeDTO,
+			ExamPartStatusDTO examPartStatusDTO) {
 		super();
 		this.id = id;
 		this.date = date;
 		this.location = location;
 		this.points = points;
-		this.exam = exam;
-		this.examPartType = examPartType;
-		this.examPartStatus = examPartStatus;
+		this.examDTO = examDTO;
+		this.examPartTypeDTO = examPartTypeDTO;
+		this.examPartStatusDTO = examPartStatusDTO;
 	}
 
 	public Long getId() {
@@ -65,30 +63,30 @@ public class ExamPartDTO {
 		this.points = points;
 	}
 
-	public Exam getExam() {
-		return exam;
+	public ExamDTO getExamDTO() {
+		return examDTO;
 	}
 
-	public void setExam(Exam exam) {
-		this.exam = exam;
+	public void setExamDTO(ExamDTO examDTO) {
+		this.examDTO = examDTO;
 	}
 
-	public ExamPartType getExamPartType() {
-		return examPartType;
+	public ExamPartTypeDTO getExamPartTypeDTO() {
+		return examPartTypeDTO;
 	}
 
-	public void setExamPartType(ExamPartType examPartType) {
-		this.examPartType = examPartType;
+	public void setExamPartTypeDTO(ExamPartTypeDTO examPartTypeDTO) {
+		this.examPartTypeDTO = examPartTypeDTO;
 	}
 
-	public ExamPartStatus getExamPartStatus() {
-		return examPartStatus;
+	public ExamPartStatusDTO getExamPartStatusDTO() {
+		return examPartStatusDTO;
 	}
 
-	public void setExamPartStatus(ExamPartStatus examPartStatus) {
-		this.examPartStatus = examPartStatus;
+	public void setExamPartStatusDTO(ExamPartStatusDTO examPartStatusDTO) {
+		this.examPartStatusDTO = examPartStatusDTO;
 	}
-	
+
 	
 	
 }

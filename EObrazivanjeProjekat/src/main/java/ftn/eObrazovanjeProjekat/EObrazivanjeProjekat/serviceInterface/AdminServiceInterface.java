@@ -45,4 +45,5 @@ public interface AdminServiceInterface {
 	public void addAdmin(Long idAdmin);
 	public void updateAdmin(Long idAdmin);
 	public void remove(Long idAdmin);
+//	public Admin findByUser(String username);
 }

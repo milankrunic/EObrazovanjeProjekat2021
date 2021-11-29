@@ -45,4 +45,9 @@ public class TeacherService implements TeacherServiceInterface{
 		
 	}
 	
+	@Override
+	public Teacher findByUsername(String username) {
+		return teacherRepository.findOneByUser_username(username);
+	}
+	
 }

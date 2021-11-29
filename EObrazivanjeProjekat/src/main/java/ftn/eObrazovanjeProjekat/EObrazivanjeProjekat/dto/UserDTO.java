@@ -104,6 +104,14 @@ public class UserDTO implements Serializable {
 		this.email = email;
 	}
 	
+	public String roleToString() {
+		String roleString = "";
+		for (RoleDTO role : this.roles) {
+			roleString += role.getCode()+" ";
+		}
+		return roleString;
+	}
+	
 	
 	
 }

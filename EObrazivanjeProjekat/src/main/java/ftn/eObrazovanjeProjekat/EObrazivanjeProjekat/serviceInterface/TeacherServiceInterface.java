@@ -11,5 +11,6 @@ public interface TeacherServiceInterface {
 	public Teacher findById(Long teacherId);
 	public Teacher save(Teacher teacher);
 	public void remove(Long id);
+	public Teacher findByUsername(String username);
 
 }

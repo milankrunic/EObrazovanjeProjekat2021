@@ -253,15 +253,9 @@ public class AdminService implements AdminServiceInterface{
 		return adminRepository.findByIdAdmin(idAdmin);
 	}
 
-//	public void addAdmin(Long idAdmin) {
-//		adminRepository.addById(idAdmin);
+//	@Override
+//	public Admin findByUser(String username) {
+//		return adminRepository.findOneByUser_username(username);
 //	}
-//	
-//	public void updateAdmin(Long idAdmin) {
-//		adminRepository.updateById(idAdmin);
-//	}
-//	
-//	public void removeAdmin(Long idAdmin) {
-//		adminRepository.removeById(idAdmin);
-//	}
+
 }

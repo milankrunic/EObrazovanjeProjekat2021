@@ -15,6 +15,8 @@ public interface TeacherRepository extends JpaRepository<Teacher, Long>{
 //	Teacher updateById(Long idTeacher);
 //	Teacher removeById(Long idTeacher);
 
+	Teacher findOneByUser_username(String username);
+
 //	void addById(Long idTeacher);
 	
 }

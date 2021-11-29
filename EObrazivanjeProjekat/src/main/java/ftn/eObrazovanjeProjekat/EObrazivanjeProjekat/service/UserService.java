@@ -47,5 +47,9 @@ public class UserService implements UserServiceInterface{
 			return null;
 	}
 
-
+	@Override
+	public User findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return userRepository.findOneByUsername(username);
+	}
 }
