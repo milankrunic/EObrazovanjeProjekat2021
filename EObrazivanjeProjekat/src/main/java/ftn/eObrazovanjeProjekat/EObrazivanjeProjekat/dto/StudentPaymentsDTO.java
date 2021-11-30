@@ -14,7 +14,7 @@ public class StudentPaymentsDTO {
 	private AccountDTO accountDTO;
 	
 	public StudentPaymentsDTO(StudentPayments payments) {
-		super();
+		this(payments.getIdStudentPayments(), payments.getAmount(), payments.getDate(), payments.getName(), new AccountDTO(payments.getAccount()));
 	}
 	
 	public StudentPaymentsDTO(Long id,Integer amount,Date date,String name,AccountDTO accountDTO) {

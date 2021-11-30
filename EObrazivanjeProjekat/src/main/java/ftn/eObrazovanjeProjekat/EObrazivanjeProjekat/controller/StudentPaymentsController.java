@@ -66,18 +66,17 @@ public class StudentPaymentsController {
 	
 	@PostMapping
 	@PreAuthorize("hasAnyRole('ROLE_STUDENT', 'ROLE_ADMINISTRATOR')")
-	public ResponseEntity<StudentPaymentsDTO> savePayment(@RequestBody StudentPaymentsDTO dto, Principal principal, @RequestParam String mode, @RequestParam String username){
+	public ResponseEntity<StudentPaymentsDTO> savePayment(@RequestBody StudentPaymentsDTO dto, Principal principal){
 		System.out.println("\nsavePayment");
-		System.out.println("Username: "+username);
+//		System.out.println("Username: "+username);
 		String u = principal.getName();
-		if(mode.equals("ADMIN")) {
-			u = username;
-		}
+		
 		Account account = accountServiceInterface.findByUsername(u).get(0);
 		StudentPayments p = new StudentPayments();
 		p.setAccount(account);
 		p.setAmount(dto.getAmount());
 		p.setDate(dto.getDate());
+		p.setName(dto.getName());
 
 		account.setAmount(account.getAmount() + p.getAmount());
 		accountServiceInterface.save(account);
