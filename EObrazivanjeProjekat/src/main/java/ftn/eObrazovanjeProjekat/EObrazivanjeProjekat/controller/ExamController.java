@@ -65,19 +65,19 @@ public class ExamController {
 		return new ResponseEntity<>(dtos, HttpStatus.OK);
 	}
 	
-	@GetMapping(value = "/all-exams")
-	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
-	public ResponseEntity<List<ExamDTO>> getAll(){
-		
-		List<Exam> exams = examServiceInterface.findAll();
-		
-		List<ExamDTO> dtos = new ArrayList<ExamDTO>();
-		
-		for (Exam exam : exams) {
-			dtos.add(new ExamDTO(exam));
-		}
-		return new ResponseEntity<List<ExamDTO>>(dtos, HttpStatus.OK);
-	}
+//	@GetMapping(value = "/all-exams")
+//	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+//	public ResponseEntity<List<ExamDTO>> getAll(){
+//		
+//		List<Exam> exams = examServiceInterface.findAll();
+//		
+//		List<ExamDTO> dtos = new ArrayList<ExamDTO>();
+//		
+//		for (Exam exam : exams) {
+//			dtos.add(new ExamDTO(exam));
+//		}
+//		return new ResponseEntity<List<ExamDTO>>(dtos, HttpStatus.OK);
+//	}
 	
 	
 	@GetMapping(value = "/{id}")
@@ -131,6 +131,58 @@ public class ExamController {
 		}
 		return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
 	}
+	
+	@GetMapping(value = "/my-passed-exams/{code}")
+	@PreAuthorize("hasAnyRole('ROLE_STUDENT')")
+	public ResponseEntity<List<ExamDTO>> passedExams(Principal principal,@PathVariable("code") String code) {
+		String name = principal.getName(); //get logged in username
+		Student st = studentServiceInterface.findByUser(name);
+		List<ExamDTO> passed = new ArrayList<ExamDTO>();
+		List<ExamDTO> failed = new ArrayList<ExamDTO>();
+		List<Exam> exams = examServiceInterface.examPassedForStudent(st.getCardNumber());
+//		List<ExamDTO> dtos = new ArrayList<ExamDTO>();
+		for (Exam exam : exams) {
+			if(6 <= exam.getGrade()) {
+				passed.add(new ExamDTO(exam));
+			}
+			else
+				failed.add(new ExamDTO(exam));
+		}
+		if(code.equals("pa")) {
+			return new ResponseEntity<List<ExamDTO>>(passed, HttpStatus.OK);
+		}
+		return new ResponseEntity<List<ExamDTO>>(failed, HttpStatus.OK);
+	}
+	
+//	@GetMapping(value = "/student/{cardNumber}")
+//	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+//	public ResponseEntity<List<ExamDTO>> getAllExamsByStudent(@PathVariable("cardNumber") String cardNumber){
+//		List<Exam> exams = examS.examPassedForStudent(cardNumber);
+//		
+//		List<ExamDTO> dtos = new ArrayList<ExamDTO>();
+//		
+//		for (Exam exam : exams) {
+//			dtos.add(new ExamDTO(exam));
+//		}
+//		return new ResponseEntity<List<ExamDTO>>(dtos, HttpStatus.OK);
+//	}
+//	
+//	@PostMapping(value = "/register-exam")
+//	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+//	public ResponseEntity<ExamDTO> registerExam(@RequestBody ExamDTO dto, Principal principal){
+//		Exam exam = new Exam();
+//		String username = principal.getName(); 
+//		Enrollment enrollment = enrollmentS.findById(dto.getEnrollmentDTO().getId());
+//		enrollment.setStudent(studServ.findByUser(username));
+//		enrollment = enrollmentS.save(enrollment);
+//		exam.setPoints();
+//		exam.setGradle(dto.getGradle());
+//		exam.setEnrollment(enrollment);
+//		
+//		exam = examS.save(exam);
+//		
+//		return new ResponseEntity<ExamDTO>(new ExamDTO(exam), HttpStatus.CREATED);
+//	}
 	
 	
 

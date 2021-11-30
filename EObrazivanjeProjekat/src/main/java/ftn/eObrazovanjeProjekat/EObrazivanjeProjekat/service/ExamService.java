@@ -58,6 +58,11 @@ public class ExamService implements ExamServiceInterface {
 		return examRepository.findByEnrollment_student_cardNumber(cardNum);
 	}
 
+	@Override
+	public List<Exam> examPassedForStudent(String cardNum) {
+		// TODO Auto-generated method stub
+		return examRepository.findByEnrollment_student_cardNumber(cardNum);
+	}
 	
 
 //	@Override

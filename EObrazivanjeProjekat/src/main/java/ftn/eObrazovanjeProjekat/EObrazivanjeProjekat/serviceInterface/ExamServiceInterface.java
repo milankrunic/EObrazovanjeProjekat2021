@@ -26,5 +26,7 @@ public interface ExamServiceInterface {
 
 	void remove(Long id);
 
+	List<Exam> examPassedForStudent(String cardNumber);
+
 
 }

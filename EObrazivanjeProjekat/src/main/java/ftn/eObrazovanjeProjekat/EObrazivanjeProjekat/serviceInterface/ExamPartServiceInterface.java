@@ -22,5 +22,9 @@ public interface ExamPartServiceInterface {
 	ExamPart add(ExamPart newExamPart);
 
 	Page<ExamPart> findByCourseInstance(Long courseId, Pageable page);
+
+	List<ExamPart> findByCodeAndCardNum(String code, String cardNum);
+
+	
 	
 }

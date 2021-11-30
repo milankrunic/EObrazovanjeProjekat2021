@@ -1,5 +1,9 @@
 package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.controller;
 
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -39,25 +43,25 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentSer
 public class ExamPartController {
 
 	@Autowired
-	private ExamPartServiceInterface examPartS;
+	private ExamPartServiceInterface examPartServiceInterface;
 	
 	@Autowired
-	private ExamServiceInterface examS;
+	private ExamServiceInterface examServiceInterface;
 	
 	@Autowired
-	private ExamPartTypeServiceInterface examPartTypeS;
+	private ExamPartTypeServiceInterface examPartTypeServiceInterface;
 	
 	@Autowired
-	private ExamPartStatusServiceInterface examPartStatusS;
+	private ExamPartStatusServiceInterface examPartStatusServiceInterface;
 
 	@Autowired
-	private EnrollmentServiceInterface enrollmentS;
+	private EnrollmentServiceInterface enrollmentServiceInterface;
 	
 	@Autowired
-	private StudentServiceInterface studServ;
+	private StudentServiceInterface studServiceInterface;
 	
 	@Autowired
-	private AccountServiceInterface accSevice;
+	private AccountServiceInterface accSeviceInterface;
 
 //	@GetMapping(value = "/number-exam-part")
 //	public ResponseEntity<Long> getNumberPage(@RequestParam String mode,@RequestParam String username, @RequestParam Long courseId,@RequestParam String code){
@@ -103,11 +107,11 @@ public class ExamPartController {
 //	}
 	
 //	@GetMapping(value = "/student/{courseId}")
-//	public ResponseEntity<List<ExamPartDTO>> getAllForCardNumber(@PathVariable("courseId") Long courseId,Principal principal,Pageable page){
+//	public ResponseEntity<List<ExamPartDTO>> getAllForCardNumber(@PathVariable("courseId") Long courseId,Principal principal){
 //		System.out.println("\nZa studenta");
 //		String name = principal.getName(); //get logged in username
-//		Student st = studServ.findByUser(name);
-//		Page<ExamPart> examParts = examPartS.findByCardNumAndCourse(st.getCardNumber(), courseId,page);
+//		Student st = studServiceInterface.findByUser(name);
+//		List<ExamPart> examParts = examPartServiceInterface.findByCardNumAndCourse(st.getCardNumber(), courseId);
 //		
 //		List<ExamPartDTO> dtos = new ArrayList<ExamPartDTO>();
 //		
