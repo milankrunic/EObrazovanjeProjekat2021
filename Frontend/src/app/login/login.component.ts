@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
             }else{
               this.router.navigate(['/teacher']); //za sad
             }
-          }
+          } 
         }else{
           alert("Pogresni login podaci!")
         }
