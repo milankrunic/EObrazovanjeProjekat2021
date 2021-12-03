@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { user } from '../../model/user';
 import { Observable, Subject } from 'rxjs';
+import { LoginData } from 'src/app/model/login-data';
+import { Jwt } from 'src/app/model/jwt';
 
 
 @Injectable({
@@ -10,6 +12,7 @@ import { Observable, Subject } from 'rxjs';
 export class UsersService {
 
   usersUrl:string = 'http://localhost:8080/api/users'
+  loginUrl:string = 'http://localhost:8080/api/users/login'
 
   constructor(private http:HttpClient) { }
 
@@ -20,6 +23,10 @@ export class UsersService {
   announceChange() {
       this.RegenerateData.next();
   }
+
+  login(loginData: LoginData): Observable<HttpResponse<Jwt>> {
+    return this.http.post<Jwt>(this.loginUrl, loginData, {observe: 'response'});
+}
   
   // getUsers():Observable<any[]> {
   //   return this.http.get<user[]>(this.usersUrl);

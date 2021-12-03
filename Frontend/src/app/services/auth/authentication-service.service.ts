@@ -3,13 +3,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { JwtUtilsService } from './jwt-utils.service';
 import { catchError, map } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { JwtHelperService } from 'angular-jwt';
 
 @Injectable()
 export class AuthenticationService {
 
   private readonly loginPath = 'http://localhost:8080/api/users/login';
 
-  constructor(private http: HttpClient, private jwtUtilsService: JwtUtilsService) { }
+  constructor(private http: HttpClient, private jwtUtilsService: JwtUtilsService, private router: Router) { }
 
   login(user_name: string, password: string): Observable<boolean> {
     var headers: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
@@ -47,6 +49,18 @@ export class AuthenticationService {
     var token = currentUser && currentUser.token;
     return token ? token : "";
   }
+
+  getRole():string{
+		const item = localStorage.getItem('loggedUser');
+		if (!item) {
+			this.router.navigate(['login']);
+			return '';
+		}
+
+		const jwt: JwtHelperService = new JwtHelperService();
+		var	role = jwt.decodeToken(item).roles[0].authority;
+		return role;
+	}
 
   logout(): void {
     localStorage.removeItem('currentUser');

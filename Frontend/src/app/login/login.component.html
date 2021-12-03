@@ -9,23 +9,23 @@
 	<div id="container">
 		<div class="box">
 			<h2>Login</h2>
-			<form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+			<form  #loginForm="ngForm">
 				<div class="inputBox">
-					<input type="text" name="user_name" [(ngModel)]="user.user_name" id="userNameInput" required="">
+					<input type="text" [(ngModel)]="loginData.username" id="userNameInput" required="" [ngModelOptions]="{standalone: true}">
 					<label>Username:</label>
 				</div>
 				<div class="inputBox">
-					<input type="password" name="password" [(ngModel)]="user.password" id="passwordInput"
-						required=""> <label>Password:</label>
+					<input type="password" [(ngModel)]="loginData.password" id="passwordInput"
+						required="" [ngModelOptions]="{standalone: true}"> <label>Password:</label>
 				</div>
-				<input type="submit" value="Login" id="loginSubmit">
+			<button type="button" class="btn btn-outline-secondary mt-5 ml-10" (click)="logIN()" id="loginSubmit">Login</button> 	
 				<a href="#">Forgot password?</a>
 
 			</form>
 
-			<div *ngIf=wrongUsernameOrPass class="alert alert-warning box-msg" role="alert">
+<!--		<div *ngIf=wrongUsernameOrPass class="alert alert-warning box-msg" role="alert">
 		  		Wrong username or password.
-			</div>
+			</div>  -->	
 
 			<p style="color: red;" id="messageParagraph" ></p>
 
