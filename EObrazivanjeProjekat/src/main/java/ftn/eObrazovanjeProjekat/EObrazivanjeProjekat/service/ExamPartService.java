@@ -54,17 +54,18 @@ public class ExamPartService implements ExamPartServiceInterface {
 		return examPart;
 	}
 	
-	@Override
-	public Page<ExamPart> findByCourseInstance(Long courseId,Pageable page) {
-//		return examPartRepository.findByCourseInstance(courseId,page);
-		return null;
-	}
+//	@Override
+//	public List<ExamPart> findByCourseInstance(Long idCourseInstance) {
+//		return examPartRepository.idCourseInstance(idCourseInstance);
+//		
+//	}
 	
 	@Override
 	public List<ExamPart> findByCodeAndCardNum(String code, String cardNum) {
 		// TODO Auto-generated method stub
 		return examPartRepository.findByExamPartStatus_codeAndExam_enrollment_student_cardNumber(code, cardNum);
 	}
+
 	
 	
 }
