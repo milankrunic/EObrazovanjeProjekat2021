@@ -57,7 +57,7 @@ public class StudentController {
 	}
 	
 	@PostMapping
-	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+//	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<StudentDTO> saveStudent(@RequestBody StudentDTO studentDTO){
 		User user = userServiceInterface.findOne(studentDTO.getUserDTO().getIdUser());
 		Student student = new Student();

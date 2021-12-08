@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { JwtUtilsService } from './jwt-utils.service';
 import { catchError, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { JwtHelperService } from 'angular-jwt';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable()
 export class AuthenticationService {
