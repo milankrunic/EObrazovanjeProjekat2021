@@ -51,13 +51,15 @@ export class LoginComponent implements OnInit {
       });
   }
 
-  getRoles(token: string) {
-    let jwtData = token.split('.')[1];
-    let decodedJwtJsonData = window.atob(jwtData);
-    let decodedJwtData = JSON.parse(decodedJwtJsonData);
-    console.log(JSON.stringify(decodedJwtData))
-
-    return [decodedJwtData.role];
+  decodePayload(token: string) {
+    const jwtData = token.split('.')[1]
+    const decodedJwtJsonData = window.atob(jwtData)
+    return JSON.parse(decodedJwtJsonData)
   }
+
+  getRoles(token: string) {
+    return this.decodePayload(token).roles.map(x => x.authority) || [];
+  }
+
 
 }

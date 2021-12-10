@@ -6,21 +6,28 @@ import { HttpHandler } from '@angular/common/http';
 import { HttpEvent } from '@angular/common/http';
 import { Injector } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Jwt } from 'src/app/model/jwt';
 
 @Injectable()
 export class TokenInterceptorService implements HttpInterceptor {
 
-  constructor(private inj: Injector) { }
+  private jwt: Jwt={value:''};
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    let authenticationService:AuthenticationService = this.inj.get(AuthenticationService);
-    request = request.clone({
+  constructor(private inj: Injector)  { }
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    //let authenticationService:AuthenticationService = this.inj.get(AuthenticationService); 
+    var j = localStorage.getItem('loggedUser')?.split(":");
+    var l = j === undefined ? 0:j?.length
+    var token = j===undefined?'':j[l-1].split("\"")[1];
+    this.jwt = token==null ? this.jwt:{value:token};
+    req = req.clone({
       setHeaders: {
-        'Authorization': `JWT ${authenticationService.getToken()}`
+        'X-Auth-Token': this.jwt.value
       }
     });
 
-    return next.handle(request);
+    return next.handle(req);
+
   }
 
 }
