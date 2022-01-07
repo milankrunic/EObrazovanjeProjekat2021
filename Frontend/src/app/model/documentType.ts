@@ -1,8 +1,12 @@
-import { document } from "./document";
+export class TypeDocument{
+    public id: number;
+    public name: string;
+    public code: string;
 
-export class documentType{
-    id?:any;
-    name:string;
-    code:string;
-    documents?:document[];
+    constructor(typeDocumentCfg: TypeDocument)
+    {
+        this.id = typeDocumentCfg.id;
+        this.name= typeDocumentCfg.name;
+        this.code = typeDocumentCfg.code;
+    }
 }

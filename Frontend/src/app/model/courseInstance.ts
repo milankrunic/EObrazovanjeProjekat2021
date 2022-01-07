@@ -1,10 +1,16 @@
-import { courseSpecification } from "./courseSpecification";
-import { enrollment } from "./enrollment";
+import { CourseSpecification } from "./courseSpecification";
 
-export class courseInstance{
-    id?:any;
-    startDate:string;
-    endDate:string;
-    courseSpecification:courseSpecification;
-    //enrollments:enrollment[];
+export class CourseInstance{
+    public id: number;
+    public startDate: Date;
+	public endDate: Date;
+    public courseSpecificationDTO: CourseSpecification;
+
+    constructor(courseInstanceCfg:CourseInstance)
+    {
+        this.id = courseInstanceCfg.id;
+        this.startDate = courseInstanceCfg.startDate;
+        this.endDate = courseInstanceCfg.endDate;
+        this.courseSpecificationDTO = courseInstanceCfg.courseSpecificationDTO;
+    }
 }
