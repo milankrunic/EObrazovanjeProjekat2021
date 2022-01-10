@@ -1,9 +1,9 @@
-export class teachingType{
+export class TeachingType{
     public id: number;
     public name: string;
 	public code: number;
 
-    constructor(teachingTypeCfg:teachingType)
+    constructor(teachingTypeCfg:TeachingType)
     {
         this.id = teachingTypeCfg.id;
         this.name = teachingTypeCfg.name;

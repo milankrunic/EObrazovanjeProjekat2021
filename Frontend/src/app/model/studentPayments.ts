@@ -1,13 +1,13 @@
-import { account } from "./account";
+import { Account } from "./account";
 
-export class payment{
+export class Payment{
     public id?:number;
     public amount: number;
     public date: Date;
     public name: string;
     public accountDTO: Account;
 
-    constructor(paymentCfg:payment)
+    constructor(paymentCfg:Payment)
     {
         this.id = paymentCfg.id;
         this.amount = paymentCfg.amount;

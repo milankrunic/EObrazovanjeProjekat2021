@@ -1,11 +1,11 @@
-import { user } from "./user";
+import { User } from "./user";
 
-export class student{
+export class Student{
     public id: number;
     public cardNumber: string;
-    public userDTO: user;
+    public userDTO: User;
 
-    constructor(studentCfg:student)
+    constructor(studentCfg:Student)
     {
         this.id = studentCfg.id;
         this.cardNumber = studentCfg.cardNumber;

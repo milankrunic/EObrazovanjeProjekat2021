@@ -1,12 +1,12 @@
-import { enrollment } from "./enrollment";
+import { Enrollment } from "./enrollment";
 
-export class exam{
+export class Exam{
     public id: number;
-    public enrollmentDTO: enrollment;
+    public enrollmentDTO: Enrollment;
     public grade: number;
     public points: number;
 
-    constructor(examCfg:exam)
+    constructor(examCfg:Exam)
     {
         this.id = examCfg.id;
         this.enrollmentDTO= examCfg.enrollmentDTO;

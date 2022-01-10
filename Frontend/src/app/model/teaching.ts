@@ -1,12 +1,12 @@
-import { courseInstance } from "./courseInstance";
-import { teacher } from "./teacher";
-import { teachingType } from "./teachingType";
+import { CourseInstance } from "./courseInstance";
+import { Teacher } from "./teacher";
+import { TeachingType } from "./teachingType";
 
 export class Teaching{
     public id: number;
-    public teachingTypeDTO: teachingType;
-	public teacherDTO: teacher;
-    public courseInstanceDTO: courseInstance;
+    public teachingTypeDTO: TeachingType;
+	public teacherDTO: Teacher;
+    public courseInstanceDTO: CourseInstance;
 
     constructor(teachingCfg:Teaching)
     {

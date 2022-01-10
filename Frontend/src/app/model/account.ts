@@ -1,13 +1,13 @@
-import { payment } from "./studentPayments";
-import { student } from "./student";
+import { Payment } from "./studentPayments";
+import { Student } from "./student";
 
-export class account{
+export class Account{
     public id?:number;
     public amount: number;
-    public studentDTO: student;
-    public payments:payment[];
+    public studentDTO: Student;
+    public payments:Payment[];
 
-    constructor(accountCfg:account)
+    constructor(accountCfg:Account)
     {
         this.id = accountCfg.id;
         this.amount = accountCfg.amount;

@@ -1,12 +1,12 @@
-import { student } from "./student";
-import { typeDocument } from "./documentType";
+import { Student } from "./student";
+import { TypeDocument } from "./documentType";
 
-export class document{
+export class Document{
     public id: number;
     public title: string;
     public url: string;
-    public typeDocumentDTO: typeDocument;
-    public studentDTO: student;
+    public typeDocumentDTO: TypeDocument;
+    public studentDTO: Student;
 
     constructor(documentCfg: Document)
     {

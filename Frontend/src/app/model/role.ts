@@ -1,9 +1,9 @@
-export class role{
+export class Role{
 	public id: number;
 	public code: string;
 	public name: string;
 		
-	constructor(roleCfg: role)
+	constructor(roleCfg: Role)
 	{	
 		this.id = roleCfg.id;
         this.code = roleCfg.code;

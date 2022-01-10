@@ -1,12 +1,12 @@
-import { courseInstance } from "./courseInstance";
-import { student } from "./student";
+import { CourseInstance } from "./courseInstance";
+import { Student } from "./student";
 
-export class enrollment{
+export class Enrollment{
     public id: number;
-    public studentDTO: student;
-    public courseInstanceDTO: courseInstance;
+    public studentDTO: Student;
+    public courseInstanceDTO: CourseInstance;
 
-    constructor(enrollmentCfg:enrollment)
+    constructor(enrollmentCfg:Enrollment)
     {
         this.id = enrollmentCfg.id;
         this.studentDTO= enrollmentCfg.studentDTO;
