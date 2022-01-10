@@ -12,16 +12,10 @@ import { TeachersService } from 'src/app/services/teachers/teachers.service';
 export class TeacherDetailsComponent implements OnInit {
 
   teacher: teacher = {
-    id:0,
-    userDTO:{
-      id:0,
-      firstName:'',
-      lastName:'',
-      email:'',
-      userName:'',
-      password:'',
-//      roles:[]
-   }
+    firstName: '',
+    lastName: '',
+    email: '',
+    user: ''
   };
 
   constructor(private teacherService: TeachersService, private route: ActivatedRoute, private location: Location) { }

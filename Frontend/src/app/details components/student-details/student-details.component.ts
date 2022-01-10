@@ -15,10 +15,8 @@ import { StudentsService } from 'src/app/services/students/students.service';
 export class StudentDetailsComponent implements OnInit {
   
   student: student = {
-    id:0,
     cardNumber: '',
     userDTO:{
-       id:0,
        firstName:'',
        lastName:'',
        email:'',

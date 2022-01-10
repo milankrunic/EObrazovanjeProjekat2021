@@ -24,10 +24,8 @@ export class AddStudentComponent implements OnInit {
 
   ngOnInit() {
       this.student = {
-        id:0,
         cardNumber: '',
         userDTO:{
-           id:0,
            firstName:'',
            lastName:'',
            email:'',
@@ -48,10 +46,8 @@ export class AddStudentComponent implements OnInit {
       });
 
       this.student = {
-        id:0,
         cardNumber: '',
         userDTO:{
-           id:0,
            firstName:'',
            lastName:'',
            email:'',

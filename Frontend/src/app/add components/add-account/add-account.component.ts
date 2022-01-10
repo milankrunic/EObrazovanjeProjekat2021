@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { account } from 'src/app/model/account';
-//import { studentPayments } from 'src/app/model/studentPayments';
+import { studentPayments } from 'src/app/model/studentPayments';
 import { AccountsService } from 'src/app/services/accounts/accounts.service';
 
 @Component({
@@ -18,11 +18,11 @@ export class AddAccountComponent implements OnInit {
   constructor(private accountService:AccountsService,private router:Router) { }
 
   ngOnInit() {
-    // this.account = {
-    //   amount:0,
-    //   student: '',
-    //   studentPayments: ''
-    // };
+    this.account = {
+      amount:0,
+      student: '',
+      studentPayments: ''
+    };
   }
 
   onSubmit(){
@@ -34,11 +34,11 @@ export class AddAccountComponent implements OnInit {
         console.log(error);
       });
     
-    // this.account = {
-    //   amount:0,
-    //   student: '',
-    //   studentPayments:'',
-    // };    
+    this.account = {
+      amount:0,
+      student: '',
+      studentPayments:'',
+    };    
   }
 
   // ngOnInit(): void {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { courseInstance } from '../../model/courseInstance';
+import { CourseInstance } from '../../model/courseInstance';
 import {Observable, Subject} from 'rxjs';
 
 
@@ -21,25 +21,25 @@ export class CourseInstanceService {
       this.RegenerateData.next();
   }
   
-  getCourses():Observable<courseInstance[]> {
-    return this.http.get<courseInstance[]>(this.courseInstanceUrl);
+  getCourses():Observable<CourseInstance[]> {
+    return this.http.get<CourseInstance[]>(this.courseInstanceUrl);
   }
 
-  getCourse(id:any):Observable<courseInstance>{
+  getCourse(id:any):Observable<CourseInstance>{
   //   // const params: HttpParams = new HttpParams().set('_id',id);
-    return this.http.get<courseInstance>(this.courseInstanceUrl+`/${id}`);
+    return this.http.get<CourseInstance>(this.courseInstanceUrl+`/${id}`);
   }
 
 
-  save(courseInstances:courseInstance){
+  save(courseInstances:CourseInstance){
     return this.http.post(this.courseInstanceUrl,courseInstances);
   }
 
   // update(students:student, id:number):Observable<student> {
   //   return this.http.put<student>(this.studentsUrl+`/${id}`, students);
   // }
-  update(id:any, courseInstance: courseInstance):Observable<courseInstance> {
-    return this.http.put<courseInstance>(this.courseInstanceUrl+`/${id}`, courseInstance);
+  update(id:any, courseInstance: CourseInstance):Observable<CourseInstance> {
+    return this.http.put<CourseInstance>(this.courseInstanceUrl+`/${id}`, courseInstance);
   }
 
   // edit(users:user, id:number): Observable<HttpResponse<user>> {

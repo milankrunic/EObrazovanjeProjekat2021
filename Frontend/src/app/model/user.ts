@@ -4,20 +4,18 @@ export class user{
     public id?: number;
     public firstName: string;
     public lastName: string;
-    public email:string;
     public userName: string;
     public password: string;
-    //public roles: role[];
+    public roles: role[];
 
     constructor(userCfg:user)
     {
         this.id = userCfg.id;
         this.firstName = userCfg.firstName;
         this.lastName = userCfg.lastName;
-        this.email = userCfg.email;
         this.userName = userCfg.userName;
         this.password = userCfg.password;
-        //this.roles = userCfg.roles;
+        this.roles = userCfg.roles;
     }
 }
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { student } from '../../model/student';
+import { Student } from '../../model/student';
 import {Observable, Subject} from 'rxjs';
 
 
@@ -21,26 +21,26 @@ export class StudentsService {
       this.RegenerateData.next();
   }
   
-  getStudents():Observable<student[]> {
+  getStudents():Observable<Student[]> {
     console.log("AAAAAAAAAAAAAAa");
-    return this.http.get<student[]>(this.studentsUrl + "/all");
+    return this.http.get<Student[]>(this.studentsUrl + "/all");
   }
 
-  getStudent(id:any):Observable<student>{
+  getStudent(id:any):Observable<Student>{
   //   // const params: HttpParams = new HttpParams().set('_id',id);
-    return this.http.get<student>(this.studentsUrl+`/${id}`);
+    return this.http.get<Student>(this.studentsUrl+`/${id}`);
   }
 
 
-  save(students:student){
+  save(students:Student){
     return this.http.post(this.studentsUrl,students);
   }
 
   // update(students:student, id:number):Observable<student> {
   //   return this.http.put<student>(this.studentsUrl+`/${id}`, students);
   // }
-  update(id:any, student: student):Observable<student> {
-    return this.http.put<student>(this.studentsUrl+`/${id}`, student);
+  update(id:any, student: Student):Observable<Student> {
+    return this.http.put<Student>(this.studentsUrl+`/${id}`, student);
   }
 
   // edit(users:user, id:number): Observable<HttpResponse<user>> {
