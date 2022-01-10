@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, Input } from '@angular/core';
-import { Student } from '../model/student';
+import { student } from '../model/student';
 import { StudentsService } from '../services/students/students.service';
 import { UsersService } from '../services/users/users.service';
-import { User } from '../model/user';
+import { user } from '../model/user';
 import { Observable, Subscription } from 'rxjs';
 import { EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class AdminStudentPageComponent implements OnInit {
 
-  students:Student[];
+  students:student[];
 
   
   
@@ -27,7 +27,7 @@ export class AdminStudentPageComponent implements OnInit {
 
 
   ngOnInit() {
-    this.studentsService.getStudents().subscribe((data: Student[]) => {
+    this.studentsService.getStudents().subscribe((data: student[]) => {
       console.log(data);
       this.students = data;
     });

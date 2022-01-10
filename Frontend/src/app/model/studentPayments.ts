@@ -5,7 +5,7 @@ export class payment{
     public amount: number;
     public date: Date;
     public name: string;
-    public accountDTO: Account;
+    public accountDTO: account;
 
     constructor(paymentCfg:payment)
     {

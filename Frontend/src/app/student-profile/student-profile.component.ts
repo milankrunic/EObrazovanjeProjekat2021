@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from '../model/student';
+import { student } from '../model/student';
 import { StudentsService } from '../services/students/students.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -10,11 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class StudentProfileComponent implements OnInit {
 
-  student: Student = {
+  student: student = {
+    id:0,
     cardNumber: '',
     userDTO:{
+       id:0,
        firstName:'',
        lastName:'',
+       email:'',
        userName:'',
        password:'',
  //      roles:[]
