@@ -35,7 +35,7 @@ public class AdminController {
 	UserServiceInterface userServiceInterface;
 
 	@GetMapping
-//	@PreAuthorize("hasAuthority('ROLE_ADMINISTRATOR')")
+	@PreAuthorize("hasAuthority('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<List<AdminDTO>> getAdmins() {
 		List<Admin> admins = adminServiceInterface.findAllAdmin();
 		
