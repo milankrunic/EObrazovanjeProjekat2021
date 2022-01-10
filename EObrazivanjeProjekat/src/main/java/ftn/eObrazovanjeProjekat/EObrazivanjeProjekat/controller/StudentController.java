@@ -22,9 +22,9 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping(value = "api/students")
-@CrossOrigin(origins = "http://localhost:4200")
 public class StudentController {
 
 	@Autowired
@@ -33,10 +33,9 @@ public class StudentController {
 	@Autowired
 	UserServiceInterface userServiceInterface;
 	
-	@GetMapping("/all")
-	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+	@GetMapping
 	public ResponseEntity<List<StudentDTO>> getStudents(){
-		System.out.println("BBBBBBBBBBBBB");
+
 		List<Student> students = studentServiceInterface.findAll();
 		
 		List<StudentDTO> studentDTO = new ArrayList<StudentDTO>();

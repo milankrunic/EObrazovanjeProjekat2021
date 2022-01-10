@@ -22,8 +22,7 @@ export class StudentsService {
   }
   
   getStudents():Observable<student[]> {
-    console.log("AAAAAAAAAAAAAAa");
-    return this.http.get<student[]>(this.studentsUrl + "/all");
+    return this.http.get<student[]>(this.studentsUrl);
   }
 
   getStudent(id:any):Observable<student>{
