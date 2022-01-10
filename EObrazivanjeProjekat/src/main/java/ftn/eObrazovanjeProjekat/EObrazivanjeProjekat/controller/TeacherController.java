@@ -38,7 +38,6 @@ public class TeacherController {
 	UserServiceInterface userServiceInterface;
 
 	@GetMapping
-	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<List<TeacherDTO>> getAllTeachers(){
 		List<Teacher> teachers = teacherServiceInterface.findAll();
 		
@@ -51,7 +50,6 @@ public class TeacherController {
 	}
 	
 	@GetMapping(value = "/{id}")
-	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<TeacherDTO> getOneTeacher(@PathVariable("id") Long id){
 		Teacher teacher = teacherServiceInterface.findById(id);
 		if(teacher == null) {
