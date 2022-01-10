@@ -1,14 +1,9 @@
-export class CourseSpecification{
-    public id: number;
-    public title: string;
-	public ects: number;
-    public code: string;
+import { courseInstance } from "./courseInstance";
 
-    constructor(courseInstanceCfg:CourseSpecification)
-    {
-        this.id = courseInstanceCfg.id;
-        this.title = courseInstanceCfg.title;
-        this.ects = courseInstanceCfg.ects;
-        this.code = courseInstanceCfg.code;
-    }
+export class courseSpecification{
+    id?:any;
+    title:string;
+    ects:number;
+    code:string;
+    courseInstance:courseInstance[];
 }
