@@ -11,4 +11,4 @@ export class Student{
         this.cardNumber = studentCfg.cardNumber;
         this.userDTO = studentCfg.userDTO;
     }
-}   
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from '../model/student';
-import { User } from '../model/user';
+import { student } from '../model/student';
+import { user } from '../model/user';
 
 @Component({
   selector: 'app-student-header',
