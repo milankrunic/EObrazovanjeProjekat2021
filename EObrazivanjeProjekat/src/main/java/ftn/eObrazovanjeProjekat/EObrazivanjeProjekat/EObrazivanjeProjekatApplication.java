@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.security.SecurityConfiguration;
 
-@SpringBootApplication(exclude={SecurityAutoConfiguration.class})
+@SpringBootApplication
 public class EObrazivanjeProjekatApplication {
 
 	public static void main(String[] args) {
