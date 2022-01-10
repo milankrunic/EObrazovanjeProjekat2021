@@ -1,12 +1,12 @@
-import { CourseSpecification } from "./courseSpecification";
+import { courseSpecification } from "./courseSpecification";
 
-export class CourseInstance{
+export class courseInstance{
     public id: number;
     public startDate: Date;
 	public endDate: Date;
-    public courseSpecificationDTO: CourseSpecification;
+    public courseSpecificationDTO: courseSpecification;
 
-    constructor(courseInstanceCfg:CourseInstance)
+    constructor(courseInstanceCfg:courseInstance)
     {
         this.id = courseInstanceCfg.id;
         this.startDate = courseInstanceCfg.startDate;

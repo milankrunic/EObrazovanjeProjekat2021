@@ -1,14 +1,14 @@
-import { Role } from "./role";
+import { role } from "./role";
 
-export class User{
+export class user{
     public id?: number;
     public firstName: string;
     public lastName: string;
     public userName: string;
     public password: string;
-    public roles: Role[];
+    public roles: role[];
 
-    constructor(userCfg:User)
+    constructor(userCfg:user)
     {
         this.id = userCfg.id;
         this.firstName = userCfg.firstName;

@@ -1,16 +1,16 @@
-import { Exam } from "./exam";
-import { ExamPartType } from "./examPartType";
-import { ExamPartStatus } from "./examPartStatus";
-export class ExamPart{
+import { exam } from "./exam";
+import { examPartType } from "./examPartType";
+import { examPartStatus } from "./examPartStatus";
+export class examPart{
     public id: number;
     public date: Date;
     public location: String;
     public points: number;
-    public examDTO: Exam;
-    public examPartTypeDTO: ExamPartType;
-    public statusDTO: ExamPartStatus;
+    public examDTO: exam;
+    public examPartTypeDTO: examPartType;
+    public statusDTO: examPartStatus;
 
-    constructor(examDetailCfg:ExamPart)
+    constructor(examDetailCfg:examPart)
     {
         this.id = examDetailCfg.id;
         this.date= examDetailCfg.date;

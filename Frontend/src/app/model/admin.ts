@@ -7,13 +7,13 @@
     
 }*/
 
-import { User } from "./user";
+import { user } from "./user";
 
-export class Admin{
+export class admin{
     public id: number;
-    public userDTO: User;
+    public userDTO: user;
 
-    constructor(adminCfg:Admin)
+    constructor(adminCfg:admin)
     {
         this.id = adminCfg.id;
         this.userDTO = adminCfg.userDTO;

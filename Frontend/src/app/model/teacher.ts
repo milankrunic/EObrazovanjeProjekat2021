@@ -1,10 +1,10 @@
-import { User } from "./user";
+import { user } from "./user";
 
-export class Teacher{
+export class teacher{
     public id: number;
-    public userDTO: User;
+    public userDTO: user;
 
-    constructor(teacherCfg:Teacher)
+    constructor(teacherCfg:teacher)
     {
         this.id = teacherCfg.id;
         this.userDTO = teacherCfg.userDTO;
