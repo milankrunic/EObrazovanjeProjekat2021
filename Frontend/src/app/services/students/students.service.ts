@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { student } from '../../model/student';
 import {Observable, Subject} from 'rxjs';
+import { AuthenticationService } from '../auth/authentication-service.service';
 
 
 @Injectable({
@@ -11,7 +12,7 @@ export class StudentsService {
 
   studentsUrl:string = 'http://localhost:8080/api/students';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private authService: AuthenticationService) { }
 
   private RegenerateData = new Subject<void>();
 
@@ -21,8 +22,15 @@ export class StudentsService {
       this.RegenerateData.next();
   }
   
+  // getAll(): Observable<any> {
+  //   const headers = new HttpHeaders({"Content-Type": "application/json", "X-Auth-Token": this.authService.getToken().toString()});
+  //   return this.http.get<any>(this.studentsUrl + "/all", { headers:headers });
+  // }
+
+
+
   getStudents():Observable<student[]> {
-    return this.http.get<student[]>(this.studentsUrl);
+    return this.http.get<student[]>(this.studentsUrl + "/all");
   }
 
   getStudent(id:any):Observable<student>{

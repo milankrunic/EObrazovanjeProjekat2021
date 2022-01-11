@@ -88,6 +88,7 @@ public class UserController {
             // ovde generisemo token pomocu detalja koje smo dobili iz funkcije iznad
             JwtDTO t = new JwtDTO(tokenUtils.generateToken(details));
             //vracamo generisan token
+            System.out.println("token" + t.getValue());
             return new ResponseEntity<JwtDTO>(t, HttpStatus.OK);
         } catch (Exception ex) {
             return ResponseEntity.status(401).build();

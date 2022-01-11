@@ -38,6 +38,7 @@ public class TeacherController {
 	UserServiceInterface userServiceInterface;
 
 	@GetMapping
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<List<TeacherDTO>> getAllTeachers(){
 		List<Teacher> teachers = teacherServiceInterface.findAll();
 		

@@ -22,9 +22,9 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
-@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping(value = "api/students")
+@CrossOrigin(origins = "http://localhost:4200")
 public class StudentController {
 
 	@Autowired
@@ -33,9 +33,10 @@ public class StudentController {
 	@Autowired
 	UserServiceInterface userServiceInterface;
 	
-	@GetMapping
+	@GetMapping("/all")
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<List<StudentDTO>> getStudents(){
-
+		System.out.println("AAAAAAAAAAAAAAAAAAAAAa");
 		List<Student> students = studentServiceInterface.findAll();
 		
 		List<StudentDTO> studentDTO = new ArrayList<StudentDTO>();
@@ -47,6 +48,7 @@ public class StudentController {
 	
 
 	@GetMapping(value = "/{id}")
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<StudentDTO> getStudent(@PathVariable("id") Long id){
 		Student student = studentServiceInterface.findOne(id);
 		
@@ -57,7 +59,7 @@ public class StudentController {
 	}
 	
 	@PostMapping
-//	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
+	@PreAuthorize("hasAnyRole('ROLE_ADMINISTRATOR')")
 	public ResponseEntity<StudentDTO> saveStudent(@RequestBody StudentDTO studentDTO){
 		User user = userServiceInterface.findOne(studentDTO.getUserDTO().getIdUser());
 		Student student = new Student();

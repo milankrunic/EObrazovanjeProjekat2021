@@ -16,22 +16,25 @@ export class AdminStudentPageComponent implements OnInit {
 
   students:student[];
 
-  
-  
+    
 // konstruktor se prvi poziva
-  constructor(private studentsService:StudentsService, private router:Router) {
+constructor(private studentsService:StudentsService, private router:Router) {
    
   subscription: Subscription;
 
   }
-
 
   ngOnInit() {
     this.studentsService.getStudents().subscribe((data: student[]) => {
       console.log(data);
       this.students = data;
     });
+    
   }
+
+
+  
+
 
 
   deleteStudent(studentId: number): void {

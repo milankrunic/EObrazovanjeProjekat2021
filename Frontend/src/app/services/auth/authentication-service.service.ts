@@ -5,6 +5,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { JwtUtilsService } from './jwt-utils.service';
 
 @Injectable({
   providedIn: 'root'
@@ -18,43 +19,58 @@ export class AuthenticationService {
   private readonly logOutPath = 'http://localhost:8080/api/users/logout';
 
   constructor(private http: HttpClient,
-              // private jwtUtilsService: JwtUtilsService, 
+                //private jwtUtilsService: JwtUtilsService, 
               private router: Router) { }
 
-  // login(user_name: string, password: string): Observable<boolean> {
+              
+	login(username:string,password:string): Observable<boolean> {
+		var headers:HttpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+
+    return this.http.post(this.loginPath, JSON.stringify({username,password}), {headers:headers,responseType:"text"})
+    
+		.pipe(map((res:any)=>{
+			let token=res;
+			if (token){
+        alert(token.getRole);
+				localStorage.setItem('currentUser',JSON.stringify({
+					username:username,
+					roles:this.getRoles(token),
+					token:token
+				}));
+				return true;
+			}else{
+				return false;
+			}
+		}))		
+	}
+
+
+  // login(auth: any): Observable<any> {
   //   var headers: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
-  //   return this.http.post(this.loginPath, JSON.stringify({ user_name, password }), { headers:headers, responseType: "text" })
+  //   // return this.http.post(this.loginPath, JSON.stringify({ username, password }), { headers:headers, responseType: "text" })
+  //   return this.http.post(this.loginPath, {username: auth.username, password: auth.password}, {headers: headers, responseType: 'json'})
   //   .pipe(map((res: any) => {
   //     let token = res;
-  //     console.log(user_name)
   //     if (token) {
   //       console.log("ALO")
   //       localStorage.setItem('currentUser', JSON.stringify({
-  //         username: user_name, 
-  //         roles: this.jwtUtilsService.getRoles(token),
+  //         username: auth.username, 
+  //         roles: this.getRoles(token),
   //         token: token
   //       }));
   //       return true;
   //     }
   //     else {
-  //       console.log("AAAA");
   //         return false;
   //       }
-  //     }),
-  //     catchError((error: any) => {
-  //       if (error.status === 400) {
-  //         return Observable.throw('Ilegal login');
-  //       }
-  //       else {
-  //         return Observable.throw(error.json().error || 'Server error');
-  //       }
-  //     }));
+  //     })
 
   // }
 
-  login(auth: any): Observable<any> {
-		return this.http.post(this.loginPath, {username: auth.username, password: auth.password}, {headers: this.headers, responseType: 'json'});
-	}
+
+  // login(auth: any): Observable<any> {
+	// 	return this.http.post(this.loginPath, {username: auth.username, password: auth.password}, {headers: this.headers, responseType: 'json'});
+	// }
 
   logout(): Observable<any> {
 		return this.http.get(this.logOutPath, {headers: this.headers, responseType: 'text'});
@@ -76,12 +92,29 @@ export class AuthenticationService {
 		const jwt: JwtHelperService = new JwtHelperService();
 		var	role = jwt.decodeToken(item).roles[0].authority;
 		return role;
-	}
+  }
+
+  decodePayload(token: string) {
+    const jwtData = token.split('.')[1]
+    const decodedJwtJsonData = window.atob(jwtData)
+    return JSON.parse(decodedJwtJsonData)
+  }
+
+  getId(token: string) {
+    return this.decodePayload(token).sub;
+  }
+
+  getRoles(token: string) {
+    return this.decodePayload(token).roles.map(x => x.authority) || [];
+  }
+  
 
   isLoggedIn(): boolean {
-    if (this.getToken() != '') return true;
-    else return false;
-  }
+		if (!localStorage.getItem('loggedUser')) {
+				return false;
+		}
+		return true;
+	}
 
   // getCurrentUser() {
   //   if (localStorage.currentUser) {
