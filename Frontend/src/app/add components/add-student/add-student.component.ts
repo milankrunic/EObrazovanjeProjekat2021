@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { user } from 'src/app/model/user';
 import { UsersService } from 'src/app/services/users/users.service';
 import {Router, Routes} from '@angular/router';
+import { Location } from '@angular/common';
 import { student } from 'src/app/model/student';
 import { StudentsService } from 'src/app/services/students/students.service';
 
@@ -18,14 +19,16 @@ export class AddStudentComponent implements OnInit {
   submitted = false;
   
 
-  constructor(private studentService:StudentsService, private router: Router ) { }
+  constructor(private studentService:StudentsService, private location: Location, private router: Router, userService: UsersService ) { }
 
 
 
   ngOnInit() {
       this.student = {
+        id:0,
         cardNumber: '',
         userDTO:{
+          id:0,
            firstName:'',
            lastName:'',
            email:'',
@@ -46,8 +49,10 @@ export class AddStudentComponent implements OnInit {
       });
 
       this.student = {
+        id:5,
         cardNumber: '',
         userDTO:{
+          id:5,
            firstName:'',
            lastName:'',
            email:'',
@@ -55,7 +60,12 @@ export class AddStudentComponent implements OnInit {
            password:'',
      //      roles:[]
         }
-      };   
+      };
+      this.goBack();
+         
+  }
+  goBack(): void {
+    this.location.back();
   }
 
   // ngOnInit(): void {
