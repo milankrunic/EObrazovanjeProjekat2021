@@ -1,56 +1,94 @@
+// import { NgModule } from '@angular/core';
+// import { RouterModule, Routes } from '@angular/router';
+// import { LoginComponent } from './components/login/login.component';
+// import { AppComponent } from './app.component';
+// import { CanActivateAuthGuard } from './services/can-activate-auth.service';
+
+// // import { BrowserModule } from '@angular/platform-browser';
+
+// const appRoutes: Routes = [
+//   { path: 'login', component: LoginComponent},
+// ];
+
+// @NgModule({
+//   imports: [RouterModule.forRoot(appRoutes,{enableTracing: true})
+//   ],
+//   exports: [RouterModule]
+  
+// })
+// export class AppRoutingModule { }
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
-import { ErrorComponent } from './error/error.component';
-import { AppComponent } from './app.component';
-import { StudentProfileComponent } from './student-profile/student-profile.component';
-import { MainPageTeacherComponent } from './main-page-teacher/main-page-teacher.component';
-import { StudentPaymentsComponent } from './student-payments/student-payments.component';
-import { StudentDocumentsComponent } from './student-documents/student-documents.component';
-import { ExamRegistrationComponent } from './exam-registration/exam-registration.component';
-import { StudentsSubjectComponent } from './students-subject/students-subject.component';
-import { AdminAdminPageComponent } from './admin-admin-page/admin-admin-page.component';
-import { AdminStudentPageComponent } from './admin-student-page/admin-student-page.component';
-import { AdminTeacherPageComponent } from './admin-teacher-page/admin-teacher-page.component';
-import { AdminExamsPageComponent } from './admin-exams-page/admin-exams-page.component';
-import { AdminCoursesPageComponent } from './admin-courses-page/admin-courses-page.component';
-import { AddStudentComponent } from './add components/add-student/add-student.component';
-import { AddTeacherComponent } from './add components/add-teacher/add-teacher.component';
-import { AddAdminComponent } from './add components/add-admin/add-admin.component';
-import { StudentDetailsComponent } from './details components/student-details/student-details.component';
-import { CanActivateAuthGuard } from './services/auth/can-activate-auth.service';
-import { TeacherDetailsComponent } from './details components/teacher-details/teacher-details.component';
+import { AccountComponent } from './components/account/account.component';
+import { AddExamPartComponent } from './components/add-exam-part/add-exam-part.component';
+import { AddExamComponent } from './components/add-exam/add-exam.component';
+import { AddPaymentComponent } from './components/add-payment/add-payment.component';
+import { CourseInstanceComponent } from './components/course-instance/course-instance.component';
+import { CoursesForStudentComponent } from './components/courses-for-student/courses-for-student.component';
+import { CoursesSpecificationsComponent } from './components/courses-specifications/courses-specifications.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { DocumentComponent } from './components/document/document.component';
+import { DocumentsComponent } from './components/documents/documents.component';
+import { ExamDetailComponent } from './components/exam-detail/exam-detail.component';
+import { ExamPartDetailComponent } from './components/exam-part-detail/exam-part-detail.component';
+import { ExamsComponent } from './components/exams/exams.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { StudentDetailComponent } from './components/student-detail/student-detail.component';
+import { StudentExamDetailComponent } from './components/student-exam-detail/student-exam-detail.component';
+import { StudentComponent } from './components/student/student.component';
+import { TeacherComponent } from './components/teacher/teacher.component';
+import { TeachersComponent } from './components/teachers/teachers.component';
+import { TeachingsComponent } from './components/teachings/teachings.component';
+import { UsersComponent } from './components/users/users.component';
+import { ViewCourseInstanceComponent } from './components/view-course-instance/view-course-instance.component';
+import { ViewCourseSpecificationComponent } from './components/view-course-specification/view-course-specification.component';
+import { ViewUserComponent } from './components/view-user/view-user.component';
+import { LoginGuard } from './guards/login-guard';
+import { RoleGuard } from './guards/role-guard';
 
-// import { BrowserModule } from '@angular/platform-browser';
-
-const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent},
-  { path: 'admin', component: AdminHomePageComponent},
-  { path: 'admin-students', component: AdminStudentPageComponent},
-  { path: 'admin-teachers', component: AdminTeacherPageComponent},
-  { path: 'admin-admins', component: AdminAdminPageComponent},
-  { path: 'adminexams', component: AdminExamsPageComponent},
-  { path: 'admincourses', component: AdminCoursesPageComponent},
-  { path: 'addStudent', component: AddStudentComponent },
-  { path: 'addTeacher', component: AddTeacherComponent },
-  { path: 'addAdmin', component: AddAdminComponent },
-  { path: 'student/:id', component: StudentProfileComponent},
-  { path: 'teacher', component: MainPageTeacherComponent},
-  { path: 'exam-registration', component: ExamRegistrationComponent },
-  { path: 'student-documents', component: StudentDocumentsComponent },
-  { path: 'student-payments', component: StudentPaymentsComponent },
-  { path: 'student-subject', component: StudentsSubjectComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full'},
-  { path: 'editstudent/:id', component: StudentDetailsComponent },
-  { path: 'editteacher/:id', component: TeacherDetailsComponent },
-  {path: "**", component: ErrorComponent},
+const routes: Routes = [
+  { path: '', component: HomeComponent, canActivate: [LoginGuard]},
+  { path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
+  { path: 'home', component: HomeComponent, canActivate: [RoleGuard]},
+  { path: 'add-user', component: ViewUserComponent, canActivate: [RoleGuard] },
+  { path: 'exams', component: ExamsComponent, canActivate: [RoleGuard] },
+  { path: 'exam-detail/student/:examId', component: ExamDetailComponent, canActivate: [RoleGuard] },
+  { path: 'teacher-exam-parts/:teacherId', component: ExamDetailComponent, canActivate: [RoleGuard] },
+  { path: 'course-instance/exam-parts/:courseId', component: ExamDetailComponent, canActivate: [RoleGuard] },
+  { path: 'account', component: AccountComponent, canActivate: [RoleGuard] },
+  { path: 'users', component: UsersComponent, canActivate: [RoleGuard] },
+  { path: 'students', component: StudentComponent, canActivate: [RoleGuard] },
+  { path: 'documents', component: DocumentsComponent, canActivate: [RoleGuard] },
+  { path: 'document', component: DocumentComponent, canActivate: [RoleGuard] },
+  { path: 'document/:id', component: DocumentComponent, canActivate: [RoleGuard] },
+  { path: 'document/add-for/:username', component: DocumentComponent, canActivate: [RoleGuard] },
+  { path: 'teachings', component: TeachingsComponent, canActivate: [RoleGuard] },
+  { path: 'course-instance/:id', component: CourseInstanceComponent, canActivate: [RoleGuard] },
+  { path: 'add-exam', component: AddExamComponent, canActivate: [RoleGuard] },
+  { path: 'add-payment', component: AddPaymentComponent, canActivate: [RoleGuard] },
+  { path: 'payment/:id', component: AddPaymentComponent, canActivate: [RoleGuard] },
+  { path: 'admin-add-payment/:studentUsername', component: AddPaymentComponent, canActivate: [RoleGuard] },
+  { path: 'add-exam-part', component: AddExamPartComponent, canActivate: [RoleGuard] },
+  { path: 'add-exam-part/:examPartId', component: AddExamPartComponent, canActivate: [RoleGuard] },
+  { path: 'view-user/:id', component: ViewUserComponent, canActivate: [RoleGuard] },
+  { path: 'courses', component: CoursesComponent, canActivate: [RoleGuard] },
+  { path: 'add-course-instance', component: ViewCourseInstanceComponent, canActivate: [RoleGuard] },
+  { path: 'courses-specifications', component: CoursesSpecificationsComponent, canActivate: [RoleGuard] },
+  { path: 'add-course-specification', component: ViewCourseSpecificationComponent, canActivate: [RoleGuard] },
+  { path: 'view-course-specification/:id', component: ViewCourseSpecificationComponent, canActivate: [RoleGuard] },
+  { path: 'student-exam-detail/:courseId/:cardNumber', component: StudentExamDetailComponent, canActivate: [RoleGuard] },
+  { path: 'student-detail/:id', component: StudentDetailComponent, canActivate: [RoleGuard] },
+  { path: 'teachers', component: TeachersComponent, canActivate: [RoleGuard] },
+  { path: 'teacher/:id', component: TeacherComponent, canActivate: [RoleGuard] },
+  { path: 'courses-for-student', component: CoursesForStudentComponent, canActivate: [RoleGuard] },
+  { path: 'exam-part/:code', component: ExamPartDetailComponent, canActivate: [RoleGuard] },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes,{enableTracing: true})
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
-  
 })
 export class AppRoutingModule { }

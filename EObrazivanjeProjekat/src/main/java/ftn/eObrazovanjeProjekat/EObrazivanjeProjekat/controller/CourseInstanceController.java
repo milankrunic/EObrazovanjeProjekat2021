@@ -98,8 +98,8 @@ public class CourseInstanceController {
 	}
 	
 //	@GetMapping(value = "/all/for-student/{username}")
-//	public ResponseEntity<List<CourseInstanceDTO>> getAllByStudent(@PathVariable("username") String username,Pageable page){
-//		Page<CourseInstance> cis = courseInstanceServiceInterface.findByStudent(username, page);
+//	public ResponseEntity<List<CourseInstanceDTO>> getAllByStudent(@PathVariable("username") String username){
+//		List<CourseInstance> cis = courseInstanceServiceInterface.findByStudent(username);
 //		
 //		System.out.println("cis for student: " + cis);
 //		

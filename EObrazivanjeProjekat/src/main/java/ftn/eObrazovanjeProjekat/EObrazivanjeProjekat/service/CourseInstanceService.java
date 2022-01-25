@@ -43,6 +43,13 @@ public class CourseInstanceService implements CourseInstanceServiceInterface{
 		
 	}
 
+//	@SuppressWarnings("unchecked")
+//	@Override
+//	public List<CourseInstance> findByStudent(String username) {
+//		// TODO Auto-generated method stub
+//		return (List<CourseInstance>) courseInstanceRepository.findByStudent(username);
+//	}
+
 //	@Override
 //	public Page<CourseInstance> findByStudent(String username, Pageable page) {
 //		// TODO Auto-generated method stub

@@ -1,6 +1,6 @@
-import { user } from "./user";
+import { User } from "./user";
 
-export class teacher {
+export class Teacher {
     id?:any;
     firstName:string;
     lastName:string;

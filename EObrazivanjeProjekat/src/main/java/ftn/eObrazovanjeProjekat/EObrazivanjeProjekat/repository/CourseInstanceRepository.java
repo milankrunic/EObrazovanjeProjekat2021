@@ -11,13 +11,14 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 public interface CourseInstanceRepository extends JpaRepository<CourseInstance, Long>{
 	
 	CourseInstance findByIdCourseInstance(Long id);
+//	CourseInstance findByStudent(String username);
 	
 //	@Query(value = "SELECT * FROM studentskasluzba.course_instance\r\n" + 
 //			"	where id_course_instance in (SELECT id_course_instance FROM studentskasluzba.enrollment\r\n" + 
 //			"					where student in (SELECT id FROM studentskasluzba.student\r\n" + 
 //			"											where id_user in (SELECT id_user FROM studentskasluzba.user\r\n" + 
 //			"												where username LIKE :userName)))", nativeQuery = true)
-//	Page<CourseInstance> findByStudent(@Param("userName") String username,Pageable page);
+//	Page<CourseInstance> findByStudent(@Param("userName") String username);
 	//greska za ovaj query?
 	
 	//java.sql.SQLSyntaxErrorException: Unknown column 'id' in 'field list'

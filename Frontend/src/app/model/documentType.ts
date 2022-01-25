@@ -1,8 +1,8 @@
-import { document } from "./document";
+import { Document } from "./document";
 
-export class documentType{
+export class DocumentType{
     id?:any;
     name:string;
     code:string;
-    documents?:document[];
+    documents?:Document[];
 }

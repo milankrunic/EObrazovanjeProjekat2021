@@ -14,6 +14,6 @@ public interface CourseInstanceServiceInterface {
 	public CourseInstance findById(Long courseInstanceId);
 	public CourseInstance save(CourseInstance courseInstance);
 	public void remove(Long id);
-//	public Page<CourseInstance> findByStudent(String username,Pageable page);
+//	public List<CourseInstance> findByStudent(String username);
 	
 }
