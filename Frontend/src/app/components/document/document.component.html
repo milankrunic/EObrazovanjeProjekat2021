@@ -1,4 +1,4 @@
-<!-- <div class=" col-md-8 color_text">
+<div class=" col-md-8 color_text">
     <div class="table_color">
         <h1 class="ml-5 title">Document</h1>
         <form class="ml-5">
@@ -12,7 +12,7 @@
                 <div class="col-md-3 px-md-1">
                     <div class="form-group">
                         <b>Type:</b>
-                        <select class="form-control" [(ngModel)]="document.typeDocumentDTO.code" [ngModelOptions]="{standalone: true}">
+                        <select class="form-control" [(ngModel)]="document.documentTypeDTO.code" [ngModelOptions]="{standalone: true}">
                             <option class="black_text_color" *ngFor="let t of documentTypes;" value="{{t.code}}">{{t.name}}</option>
                         </select>
                         </div>
@@ -33,4 +33,4 @@
             <button type="button" class="btn btn-fill btn-danger ml-1" (click)="goBack()">X</button>
         </div>
     </div>
-</div> -->
+</div>
