@@ -14,7 +14,7 @@ import { ChangePass } from 'src/app/model/changePass';
 @Injectable()
 export class UserService {
     private usersUrl = 'api/users';
-    private loginUrl = 'api/login';
+    private loginUrl = 'http://localhost:8080/api/users/login';
     private signUp = 'api/signup';
     private studentURL = 'api/student'
     private teacherUrl = 'api/teacher'
@@ -63,6 +63,9 @@ export class UserService {
         return this.http.get<Student[]>(url, {observe: 'response'});
     }
 
+    // login(loginData: LoginData): Observable<HttpResponse<Jwt>> {
+    //     return this.http.post<Jwt>(this.loginUrl, loginData, {observe: 'response'});
+    // }
     login(loginData: LoginData): Observable<HttpResponse<Jwt>> {
         return this.http.post<Jwt>(this.loginUrl, loginData, {observe: 'response'});
     }
