@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
+import { AuthenticationService } from 'src/app/services/authentication-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-sidebar',
@@ -7,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeacherSidebarComponent implements OnInit {
 
-  constructor() { }
+  @Input() collapsed:boolean;
+
+  constructor(private app:AppComponent,
+              private authenticationService: AuthenticationService,
+              // private toastr: ToastrService,
+              private router: Router
+    ) {
+    this.collapsed = app.collapsed;
+   }
 
   ngOnInit(): void {
   }
