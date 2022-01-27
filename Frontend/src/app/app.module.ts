@@ -50,7 +50,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ExamsComponent } from './components/exams/exams.component';
 import { ExamDetailComponent } from './components/exam-detail/exam-detail.component';
 import { AccountComponent } from './components/account/account.component';
@@ -97,6 +96,7 @@ import { CoursesForStudentComponent } from './components/courses-for-student/cou
 import { CourseInstanceForStudentService } from './components/courses-for-student/courses-for-student.service';
 import { ExamPartDetailComponent } from './components/exam-part-detail/exam-part-detail.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -137,7 +137,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-//   NgbModule,
+    NgbModule,
     FormsModule,
     HttpClientModule,
     CommonModule
