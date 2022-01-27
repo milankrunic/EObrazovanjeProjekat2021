@@ -1,6 +1,6 @@
-<!-- <div class="table_color ">
+<div class="table_color ">
     <h1 class="ml-5 title">Teachers</h1>
-    <table class="table mx-auto w-75 mt-5" style="background-color: rgba(39,41,61,255);">
+    <table class="table mx-auto w-75 mt-5" style="background-color: yellow;">
         <thead>
             <tr>
                 <th class="text-center">Firstname</th>
@@ -10,10 +10,9 @@
             </tr>
         </thead>
         <tbody >
-            <tr *ngFor="let t of teachers">
+            <tr *ngFor="let t of teachers" >
                 <td class="text-center">{{t.userDTO.firstName}}</td>
                 <td class="text-center">{{t.userDTO.lastName}}</td>
-                <td class="text-center"><button class="btn btn-link" (click)="goToTeacher(t)">{{t.userDTO.userName}}</button></td>
                 <td class="text-center"><button type="button" class="btn btn-danger btn-sm" (click)="deleteTeacher(t)">X</button></td>
             </tr>
         </tbody>
@@ -38,4 +37,4 @@
           </li>
         </ul>
       </nav>
-    </div> -->
+    </div>
