@@ -1,4 +1,4 @@
-<!-- <div class=" col-md-8 color_text">
+<div class=" col-md-8 color_text">
     <div class=" table_color">
       <div class=" card-body" >
         <h1 class=" title" >My Profile</h1>
@@ -48,18 +48,6 @@
                   />
                 </div>
               </div>
-            <div class=" col-md-4 pl-md-1">
-              <div class=" form-group">
-                <label for="exampleInputEmail1"> Username: </label>
-                <input
-                  style="background-color: rgba(39,41,61,255); color: white;"
-                  class=" form-control"
-                  type="text"
-                  readonly [(ngModel)]="user.userName"
-                  [ngModelOptions]="{standalone: true}"
-                />
-              </div>
-            </div>
           </div>
           <div *ngIf="editInstance" class=" row">
             <div class=" col-md-3 px-md-1">
@@ -107,4 +95,4 @@
         <button type="button" class=" btn btn-fill btn-danger" *ngIf="editInstance" (click)="cancel()">X</button>
       </div>
     </div>
-  </div> -->
+  </div>
