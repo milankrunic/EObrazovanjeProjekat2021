@@ -16,7 +16,7 @@ export class UserService {
     private usersUrl = 'api/users';
     private loginUrl = 'http://localhost:8080/api/users/login';
     private signUp = 'api/signup';
-    private studentURL = 'api/student'
+    private studentsUrl = 'http://localhost:8080/api/students';
     private teacherUrl = 'api/teacher'
 
     constructor(private http: HttpClient) { }
@@ -48,7 +48,7 @@ export class UserService {
     }
 
     getCourseInstanceStudents(courseInstance:CourseInstance,numberPage:number): Observable<HttpResponse<Student[]>> {
-        const url = `${this.studentURL}/course-instance/${courseInstance.id}?page=${numberPage}&size=5`
+        const url = `${this.studentsUrl}/course-instance/${courseInstance.id}?page=${numberPage}&size=5`
         return this.http.get<Student[]>(url, {observe: 'response'});
     }
 
@@ -59,7 +59,7 @@ export class UserService {
     }
 
     getCourseInstanceOtherStudents(courseInstance:CourseInstance,searchString:string): Observable<HttpResponse<Student[]>> {
-        const url = `${this.studentURL}/course-instance/other-students/${courseInstance.id}?searchString=${searchString}&size=5`
+        const url = `${this.studentsUrl}/course-instance/other-students/${courseInstance.id}?searchString=${searchString}&size=5`
         return this.http.get<Student[]>(url, {observe: 'response'});
     }
 
@@ -80,10 +80,15 @@ export class UserService {
         return this.http.get<Teacher>(url, {observe: 'response'});
     }
 
-    getStudent(id: number): Observable<HttpResponse<Student>> {
-        const url = `${this.studentURL}/${id}`;
-        return this.http.get<Student>(url, {observe: 'response'});
-    }
+    // getStudent(id: number): Observable<HttpResponse<Student>> {
+    //     const url = `${this.studentURL}/${id}`;
+    //     return this.http.get<Student>(url, {observe: 'response'});
+    // }
+
+    getStudent(id:any):Observable<HttpResponse<Student>>{
+        //   // const params: HttpParams = new HttpParams().set('_id',id);
+          return this.http.get<Student>(this.studentsUrl+`/${id}`, {observe: 'response'});
+        }
 
     getLoggedUser(): Observable<HttpResponse<User>> {
         const url = `${this.usersUrl}/loggedUser`;

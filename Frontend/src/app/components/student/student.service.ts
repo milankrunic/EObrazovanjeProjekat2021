@@ -39,6 +39,7 @@ export class StudentService {
     getStudents():Observable<HttpResponse<Student[]>> {
         return this.http.get<Student[]>(this.studentsUrl + "/all", {observe: 'response'});
       }
+      
 
     deleteStudent(stId: number): Observable<HttpResponse<any>>{
         const url = `${this.studentsUrl}/${stId}`;
