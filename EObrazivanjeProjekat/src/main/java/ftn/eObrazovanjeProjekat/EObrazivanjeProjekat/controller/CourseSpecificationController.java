@@ -114,6 +114,7 @@ public class CourseSpecificationController {
 		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(cs), HttpStatus.OK);
 	}
 	
+	
 	@DeleteMapping(value = "/{id}")
 	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<Void> deleteCourseSpecification(@PathVariable("id") Long id){
