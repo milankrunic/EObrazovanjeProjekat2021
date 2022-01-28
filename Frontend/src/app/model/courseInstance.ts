@@ -1,6 +1,7 @@
 import { CourseSpecification } from "./courseSpecification";
 
 export class CourseInstance{
+  [x: string]: any;
     public id: number;
     public startDate: Date;
 	public endDate: Date;

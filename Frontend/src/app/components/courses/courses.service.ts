@@ -11,7 +11,7 @@ import { AuthenticationService } from 'src/app/services/authentication-service.s
 })
 export class CoursesService {
 
-  private coursesInstanceUrl = 'api/course-instance';
+  private coursesInstanceUrl = 'http://localhost:8080/api/course-instance';
 
   coursesSpecificationUrl:string = 'http://localhost:8080/api/course-specification';
 
@@ -28,17 +28,17 @@ export class CoursesService {
   }
 
   getCoursesInstances(username:String,numberPage:number):Observable<HttpResponse<CourseInstance[]>> {
-    var url = '';
-    if(username!==''){
-      url = `${this.coursesInstanceUrl}/teacher/${username}?sort=start_date,asc&page=${numberPage}&size=5`;
-    }else if(this.authS.getRole()==='ROLE_ADMINISTRATOR'){
-      url = `${this.coursesInstanceUrl}?sort=startDate,asc&page=${numberPage}&size=5`;
-    }else if(this.authS.getRole()==='ROLE_TEACHER'){
-      url = `${this.coursesInstanceUrl}/teacher?sort=start_date,asc&page=${numberPage}&size=5`;
-    }else if(this.authS.getRole()==='ROLE_STUDENT'){
-      url = `${this.coursesInstanceUrl}/student?sort=start_date,asc&page=${numberPage}&size=5`;
-    }
-    return this.http.get<CourseInstance[]>(url, {observe: 'response'});
+    // var url = '';
+    // if(username!==''){
+    //   url = `${this.coursesInstanceUrl}/teacher/${username}?sort=start_date,asc&page=${numberPage}&size=5`;
+    // }else if(this.authS.getRole()==='ROLE_ADMINISTRATOR'){
+    //   url = `${this.coursesInstanceUrl}?sort=startDate,asc&page=${numberPage}&size=5`;
+    // }else if(this.authS.getRole()==='ROLE_TEACHER'){
+    //   url = `${this.coursesInstanceUrl}/teacher?sort=start_date,asc&page=${numberPage}&size=5`;
+    // }else if(this.authS.getRole()==='ROLE_STUDENT'){
+    //   url = `${this.coursesInstanceUrl}/student?sort=start_date,asc&page=${numberPage}&size=5`;
+    // }
+    return this.http.get<CourseInstance[]>(this.coursesInstanceUrl, {observe: 'response'});
   }
 
   getNumberPage(mode:string,username:string,courseId:number): Observable<HttpResponse<number>> {

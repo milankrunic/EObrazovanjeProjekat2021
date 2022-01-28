@@ -13,7 +13,7 @@ import { ChangePass } from 'src/app/model/changePass';
 
 @Injectable()
 export class UserService {
-    private usersUrl = 'api/users';
+    private usersUrl = 'http://localhost:8080/api/users';
     private loginUrl = 'http://localhost:8080/api/users/login';
     private signUp = 'api/signup';
     private studentsUrl = 'http://localhost:8080/api/students';

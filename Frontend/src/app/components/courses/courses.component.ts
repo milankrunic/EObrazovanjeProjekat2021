@@ -89,13 +89,13 @@ export class CoursesComponent implements OnInit {
 
   deleteCourseInstance(courseInstance: CourseInstance): void {
     console.log("Brisem: "+JSON.stringify(courseInstance));
-    this.courseService.deleteCourseInstance(courseInstance.id==undefined ? 0:courseInstance.id).subscribe(
+    this.courseService.deleteCourseInstance(courseInstance.idCourseInstance==undefined ? 0:courseInstance.idCourseInstance).subscribe(
       () => this.getCoursesInstances(this.mode)
     );
   }
 
   goToCourseInstance(courseInstance: CourseInstance): void {
-    this.router.navigate(['/course-instance', courseInstance.id]);
+    this.router.navigate(['/course-instance', courseInstance.idCourseInstance]);
   }
 
   dateToString(date:Date):Date{
