@@ -36,7 +36,7 @@ export class ViewCourseInstanceComponent implements OnInit {
     //       }
     //     );
     // }else{
-      this.courseService.getCoursesSpecifications(-1,'').
+      this.courseService.getCoursesSpecifications().
             subscribe(res =>{
               this.coursesSpecifications = [];
               this.coursesSpecifications = res.body==null ? []:res.body;
@@ -62,15 +62,15 @@ export class ViewCourseInstanceComponent implements OnInit {
     }
   }
 
-  searchSpecification(event:Event){
-    const target= event.target as HTMLInputElement;
-    const searchString = target.value as string;
-    console.log(searchString)
-    this.courseService.getCoursesSpecifications(-1,searchString).subscribe(res =>
-      {
-        this.coursesSpecifications = res.body==null ? []:res.body;
-      });
-  }
+  // searchSpecification(event:Event){
+  //   const target= event.target as HTMLInputElement;
+  //   const searchString = target.value as string;
+  //   console.log(searchString)
+  //   this.courseService.getCoursesSpecifications(-1,searchString).subscribe(res =>
+  //     {
+  //       this.coursesSpecifications = res.body==null ? []:res.body;
+  //     });
+  // }
 
   goBack(): void {
     this.location.back();

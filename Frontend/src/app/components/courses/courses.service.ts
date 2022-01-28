@@ -13,7 +13,7 @@ export class CoursesService {
 
   private coursesInstanceUrl = 'api/course-instance';
 
-  private coursesSpecificationUrl = 'api/course-specfication';
+  coursesSpecificationUrl:string = 'http://localhost:8080/api/course-specification';
 
   private enrolmentUrl = 'api/enrollment';
 
@@ -57,12 +57,8 @@ export class CoursesService {
     return this.http.get<number>(url, {observe: 'response'});
   }
 
-  getCoursesSpecifications(numberPage:number,searchString:string):Observable<HttpResponse<CourseSpecification[]>> {
-    var url = `${this.coursesSpecificationUrl}?searchString=${searchString}&sort=title,asc&page=${numberPage}&size=5`;
-    if(numberPage==-1){
-      url = `${this.coursesSpecificationUrl}?searchString=${searchString}&size=5`;
-    }
-    return this.http.get<CourseSpecification[]>(url, {observe: 'response'});
+  getCoursesSpecifications():Observable<HttpResponse<CourseSpecification[]>> {
+    return this.http.get<CourseSpecification[]>(this.coursesSpecificationUrl, {observe: 'response'});
   }
 
   getCourseInstance(id: number): Observable<HttpResponse<CourseInstance>> {
@@ -72,6 +68,7 @@ export class CoursesService {
 
   getCourseSpecification(id: number): Observable<HttpResponse<CourseSpecification>> {
     const url = `${this.coursesSpecificationUrl}/${id}`;
+    console.log("AAA")
     return this.http.get<CourseSpecification>(url, {observe: 'response'});
   }
 
@@ -107,6 +104,8 @@ export class CoursesService {
 
   deleteCourseSpecification(courseSpecificationId: number): Observable<HttpResponse<any>> {
     const url = `${this.coursesSpecificationUrl}/${courseSpecificationId}`;
+    console.log(courseSpecificationId)
     return this.http.delete<any>(url, {observe: 'response'});
   }
+
 }

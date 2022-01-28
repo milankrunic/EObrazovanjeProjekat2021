@@ -103,6 +103,7 @@ public class CourseSpecificationController {
 	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
 	public ResponseEntity<Void> deleteCourseSpecification(@PathVariable("id") Long id){
 		CourseSpecification cs = courseSpecificationServiceInterface.findById(id);
+		System.out.println(cs);
 		if(cs != null) {
 			courseSpecificationServiceInterface.remove(id);
 			

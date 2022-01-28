@@ -1,4 +1,5 @@
 export class CourseSpecification{
+  [x: string]: any;
     public id: number;
     public title: string;
 	public ects: number;

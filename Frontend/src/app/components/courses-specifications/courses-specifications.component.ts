@@ -27,61 +27,63 @@ export class CoursesSpecificationsComponent implements OnInit {
   }
 
   getCoursesSpecifications(){
-    this.getNumberPages();
-    this.courseService.getCoursesSpecifications(this.numberPage,'').subscribe(
+    // this.getNumberPages();
+    this.courseService.getCoursesSpecifications().subscribe(
       response => {
         console.log(response.body)
         this.coursesSpecifications = response.body
       });
   }
 
-  getNumberPages(){
-    this.courseService.getNumberPage('COURSE_SPECIFICATION','',-1).subscribe(res =>{
-      const num = res.body == null ? 0:res.body;
-      var i = 1;
-      this.numberPages = [];
-      for (let index = 0; index < num; index++) {
-        this.numberPages.push(i);
-        i++;
-      }
-    })
-  }
+  // getNumberPages(){
+  //   this.courseService.getNumberPage('COURSE_SPECIFICATION','',-1).subscribe(res =>{
+  //     const num = res.body == null ? 0:res.body;
+  //     var i = 1;
+  //     this.numberPages = [];
+  //     for (let index = 0; index < num; index++) {
+  //       this.numberPages.push(i);
+  //       i++;
+  //     }
+  //   })
+  // }
 
   deleteCourseSpecification(courseSpecification: CourseSpecification): void {
     console.log("Brisem: "+JSON.stringify(courseSpecification));
-    this.courseService.deleteCourseSpecification(courseSpecification.id==undefined ? 0:courseSpecification.id).subscribe(
+    this.courseService.deleteCourseSpecification(courseSpecification.idCourseSpecification==undefined ? 0:courseSpecification.idCourseSpecification).subscribe(
       () => this.getCoursesSpecifications()
+      
     );
+    console.log(courseSpecification)
   }
 
   goToViewCourseSpecification(courseSpecification: CourseSpecification): void {
     this.router.navigate(['/view-course-specification', courseSpecification.id]);
   }
 
-  increaseNumberPage(){
-    if(this.numberPage < this.numberPages.length-1){
-      this.numberPage=this.numberPage+1;
-      this.getCoursesSpecifications();
-    }
-  }
+  // increaseNumberPage(){
+  //   if(this.numberPage < this.numberPages.length-1){
+  //     this.numberPage=this.numberPage+1;
+  //     this.getCoursesSpecifications();
+  //   }
+  // }
 
-  reduceNumberPage(){
-    if(this.numberPage>=1){
-      this.numberPage=this.numberPage-1;
-      this.getCoursesSpecifications();
-    }
-  }
+  // reduceNumberPage(){
+  //   if(this.numberPage>=1){
+  //     this.numberPage=this.numberPage-1;
+  //     this.getCoursesSpecifications();
+  //   }
+  // }
 
-  setNumberPage(numberPage:number){
-    this.numberPage = numberPage-1;
-    this.getCoursesSpecifications();
-  }
+  // setNumberPage(numberPage:number){
+  //   this.numberPage = numberPage-1;
+  //   this.getCoursesSpecifications();
+  // }
 
-  isActive(num:number):boolean{
-    if(this.numberPage===num){
-      return true;
-    }
-    return false;
-  }
+  // isActive(num:number):boolean{
+  //   if(this.numberPage===num){
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
 }
