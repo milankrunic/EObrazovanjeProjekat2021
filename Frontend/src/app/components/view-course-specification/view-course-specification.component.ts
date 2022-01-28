@@ -3,6 +3,7 @@ import { CoursesService } from '../courses/courses.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { CourseSpecification } from 'src/app/model/courseSpecification';
 import { switchMap } from 'rxjs/operators';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-view-course-specification',
@@ -44,7 +45,7 @@ export class ViewCourseSpecificationComponent implements OnInit {
     this.courseService.addCourseSpecification(this.courseSpecification)
       .subscribe(res => {
         // this.userService.announceChange();
-        // this.goBack();
+        this.goBack();
       });
   }
 
@@ -52,13 +53,13 @@ export class ViewCourseSpecificationComponent implements OnInit {
     this.courseService.editCourseSpecification(this.courseSpecification)
       .subscribe(() => {
         // this.userService.announceChange();
-        // this.goBack();
+        this.goBack();
       });
   }
 
-  // goBack(): void {
-  //   this.location.back();
-  // }
+  goBack(): void {
+    this.location.back();
+  }
 
 
 }

@@ -30,7 +30,7 @@ export class CoursesSpecificationsComponent implements OnInit {
     // this.getNumberPages();
     this.courseService.getCoursesSpecifications().subscribe(
       response => {
-        console.log(response.body)
+        // console.log(response.body)
         this.coursesSpecifications = response.body
       });
   }
@@ -53,11 +53,11 @@ export class CoursesSpecificationsComponent implements OnInit {
       () => this.getCoursesSpecifications()
       
     );
-    console.log(courseSpecification)
+   
   }
 
   goToViewCourseSpecification(courseSpecification: CourseSpecification): void {
-    this.router.navigate(['/view-course-specification', courseSpecification.id]);
+    this.router.navigate(['/view-course-specification', courseSpecification.idCourseSpecification]);
   }
 
   // increaseNumberPage(){

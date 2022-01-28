@@ -68,7 +68,6 @@ export class CoursesService {
 
   getCourseSpecification(id: number): Observable<HttpResponse<CourseSpecification>> {
     const url = `${this.coursesSpecificationUrl}/${id}`;
-    console.log("AAA")
     return this.http.get<CourseSpecification>(url, {observe: 'response'});
   }
 
@@ -104,7 +103,6 @@ export class CoursesService {
 
   deleteCourseSpecification(courseSpecificationId: number): Observable<HttpResponse<any>> {
     const url = `${this.coursesSpecificationUrl}/${courseSpecificationId}`;
-    console.log(courseSpecificationId)
     return this.http.delete<any>(url, {observe: 'response'});
   }
 

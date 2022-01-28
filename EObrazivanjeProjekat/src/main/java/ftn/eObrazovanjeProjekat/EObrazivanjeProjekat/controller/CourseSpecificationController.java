@@ -81,22 +81,37 @@ public class CourseSpecificationController {
 		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(cs), HttpStatus.CREATED);
 	}
 
-	@PutMapping(value = "/{id}", consumes = "application/json")
+//	@PutMapping(value = "/{id}", consumes = "application/json")
+//	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+//	public ResponseEntity<CourseSpecificationDTO> updateCourseSpecification(@RequestBody CourseSpecificationDTO courseSpecificationDTO, @PathVariable("id") Long id){
+//
+//		CourseSpecification courseSpecification = courseSpecificationServiceInterface.findById(id);
+//		
+//		if(courseSpecification == null) {
+//			return new ResponseEntity<CourseSpecificationDTO>(HttpStatus.BAD_REQUEST);
+//		}
+//		courseSpecification.setIdCourseSpecification(courseSpecificationDTO.getIdCourseSpecification());
+//		courseSpecification.setTitle(courseSpecificationDTO.getTitle());
+//		courseSpecification.setEcts(courseSpecificationDTO.getEcts());
+//		courseSpecification.setCode(courseSpecificationDTO.getCode());
+//
+//		courseSpecification = courseSpecificationServiceInterface.save(courseSpecification);
+//		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(courseSpecification), HttpStatus.OK);
+//	}
+	
+	@PutMapping()
 	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
-	public ResponseEntity<CourseSpecificationDTO> updateCourseSpecification(@RequestBody CourseSpecificationDTO courseSpecificationDTO, @PathVariable("id") Long id){
-
-		CourseSpecification courseSpecification = courseSpecificationServiceInterface.findById(id);
+	public ResponseEntity<CourseSpecificationDTO> updateCourseSpecification(@RequestBody CourseSpecificationDTO csDTO){
+		CourseSpecification cs = courseSpecificationServiceInterface.findById(csDTO.getIdCourseSpecification());
 		
-		if(courseSpecification == null) {
-			return new ResponseEntity<CourseSpecificationDTO>(HttpStatus.BAD_REQUEST);
+		if(cs == null) {
+			return new ResponseEntity<CourseSpecificationDTO>(HttpStatus.NOT_FOUND);
 		}
-		courseSpecification.setIdCourseSpecification(courseSpecificationDTO.getIdCourseSpecification());
-		courseSpecification.setTitle(courseSpecificationDTO.getTitle());
-		courseSpecification.setEcts(courseSpecificationDTO.getEcts());
-		courseSpecification.setCode(courseSpecificationDTO.getCode());
-
-		courseSpecification = courseSpecificationServiceInterface.save(courseSpecification);
-		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(courseSpecification), HttpStatus.OK);
+		cs.setTitle(csDTO.getTitle());
+		cs.setCode(csDTO.getCode());
+		cs.setEcts(csDTO.getEcts());
+		courseSpecificationServiceInterface.save(cs);
+		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(cs), HttpStatus.OK);
 	}
 	
 	@DeleteMapping(value = "/{id}")

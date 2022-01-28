@@ -6,9 +6,9 @@
 
 // // import { BrowserModule } from '@angular/platform-browser';
 
-// const appRoutes: Routes = [
-//   { path: 'login', component: LoginComponent},
-// ];
+const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent},
+];
 
 // @NgModule({
 //   imports: [RouterModule.forRoot(appRoutes,{enableTracing: true})
@@ -18,6 +18,7 @@
 // })
 // export class AppRoutingModule { }
 import { NgModule } from '@angular/core';
+import {Location} from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './components/account/account.component';
 import { AddExamPartComponent } from './components/add-exam-part/add-exam-part.component';
