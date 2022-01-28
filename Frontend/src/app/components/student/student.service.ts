@@ -5,7 +5,7 @@ import { Student } from "src/app/model/student";
 
 @Injectable()
 export class StudentService {
-    private studentsUrl = 'api/students';
+    studentsUrl:string = 'http://localhost:8080/api/students';
     student:Student;
 
     constructor(private http: HttpClient) {
@@ -31,10 +31,14 @@ export class StudentService {
         this.RegenerateData.next();
     }
 
-    getStudents(numberPage:number): Observable<HttpResponse<Student[]>>{
-        const url = `${this.studentsUrl}?page=${numberPage}&size=5`
-        return this.http.get<Student[]>(url, {observe:'response'});
-    }
+    // getStudents(numberPage:number): Observable<HttpResponse<Student[]>>{
+    //     const url = `${this.studentsUrl}?page=${numberPage}&size=5`
+    //     return this.http.get<Student[]>(url, {observe:'response'});
+    // }
+
+    getStudents():Observable<HttpResponse<Student[]>> {
+        return this.http.get<Student[]>(this.studentsUrl + "/all", {observe: 'response'});
+      }
 
     deleteStudent(stId: number): Observable<HttpResponse<any>>{
         const url = `${this.studentsUrl}/${stId}`;
