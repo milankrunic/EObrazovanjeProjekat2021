@@ -51,6 +51,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentSer
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.TeacherServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserRoleServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.ChangePassDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.RoleDTO;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -175,6 +176,19 @@ public class UserController {
 		
 		return new ResponseEntity<List<RoleDTO>>(rolesDTO, HttpStatus.OK);
 	}
+	
+	@RequestMapping(value = "/change-password", method = RequestMethod.POST)
+	public ResponseEntity<UserDTO> changePassword(@RequestBody ChangePassDTO passwordChanger) {
+		System.out.println(passwordChanger.toString() + "pwd changer");
+		userDetailsService.changePassword(passwordChanger.getOldPass(), passwordChanger.getNewPass());
+		
+		User u = userService.findByUsername(passwordChanger.getUserName());
+		u.setFirstName(passwordChanger.getFirstName());
+		u.setLastName(passwordChanger.getLastName());
+		u = userService.save(u);
+		return new ResponseEntity<UserDTO>(new UserDTO(u), HttpStatus.OK);
+	}
+	
 	@GetMapping(value = "/loggedUser")
 	public ResponseEntity<UserDTO> getLoggedUser(Principal principal){
 		
