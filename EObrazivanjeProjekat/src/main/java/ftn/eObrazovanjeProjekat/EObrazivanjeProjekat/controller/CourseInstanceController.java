@@ -27,7 +27,6 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseSpecification;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.CourseInstanceServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.CourseSpecificationServiceInterface;
-import ftn.projekat.eObrazovanje.ProjekatEObrazovanje20212022.serviceInterface.CourseInstanceI;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping(value = "api/course-instance")

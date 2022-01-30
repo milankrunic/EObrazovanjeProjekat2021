@@ -43,6 +43,24 @@ public class CourseInstanceService implements CourseInstanceServiceInterface{
 		
 	}
 
+	@Override
+	public Long countAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Long countForTeacher(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Long countForStudent(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 //	@SuppressWarnings("unchecked")
 //	@Override
 //	public List<CourseInstance> findByStudent(String username) {

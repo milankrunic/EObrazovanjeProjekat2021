@@ -50,13 +50,13 @@ export class UsersComponent implements OnInit {
 
   deleteUser(user: User): void {
     console.log("Brisem: "+JSON.stringify(user));
-    this.userService.deleteUser(user.id==undefined ? 0:user.id).subscribe(
+    this.userService.deleteUser(user.idUser==undefined ? 0:user.idUser).subscribe(
       () => this.getUsers()
     );
   }
 
   goToViewUser(user: User): void {
-    this.router.navigate(['/view-user', user.id]);
+    this.router.navigate(['/view-user', user.idUser]);
   }
 
   increaseNumberPage(){

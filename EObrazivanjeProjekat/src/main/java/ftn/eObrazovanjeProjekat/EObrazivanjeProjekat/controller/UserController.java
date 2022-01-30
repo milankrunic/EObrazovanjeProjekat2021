@@ -37,16 +37,21 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.UserDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.exceptions.BadRequestException;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Admin;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Document;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Role;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Student;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.Teacher;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.UserRole;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.security.TokenUtils;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service.UserDetailsServiceImpl;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service.UserRoleService;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.AdminServiceInterface;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.RoleServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.StudentServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.TeacherServiceInterface;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserRoleServiceInterface;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServiceInterface;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.RoleDTO;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -64,6 +69,13 @@ public class UserController {
 
 	@Autowired
 	private UserServiceInterface userService;
+	
+	@Autowired
+	private UserRoleServiceInterface userRoleServiceInterface;
+	
+	@Autowired
+	private RoleServiceInterface roleService;
+	
 	
 	@Autowired
 	private StudentServiceInterface studentService;
@@ -131,94 +143,38 @@ public class UserController {
 	}
 	
 	
-//	put i videti za signup tj za post!!!
 	
-//	@PutMapping(value = "/")
-//	@PreAuthorize("hasAnyRole('ROLE_STUDENT', 'ROLE_ADMINISTRATOR')")
-//	@Transactional
-//	public ResponseEntity<UserDTO> updateStudent(@RequestBody UserDTO userDTO){
-//		User user = userService.findByUsername(userDTO.getUser_name());
-//		System.out.println("\nFirst name: "+userDTO.getFirstName());
-//		if(user == null) {
-//			return new ResponseEntity<UserDTO>(HttpStatus.NOT_FOUND);
-//		}
-//		List<UserRole> userRoles = new ArrayList<UserRole>();
-////		for (UserRole userRole : user.getUserRoles()) {
-////			userRoleS.deleteUserRole(userRole);
-////		}
-//		for(UserRole r:user.getUserRoles()) {
-//			if(r.getRole().getCode().equals("st")) {
-//				Student s = studentService.findByUser(user.getUsername());
-//				System.out.println("\nroleToString "+userDTO.roleToString());
-//				System.out.println("r.getRole().getCode() "+r.getRole().getCode());
-//				System.out.println("Da li tacno? "+userDTO.roleToString().contains(r.getRole().getCode()));
-//				if(s!=null && !userDTO.roleToString().contains(r.getRole().getCode())) {	
-//					System.out.println("\nBrisem studenta");
-//					studentService.remove(s.getIdStudent());
-//				}
-//			}else if(r.getRole().getCode().equals("admin")) {
-//				Admin a = adminService.findByUser(user.getUsername());
-//				if(a!=null && !userDTO.roleToString().contains(r.getRole().getCode())) {
-//					adminService.remove(a.getIdAdmin());
-//				}
-//			}else if(r.getRole().getCode().equals("teach") ) {
-//				Teacher teacher = teacherService.findByUsername(user.getUsername());;
-//				if(teacher!=null && !userDTO.roleToString().contains(r.getRole().getCode())) {
-//					System.out.println("\nBrisem teachera");
-//					teacherService.remove(teacher.getIdTeacher());
-//				} 
-//			}
-//		}
+	@GetMapping(value = "/{username}/unassigned-roles")
+	public ResponseEntity<List<RoleDTO>> getRoles(@PathVariable("username") String username){
+		User user = userService.findByUsername(username);
 		
-//		userRoles.deleteByUser(user.getId());
-//		user.setFirstName(userDTO.getFirstName());
-//		user.setLastName(userDTO.getLastName());
-//		if(!userDTO.getPassword().equals(user.getPassword())) {
-//			user.setPassword(passwordEncoder.encode(userDTO.getPassword()));	
-//		}
-//		user.setUserRoles(userRoles);
-//		System.out.println("\nPukao2");
-//		for (RoleDTO roleDTO : userDTO.getRoles()) {
-//			Role r = roleS.findByCode(roleDTO.getCode());
-//			UserRole userRole = new UserRole(user,r);
-//			user.getUserRoles().add(userRole);
-//			if(roleDTO.getCode().equals("st")) {
-//				Student student = studentS.findByUser(user.getUsername());
-//				if(student==null) {
-//					student = new Student();
-//					Date date = new Date();
-//					Calendar calendar = Calendar.getInstance();
-//					calendar.setTime(date);
-//					String cardNumber = "S-"+studentS.maxId()+"-"+calendar.get(Calendar.YEAR);
-//					student.setCardNumber(cardNumber);
-//					student.setUser(user);
-//					studentS.save(student);
-//					
-//					Account account = new Account();
-//					account.setStudent(student);
-//					accountS.save(account);
-//				}
-//			}else if(roleDTO.getCode().equals("teach")) {
-//				Teacher teacher = teachS.findByUsername(user.getUsername());
-//				if(teacher==null) {
-//					teacher = new Teacher();
-//					teacher.setUser(user);
-//					teachS.save(teacher);
-//				}
-//			}else if(roleDTO.getCode().equals("admin")) {
-//				Administrator admin = adminS.findByUser(user.getUsername());
-//				if(admin==null) {
-//					admin = new Administrator();
-//					admin.setUser(user);
-//					adminS.save(admin);
-//				}
-//			}
-//			user = userService.save(user);
-//		}
-//		
-//		return ResponseEntity.ok().build();
-//	}
-//	
+		List<RoleDTO> rolesDTO = new ArrayList<RoleDTO>();
+		List<Role> allRole= roleService.findAll();
+		
+		if(user != null && user.getUserRoles().size()>0) {
+			for (Role role : allRole) {
+				int isIn = 0;
+				for (UserRole userRole: user.getUserRoles()) {
+					if(!userRole.getRole().getCode().equals(role.getCode())) {
+						System.out.println("Rola: "+role.getName()+" ne postoji kod korisnika: "+user.getUsername());
+						isIn ++;
+					}
+				}
+				System.out.println("\nIs IN: "+isIn);
+				System.out.println("Size userRoles: "+user.getUserRoles().size());
+				if(isIn==user.getUserRoles().size()) {
+					System.out.println("Prosao\n");
+					rolesDTO.add(new RoleDTO(role));
+				}
+			}
+		}else if ((user == null) || user.getUserRoles().size()==0){
+			for (Role role : allRole) {
+				rolesDTO.add(new RoleDTO(role));
+			}
+		}
+		
+		return new ResponseEntity<List<RoleDTO>>(rolesDTO, HttpStatus.OK);
+	}
 	@GetMapping(value = "/loggedUser")
 	public ResponseEntity<UserDTO> getLoggedUser(Principal principal){
 		

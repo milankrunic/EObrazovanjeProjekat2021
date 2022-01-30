@@ -17,7 +17,7 @@ export class UserService {
     private loginUrl = 'http://localhost:8080/api/users/login';
     private signUp = 'api/signup';
     private studentsUrl = 'http://localhost:8080/api/students';
-    private teacherUrl = 'api/teacher'
+    private teacherUrl = 'http://localhost:8080/api/teacher'
 
     constructor(private http: HttpClient) { }
 
