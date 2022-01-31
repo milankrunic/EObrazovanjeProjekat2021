@@ -16,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "C:/Users/zigad/git/EObrazovanjeProjekat2021/EObrazivanjeProjekat/static",
+            "outputPath": "C:/Users/Milan Krunic/git/EObrazovanjeProjekat2021/EObrazivanjeProjekat/static",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
