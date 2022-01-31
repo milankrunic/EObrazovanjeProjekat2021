@@ -119,7 +119,7 @@ export class UserService {
     }
 
     changePass(changePass: ChangePass): Observable<HttpResponse<User>>{
-        const url = `api/users/change-password`;
+        const url = `http://localhost:8080/api/users/change-password`;
         return this.http.post<User>(url, changePass, {observe: 'response'});
     }
     // getUserRoles(userId: number): Observable<HttpResponse<Role[]>> {

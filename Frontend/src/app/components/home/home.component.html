@@ -15,6 +15,7 @@
                   readonly 
                   [(ngModel)]="user.firstName"
                   [ngModelOptions]="{standalone: true}"
+                  name="first"
                 />
                 <input
                 style="background-color: rgba(39,41,61,255); color: white;"
@@ -23,6 +24,7 @@
                   type="text"
                   [(ngModel)]="changePass.firstName"
                   [ngModelOptions]="{standalone: true}"
+                  name="first"
                 />
               </div>
             </div>
@@ -37,6 +39,7 @@
                     readonly 
                     [(ngModel)]="user.lastName"
                     [ngModelOptions]="{standalone: true}"
+                    name="lastName"
                   />
                   <input
                   style="background-color: rgba(39,41,61,255); color: white;"
@@ -45,9 +48,14 @@
                     type="text"
                     [(ngModel)]="changePass.lastName"
                     [ngModelOptions]="{standalone: true}"
+                    name="lastName"
                   />
                 </div>
               </div>
+              <div class="mt-2 ml-50">
+                <b>Username:</b>
+                <input type="text" class="form-control col-2 d-inline ml-2" readonly [(ngModel)]="changePass.userName" name="username">
+            </div>
           </div>
           <div *ngIf="editInstance" class=" row">
             <div class=" col-md-3 px-md-1">
@@ -59,6 +67,7 @@
                   type="password"
                   [(ngModel)]="changePass.oldPass"
                   [ngModelOptions]="{standalone: true}"
+                  name="oldPass"
                 />
               </div>
             </div>
@@ -71,6 +80,7 @@
                   type="password"
                   [(ngModel)]="changePass.newPass"
                   [ngModelOptions]="{standalone: true}"
+                  name="newPass"
                 />
               </div>
             </div>
@@ -83,6 +93,7 @@
                   type="password"
                   [(ngModel)]="repeatPass"
                   [ngModelOptions]="{standalone: true}"
+                  name="repeatPass"
                 />
               </div>
             </div>
