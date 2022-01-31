@@ -1,4 +1,4 @@
-<div class=" col-md-8 color_text">
+<div class=" col-md-8 color_text" style="margin-left:10px;">
     <div class=" table_color">
       <div class=" card-body" >
         <h1 class=" title" >My Profile</h1>
@@ -6,7 +6,7 @@
           <div class=" row">
             <div class=" col-md-3 px-md-1">
               <div class=" form-group">
-                <label> Frist name: </label>
+                <label> First name: </label>
                 <input
                   style="background-color: rgba(39,41,61,255); color: white;"
                   *ngIf="editInstance!=true"
@@ -89,9 +89,9 @@
           </div>
         </form>
       </div>
-      <div class=" card-footer text-right" style="background-color: rgba(39,41,61,255);">
-        <button type="button" class=" btn btn-fill btn-danger" *ngIf="!editInstance" (click)="edit()">Change information</button>
-        <button type="button" class=" btn btn-fill btn-danger" *ngIf="editInstance" (click)="submit()">✓</button>
+      <div class=" card-footer text-right" style="background-color: rgba(39,41,61,255); width:200px; margin-left:10px;">
+        <button type="button" class=" btn btn-fill btn-danger" style="margin-right:15px;" *ngIf="!editInstance" (click)="edit()">Change information</button>
+        <button type="button" class=" btn btn-fill btn-danger" style="margin-right:15px;" *ngIf="editInstance" (click)="submit()">✓</button>
         <button type="button" class=" btn btn-fill btn-danger" *ngIf="editInstance" (click)="cancel()">X</button>
       </div>
     </div>

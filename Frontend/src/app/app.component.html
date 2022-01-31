@@ -12,8 +12,8 @@
 
 <div class="wrapper">
     <app-admin-sidebar *ngIf="role === 'ROLE_ADMINISTRATOR'"></app-admin-sidebar>
-    <app-student-navbar *ngIf="role === 'ROLE_STUDENT'"></app-student-navbar>
-    <app-teacher-navbar *ngIf="role === 'ROLE_TEACHER'"></app-teacher-navbar>
+    <app-student-sidebar *ngIf="role === 'ROLE_STUDENT'"></app-student-sidebar>
+    <app-teacher-sidebar *ngIf="role === 'ROLE_TEACHER'"></app-teacher-sidebar>
     <div class="main-panel">
       <app-navbar *ngIf="role === 'ROLE_ADMINISTRATOR' || role === 'ROLE_STUDENT' || role === 'ROLE_TEACHER'"></app-navbar>
       <div [ngClass]="{'content':role!=undefined}">
