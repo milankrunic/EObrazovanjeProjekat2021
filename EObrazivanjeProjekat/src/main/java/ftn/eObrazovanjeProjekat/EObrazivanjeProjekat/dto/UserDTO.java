@@ -15,7 +15,7 @@ public class UserDTO implements Serializable {
 	private String firstName;
 	private String lastName;
 	private String email;
-	private String user_name;
+	private String userName;
 	private String password;
 	private List<RoleDTO> roles = new ArrayList<RoleDTO>();
 	
@@ -28,13 +28,13 @@ public class UserDTO implements Serializable {
 		this(user.getId(),user.getFirstName(),user.getLastName(), user.getEmail(), user.getUsername(),user.getPassword(), user.getUserRoles());
 	}
 	
-	public UserDTO(Long idUser, String firstName, String lastName, String email, String user_name, String password, List<UserRole> roles) {
+	public UserDTO(Long idUser, String firstName, String lastName, String email, String userName, String password, List<UserRole> roles) {
 		super();
 		this.idUser = idUser;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
-		this.user_name = user_name;
+		this.userName = userName;
 		this.password = password;
 		for (UserRole userRole : roles) {
 			this.roles.add(new RoleDTO(userRole.getRole()));
@@ -72,13 +72,13 @@ public class UserDTO implements Serializable {
 	}
 
 
-	public String getUser_name() {
-		return user_name;
+	public String getUserName() {
+		return userName;
 	}
 
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 
