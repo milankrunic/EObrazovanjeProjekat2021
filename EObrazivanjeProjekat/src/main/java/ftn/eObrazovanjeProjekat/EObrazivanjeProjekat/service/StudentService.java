@@ -60,6 +60,12 @@ public class StudentService implements StudentServiceInterface {
 //	}
 
 	@Override
+	public Long maxId() {
+		// TODO Auto-generated method stub
+		return studentRepository.maxID();
+	}
+	
+	@Override
 	@Transactional
 	public void remove(Long id) {
 		
@@ -90,6 +96,11 @@ public class StudentService implements StudentServiceInterface {
 	public Student findByUser(String username) {
 		// TODO Auto-generated method stub
 		return studentRepository.findOneByUser_username(username);
+	}
+
+	@Override
+	public Long count() {
+		return studentRepository.count();
 	}
 
 	

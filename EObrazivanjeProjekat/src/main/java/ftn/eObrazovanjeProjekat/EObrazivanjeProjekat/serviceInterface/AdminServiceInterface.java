@@ -18,6 +18,7 @@ public interface AdminServiceInterface {
 	public void updateTeacher(Long idTeacher);
 	public void removeTeacher(Long idTeacher);
 	
+	public Admin findByUser(String username);
 	
 	public List<Student> findAllStudent(Long idStudent);
 	public Student findOneStudent(Long idStudent);

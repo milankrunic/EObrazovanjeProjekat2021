@@ -49,5 +49,10 @@ public class TeacherService implements TeacherServiceInterface{
 	public Teacher findByUsername(String username) {
 		return teacherRepository.findOneByUser_username(username);
 	}
+
+	@Override
+	public Long count() {
+		return teacherRepository.count();
+	}
 	
 }

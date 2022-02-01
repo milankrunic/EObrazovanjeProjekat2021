@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.UserRole;
+
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.User;
 
 
@@ -102,6 +103,14 @@ public class UserDTO implements Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public List<RoleDTO> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<RoleDTO> roles) {
+		this.roles = roles;
 	}
 	
 	public String roleToString() {

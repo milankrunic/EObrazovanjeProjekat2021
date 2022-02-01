@@ -29,5 +29,9 @@ public interface StudentServiceInterface {
 	List<Student> findAll();
 	
 	public Student findByUser(String username);
+	
+	public Long count();
+	
+	public Long maxId();
 
 }

@@ -36,6 +36,7 @@ export class ViewUserComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     if (this.route.snapshot.params['id']) {
       this.mode = 'EDIT';
       this.route.params.pipe(switchMap((params: Params) => 
@@ -46,6 +47,7 @@ export class ViewUserComponent implements OnInit {
             subscribe(res =>{
               this.unassignedRoles = [];
               this.unassignedRoles = res.body==null ? []:res.body;
+              
             });
           }
         );

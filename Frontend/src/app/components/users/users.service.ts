@@ -35,7 +35,7 @@ export class UserService {
     }
 
     getNumberPage(mode:string): Observable<HttpResponse<number>> {
-        var url = `api/number-users?mode=${mode}`
+        var url = `http://localhost:8080/api/users/number-users?mode=${mode}`
         return this.http.get<number>(url, {observe: 'response'});
     }
 

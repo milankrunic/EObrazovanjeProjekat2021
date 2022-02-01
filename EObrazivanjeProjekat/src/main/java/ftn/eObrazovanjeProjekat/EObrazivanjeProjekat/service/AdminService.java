@@ -25,6 +25,14 @@ public class AdminService implements AdminServiceInterface{
 //	As a Admin, I want create update delete teacher, so that I work on them.
 //	As a Admin, I want create update delete exam, so that I work on them.
 	
+	@Autowired
+	AdminRepository adminRepository;
+	
+	@Override
+	public Admin findByUser(String username) {
+		return adminRepository.findOneByUser_username(username);
+	}
+	
 	//TEACHER
 	@Autowired
 	TeacherRepository teacherRepository;
@@ -131,10 +139,6 @@ public class AdminService implements AdminServiceInterface{
 	
 	
 	
-	
-	//ADMIN
-	@Autowired
-	AdminRepository adminRepository;
 
 	public List<Admin> findAllAdmin() {
 		return adminRepository.findAll();

@@ -43,23 +43,20 @@ public class CourseInstanceService implements CourseInstanceServiceInterface{
 		
 	}
 
-	@Override
-	public Long countAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public Long countAll() {
+//		return courseInstanceRepository.count();
+//	}
 
-	@Override
-	public Long countForTeacher(String username) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Long countForStudent(String username) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public Long countForTeacher(String username) {
+//		return courseInstanceRepository.countForTeacher(username);
+//	}
+//
+//	@Override
+//	public Long countForStudent(String username) {
+//		return courseInstanceRepository.countForStudent(username);
+//	}
 
 //	@SuppressWarnings("unchecked")
 //	@Override

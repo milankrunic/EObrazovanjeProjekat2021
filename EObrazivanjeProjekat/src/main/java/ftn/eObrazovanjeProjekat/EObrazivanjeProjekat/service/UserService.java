@@ -52,4 +52,8 @@ public class UserService implements UserServiceInterface{
 		// TODO Auto-generated method stub
 		return userRepository.findOneByUsername(username);
 	}
+	@Override
+	public Long count() {
+		return userRepository.count();
+	}
 }

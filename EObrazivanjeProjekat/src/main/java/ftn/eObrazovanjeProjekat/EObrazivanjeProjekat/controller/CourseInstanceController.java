@@ -51,35 +51,35 @@ public class CourseInstanceController {
 		return new ResponseEntity<List<CourseInstanceDTO>>(courseInstanceDTO, HttpStatus.OK);
 	}
 	
-	@GetMapping(value = "/number-course-instance")
-	public ResponseEntity<Long> getNumberPage(@RequestParam String mode,@RequestParam String username){
-		System.out.println("\nPoziva se number-course-instance: "+mode+" "+username);
-		Long num = (long)0;
-		if(mode.equals("ADMIN")) {
-			num = courseInstanceServiceInterface.countAll()/5;
-			Long mod = courseInstanceServiceInterface.countAll()%5;
-			if(mod>0) {
-				num ++;
-			}
-		}else if(mode.equals("TEACHER")) {
-			num = courseInstanceServiceInterface.countForTeacher(username)/5;
-			System.out.println("\nNum: "+num);
-			Long mod = courseInstanceServiceInterface.countForTeacher(username)%5;
-			System.out.println("\nMod: "+mod);
-			if(mod>0) {
-				num ++;
-			}
-		}else if(mode.equals("STUDENT")) {
-			num = courseInstanceServiceInterface.countForStudent(username)/5;
-			System.out.println("\nNum: "+num);
-			Long mod = courseInstanceServiceInterface.countForStudent(username)%5;
-			System.out.println("\nMod: "+mod);
-			if(mod>0) {
-				num ++;
-			}
-		}
-		return new ResponseEntity<Long>(num, HttpStatus.OK);
-	}
+//	@GetMapping(value = "/number-course-instance")
+//	public ResponseEntity<Long> getNumberPage(@RequestParam String mode,@RequestParam String username){
+//		System.out.println("\nPoziva se number-course-instance: "+mode+" "+username);
+//		Long num = (long)0;
+//		if(mode.equals("ADMIN")) {
+//			num = courseInstanceServiceInterface.countAll()/5;
+//			Long mod = courseInstanceServiceInterface.countAll()%5;
+//			if(mod>0) {
+//				num ++;
+//			}
+//		}else if(mode.equals("TEACHER")) {
+//			num = courseInstanceServiceInterface.countForTeacher(username)/5;
+//			System.out.println("\nNum: "+num);
+//			Long mod = courseInstanceServiceInterface.countForTeacher(username)%5;
+//			System.out.println("\nMod: "+mod);
+//			if(mod>0) {
+//				num ++;
+//			}
+//		}else if(mode.equals("STUDENT")) {
+//			num = courseInstanceServiceInterface.countForStudent(username)/5;
+//			System.out.println("\nNum: "+num);
+//			Long mod = courseInstanceServiceInterface.countForStudent(username)%5;
+//			System.out.println("\nMod: "+mod);
+//			if(mod>0) {
+//				num ++;
+//			}
+//		}
+//		return new ResponseEntity<Long>(num, HttpStatus.OK);
+//	}
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<CourseInstanceDTO> getCourseInstance(@PathVariable("id") Long id){

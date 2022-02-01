@@ -13,5 +13,5 @@ public interface UserServiceInterface {
 	public void remove(Long id);
 	public User findByUsernameAndPassword(String username, String password);
 	User findByUsername(String username);
-	
+	public Long count();
 }

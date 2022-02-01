@@ -15,10 +15,10 @@ public interface CourseInstanceServiceInterface {
 	public CourseInstance save(CourseInstance courseInstance);
 	public void remove(Long id);
 //	public List<CourseInstance> findByStudent(String username);
-	public Long countAll();
-	
-	public Long countForTeacher(String username);
-	
-	public Long countForStudent(String username);
+//	public Long countAll();
+//	
+//	public Long countForTeacher(String username);
+//	
+//	public Long countForStudent(String username);
 	
 }
