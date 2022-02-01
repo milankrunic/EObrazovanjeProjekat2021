@@ -30,6 +30,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.DocumentDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.JwtDTO;
@@ -224,6 +225,51 @@ public class UserController {
 		u.setLastName(passwordChanger.getLastName());
 		u = userService.save(u);
 		return new ResponseEntity<UserDTO>(new UserDTO(u), HttpStatus.OK);
+	}
+	
+	@PostMapping("/signup")
+	public ResponseEntity<UserDTO> addUser(@RequestBody UserDTO dto, UriComponentsBuilder ucBuilder){
+		User existUser = this.userService.findByUsername(dto.getUserName());
+		System.out.println("Metoda se pozvala");
+		if (existUser != null) {
+			return ResponseEntity.status(409).build();
+		}
+		User user = new User();
+		user.setFirstName(dto.getFirstName());
+		user.setLastName(dto.getLastName());
+		user.setUsername(dto.getUserName());
+		user.setPassword(passwordEncoder.encode(dto.getPassword()));
+		user = userService.save(user);
+		for (RoleDTO roleDTO : dto.getRoles()) {
+			Role r = roleService.findByCode(roleDTO.getCode());
+			UserRole userRole = new UserRole(user,r);
+			user.getUserRoles().add(userRole);
+			if(roleDTO.getCode().equals("st")) {
+				Student student = new Student();
+				Date date = new Date();
+				Calendar calendar = Calendar.getInstance();
+				calendar.setTime(date);
+				String cardNumber = "S-"+studentService.maxId()+"-"+calendar.get(Calendar.YEAR);
+				student.setCardNumber(cardNumber);
+				student.setUser(user);
+				studentService.save(student);
+				
+				Account account = new Account();
+				account.setStudent(student);
+				accountService.save(account);
+			}else if(roleDTO.getCode().equals("teach")) {
+				Teacher teacher = new Teacher();
+				teacher.setUser(user);
+				teacherService.save(teacher);
+			}else if(roleDTO.getCode().equals("admin")) {
+				Admin admin = new Admin();
+				admin.setUser(user);
+				adminService.saveAdmin(admin);
+			}
+			user = userService.save(user);
+		}
+		
+		return new ResponseEntity<UserDTO>(new UserDTO(user), HttpStatus.OK);
 	}
 	
 	@GetMapping(value = "/loggedUser")

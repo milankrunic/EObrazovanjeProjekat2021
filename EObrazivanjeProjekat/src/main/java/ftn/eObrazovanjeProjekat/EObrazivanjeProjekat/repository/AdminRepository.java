@@ -15,6 +15,4 @@ public interface AdminRepository extends JpaRepository<Admin, Long> {
 //	Admin removeById(Long idAdmin);
 	
 	Admin findOneByUser_username(String username);
-
-//	Admin findOneByUser_user_name(String username);
 }
