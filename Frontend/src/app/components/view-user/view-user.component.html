@@ -21,14 +21,14 @@
             <div class="row ml-2">
               <div class="col-md-5 pl-md-1">
                 <b>Username:</b>
-                <input type="text"  class="form-control" [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}">
+                <input type="text" *ngIf="mode === 'EDIT'" readonly class="form-control" [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}">
                 <input type="text" *ngIf="mode === 'ADD'" class="form-control" [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}">
               </div>
             </div>
             <div class="row ml-2">
               <div class="col-md-5 pl-md-1">
                 <b>Email:</b>
-                
+                <input type="text" *ngIf="mode === 'EDIT'" readonly class="form-control" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
                 <input type="text" *ngIf="mode === 'ADD'" class="form-control" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
               </div>
             </div>
