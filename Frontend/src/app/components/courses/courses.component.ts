@@ -50,17 +50,17 @@ export class CoursesComponent implements OnInit {
     this.role = authS.getRole()
   }
 
-  getNumberPages(mode:string){
-    this.courseService.getNumberPage(mode,this.teacher.userDTO.userName,-1).subscribe(res =>{
-      const num = res.body == null ? 0:res.body;
-      var i = 1;
-      this.numberPages = [];
-      for (let index = 0; index < num; index++) {
-        this.numberPages.push(i);
-        i++;
-      }
-    })
-  }
+  // getNumberPages(mode:string){
+  //   this.courseService.getNumberPage(mode,this.teacher.userDTO.userName,-1).subscribe(res =>{
+  //     const num = res.body == null ? 0:res.body;
+  //     var i = 1;
+  //     this.numberPages = [];
+  //     for (let index = 0; index < num; index++) {
+  //       this.numberPages.push(i);
+  //       i++;
+  //     }
+  //   })
+  // }
 
   ngOnInit(): void {
     if (this.route.snapshot.params['id']) {
@@ -80,8 +80,8 @@ export class CoursesComponent implements OnInit {
   }
 
   getCoursesInstances(mode:string){
-    this.getNumberPages(mode);
-    this.courseService.getCoursesInstances(this.teacher.userDTO.userName,this.numberPage).subscribe(
+    // this.getNumberPages(mode);
+    this.courseService.getCoursesInstances(this.teacher.userDTO.userName).subscribe(
       response => {
         this.coursesIntances = response.body;
       });
