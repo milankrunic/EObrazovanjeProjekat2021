@@ -48,10 +48,12 @@ import { ViewCourseSpecificationComponent } from './components/view-course-speci
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { LoginGuard } from './guards/login-guard';
 import { RoleGuard } from './guards/role-guard';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [LoginGuard]},
   { path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
+  { path:'register',component: RegisterComponent,canActivate:[RoleGuard]},
   { path: 'admin', component: AccountComponent, canActivate: [LoginGuard]},
   { path: 'home', component: HomeComponent, canActivate: [RoleGuard]},
   { path: 'add-user', component: ViewUserComponent, canActivate: [RoleGuard] },

@@ -15,7 +15,7 @@ import { ChangePass } from 'src/app/model/changePass';
 export class UserService {
     private usersUrl = 'http://localhost:8080/api/users';
     private loginUrl = 'http://localhost:8080/api/users/login';
-    private signUp = 'http://localhost:8080/api/users/signup';
+    // private signUp = 'http://localhost:8080/api/users/signup';
     private studentsUrl = 'http://localhost:8080/api/students';
     private teacherUrl = 'http://localhost:8080/api/teacher'
 
@@ -105,7 +105,8 @@ export class UserService {
     }
 
     addUser(user: User): Observable<HttpResponse<User>> {
-        return this.http.post<User>(this.signUp, user, {observe: 'response'});
+        const url = 'http://localhost:8080/api/users/signup'
+        return this.http.post<User>(url, user, {observe: 'response'});
     }
 
     deleteUser(userId: number): Observable<HttpResponse<any>> {
