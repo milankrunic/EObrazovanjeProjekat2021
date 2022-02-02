@@ -59,7 +59,7 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.UserServic
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.ChangePassDTO;
 import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.RoleDTO;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "http://127.0.0.1:8080"})
 @RestController
 @RequestMapping(value = "api/users")
 public class UserController {
@@ -186,7 +186,7 @@ public class UserController {
 	@GetMapping(value = "/{username}/unassigned-roles")
 	public ResponseEntity<List<RoleDTO>> getRoles(@PathVariable("username") String username){
 		User user = userService.findByUsername(username);
-		
+		System.out.println(user);
 		List<RoleDTO> rolesDTO = new ArrayList<RoleDTO>();
 		List<Role> allRole= roleService.findAll();
 		
@@ -237,6 +237,7 @@ public class UserController {
 		User user = new User();
 		user.setFirstName(dto.getFirstName());
 		user.setLastName(dto.getLastName());
+		user.setEmail(dto.getEmail());
 		user.setUsername(dto.getUserName());
 		user.setPassword(passwordEncoder.encode(dto.getPassword()));
 		user = userService.save(user);

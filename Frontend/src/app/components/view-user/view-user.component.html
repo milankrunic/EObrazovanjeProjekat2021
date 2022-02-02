@@ -25,6 +25,19 @@
                 <input type="text" *ngIf="mode === 'ADD'" class="form-control" [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}">
               </div>
             </div>
+            <div class="row ml-2">
+              <div class="col-md-5 pl-md-1">
+                <b>Email:</b>
+                
+                <input type="text" *ngIf="mode === 'ADD'" class="form-control" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+            <div class="col-md-5 pr-md-1">
+              <div class="form-group">
+                <b>Password:</b>
+                <input type="password" class="form-control" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
           </div>
           <div class="row w-50">
             <div class="col-md-8 pr-md-1 ml-5">
