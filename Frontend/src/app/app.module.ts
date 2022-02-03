@@ -84,6 +84,7 @@ import { AccountService } from './components/account/account.service';
 import { PaymentComponent } from './components/payment/payment.component';
 import { PaymentService } from './components/payment/payment.service';
 import { DocumentTypeService } from './services/document-type.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 import { StudentComponent } from './components/student/student.component';
 import { StudentService } from './components/student/student.service';
@@ -133,6 +134,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CoursesForStudentComponent,
     ExamPartDetailComponent,
     NavbarComponent,
+FooterComponent,
   ],
   imports: [
     BrowserModule,

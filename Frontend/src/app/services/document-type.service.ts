@@ -8,7 +8,7 @@ import { DocumentType } from '../model/documentType';
 })
 export class DocumentTypeService {
 
-  private examPartType = 'api/document-type';
+  private examPartType = 'http://localhost:8080/api/document-type';
 
   constructor(private http: HttpClient) { }
 
