@@ -60,20 +60,6 @@ export class ExamsComponent implements OnInit {
     this.router.navigate(['/exam-detail/student/', exam.id]);
   }
 
-  increaseNumberPage(){
-    if(this.numberPage < this.numberPages.length-1){
-      this.numberPage=this.numberPage+1;
-      this.getExams();
-    }
-  }
-
-  reduceNumberPage(){
-    if(this.numberPage>=1){
-      this.numberPage=this.numberPage-1;
-      this.getExams();
-    }
-  }
-
   setNumberPage(numberPage:number){
     this.numberPage = numberPage-1;
     this.getExams();
