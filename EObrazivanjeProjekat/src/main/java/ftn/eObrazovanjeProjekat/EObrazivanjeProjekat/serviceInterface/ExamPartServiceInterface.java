@@ -23,7 +23,9 @@ public interface ExamPartServiceInterface {
 
 	List<ExamPart> findByCodeAndCardNum(String code, String cardNum);
 
-	List<ExamPart> findByTeacher(String username);
+//	public List<ExamPart> findByTeacher(String username);
+//	
+//	public Long countByTeacher(String username);
 	
 //	List<ExamPart> findByCourseInstance(Long idCourseInstance);
 
