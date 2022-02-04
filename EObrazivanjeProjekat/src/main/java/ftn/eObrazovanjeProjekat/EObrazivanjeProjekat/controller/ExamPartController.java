@@ -64,17 +64,18 @@ public class ExamPartController {
 //	private AccountServiceInterface accSeviceInterface;
 
 	
-	@GetMapping(value = "/teacher")
+	@GetMapping(value = "/teacher") //value = "/teacher"
 	@PreAuthorize("hasAnyRole('ROLE_TEACHER')")
-	public ResponseEntity<List<ExamPartDTO>> getAllForTeacher(Principal principal){
+	public ResponseEntity<List<ExamPartDTO>> getAllForTeacher(Principal principal){ // Principal principal
 		System.out.println("\nGet all parts for TEACHER");
-//		List<ExamPart> examParts = examPartServiceInterface.findByTeacher(principal.getName());
+		List<ExamPart> examParts = examPartServiceInterface.findByTeacher(principal.getName());
+//		List<ExamPart> examParts = examPartServiceInterface.findAll();
 		
 		List<ExamPartDTO> dtos = new ArrayList<ExamPartDTO>();
 		
-//		for (ExamPart examPart : examParts) {
-//			dtos.add(new ExamPartDTO(examPart));
-//		}
+		for (ExamPart examPart : examParts) {
+			dtos.add(new ExamPartDTO(examPart));
+		}
 
 		return new ResponseEntity<List<ExamPartDTO>>(dtos, HttpStatus.OK);
 	}

@@ -3,8 +3,6 @@ package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -66,18 +64,16 @@ public class ExamPartService implements ExamPartServiceInterface {
 		return examPartRepository.findByExamPartStatus_codeAndExam_enrollment_student_cardNumber(code, cardNum);
 	}
 
-//	@Override
-//	public List<ExamPart> findByTeacher(String username) {
-//		// TODO Auto-generated method stub
-//		return examPartRepository.findByTeacher(username);
-//	}
-//
-//	@Override
-//	public Long countByTeacher(String username) {
-//		// TODO Auto-generated method stub
-//		return examPartRepository.countByTeacher(username);
-//	}
+	@Override
+	public List<ExamPart> findAll() {
+		// TODO Auto-generated method stub
+		return examPartRepository.findAll();
+	}
 
-	
-	
+	@Override
+	public List<ExamPart> findByTeacher(String username) {
+		// TODO Auto-generated method stub
+		return examPartRepository.findByTeacher(username);
+	}
+
 }

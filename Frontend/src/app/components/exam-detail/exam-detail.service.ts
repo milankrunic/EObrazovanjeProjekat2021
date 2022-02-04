@@ -25,7 +25,7 @@ export class ExamPartService{
         var url = ``;
         this.courseId = courseId;
         if(mode==='TEACHER_EXAM_DETAIL'){
-            url = `${this.examDetailUrl}/teacher?sort=date_exam_part,desc&page=${numberPage}&size=5`;
+            url = `${this.examDetailUrl}/teacher?`; // teacher?sort=date_exam_part,desc&page=${numberPage}&size=5
         }
         else if(this.auths.getRole()==='ROLE_ADMINISTRATOR' || this.auths.getRole()==='ROLE_TEACHER'){
             url = `${this.examDetailUrl}/course-instance/${courseId}?sort=date_exam_part,desc&page=${numberPage}&size=5`;
@@ -35,18 +35,18 @@ export class ExamPartService{
         return this.http.get<ExamPart[]>(url, {observe: 'response'});
     }
 
-    getNumberPage(mode:string,code:string): Observable<HttpResponse<number>> {
-        console.log("\ngetNumberPage")
-        var username = 'undefined';
-        if(mode === 'STUDENT_EXAM_DETAIL'){
-            username = this.studentS.student.userDTO.userName;
-        }
-        else if(this.auths.getRole()==='ROLE_TEACHER' || this.auths.getRole()==='ROLE_STUDENT'){
-            var user = this.auths.getLoggedUser();
-            username = JSON.stringify(user.sub).split('"')[1];
-        }
-        return this.http.get<number>(`${this.examDetailUrl}/number-exam-part?mode=${mode}&username=${username}&courseId=${this.courseId}&code=${code}`, {observe: 'response'});
-      }
+    // getNumberPage(mode:string,code:string): Observable<HttpResponse<number>> {
+    //     console.log("\ngetNumberPage")
+    //     var username = 'undefined';
+    //     if(mode === 'STUDENT_EXAM_DETAIL'){
+    //         username = this.studentS.student.userDTO.userName;
+    //     }
+    //     else if(this.auths.getRole()==='ROLE_TEACHER' || this.auths.getRole()==='ROLE_STUDENT'){
+    //         var user = this.auths.getLoggedUser();
+    //         username = JSON.stringify(user.sub).split('"')[1];
+    //     }
+    //     return this.http.get<number>(`${this.examDetailUrl}/number-exam-part?mode=${mode}&username=${username}&courseId=${this.courseId}&code=${code}`, {observe: 'response'});
+    //   }
 
     // getExamPartsForTeacher(): Observable<HttpResponse<ExamPart[]>>{
     //     var url = `${this.examDetailUrl}/teacher`;
@@ -84,20 +84,20 @@ export class ExamPartService{
         return this.http.get<ExamPart>(url, {observe: 'response'});
     }
 
-    getExamPartsByCode(numberPage:number,code: string): Observable<HttpResponse<ExamPart[]>> {
-        const url = `${this.examDetailUrl}/registered-exam-parts/${code}?page=${numberPage}&size=5`;
-        return this.http.get<ExamPart[]>(url, {observe: 'response'});
-    }
+    // getExamPartsByCode(numberPage:number,code: string): Observable<HttpResponse<ExamPart[]>> {
+    //     const url = `${this.examDetailUrl}/registered-exam-parts/${code}?page=${numberPage}&size=5`;
+    //     return this.http.get<ExamPart[]>(url, {observe: 'response'});
+    // }
 
-    getExamPartByCode(code: string): Observable<HttpResponse<ExamPart>> {
-        const url = `${this.examDetailUrl}/by-code/${code}`;
-        return this.http.get<ExamPart>(url, {observe: 'response'});
-    }
+    // getExamPartByCode(code: string): Observable<HttpResponse<ExamPart>> {
+    //     const url = `${this.examDetailUrl}/by-code/${code}`;
+    //     return this.http.get<ExamPart>(url, {observe: 'response'});
+    // }
 
-    evaluationExamParts(examParts: ExamPart[]): Observable<HttpResponse<ExamPart[]>> {
-        const url = `${this.examDetailUrl}/evaluation-exam-parts`
-        return this.http.put<ExamPart[]>(url, examParts, {observe: 'response'});
-    }
+    // evaluationExamParts(examParts: ExamPart[]): Observable<HttpResponse<ExamPart[]>> {
+    //     const url = `${this.examDetailUrl}/evaluation-exam-parts`
+    //     return this.http.put<ExamPart[]>(url, examParts, {observe: 'response'});
+    // }
 
     getCourseId(){
         return this.courseId;
