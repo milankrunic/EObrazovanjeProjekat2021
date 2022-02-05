@@ -9,16 +9,22 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseInstance;
 
 public interface CourseInstanceServiceInterface {
 
-	public List<CourseInstance> findAll();
-	public CourseInstance findOne(Long id);
-	public CourseInstance findById(Long courseInstanceId);
-	public CourseInstance save(CourseInstance courseInstance);
-	public void remove(Long id);
-//	public List<CourseInstance> findByStudent(String username);
-//	public Long countAll();
-//	
-//	public Long countForTeacher(String username);
-//	
-//	public Long countForStudent(String username);
+	public Page<CourseInstance> getAll(Pageable page);
+	
+	public CourseInstance findById(Long id);
+	
+	public CourseInstance save(CourseInstance ci);
+	
+	public void delete(Long id);
+	
+	public Page<CourseInstance> findByTeacher(String username,Pageable page);
+	
+	public Page<CourseInstance> findByStudent(String username,Pageable page);
+	
+	public Long countAll();
+	
+	public Long countForTeacher(String username);
+	
+	public Long countForStudent(String username);
 	
 }

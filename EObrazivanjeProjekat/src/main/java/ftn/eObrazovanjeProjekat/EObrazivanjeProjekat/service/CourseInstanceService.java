@@ -14,61 +14,60 @@ import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.CourseInst
 @Service
 public class CourseInstanceService implements CourseInstanceServiceInterface{
 	
-	@Autowired 
-	CourseInstanceRepository courseInstanceRepository;
-
+	@Autowired
+	CourseInstanceRepository cir;
+	
 	@Override
-	public List<CourseInstance> findAll() {
-		return courseInstanceRepository.findAll();
+	public Page<CourseInstance> getAll(Pageable page) {
+		// TODO Auto-generated method stub
+		return cir.findAll(page);
 	}
 
 	@Override
-	public CourseInstance findOne(Long id) {
-		return courseInstanceRepository.getOne(id);
+	public CourseInstance findById(Long id) {
+		// TODO Auto-generated method stub
+		return cir.getOne(id);
 	}
 
 	@Override
-	public CourseInstance findById(Long courseInstanceId) {
-		return courseInstanceRepository.findByIdCourseInstance(courseInstanceId);
+	public CourseInstance save(CourseInstance ci) {
+		// TODO Auto-generated method stub
+		return cir.save(ci);
 	}
 
 	@Override
-	public CourseInstance save(CourseInstance courseInstance) {
-		return courseInstanceRepository.save(courseInstance);
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		cir.deleteById(id);
 	}
 
 	@Override
-	public void remove(Long id) {
-		courseInstanceRepository.deleteById(id);
-		
+	public Page<CourseInstance> findByTeacher(String username,Pageable page) {
+		return cir.findByTeacher(username,page);
 	}
 
-//	@Override
-//	public Long countAll() {
-//		return courseInstanceRepository.count();
-//	}
+	@Override
+	public Long countAll() {
+		// TODO Auto-generated method stub
+		return cir.count();
+	}
 
-//	@Override
-//	public Long countForTeacher(String username) {
-//		return courseInstanceRepository.countForTeacher(username);
-//	}
-//
-//	@Override
-//	public Long countForStudent(String username) {
-//		return courseInstanceRepository.countForStudent(username);
-//	}
+	@Override
+	public Long countForTeacher(String username) {
+		// TODO Auto-generated method stub
+		return cir.countForTeacher(username);
+	}
 
-//	@SuppressWarnings("unchecked")
-//	@Override
-//	public List<CourseInstance> findByStudent(String username) {
-//		// TODO Auto-generated method stub
-//		return (List<CourseInstance>) courseInstanceRepository.findByStudent(username);
-//	}
+	@Override
+	public Page<CourseInstance> findByStudent(String username,Pageable page) {
+		// TODO Auto-generated method stub
+		return cir.findByStudent(username,page);
+	}
 
-//	@Override
-//	public Page<CourseInstance> findByStudent(String username, Pageable page) {
-//		// TODO Auto-generated method stub
-//		return courseInstanceRepository.findByStudent(username, page);
-//	}
+	@Override
+	public Long countForStudent(String username) {
+		// TODO Auto-generated method stub
+		return cir.countForStudent(username);
+	}
 
 }

@@ -41,21 +41,21 @@ export class CoursesService {
     return this.http.get<CourseInstance[]>(this.coursesInstanceUrl, {observe: 'response'});
   }
 
-  // getNumberPage(mode:string,username:string,courseId:number): Observable<HttpResponse<number>> {
-  //   var url = `${this.coursesInstanceUrl}/number-course-instance?mode=${mode}&username=${username}`;
-  //   if(mode === 'STUDENTS_COURSE'){
-  //     url = `api/student/number-students?courseId=${courseId}`
-  //   }else if(this.authS.getRole()==='ROLE_TEACHER'){
-  //     var user = this.authS.getLoggedUser();
-  //     username = JSON.stringify(user.sub).split('"')[1];
-  //     mode = 'TEACHER';
-  //     url = `${this.coursesInstanceUrl}/number-course-instance?mode=${mode}&username=${username}`;
-  //   }else if(mode==="COURSE_SPECIFICATION"){
-  //     url = `${this.coursesSpecificationUrl}/number-course-specification`
-  //   }
-  //   // console.log("Url: "+url)
-  //   return this.http.get<number>(url, {observe: 'response'});
-  // }
+  getNumberPage(mode:string,username:string,courseId:number): Observable<HttpResponse<number>> {
+    var url = `${this.coursesInstanceUrl}/number-course-instance?mode=${mode}&username=${username}`;
+    if(mode === 'STUDENTS_COURSE'){
+      url = `api/student/number-students?courseId=${courseId}`
+    }else if(this.authS.getRole()==='ROLE_TEACHER'){
+      var user = this.authS.getLoggedUser();
+      username = JSON.stringify(user.sub).split('"')[1];
+      mode = 'TEACHER';
+      url = `${this.coursesInstanceUrl}/number-course-instance?mode=${mode}&username=${username}`;
+    }else if(mode==="COURSE_SPECIFICATION"){
+      url = `${this.coursesSpecificationUrl}/number-course-specification`
+    }
+    // console.log("Url: "+url)
+    return this.http.get<number>(url, {observe: 'response'});
+  }
 
   getCoursesSpecifications():Observable<HttpResponse<CourseSpecification[]>> {
     return this.http.get<CourseSpecification[]>(this.coursesSpecificationUrl, {observe: 'response'});
