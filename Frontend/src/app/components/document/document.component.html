@@ -1,0 +1,36 @@
+<div class=" col-md-8 color_text" style="margin-left:25px;">
+    <div class="table_color">
+        <h1 class="ml-5 title">Document</h1>
+        <form class="ml-5">
+            <div class="row ml-2">
+                <div class="col-md-3 px-md-1">
+                    <div class="form-group">
+                        <b>Title:</b>
+                        <input type="text" readonly [(ngModel)]="document.title" class="form-control" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="col-md-3 px-md-1">
+                    <div class="form-group">
+                        <b>Type:</b>
+                        <select class="form-control" [(ngModel)]="document.documentTypeDTO.code" [ngModelOptions]="{standalone: true}">
+                            <option class="black_text_color" *ngFor="let t of documentTypes;" value="{{t.code}}">{{t.name}}</option>
+                        </select>
+                        </div>
+                </div>
+                
+            </div>
+            <div class="row ml-2">
+                <div class="col-md-2 px-md-1">
+                    <div class="">
+                        <input type="file" class="form-control-file btn btn-sm" style="color: transparent"
+                            (change)="onFileSelected($event)">
+                    </div>
+                </div>
+            </div>
+        </form>     
+        <div class="text-right mt-2">
+            <button type="button" class="btn btn-fill btn-danger" (click)="submitDocument()" style="margin-right:15px;">✓</button>
+            <button type="button" class="btn btn-fill btn-danger ml-1" (click)="goBack()">X</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+package ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.dto.CourseSpecificationDTO;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.model.CourseSpecification;
+import ftn.eObrazovanjeProjekat.EObrazivanjeProjekat.serviceInterface.CourseSpecificationServiceInterface;
+
+
+@RestController
+@RequestMapping(value = "api/course-specification")
+public class CourseSpecificationController {
+	
+	@Autowired
+	CourseSpecificationServiceInterface courseSpecificationServiceInterface;
+	
+//	@GetMapping
+//	public ResponseEntity<List<CourseSpecificationDTO>> getAllCourseSpecifications(@RequestParam String searchString,Pageable page){
+//		Page<CourseSpecification> csspecs = courseSpecificationServiceInterface.findAll(searchString,page);
+//		
+//		List<CourseSpecificationDTO> cspecsDTO = new ArrayList<CourseSpecificationDTO>();
+//		
+//		for(CourseSpecification css : csspecs) {
+//			cspecsDTO.add(new CourseSpecificationDTO(css));
+//		}
+//		
+//		return new ResponseEntity<List<CourseSpecificationDTO>>(cspecsDTO, HttpStatus.OK);
+//	}
+	
+	@GetMapping
+	public ResponseEntity<List<CourseSpecificationDTO>> getCourseSpecification(){
+
+		List<CourseSpecification> courseSpecifications = courseSpecificationServiceInterface.findAll();
+		
+		List<CourseSpecificationDTO> courseSpecificationDTO = new ArrayList<CourseSpecificationDTO>();
+		for(CourseSpecification cs: courseSpecifications) {
+			courseSpecificationDTO.add(new CourseSpecificationDTO(cs));
+		}
+		return new ResponseEntity<List<CourseSpecificationDTO>>(courseSpecificationDTO, HttpStatus.OK);
+	}
+
+	
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<CourseSpecificationDTO> getCourseSpecification(@PathVariable("id") Long id){
+		CourseSpecification courseSpecification = courseSpecificationServiceInterface.findById(id);
+		
+		if(courseSpecification == null) {
+			return new ResponseEntity<CourseSpecificationDTO>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(courseSpecification), HttpStatus.OK);
+	}
+	
+	@PostMapping
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+	public ResponseEntity<CourseSpecificationDTO> addCourseSpecification(@RequestBody CourseSpecificationDTO courseSpecificationDTO){
+
+		CourseSpecification cs = new CourseSpecification();
+		cs.setIdCourseSpecification(courseSpecificationDTO.getIdCourseSpecification());
+		cs.setTitle(courseSpecificationDTO.getTitle());
+		cs.setEcts(courseSpecificationDTO.getEcts());
+		cs.setCode(courseSpecificationDTO.getCode());
+		
+		cs = courseSpecificationServiceInterface.save(cs);
+		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(cs), HttpStatus.CREATED);
+	}
+
+//	@PutMapping(value = "/{id}", consumes = "application/json")
+//	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+//	public ResponseEntity<CourseSpecificationDTO> updateCourseSpecification(@RequestBody CourseSpecificationDTO courseSpecificationDTO, @PathVariable("id") Long id){
+//
+//		CourseSpecification courseSpecification = courseSpecificationServiceInterface.findById(id);
+//		
+//		if(courseSpecification == null) {
+//			return new ResponseEntity<CourseSpecificationDTO>(HttpStatus.BAD_REQUEST);
+//		}
+//		courseSpecification.setIdCourseSpecification(courseSpecificationDTO.getIdCourseSpecification());
+//		courseSpecification.setTitle(courseSpecificationDTO.getTitle());
+//		courseSpecification.setEcts(courseSpecificationDTO.getEcts());
+//		courseSpecification.setCode(courseSpecificationDTO.getCode());
+//
+//		courseSpecification = courseSpecificationServiceInterface.save(courseSpecification);
+//		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(courseSpecification), HttpStatus.OK);
+//	}
+	
+	@PutMapping()
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+	public ResponseEntity<CourseSpecificationDTO> updateCourseSpecification(@RequestBody CourseSpecificationDTO csDTO){
+		CourseSpecification cs = courseSpecificationServiceInterface.findById(csDTO.getIdCourseSpecification());
+		
+		if(cs == null) {
+			return new ResponseEntity<CourseSpecificationDTO>(HttpStatus.NOT_FOUND);
+		}
+		cs.setTitle(csDTO.getTitle());
+		cs.setCode(csDTO.getCode());
+		cs.setEcts(csDTO.getEcts());
+		courseSpecificationServiceInterface.save(cs);
+		return new ResponseEntity<CourseSpecificationDTO>(new CourseSpecificationDTO(cs), HttpStatus.OK);
+	}
+	
+	
+	@DeleteMapping(value = "/{id}")
+	@PreAuthorize("hasAnyRole('ROLE_TEACHER', 'ROLE_ADMINISTRATOR')")
+	public ResponseEntity<Void> deleteCourseSpecification(@PathVariable("id") Long id){
+		CourseSpecification cs = courseSpecificationServiceInterface.findById(id);
+		System.out.println(cs);
+		if(cs != null) {
+			courseSpecificationServiceInterface.remove(id);
+			
+			return new ResponseEntity<Void>(HttpStatus.OK);
+		}
+		return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+	}
+
+}
